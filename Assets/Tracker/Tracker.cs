@@ -38,13 +38,13 @@ namespace RAGE.Analytics
 		public static bool strictMode = true;
 		private float nextFlush;
 		private bool flushRequested = false;
-		public float flushInterval = 3;
+		public float flushInterval = -1;
 		[Range(3, int.MaxValue)]
 		public float checkInterval = 3;
 		private float nextCheck;
-		public string storageType = "net";
-		public string traceFormat = "xapi";
-		public string host = "https://analytics.e-ucm.es/";
+		public string storageType = "local";
+		public string traceFormat = "csv";
+		public string host;
 		public string trackingCode;
 		public Boolean debug = false;
 
@@ -56,60 +56,12 @@ namespace RAGE.Analytics
 			get { return TrackerAsset.Instance; }
 		}
 
-        public void readHosts()
-        {
-            string path = Application.persistentDataPath;
-
-            if (!path.EndsWith("/"))
-            {
-                path += "/";
-            }
-            
-            PlayerPrefs.Save();
-            //PlayerPrefs.DeleteAll();
-
-            SimpleJSON.JSONNode hostfile = new SimpleJSON.JSONClass();
-            /*
-#if !(UNITY_WEBPLAYER || UNITY_WEBGL)
-            if (!System.IO.File.Exists("host.cfg"))
-            {
-                hostfile.Add("host", new SimpleJSON.JSONData("https://analytics-test.e-ucm.es/api/proxy/gleaner/collector/"));
-                hostfile.Add("trackingCode", new SimpleJSON.JSONData("5be4222305ea050083483aa8izpp9w59eji"));
-                System.IO.File.WriteAllText("host.cfg", hostfile.ToString());
-            }
-            else
-                hostfile = SimpleJSON.JSON.Parse(System.IO.File.ReadAllText("host.cfg"));
-#endif
-
-            PlayerPrefs.SetString("host", hostfile["host"]);
-            PlayerPrefs.SetString("trackingCode", hostfile["trackingCode"]);
-            PlayerPrefs.Save();*/
-
-            PlayerPrefs.SetString("host", "https://analytics-test.e-ucm.es/api/proxy/gleaner/collector/");
-            PlayerPrefs.SetString("trackingCode", "5be4222305ea050083483aa8izpp9w59eji");
-            PlayerPrefs.Save();
-
-
-            //End tracker data loading
-        }
-
-        void Awake()
-        {
-            string domain = "";
-            int port = 80;
-            bool secure = false;
-
-            readHosts();
-            host = PlayerPrefs.GetString("host");
-            trackingCode = PlayerPrefs.GetString("trackingCode");
-
-            if (host != "") { 
-                string[] splitted = host.Split('/');
-                string[] host_splitted = splitted[2].Split(':');
-                domain = host_splitted[0];
-                port = (host_splitted.Length > 1) ? int.Parse(host_splitted[1]) : (splitted[0] == "https:" ? 443 : 80);
-                secure = splitted[0] == "https:";
-            }
+		void Awake ()
+		{
+			string [] splitted = host.Split ('/');
+			string [] host_splitted = splitted [2].Split (':');
+			string domain = host_splitted [0];
+			int port = (host_splitted.Length > 1) ? int.Parse(host_splitted[1]) : (splitted[0] == "https:" ? 443 : 80);
 
 			TrackerAsset.TraceFormats format;
 			switch (traceFormat) {
@@ -140,15 +92,15 @@ namespace RAGE.Analytics
 				TrackingCode = trackingCode,
 				BasePath = "/api",
 				Port = port,
-				Secure = secure,
-                StorageType = storage,
+				Secure = splitted[0] == "https:",
+				StorageType = storage,
 				TraceFormat = format,
 				BackupStorage = rawCopy
 			};
 
 			TrackerAsset.Instance.Bridge = new UnityBridge();
 			TrackerAsset.Instance.Settings = tracker_settings;
-        }
+		}
         
 		/// <summary>
 		/// DONT USE THIS METHOD. UNITY INTERNAL MONOBEHAVIOUR.
