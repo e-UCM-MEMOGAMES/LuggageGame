@@ -1,11 +1,19 @@
 M
-Camisa roja
+Camiseta amarilla
 F
 Blusa verde
 N
-Pantalón
-Camiseta amarilla
-Chanclas
+Pantalones
+Deportivas
 Gafas de buceo
-Cepillo de dientes
+Reloj
+Bote de medicinas
+Fin
+M
+Jersey, ArmarioPuerta, 0
+F
+Blusa verde, ArmarioPuerta, 0
+N
+Abrigo, Perchero, 1
+Camisa roja, ArmarioPuerta, 1
 Fin

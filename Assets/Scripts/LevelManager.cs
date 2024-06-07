@@ -1,13 +1,43 @@
 ﻿using RAGE.Analytics;
+using System;
 using System.Collections.Generic;
 using System.Text;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Linq;
+
+using static Assets.Scripts.Constantes;
 
 public class LevelManager : MonoBehaviour
 {
 
     enum State { BATHROOM, ROOM, DRAWER, LUGGAGE, FIRSTAIDKIT, END };
+    public enum ObjectType { Clothes, Shoes, Others };
+
+
+    [System.Serializable]
+    public class ObjectsInfo
+    {
+        public string name;
+        public GameObject go;
+        public ObjectType type;
+
+    }
+
+    [System.Serializable]
+    public class Storeinfo
+    {
+        public string name;
+        public List<Transform> positions;
+    }
+
+
+    public List<ObjectsInfo> objectsInfo;
+    public List<Storeinfo> storeInfo;
+
+    private Dictionary<string, ObjectsInfo> objectsDictionary;
+    private Dictionary<string, List<Transform>> storeDictionary;
 
     public int level;
     public Camera roomCam;
@@ -32,12 +62,30 @@ public class LevelManager : MonoBehaviour
     public List<Sprite> TiposSuelos { get => _tiposSuelos; set => _tiposSuelos = value; }
     public GameObject Suelo { get => _suelo; set => _suelo = value; }
     public GameObject[] stars;
+    [SerializeField]
+    private GameObject _panelList;
+
+    /// <summary>
+    /// Panel donde se encuentra la lista de objetos a recoger.
+    /// </summary>
+    public GameObject PanelList { get => _panelList; set => _panelList = value; }
+    /// <summary>
+    /// Lista de objetos a recoger.
+    /// </summary>
+    public Text TextList { get; set; }
 
     // 0 = Room & 1 = Bathroom
     int myActualRoom = 0;
     //public Image
     void Start()
     {
+
+        InicializeDictionary();
+        TextList = PanelList.GetComponentInChildren<Text>();
+
+        GM.Gm.Genero = (Genero)PlayerPrefs.GetInt("genre", -1);
+        SetLevel();
+
         state = State.ROOM;
         roomCam.gameObject.SetActive(true);
         bathroomCam.gameObject.SetActive(false);
@@ -48,7 +96,182 @@ public class LevelManager : MonoBehaviour
         initialLuggagePos = luggage.transform.position;
         initialLuggageScale = luggage.transform.localScale;
         bttnEnd.gameObject.SetActive(true);
+
     }
+    private void InicializeDictionary()
+    {
+        objectsDictionary = new Dictionary<string, ObjectsInfo>();
+        for (int i = 0; i < objectsInfo.Count; i++)
+        {
+            objectsDictionary.Add(objectsInfo[i].name, objectsInfo[i]);
+        }
+        storeDictionary = new Dictionary<string, List<Transform>>();
+        for (int i = 0; i < storeInfo.Count; i++)
+        {
+
+            storeDictionary.Add(storeInfo[i].name, storeInfo[i].positions);
+
+        }
+    }
+    private void SetLevel()
+    {
+
+        PanelList.SetActive(true);
+        int l = GM.Gm.Level;
+        string LevelNameGlobal = string.Empty;
+        Debug.Log(l);
+        if (l != 0)
+        {
+            switch (l)
+            {
+                case 1:
+                    LevelNameGlobal = "Level1";
+                    break;
+                case 2:
+                    LevelNameGlobal = "Level2";
+                    break;
+                case 3:
+                    LevelNameGlobal = "Level3";
+                    break;
+            }
+
+
+            switch (GM.Gm.Clima)
+            {
+                case Clima.CALIDO:
+                    LevelNameGlobal = string.Concat(LevelNameGlobal, "Warm");
+                    break;
+                case Clima.FRIO:
+                    LevelNameGlobal = string.Concat(LevelNameGlobal, "Cold");
+                    break;
+            }
+
+            LoadList(LevelNameGlobal);
+        }
+
+        //Tracker.T.Completable.Initialized(LevelNameGlobal, CompletableTracker.Completable.Level);
+
+    }
+
+    /// <summary>
+    /// Carga la lista de objetos a poner en la maleta.
+    /// </summary>
+    /// <param name="name">Nombre del fichero donde se van a cargar los datos.</param>
+    private void LoadList(string name)
+    {
+
+        TextList.text = string.Concat("Lea atentamente e intente memorizar los siguientes objetos que debe introducir en la maleta...\n", Environment.NewLine);
+        GM.Gm.List = new List<string>();
+        GM.Gm.SceneObjects = new List<string>();
+        TextAsset list;
+        string txt = " ";
+
+        list = (TextAsset)Resources.Load(string.Concat("Lists/", name), typeof(TextAsset));
+        txt = Encoding.UTF8.GetString(list.bytes);
+
+
+        Queue<string> cola = new Queue<string>(txt.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries));
+        cola.Dequeue();
+
+        GetPrendas(cola, Genero.HOMBRE, "F");
+        GetPrendas(cola, Genero.MUJER, "N");
+        GetPrendas(cola, Genero.NEUTRAL, "Fin");
+        GetSceneObj(cola, Genero.HOMBRE, "F");
+        GetSceneObj(cola, Genero.MUJER, "N");
+        GetSceneObj(cola, Genero.NEUTRAL, "Fin");
+
+
+    }
+
+    public void Ready()
+    {
+
+        PanelList.SetActive(false);
+
+
+    }
+
+
+    /// <summary>
+    /// Recoge del fichero las prendas según los parámetros.
+    /// </summary>
+    /// <param name="cola">Cola con la lista de objetos a procesar.</param>
+    /// <param name="genero">Genero de la prenda a recoger.</param>
+    /// <param name="fin">Hasta donde leemos del fichero.</param>
+    private void GetPrendas(Queue<string> cola, Genero genero, string fin)
+    {
+        if (GM.Gm.Genero == genero || genero == Genero.NEUTRAL)
+        {
+            StringBuilder finalList = new StringBuilder();
+            string objeto = cola.Dequeue();
+            while (!objeto.Equals(fin))
+            {
+
+                GM.Gm.List.Add(objeto);
+                finalList.AppendLine(string.Concat("- ", objeto));
+
+                objeto = cola.Dequeue();
+            }
+
+            TextList.text = string.Concat(TextList.text, finalList.ToString());
+        }
+        else
+        {
+            string objeto = cola.Dequeue();
+            while (!objeto.Equals(fin))
+            {
+                objeto = cola.Dequeue();
+            }
+        }
+    }
+
+    /// <summary>
+    /// Recoge del fichero los objetos de escena según los parámetros.
+    /// </summary>
+    /// <param name="cola">Cola con la lista de objetos a procesar.</param>
+    /// <param name="genero">Genero de la prenda a recoger.</param>
+    /// <param name="fin">Hasta donde leemos del fichero.</param>
+    private void GetSceneObj(Queue<string> cola, Genero genero, string fin)
+    {
+        if (GM.Gm.Genero == genero || genero == Genero.NEUTRAL)
+        {
+            string objeto = cola.Dequeue();
+
+            List<string> listObj;
+            int j = 0;
+            listObj = new List<string>(objeto.Split(',').Select(o => o.Trim()));
+            Debug.Log(listObj[0]);
+            while (!listObj[0].Equals(fin) && j < 5)
+            {
+
+                Debug.Log("&&&&&&&&&&&&&&& List : " + listObj[0]);
+                if (listObj.Count == 3)
+                {
+                    GM.Gm.SceneObjects.Add(listObj[0]);
+                    Debug.Log("a");
+                    storeDictionary.TryGetValue(listObj[1], out List<Transform> l);
+         
+                    objectsDictionary[listObj[0]].go.transform.SetParent(l[int.Parse(listObj[2])]);
+                    objectsDictionary[listObj[0]].go.transform.localPosition=new Vector3(0,0,0);
+                    objectsDictionary[listObj[0]].go.SetActive(true);
+                }
+
+                objeto = cola.Dequeue();
+                listObj = new List<string>(objeto.Split(',').Select(o => o.Trim()));
+                j++;
+            }
+
+        }
+        else
+        {
+            string objeto = cola.Dequeue();      
+            while (!objeto.Equals(fin))
+            {
+                objeto = cola.Dequeue();
+            }
+        }
+    }
+
 
     public void GoToFirstAidKit()
     {
@@ -182,16 +405,16 @@ public class LevelManager : MonoBehaviour
         StringBuilder cad = new StringBuilder();
 
         cad.AppendLine(luggage.Check(level));
-       
+
         string s = luggage.GetObjetosErroneos();
         if (s.Length > 0)
             cad.Append(s);
-        
-        for(int i = 0; i < luggage.Stars; i++)
+
+        for (int i = 0; i < luggage.Stars; i++)
         {
             stars[i].transform.GetChild(0).gameObject.SetActive(true);
         }
-      
+
         bttnEnd.gameObject.SetActive(false);
         buttonBathroom.SetActive(false);
         endPanel.gameObject.SetActive(true);

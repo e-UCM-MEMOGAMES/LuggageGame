@@ -9,3 +9,13 @@ Botas de montaña
 Gorro
 Cepillo de dientes
 Fin
+M
+Camiseta amarilla, armario, 0
+F
+Blusa verde, armario, 0
+N
+Abrigo, perchero, 1
+Pantalones, cajonComoda2, 0
+Deportivas, zapatero, 2
+Bote de medicinas, armarioBotiquin, 0
+Fin

@@ -25,6 +25,11 @@ public class GM : MonoBehaviour
     public List<string> List { get; set; }
 
     /// <summary>
+    /// Lista de objetos del nivel.
+    /// </summary>+
+    public List<string> SceneObjects { get; set; }
+    
+    /// <summary>
     /// Manejado general del juego.
     /// </summary>
     public static GM Gm;

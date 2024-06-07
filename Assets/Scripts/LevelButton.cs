@@ -20,6 +20,7 @@ public class LevelButton : MonoBehaviour
             if (level != 0) blocked.SetActive(false);
 
             CalcStars(level);
+            numStars = 2;
             for (int i = 0; i < numStars; i++)
             {
                 stars[i].transform.GetChild(0).gameObject.SetActive(true);
@@ -41,11 +42,12 @@ public class LevelButton : MonoBehaviour
         else if (suma >= 1) numStars = 1;
         else numStars = 0;*/
     }
-    public void SelectWeather()
+    public void OnSelected()
     {
         if (!isBlocked)
         {
-            lvlSelector.SelectWeather(level);
+            lvlSelector.SetLevel(level);
+            
         }
     }
 

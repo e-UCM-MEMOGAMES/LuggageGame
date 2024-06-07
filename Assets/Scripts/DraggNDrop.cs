@@ -65,9 +65,8 @@ public class DraggNDrop : MonoBehaviour
 
     void Start()
     {
-        if (Clima != Clima.AMBOS && Clima != GM.Gm.Clima) gameObject.SetActive(false);
-        else if (Genero != Genero.NEUTRAL && Genero != GM.Gm.Genero) gameObject.SetActive(false);
-        GENERO = GM.Gm.Genero;
+    
+        //GENERO = GM.Gm.Genero;
         ItsInTarget = false;
         Maleta = ObjetoMaleta.transform.parent.gameObject.GetComponent<Luggage>();
     }

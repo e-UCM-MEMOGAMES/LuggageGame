@@ -22,7 +22,7 @@ public class LevelSelector : MonoBehaviour
     private GameObject _levelButtons;
     [SerializeField]
     private GameObject _panelList;
-   
+
     public GameObject creditsButton;
 
     #endregion
@@ -73,20 +73,18 @@ public class LevelSelector : MonoBehaviour
     private void Start()
     {
         levelSelected = -1;
-        PanelList.SetActive(false);
-        ClimaButtons.SetActive(false);
-        levelButtons.SetActive(true);
-        TextList = PanelList.GetComponentInChildren<Text>();
-
+        ClimaButtons.SetActive(true);
+        levelButtons.SetActive(false);
         GM.Gm.Genero = (Genero)PlayerPrefs.GetInt("genre", -1);
+
         if (!PlayerPrefs.HasKey("firstime"))
         {
             PlayerPrefs.SetInt("firstime", 1);
             SelectWeather(0);
         }
 
-        if (PlayerPrefs.GetInt("level3C") + PlayerPrefs.GetInt("level3W") >= 1) creditsButton.SetActive(true);
-        else creditsButton.SetActive(false);
+        //if (PlayerPrefs.GetInt("level3C") + PlayerPrefs.GetInt("level3W") >= 1) creditsButton.SetActive(true);
+        //else creditsButton.SetActive(false);
     }
 
     #endregion
@@ -97,11 +95,11 @@ public class LevelSelector : MonoBehaviour
     /// Establece el clima en el que se cargarán los datos.
     /// </summary>
     /// <param name="w">Valor númerico del clima: 0 -> AMBOS, 1 -> CÁLIDO, 2 -> FRÍO</param>
-    public void SetWeather(int w, int level)
+    public void SetWeather(int w)
     {
         GM.Gm.Clima = (Clima)w;
         ClimaButtons.SetActive(false);
-        SetLevel(level);
+        levelButtons.SetActive(true);
     }
 
     /// <summary>
@@ -110,15 +108,14 @@ public class LevelSelector : MonoBehaviour
     /// <param name="l">Nivel de dificultad del juego: 0 -> Tutorial</param>
     public void SetLevel(int l)
     {
+        GM.Gm.Level = l;
         _decoration.SetActive(false);
-
-        Level = l;
         ClimaButtons.SetActive(false);
-       
-        
-        PanelList.SetActive(true);
-        
 
+
+        //  PanelList.SetActive(true);
+
+       
         //reiniciar la variable
         LevelNameGlobal = string.Empty;
         if (l != 0)
@@ -137,7 +134,7 @@ public class LevelSelector : MonoBehaviour
                 case 4:
                     LevelNameGlobal = "Level4Global";
                     break;
-            }
+            }  
 
             if (LevelNameGlobal != "Level4Global")
             {
@@ -151,8 +148,9 @@ public class LevelSelector : MonoBehaviour
                         break;
                 }
             }
-            LoadList(LevelNameGlobal);
+            //LoadList(LevelNameGlobal);
         }
+        //TUTORIAL
         else
         {
             LevelNameGlobal = "LevelTutorial";
@@ -176,6 +174,7 @@ public class LevelSelector : MonoBehaviour
         }
 
         Tracker.T.Completable.Initialized(LevelNameGlobal, CompletableTracker.Completable.Level);
+        Play();
     }
 
     /// <summary>
@@ -183,7 +182,7 @@ public class LevelSelector : MonoBehaviour
     /// </summary>
     public void Play()
     {
-        string levelPlay = (Level != 0) ? "Level" + Level.ToString() : "Tutorial";
+        string levelPlay = (GM.Gm.Level != 0) ? "Level"  : "Tutorial";
         SceneManager.LoadScene(levelPlay);
     }
 
@@ -205,15 +204,15 @@ public class LevelSelector : MonoBehaviour
             SetLevel(level);
             levelButtons.SetActive(false);
             ClimaButtons.SetActive(false);
-            
+
         }
         levelSelected = level;
-       
+
     }
-    public void BackToLevels()
+    public void BackToWeather()
     {
-        levelButtons.SetActive(true);
-        ClimaButtons.SetActive(false);
+        levelButtons.SetActive(false);
+        ClimaButtons.SetActive(true);
     }
     #endregion
 
@@ -222,22 +221,23 @@ public class LevelSelector : MonoBehaviour
     /// <summary>
     /// Carga la lista de objetos a poner en la maleta.
     /// </summary>
-    /// <param name="name">Nombre del fichero donde se van a carar los datos.</param>
+    /// <param name="name">Nombre del fichero donde se van a cargar los datos.</param>
     private void LoadList(string name)
     {
 
         TextList.text = string.Concat("Lea atentamente e intente memorizar los siguientes objetos que debe introducir en la maleta...\n", Environment.NewLine);
         GM.Gm.List = new List<string>();
+        GM.Gm.SceneObjects = new List<string>();
         TextAsset list;
-        string txt =" ";
+        string txt = " ";
         if (LevelNameGlobal != "Level4Global")
         {
             list = (TextAsset)Resources.Load(string.Concat("Lists/", name), typeof(TextAsset));
-            txt= Encoding.UTF8.GetString(list.bytes);
+            txt = Encoding.UTF8.GetString(list.bytes);
         }
         else
         {
-           // list = (TextAsset)new System.IO.StreamReader(@".\configFile15O.txt");
+            // list = (TextAsset)new System.IO.StreamReader(@".\configFile15O.txt");
             string path = @".\configFileLuggage.txt";
             FileStream fs;
             if (!File.Exists(path))
@@ -254,7 +254,7 @@ public class LevelSelector : MonoBehaviour
 
         }
 
-       
+
         Queue<string> cola = new Queue<string>(txt.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries));
         cola.Dequeue();
         if (LevelNameGlobal != "Level4Global")
@@ -263,6 +263,9 @@ public class LevelSelector : MonoBehaviour
             GetPrendas(cola, Genero.HOMBRE, "F");
             GetPrendas(cola, Genero.MUJER, "N");
             GetPrendas(cola, Genero.NEUTRAL, "Fin");
+            GetSceneObj(cola, Genero.HOMBRE, "F");
+            GetSceneObj(cola, Genero.MUJER, "N");
+            GetSceneObj(cola, Genero.NEUTRAL, "Fin");
         }
         // Level 4
         else
@@ -274,6 +277,8 @@ public class LevelSelector : MonoBehaviour
 
         }
     }
+
+
 
     /// <summary>
     /// Busca en el txt los objetos que el usuario debe guardar en la maleta
@@ -326,7 +331,27 @@ public class LevelSelector : MonoBehaviour
         TextList.text = string.Concat(TextList.text, finalList.ToString());
     }
 
-    
+    /// <summary>
+    /// Recoge del fichero los objetos de escena según los parámetros.
+    /// </summary>
+    /// <param name="cola">Cola con la lista de objetos a procesar.</param>
+    /// <param name="genero">Genero de la prenda a recoger.</param>
+    /// <param name="fin">Hasta donde leemos del fichero.</param>
+    private void GetSceneObj(Queue<string> cola, Genero genero, string fin)
+    {
+        string objeto = cola.Dequeue();
+        while (!objeto.Equals(fin))
+        {
+            if (GM.Gm.Genero == genero || genero == Genero.NEUTRAL)
+            {
+                GM.Gm.SceneObjects.Add(objeto);
+            }
+            objeto = cola.Dequeue();
+        }
+    }
+
+
+
     #endregion
 
 }
