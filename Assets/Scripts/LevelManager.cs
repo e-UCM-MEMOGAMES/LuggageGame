@@ -13,7 +13,7 @@ public class LevelManager : MonoBehaviour
 {
 
     enum State { BATHROOM, ROOM, DRAWER, LUGGAGE, FIRSTAIDKIT, END };
-    public enum ObjectType { Clothes, Shoes, Others };
+    public enum ObjectType { Clothes, Shoes, Others, ObjectTypeSize };
 
 
     [System.Serializable]
@@ -25,19 +25,38 @@ public class LevelManager : MonoBehaviour
 
     }
 
+
     [System.Serializable]
     public class Storeinfo
     {
         public string name;
         public List<Transform> positions;
     }
-
+    [System.Serializable]
+    public class ListInfo
+    {
+        public List<string> objectList;
+        public GameObject titleGO;
+        public GameObject contentGO;
+        public Text contentText;
+        public RectTransform contentTr;
+        public RectTransform titleTr;
+    }
 
     public List<ObjectsInfo> objectsInfo;
     public List<Storeinfo> storeInfo;
 
     private Dictionary<string, ObjectsInfo> objectsDictionary;
     private Dictionary<string, List<Transform>> storeDictionary;
+
+
+    //Lista de objetos en pantalla
+    [SerializeField]
+    private List<ListInfo> objectLists;
+    [SerializeField]
+    private float firstTitleYOffset;
+    [SerializeField]
+    private float YOffsetBetweenLine;
 
     public int level;
     public Camera roomCam;
@@ -79,7 +98,11 @@ public class LevelManager : MonoBehaviour
     //public Image
     void Start()
     {
-
+        for (int i = 0; i < objectLists.Count; i++)
+        {
+            objectLists[i].objectList = new List<string>();
+        }
+        level = GM.Gm.Level;
         InicializeDictionary();
         TextList = PanelList.GetComponentInChildren<Text>();
 
@@ -160,7 +183,7 @@ public class LevelManager : MonoBehaviour
     private void LoadList(string name)
     {
 
-        TextList.text = string.Concat("Lea atentamente e intente memorizar los siguientes objetos que debe introducir en la maleta...\n", Environment.NewLine);
+       // TextList.text = string.Concat("Lea atentamente e intente memorizar los siguientes objetos que debe introducir en la maleta...\n", Environment.NewLine);
         GM.Gm.List = new List<string>();
         GM.Gm.SceneObjects = new List<string>();
         TextAsset list;
@@ -180,13 +203,56 @@ public class LevelManager : MonoBehaviour
         GetSceneObj(cola, Genero.MUJER, "N");
         GetSceneObj(cola, Genero.NEUTRAL, "Fin");
 
-
+        showList();
     }
 
     public void Ready()
     {
 
         PanelList.SetActive(false);
+
+
+    }
+
+    /// <summary>
+    /// Añadir a la categoria correspondiente de objeto
+    /// </summary>
+    private void addToList(string o)
+    {
+        ObjectType type = objectsDictionary[o].type;
+        objectLists[(int)type].objectList.Add(o);
+    }
+
+    /// <summary>
+    /// Generar la lista d eobjetos a poner en la maleta en UI
+    /// </summary>
+    private void showList()
+    {
+        float actualLineYPosition = 0;
+
+        for (int i = 0; i < objectLists.Count; i++)
+        {
+            if (objectLists[i].objectList.Count == 0)
+            {
+                objectLists[i].contentGO.SetActive(false);
+                objectLists[i].titleGO.SetActive(false);
+            }
+            else
+            {
+                StringBuilder finalList = new StringBuilder();
+
+                objectLists[i].titleTr.localPosition += actualLineYPosition * Vector3.up;
+                objectLists[i].contentTr.localPosition += actualLineYPosition * Vector3.up;
+                for (int j = 0; j < objectLists[i].objectList.Count; j++)
+                {
+                    finalList.AppendLine(string.Concat("- ", objectLists[i].objectList[j]));
+                    actualLineYPosition += YOffsetBetweenLine;
+                }
+                objectLists[i].contentText.text = string.Concat(objectLists[i].contentText.text, finalList.ToString());
+                actualLineYPosition += YOffsetBetweenLine;
+            }
+
+        }
 
 
     }
@@ -209,11 +275,11 @@ public class LevelManager : MonoBehaviour
 
                 GM.Gm.List.Add(objeto);
                 finalList.AppendLine(string.Concat("- ", objeto));
-
+                addToList(objeto);
                 objeto = cola.Dequeue();
             }
 
-            TextList.text = string.Concat(TextList.text, finalList.ToString());
+            //  TextList.text = string.Concat(TextList.text, finalList.ToString());
         }
         else
         {
@@ -241,22 +307,23 @@ public class LevelManager : MonoBehaviour
             int j = 0;
             listObj = new List<string>(objeto.Split(',').Select(o => o.Trim()));
             Debug.Log(listObj[0]);
-            while (!listObj[0].Equals(fin) && j < 5)
+            while (!listObj[0].Equals(fin))
             {
 
-                Debug.Log("&&&&&&&&&&&&&&& List : " + listObj[0]);
+                Debug.Log("&&&&&&&&&&&&&&& List : " + listObj[0] + " " + listObj[1] + " " + listObj[2]);
                 if (listObj.Count == 3)
                 {
                     GM.Gm.SceneObjects.Add(listObj[0]);
-                    Debug.Log("a");
+
                     storeDictionary.TryGetValue(listObj[1], out List<Transform> l);
-         
+
                     objectsDictionary[listObj[0]].go.transform.SetParent(l[int.Parse(listObj[2])]);
-                    objectsDictionary[listObj[0]].go.transform.localPosition=new Vector3(0,0,0);
+                    objectsDictionary[listObj[0]].go.transform.localPosition = new Vector3(0, 0, 0);
                     objectsDictionary[listObj[0]].go.SetActive(true);
                 }
 
                 objeto = cola.Dequeue();
+                Debug.Log("a");
                 listObj = new List<string>(objeto.Split(',').Select(o => o.Trim()));
                 j++;
             }
@@ -264,7 +331,7 @@ public class LevelManager : MonoBehaviour
         }
         else
         {
-            string objeto = cola.Dequeue();      
+            string objeto = cola.Dequeue();
             while (!objeto.Equals(fin))
             {
                 objeto = cola.Dequeue();
