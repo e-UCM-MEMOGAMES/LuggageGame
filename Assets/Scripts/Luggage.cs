@@ -50,11 +50,13 @@ public class Luggage : MonoBehaviour
 
     void Start()
     {
-        ObjetosList = GM.Gm.List;
         ObjetosGuardados = new List<string>();
         ObjetosErroneosGuardados = new List<string>();
     }
-
+    public void InicializeList()
+    {
+        ObjetosList = GM.Gm.List;
+    }
     void Update() { }
 
     #endregion

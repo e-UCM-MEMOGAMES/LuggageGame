@@ -156,12 +156,12 @@ public class LevelSelector : MonoBehaviour
             LevelNameGlobal = "LevelTutorial";
             GM.Gm.Genero = Genero.NEUTRAL;
             GM.Gm.Clima = Clima.AMBOS;
-            GM.Gm.List = new List<string>
-            {
-                "Camiseta amarilla",
-                "Deportivas",
-                "Cepillo de dientes"
-            };
+            //GM.Gm.List = new List<string>
+            //{
+            //    "Camiseta amarilla",
+            //    "Deportivas",
+            //    "Cepillo de dientes"
+            //};
             StringBuilder cad = new StringBuilder();
             cad.AppendLine("Lea atentamente e intente memorizar los siguientes objetos que debe introducir en la maleta...");
             cad.AppendLine("Cuando se sienta preparado haga click en el botón amarillo de abajo");
@@ -169,8 +169,8 @@ public class LevelSelector : MonoBehaviour
             cad.AppendLine("- Camiseta amarilla");
             cad.AppendLine("- Deportivas");
             cad.AppendLine("- Cepillo de dientes");
-            TextList.text = cad.ToString();
-            TextList.alignment = TextAnchor.MiddleLeft;
+           // TextList.text = cad.ToString();
+          //  TextList.alignment = TextAnchor.MiddleLeft;
         }
 
         Tracker.T.Completable.Initialized(LevelNameGlobal, CompletableTracker.Completable.Level);

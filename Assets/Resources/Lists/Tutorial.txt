@@ -1,0 +1,10 @@
+M
+F
+N
+Camiseta amarilla
+Fin
+M
+F
+N
+Camiseta amarilla, ArmarioPuerta, 1
+Fin

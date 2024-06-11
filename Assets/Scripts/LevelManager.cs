@@ -169,9 +169,10 @@ public class LevelManager : MonoBehaviour
                     break;
             }
 
-            LoadList(LevelNameGlobal);
+            
         }
-
+        else LevelNameGlobal = "Tutorial";
+        LoadList(LevelNameGlobal);
         //Tracker.T.Completable.Initialized(LevelNameGlobal, CompletableTracker.Completable.Level);
 
     }
@@ -204,6 +205,8 @@ public class LevelManager : MonoBehaviour
         GetSceneObj(cola, Genero.NEUTRAL, "Fin");
 
         showList();
+
+        luggage.InicializeList();
     }
 
     public void Ready()
@@ -377,6 +380,7 @@ public class LevelManager : MonoBehaviour
                 Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[1];
             }
             buttonBackToRoom.SetActive(true);
+            buttonBathroom.SetActive(false);
             drawerImage.SetActive(true);
 
             if (drawer != null)
@@ -423,6 +427,7 @@ public class LevelManager : MonoBehaviour
                 roomCam.gameObject.SetActive(false);
                 bathroomCam.gameObject.SetActive(true);
             }
+            buttonBathroom.SetActive(true);
             drawerCam.gameObject.SetActive(false);
             if (currentDrawer != null)
                 currentDrawer.SetActive(false);
