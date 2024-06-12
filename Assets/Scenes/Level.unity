@@ -8607,6 +8607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 587537669}
   - component: {fileID: 587537668}
+  - component: {fileID: 587537670}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -8679,19 +8680,19 @@ MonoBehaviour:
     go: {fileID: 1509433758}
     type: 0
   storeInfo:
-  - name: ArmarioPuerta
+  - name: Bedroom_ClosetDoor
     positions:
     - {fileID: 1952255107}
     - {fileID: 1572091465}
-  - name: Perchero
+  - name: Bedroom_CoatRack
     positions:
     - {fileID: 844019154}
     - {fileID: 471714156}
-  - name: Percha
+  - name: Bathroom_hanger
     positions:
     - {fileID: 526835436}
     - {fileID: 2721814}
-  - name: ComodaCajonSuperior
+  - name: Bedroom_DresserDrawer_top
     positions:
     - {fileID: 1203638888}
     - {fileID: 792476017}
@@ -8699,7 +8700,7 @@ MonoBehaviour:
     - {fileID: 1953284002}
     - {fileID: 868967477}
     - {fileID: 1106226164}
-  - name: ComodaCajonMedio
+  - name: Bedroom_DresserDrawer_middle
     positions:
     - {fileID: 243207789}
     - {fileID: 330702717}
@@ -8707,7 +8708,7 @@ MonoBehaviour:
     - {fileID: 1901558502}
     - {fileID: 1999458082}
     - {fileID: 701928782}
-  - name: ComodaCajonInferior
+  - name: Bedroom_DresserDrawer_bottom
     positions:
     - {fileID: 499345399}
     - {fileID: 1525717677}
@@ -8715,7 +8716,7 @@ MonoBehaviour:
     - {fileID: 1822993257}
     - {fileID: 1717842439}
     - {fileID: 1606175181}
-  - name: ArmarioCajonMedio
+  - name: Bedroom_ClosetDrawer_middle
     positions:
     - {fileID: 878794469}
     - {fileID: 244840721}
@@ -8723,7 +8724,7 @@ MonoBehaviour:
     - {fileID: 877340684}
     - {fileID: 1817887429}
     - {fileID: 347548658}
-  - name: ArmarioCajonSuperior
+  - name: Bedroom_ClosetDrawer_top
     positions:
     - {fileID: 1083788258}
     - {fileID: 2062053677}
@@ -8731,7 +8732,7 @@ MonoBehaviour:
     - {fileID: 1624516028}
     - {fileID: 1589419775}
     - {fileID: 1867691390}
-  - name: ArmarioCajonInferior
+  - name: Bedroom_ClosetDrawer_bottom
     positions:
     - {fileID: 188382827}
     - {fileID: 1680053982}
@@ -8739,7 +8740,7 @@ MonoBehaviour:
     - {fileID: 708689775}
     - {fileID: 1589419775}
     - {fileID: 1696164062}
-  - name: ArmarioLavaboSuperior
+  - name: Bathroom_cabinet_top
     positions:
     - {fileID: 57737884}
     - {fileID: 1726045960}
@@ -8747,7 +8748,7 @@ MonoBehaviour:
     - {fileID: 560301848}
     - {fileID: 1909621989}
     - {fileID: 922419080}
-  - name: ArmarioLavaboInferior
+  - name: Bathroom_cabinet_bottom
     positions:
     - {fileID: 1198711476}
     - {fileID: 822010415}
@@ -8755,7 +8756,7 @@ MonoBehaviour:
     - {fileID: 1312984485}
     - {fileID: 2010121600}
     - {fileID: 1957314250}
-  - name: Zapatero
+  - name: Bedroom_ShoeRack
     positions:
     - {fileID: 494087625}
     - {fileID: 490885420}
@@ -8763,20 +8764,20 @@ MonoBehaviour:
     - {fileID: 177107391}
     - {fileID: 797304454}
     - {fileID: 1447253641}
-  - name: EncimaZapatero
+  - name: Bedroom_ShoeRack_above
     positions:
     - {fileID: 1936020568}
     - {fileID: 2004625950}
     - {fileID: 2025383721}
-  - name: EncimaComoda
+  - name: Bedroom_DresserDrawer_above
     positions:
     - {fileID: 1234015336}
     - {fileID: 1964086737}
     - {fileID: 1923291867}
-  - name: EncimaArmarioLavabo
+  - name: Bathroom_cabinet_above
     positions:
     - {fileID: 1873324512}
-  - name: ArmarioBotiquin
+  - name: Bathroom_medicineCabinet
     positions:
     - {fileID: 2002349867}
     - {fileID: 269673707}
@@ -8840,6 +8841,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &587537670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587537667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ebed2ca17b84264892fca0340f9dd38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelInfo:
+    objectList_M: []
+    objectList_F: []
+    objectList_N: []
+    storePoints: []
 --- !u!1 &592053475
 GameObject:
   m_ObjectHideFlags: 0

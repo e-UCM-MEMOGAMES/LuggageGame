@@ -1,0 +1,155 @@
+{
+      "objectList_M": [
+            "Jersey",
+            "Pantalones"
+      ],
+      "objectList_F": [
+            "Blusa verde",
+            "Deportivas"
+      ],
+      "objectList_N": [
+            "Bote de medicinas",
+            "Peine"
+      ],
+      "storePoints": [
+            {
+                  "name": "Bedroom_DresserDrawer_above",
+                  "objects": [
+                        {
+                              "name": "Libro",
+                              "position": 1,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bedroom_DresserDrawer_top",
+                  "objects": []
+            },
+            {
+                  "name": "Bedroom_DresserDrawer_middle",
+                  "objects": []
+            },
+            {
+                  "name": "Bedroom_DresserDrawer_bottom",
+                  "objects": [
+                        {
+                              "name": "Guion de viajes",
+                              "position": 5,
+                              "gender": "N"
+                        },
+                        {
+                              "name": "Pijama de invierno",
+                              "position": 2,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bedroom_ClosetDrawer_top",
+                  "objects": []
+            },
+            {
+                  "name": "Bedroom_ClosetDrawer_middle",
+                  "objects": [
+                        {
+                              "name": "Bermudas",
+                              "position": 3,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bedroom_ClosetDrawer_bottom",
+                  "objects": []
+            },
+            {
+                  "name": "Bedroom_ClosetDoor",
+                  "objects": [
+                        {
+                              "name": "Jersey",
+                              "position": 0,
+                              "gender": "M"
+                        },
+                        {
+                              "name": "Blusa verde",
+                              "position": 0,
+                              "gender": "F"
+                        },
+                        {
+                              "name": "Camisa roja",
+                              "position": 1,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bedroom_CoatRack",
+                  "objects": [
+                        {
+                              "name": "Abrigo",
+                              "position": 0,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bedroom_ShoeRack",
+                  "objects": [
+                        {
+                              "name": "Deportivas",
+                              "position": 4,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bedroom_ShoeRack_above",
+                  "objects": []
+            },
+            {
+                  "name": "Bathroom_hanger",
+                  "objects": [
+                        {
+                              "name": "Toalla",
+                              "position": 0,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bathroom_cabinet_above",
+                  "objects": [
+                        {
+                              "name": "Colonia",
+                              "position": 0,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bathroom_medicineCabinet",
+                  "objects": [
+                        {
+                              "name": "Bote de medicinas",
+                              "position": 1,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bathroom_cabinet_top",
+                  "objects": [
+                        {
+                              "name": "Peine",
+                              "position": 4,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bathroom_cabinet_bottom",
+                  "objects": []
+            }
+      ]
+}

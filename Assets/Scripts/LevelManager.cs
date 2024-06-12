@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using System.Linq;
 
 using static Assets.Scripts.Constantes;
+using static JSONReader;
 
 public class LevelManager : MonoBehaviour
 {
@@ -15,6 +16,7 @@ public class LevelManager : MonoBehaviour
     enum State { BATHROOM, ROOM, DRAWER, LUGGAGE, FIRSTAIDKIT, END };
     public enum ObjectType { Clothes, Shoes, Others, ObjectTypeSize };
 
+    JSONReader jsonReader;
 
     [System.Serializable]
     public class ObjectsInfo
@@ -98,6 +100,8 @@ public class LevelManager : MonoBehaviour
     //public Image
     void Start()
     {
+        jsonReader = GetComponent<JSONReader>();
+
         for (int i = 0; i < objectLists.Count; i++)
         {
             objectLists[i].objectList = new List<string>();
@@ -169,7 +173,7 @@ public class LevelManager : MonoBehaviour
                     break;
             }
 
-            
+
         }
         else LevelNameGlobal = "Tutorial";
         LoadList(LevelNameGlobal);
@@ -183,26 +187,11 @@ public class LevelManager : MonoBehaviour
     /// <param name="name">Nombre del fichero donde se van a cargar los datos.</param>
     private void LoadList(string name)
     {
-
-       // TextList.text = string.Concat("Lea atentamente e intente memorizar los siguientes objetos que debe introducir en la maleta...\n", Environment.NewLine);
         GM.Gm.List = new List<string>();
         GM.Gm.SceneObjects = new List<string>();
-        TextAsset list;
-        string txt = " ";
 
-        list = (TextAsset)Resources.Load(string.Concat("Lists/", name), typeof(TextAsset));
-        txt = Encoding.UTF8.GetString(list.bytes);
-
-
-        Queue<string> cola = new Queue<string>(txt.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries));
-        cola.Dequeue();
-
-        GetPrendas(cola, Genero.HOMBRE, "F");
-        GetPrendas(cola, Genero.MUJER, "N");
-        GetPrendas(cola, Genero.NEUTRAL, "Fin");
-        GetSceneObj(cola, Genero.HOMBRE, "F");
-        GetSceneObj(cola, Genero.MUJER, "N");
-        GetSceneObj(cola, Genero.NEUTRAL, "Fin");
+        TextAsset jsonFile = (TextAsset)Resources.Load(string.Concat("Lists/", name), typeof(TextAsset));
+        ReadLevelInfo(jsonReader.LoadFile(jsonFile.text));
 
         showList();
 
@@ -267,29 +256,54 @@ public class LevelManager : MonoBehaviour
     /// <param name="cola">Cola con la lista de objetos a procesar.</param>
     /// <param name="genero">Genero de la prenda a recoger.</param>
     /// <param name="fin">Hasta donde leemos del fichero.</param>
-    private void GetPrendas(Queue<string> cola, Genero genero, string fin)
+    private void ReadLevelInfo(LevelInfo info)
     {
-        if (GM.Gm.Genero == genero || genero == Genero.NEUTRAL)
+        string gen;
+        if (GM.Gm.Genero == Genero.HOMBRE) gen = "M";
+        else gen = "F";
+
+        //lectura de lista de objetos a introducir a la maleta
+        if (gen == "M")
         {
-            StringBuilder finalList = new StringBuilder();
-            string objeto = cola.Dequeue();
-            while (!objeto.Equals(fin))
+            for (int i = 0; i < info.objectList_M.Length; ++i)
             {
-
-                GM.Gm.List.Add(objeto);
-                finalList.AppendLine(string.Concat("- ", objeto));
-                addToList(objeto);
-                objeto = cola.Dequeue();
+                GM.Gm.List.Add(info.objectList_M[i]);
+                addToList(info.objectList_M[i]);
             }
-
-            //  TextList.text = string.Concat(TextList.text, finalList.ToString());
         }
         else
         {
-            string objeto = cola.Dequeue();
-            while (!objeto.Equals(fin))
+            for (int i = 0; i < info.objectList_F.Length; ++i)
             {
-                objeto = cola.Dequeue();
+                GM.Gm.List.Add(info.objectList_F[i]);
+                addToList(info.objectList_F[i]);
+            }
+        }
+
+        for (int i = 0; i < info.objectList_N.Length; ++i)
+        {
+            GM.Gm.List.Add(info.objectList_N[i]);
+            addToList(info.objectList_N[i]);
+        }
+
+        //objetos de escena
+        for (int i = 0; i < info.storePoints.Length; ++i)
+        {
+            //para cada punto de almacenamiento
+            for (int j = 0; j < info.storePoints[i].objects.Length; ++j)
+            {
+                if (info.storePoints[i].objects[j].gender == gen || info.storePoints[i].objects[j].gender=="N")
+                {
+                    string objectName = info.storePoints[i].objects[j].name;
+                    GM.Gm.SceneObjects.Add(objectName);
+                    storeDictionary.TryGetValue(info.storePoints[i].name, out List<Transform> l);
+
+                    GameObject go = objectsDictionary[objectName].go;
+                    go.transform.SetParent(l[info.storePoints[i].objects[j].position]);
+                    go.transform.localPosition = new Vector3(0, 0, 0);
+                    go.SetActive(true);
+
+                }
             }
         }
     }
