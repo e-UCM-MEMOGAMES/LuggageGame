@@ -9,13 +9,15 @@ using System.Linq;
 
 using static Assets.Scripts.Constantes;
 using static JSONReader;
+using TMPro;
+using static CheckBox;
 
 public class LevelManager : MonoBehaviour
 {
 
     enum State { BATHROOM, ROOM, DRAWER, LUGGAGE, FIRSTAIDKIT, END };
     public enum ObjectType { Clothes, Shoes, Others, ObjectTypeSize };
-
+    string LevelNameGlobal;
     JSONReader jsonReader;
 
     [System.Serializable]
@@ -40,7 +42,7 @@ public class LevelManager : MonoBehaviour
         public List<string> objectList;
         public GameObject titleGO;
         public GameObject contentGO;
-        public Text contentText;
+        public TMP_Text contentText;
         public RectTransform contentTr;
         public RectTransform titleTr;
     }
@@ -49,8 +51,8 @@ public class LevelManager : MonoBehaviour
     public List<Storeinfo> storeInfo;
 
     private Dictionary<string, ObjectsInfo> objectsDictionary;
-    private Dictionary<string, List<Transform>> storeDictionary;
-
+    private Dictionary<string, CheckBox> checkBoxDictionary;
+    private Dictionary<string, List<Transform>> storageDictionary;
 
     //Lista de objetos en pantalla
     [SerializeField]
@@ -59,6 +61,21 @@ public class LevelManager : MonoBehaviour
     private float firstTitleYOffset;
     [SerializeField]
     private float YOffsetBetweenLine;
+    [SerializeField]
+    private float YOffsetBetweenCheckBox;
+    [SerializeField]
+    private GameObject noteBookGO;
+    private RectTransform noteBookTr;
+    [SerializeField]
+    private GameObject checkBoxPrefab;
+
+    [SerializeField]
+    private int maxcheckOpportunities = 3;
+    private int checkOpportunities;
+
+    [SerializeField]
+    private TMP_Text opportunitiesText;
+
 
     public int level;
     public Camera roomCam;
@@ -73,7 +90,6 @@ public class LevelManager : MonoBehaviour
     private GameObject _suelo;
     public GameObject buttonBackToRoom;
     public GameObject bttnEnd;
-    public GameObject endPanel;
     public Luggage luggage;
     public GameObject drawerImage;
     Vector3 initialLuggagePos;
@@ -84,12 +100,13 @@ public class LevelManager : MonoBehaviour
     public GameObject Suelo { get => _suelo; set => _suelo = value; }
     public GameObject[] stars;
     [SerializeField]
-    private GameObject _panelList;
-
+    private GameObject initialPanel, objectsPanel, noteBookPanel, endPanel;
+    [SerializeField]
+    private TMP_Text correctObjectsText, wrongObjectsText, finalOpportunitiesText;
     /// <summary>
     /// Panel donde se encuentra la lista de objetos a recoger.
     /// </summary>
-    public GameObject PanelList { get => _panelList; set => _panelList = value; }
+    public GameObject PanelList { get => initialPanel; set => initialPanel = value; }
     /// <summary>
     /// Lista de objetos a recoger.
     /// </summary>
@@ -108,8 +125,9 @@ public class LevelManager : MonoBehaviour
         }
         level = GM.Gm.Level;
         InicializeDictionary();
-        TextList = PanelList.GetComponentInChildren<Text>();
+       // TextList = PanelList.GetComponentInChildren<Text>();
 
+        noteBookTr = noteBookGO.GetComponent<RectTransform>();
         GM.Gm.Genero = (Genero)PlayerPrefs.GetInt("genre", -1);
         SetLevel();
 
@@ -124,6 +142,12 @@ public class LevelManager : MonoBehaviour
         initialLuggageScale = luggage.transform.localScale;
         bttnEnd.gameObject.SetActive(true);
 
+        initialPanel.SetActive(true);
+        objectsPanel.SetActive(true);
+        noteBookPanel.SetActive(false);
+        endPanel.SetActive(false);
+        checkOpportunities = maxcheckOpportunities;
+        opportunitiesText.text = checkOpportunities.ToString();
     }
     private void InicializeDictionary()
     {
@@ -132,21 +156,22 @@ public class LevelManager : MonoBehaviour
         {
             objectsDictionary.Add(objectsInfo[i].name, objectsInfo[i]);
         }
-        storeDictionary = new Dictionary<string, List<Transform>>();
+        storageDictionary = new Dictionary<string, List<Transform>>();
         for (int i = 0; i < storeInfo.Count; i++)
         {
 
-            storeDictionary.Add(storeInfo[i].name, storeInfo[i].positions);
+            storageDictionary.Add(storeInfo[i].name, storeInfo[i].positions);
 
         }
+        checkBoxDictionary = new Dictionary<string, CheckBox>();
     }
     private void SetLevel()
     {
 
         PanelList.SetActive(true);
         int l = GM.Gm.Level;
-        string LevelNameGlobal = string.Empty;
-        Debug.Log(l);
+        LevelNameGlobal = string.Empty;
+        Debug.Log(level +" "+l);
         if (l != 0)
         {
             switch (l)
@@ -177,7 +202,7 @@ public class LevelManager : MonoBehaviour
         }
         else LevelNameGlobal = "Tutorial";
         LoadList(LevelNameGlobal);
-        //Tracker.T.Completable.Initialized(LevelNameGlobal, CompletableTracker.Completable.Level);
+        Tracker.T.Completable.Initialized(LevelNameGlobal, CompletableTracker.Completable.Level);
 
     }
 
@@ -191,6 +216,7 @@ public class LevelManager : MonoBehaviour
         GM.Gm.SceneObjects = new List<string>();
 
         TextAsset jsonFile = (TextAsset)Resources.Load(string.Concat("Lists/", name), typeof(TextAsset));
+        Debug.Log(jsonFile.text);
         ReadLevelInfo(jsonReader.LoadFile(jsonFile.text));
 
         showList();
@@ -201,9 +227,26 @@ public class LevelManager : MonoBehaviour
     public void Ready()
     {
 
-        PanelList.SetActive(false);
+        initialPanel.SetActive(false);
+        objectsPanel.SetActive(false);
 
 
+    }
+    public void Checklist()
+    {
+        if (checkOpportunities > 0)
+        {
+            checkOpportunities--;
+            objectsPanel.SetActive(true);
+            noteBookPanel.SetActive(true);
+            opportunitiesText.text = checkOpportunities.ToString();
+        }
+    }
+    public void ReturnFromCheckList()
+    {
+
+        objectsPanel.SetActive(false);
+        noteBookPanel.SetActive(false);
     }
 
     /// <summary>
@@ -220,7 +263,9 @@ public class LevelManager : MonoBehaviour
     /// </summary>
     private void showList()
     {
+
         float actualLineYPosition = 0;
+        float actualCheckboxYPosition;
 
         for (int i = 0; i < objectLists.Count; i++)
         {
@@ -235,15 +280,26 @@ public class LevelManager : MonoBehaviour
 
                 objectLists[i].titleTr.localPosition += actualLineYPosition * Vector3.up;
                 objectLists[i].contentTr.localPosition += actualLineYPosition * Vector3.up;
+                actualCheckboxYPosition = objectLists[i].contentTr.localPosition.y + 4;
                 for (int j = 0; j < objectLists[i].objectList.Count; j++)
                 {
-                    finalList.AppendLine(string.Concat("- ", objectLists[i].objectList[j]));
+                    GameObject checkbox = Instantiate(checkBoxPrefab, new Vector3(0, 0, 0),
+                    checkBoxPrefab.transform.rotation, noteBookTr);
+
+                    RectTransform checkboxTr = checkbox.GetComponent<RectTransform>();
+                    checkboxTr.localPosition = new Vector2(objectLists[i].contentTr.localPosition.x - 35, actualCheckboxYPosition);
+                    CheckBox c = checkbox.GetComponent<CheckBox>();
+                    c.SetCheckBoxState(CheckBoxState.None);
+                    checkBoxDictionary.Add(objectLists[i].objectList[j], c);
+
+                    finalList.AppendLine(objectLists[i].objectList[j]);
                     actualLineYPosition += YOffsetBetweenLine;
+                    actualCheckboxYPosition += YOffsetBetweenCheckBox;
                 }
                 objectLists[i].contentText.text = string.Concat(objectLists[i].contentText.text, finalList.ToString());
-                actualLineYPosition += YOffsetBetweenLine;
-            }
 
+            }
+            actualLineYPosition += YOffsetBetweenLine;
         }
 
 
@@ -287,19 +343,19 @@ public class LevelManager : MonoBehaviour
         }
 
         //objetos de escena
-        for (int i = 0; i < info.storePoints.Length; ++i)
+        for (int i = 0; i < info.storagePoints.Length; ++i)
         {
             //para cada punto de almacenamiento
-            for (int j = 0; j < info.storePoints[i].objects.Length; ++j)
+            for (int j = 0; j < info.storagePoints[i].objects.Length; ++j)
             {
-                if (info.storePoints[i].objects[j].gender == gen || info.storePoints[i].objects[j].gender=="N")
+                if (info.storagePoints[i].objects[j].gender == gen || info.storagePoints[i].objects[j].gender == "N")
                 {
-                    string objectName = info.storePoints[i].objects[j].name;
+                    string objectName = info.storagePoints[i].objects[j].name;
                     GM.Gm.SceneObjects.Add(objectName);
-                    storeDictionary.TryGetValue(info.storePoints[i].name, out List<Transform> l);
+                    storageDictionary.TryGetValue(info.storagePoints[i].name, out List<Transform> l);
 
                     GameObject go = objectsDictionary[objectName].go;
-                    go.transform.SetParent(l[info.storePoints[i].objects[j].position]);
+                    go.transform.SetParent(l[info.storagePoints[i].objects[j].position]);
                     go.transform.localPosition = new Vector3(0, 0, 0);
                     go.SetActive(true);
 
@@ -332,7 +388,7 @@ public class LevelManager : MonoBehaviour
                 {
                     GM.Gm.SceneObjects.Add(listObj[0]);
 
-                    storeDictionary.TryGetValue(listObj[1], out List<Transform> l);
+                    storageDictionary.TryGetValue(listObj[1], out List<Transform> l);
 
                     objectsDictionary[listObj[0]].go.transform.SetParent(l[int.Parse(listObj[2])]);
                     objectsDictionary[listObj[0]].go.transform.localPosition = new Vector3(0, 0, 0);
@@ -355,8 +411,14 @@ public class LevelManager : MonoBehaviour
             }
         }
     }
-
-
+    public void addToLuggage(string o)
+    {
+        checkBoxDictionary[o].SetCheckBoxState(CheckBoxState.Correct);
+    }
+    public void removefromLuggage(string o)
+    {
+        checkBoxDictionary[o].SetCheckBoxState(CheckBoxState.None);
+    }
     public void GoToFirstAidKit()
     {
         if (state != State.END)
@@ -490,24 +552,50 @@ public class LevelManager : MonoBehaviour
         state = State.END;
         StringBuilder cad = new StringBuilder();
 
-        cad.AppendLine(luggage.Check(level));
+      //  cad.AppendLine(luggage.Check(level));
 
-        string s = luggage.GetObjetosErroneos();
-        if (s.Length > 0)
-            cad.Append(s);
+        //string s = luggage.GetObjetosErroneos();
+        //if (s.Length > 0)
+        //    cad.Append(s);
 
-        for (int i = 0; i < luggage.Stars; i++)
+        int starsCompleted=0;
+        if (luggage.ObjetosErroneosGuardados.Count() == 0)
         {
-            stars[i].transform.GetChild(0).gameObject.SetActive(true);
+            starsCompleted++;
+            stars[0].transform.GetChild(0).gameObject.SetActive(true);
+          
         }
+        wrongObjectsText.text = luggage.ObjetosErroneosGuardados.Count().ToString();
+        if (luggage.ObjetosGuardados.Count()== luggage.ObjetosList.Count())
+        {
+            starsCompleted++;
+            stars[1].transform.GetChild(0).gameObject.SetActive(true);
+            
+        }
+        correctObjectsText.text = luggage.ObjetosGuardados.Count().ToString() + " / " + luggage.ObjetosList.Count().ToString();
+        if (checkOpportunities==maxcheckOpportunities)
+        {
+            starsCompleted++;
+            stars[2].transform.GetChild(0).gameObject.SetActive(true);
+           
+        }
+        finalOpportunitiesText.text = (maxcheckOpportunities - checkOpportunities).ToString() + " / " + maxcheckOpportunities.ToString();
 
+        if (PlayerPrefs.GetInt(LevelNameGlobal)<= starsCompleted)
+            PlayerPrefs.SetInt(LevelNameGlobal, starsCompleted);
+        Debug.Log(LevelNameGlobal + " " + PlayerPrefs.GetInt(LevelNameGlobal));
+        for(int i = 0; i < GM.Gm.List.Count(); i++) {
+            CheckBox c = checkBoxDictionary[GM.Gm.List[i]];
+            if (c.GetCheckBoxState() == CheckBoxState.None)
+                c.SetCheckBoxState(CheckBoxState.Wrong);
+        }
+        objectsPanel.SetActive(true);
         bttnEnd.gameObject.SetActive(false);
         buttonBathroom.SetActive(false);
         endPanel.gameObject.SetActive(true);
-        endPanel.GetComponentInChildren<Text>().text = cad.ToString();
-
+        //endPanel.GetComponentInChildren<Text>().text = cad.ToString();
         Tracker.T.setVar("EndButton", 1);
-        Tracker.T.setVar("Resultado: " + cad.Length, cad.ToString());
-        Tracker.T.Completable.Completed(LevelSelector.LevelNameGlobal, CompletableTracker.Completable.Level, true);
+      //  Tracker.T.setVar("Resultado: " + cad.Length, cad.ToString());
+        Tracker.T.Completable.Completed(LevelNameGlobal, CompletableTracker.Completable.Level, true);
     }
 }

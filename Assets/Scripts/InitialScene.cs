@@ -57,6 +57,6 @@ public class InitialScene : MonoBehaviour
             genre.SetActive(true);
         }
         else
-            GM.Gm.LoadScene("Menu");
+            GM.Gm.LoadScene("LevelSelector");
     }
 }

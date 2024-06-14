@@ -10,37 +10,36 @@ public class LevelButton : MonoBehaviour
     public LevelSelector lvlSelector;
 
     bool isBlocked;
-    int numStars = 0;
     void Start()
     {
-        isBlocked = true;
-        CalcStars(level - 1);
-        if ((numStars >= 4) || level <= 1)
-        {
-            if (level != 0) blocked.SetActive(false);
-
-            CalcStars(level);
-            numStars = 2;
-            for (int i = 0; i < numStars; i++)
-            {
-                stars[i].transform.GetChild(0).gameObject.SetActive(true);
-            }
-            isBlocked = false;
-        }
+        isBlocked = false;   
     }
 
-    void CalcStars(int level)
+    public void CalcStars()
     {
+        int numStars = 0;
+
+        for (int i = 0; i < stars.Length; i++)
+        {
+            stars[i].transform.GetChild(0).gameObject.SetActive(false);
+        }
+
+        if (GM.Gm.Clima == Assets.Scripts.Constantes.Clima.CALIDO)
+        {
+            Debug.Log(PlayerPrefs.GetInt("Level" + level.ToString() + "Warm", 0));
+            numStars = PlayerPrefs.GetInt("Level" + level.ToString() + "Warm", 0);
+        }
+        else { 
+            PlayerPrefs.GetInt("Level" + level.ToString() + "Cold", 0);
+            Debug.Log(PlayerPrefs.GetInt("Level" + level.ToString() + "Cold", 0));
+        }
+
+        for (int i = 0; i < numStars; i++)
+        {
+            stars[i].transform.GetChild(0).gameObject.SetActive(true);
+        }
        
-        if (level != 0)
-            numStars = PlayerPrefs.GetInt("level" + level.ToString() + "W", 0) + PlayerPrefs.GetInt("level" + level.ToString() + "C", 0);
-        else numStars = PlayerPrefs.GetInt("level" + level.ToString() + "C", 0);
-        
-        /*
-        if (suma >= 5) numStars = 3;
-        else if (suma >= 4) numStars = 2;
-        else if (suma >= 1) numStars = 1;
-        else numStars = 0;*/
+       
     }
     public void OnSelected()
     {

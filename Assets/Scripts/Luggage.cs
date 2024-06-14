@@ -10,24 +10,25 @@ public class Luggage : MonoBehaviour
     [SerializeField]
     private List<LuggageTarget> _targets;
     public Sprite emptyLuggage, fullLuggage;
-
+    [SerializeField]
+    private LevelManager levelMng;
     #endregion
 
     #region Atributos
     /// <summary>
     /// Objetos que hay que meter en la maleta.
     /// </summary>
-    private List<string> ObjetosList { get; set; }
+    public List<string> ObjetosList { get; set; }
 
     /// <summary>
     /// Objetos guardados en la maleta y correctos.
     /// </summary>
-    private List<string> ObjetosGuardados { get; set; }
+    public List<string> ObjetosGuardados { get; set; }
 
     /// <summary>
     /// Objetos guardados en la maleta e incorrectos.
     /// </summary>
-    private List<string> ObjetosErroneosGuardados { get; set; }
+    public List<string> ObjetosErroneosGuardados { get; set; }
 
     /// <summary>
     /// Número de objetos guardados.
@@ -79,6 +80,7 @@ public class Luggage : MonoBehaviour
             ObjetosGuardados.Add(obj.name);
             Tracker.T.setVar("Objeto guardado", 1);
             Debug.Log("Correcto");
+            levelMng.addToLuggage(obj.name);
         }
         else
         {
@@ -103,6 +105,7 @@ public class Luggage : MonoBehaviour
         {
             ObjetosGuardados.Remove(obj.name);
             Tracker.T.setVar("Objeto quitado", 1);
+            levelMng.removefromLuggage(obj.name);
         }
         else
         {

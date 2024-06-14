@@ -9,6 +9,7 @@ using static Assets.Scripts.Constantes;
 // para leer de txt
 using System.IO;
 using System.Linq;
+using UnityEngine.Analytics;
 
 public class LevelSelector : MonoBehaviour
 {
@@ -65,7 +66,8 @@ public class LevelSelector : MonoBehaviour
     public int Level { get; set; }
 
     private int levelSelected;
-
+    [SerializeField]
+    private List<LevelButton> levels;
     #endregion
 
     #region Eventos
@@ -98,6 +100,8 @@ public class LevelSelector : MonoBehaviour
     public void SetWeather(int w)
     {
         GM.Gm.Clima = (Clima)w;
+        for (int i = 0; i < levels.Count; i++)
+            levels[i].CalcStars();
         ClimaButtons.SetActive(false);
         levelButtons.SetActive(true);
     }
@@ -112,68 +116,12 @@ public class LevelSelector : MonoBehaviour
         _decoration.SetActive(false);
         ClimaButtons.SetActive(false);
 
-
-        //  PanelList.SetActive(true);
-
-       
-        //reiniciar la variable
-        LevelNameGlobal = string.Empty;
-        if (l != 0)
+        if (l == 0)
         {
-            switch (l)
-            {
-                case 1:
-                    LevelNameGlobal = "Level1";
-                    break;
-                case 2:
-                    LevelNameGlobal = "Level2";
-                    break;
-                case 3:
-                    LevelNameGlobal = "Level3";
-                    break;
-                case 4:
-                    LevelNameGlobal = "Level4Global";
-                    break;
-            }  
-
-            if (LevelNameGlobal != "Level4Global")
-            {
-                switch (GM.Gm.Clima)
-                {
-                    case Clima.CALIDO:
-                        LevelNameGlobal = string.Concat(LevelNameGlobal, "Warm");
-                        break;
-                    case Clima.FRIO:
-                        LevelNameGlobal = string.Concat(LevelNameGlobal, "Cold");
-                        break;
-                }
-            }
-            //LoadList(LevelNameGlobal);
-        }
-        //TUTORIAL
-        else
-        {
-            LevelNameGlobal = "LevelTutorial";
             GM.Gm.Genero = Genero.NEUTRAL;
             GM.Gm.Clima = Clima.AMBOS;
-            //GM.Gm.List = new List<string>
-            //{
-            //    "Camiseta amarilla",
-            //    "Deportivas",
-            //    "Cepillo de dientes"
-            //};
-            StringBuilder cad = new StringBuilder();
-            cad.AppendLine("Lea atentamente e intente memorizar los siguientes objetos que debe introducir en la maleta...");
-            cad.AppendLine("Cuando se sienta preparado haga click en el botón amarillo de abajo");
-            cad.AppendLine(" ");
-            cad.AppendLine("- Camiseta amarilla");
-            cad.AppendLine("- Deportivas");
-            cad.AppendLine("- Cepillo de dientes");
-           // TextList.text = cad.ToString();
-          //  TextList.alignment = TextAnchor.MiddleLeft;
         }
 
-        Tracker.T.Completable.Initialized(LevelNameGlobal, CompletableTracker.Completable.Level);
         Play();
     }
 
@@ -182,7 +130,7 @@ public class LevelSelector : MonoBehaviour
     /// </summary>
     public void Play()
     {
-        string levelPlay = (GM.Gm.Level != 0) ? "Level"  : "Tutorial";
+        string levelPlay = (GM.Gm.Level != 0) ? "Level" : "Tutorial";
         SceneManager.LoadScene(levelPlay);
     }
 
@@ -217,138 +165,6 @@ public class LevelSelector : MonoBehaviour
     #endregion
 
     #region Métodos privados
-
-    /// <summary>
-    /// Carga la lista de objetos a poner en la maleta.
-    /// </summary>
-    /// <param name="name">Nombre del fichero donde se van a cargar los datos.</param>
-    private void LoadList(string name)
-    {
-
-        TextList.text = string.Concat("Lea atentamente e intente memorizar los siguientes objetos que debe introducir en la maleta...\n", Environment.NewLine);
-        GM.Gm.List = new List<string>();
-        GM.Gm.SceneObjects = new List<string>();
-        TextAsset list;
-        string txt = " ";
-        if (LevelNameGlobal != "Level4Global")
-        {
-            list = (TextAsset)Resources.Load(string.Concat("Lists/", name), typeof(TextAsset));
-            txt = Encoding.UTF8.GetString(list.bytes);
-        }
-        else
-        {
-            // list = (TextAsset)new System.IO.StreamReader(@".\configFile15O.txt");
-            string path = @".\configFileLuggage.txt";
-            FileStream fs;
-            if (!File.Exists(path))
-            {
-                list = (TextAsset)Resources.Load(string.Concat("Lists/", name), typeof(TextAsset));
-                txt = Encoding.UTF8.GetString(list.bytes);
-            }
-            else
-            {
-                System.IO.StreamReader file = new System.IO.StreamReader(path);
-                txt = file.ReadToEnd();
-                file.Close();
-            }
-
-        }
-
-
-        Queue<string> cola = new Queue<string>(txt.Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.RemoveEmptyEntries));
-        cola.Dequeue();
-        if (LevelNameGlobal != "Level4Global")
-        {
-
-            GetPrendas(cola, Genero.HOMBRE, "F");
-            GetPrendas(cola, Genero.MUJER, "N");
-            GetPrendas(cola, Genero.NEUTRAL, "Fin");
-            GetSceneObj(cola, Genero.HOMBRE, "F");
-            GetSceneObj(cola, Genero.MUJER, "N");
-            GetSceneObj(cola, Genero.NEUTRAL, "Fin");
-        }
-        // Level 4
-        else
-        {
-            string listObjetos = LoadListLevel4(cola, GM.Gm.List, "Ropa para obstaculizar");
-
-            TextList.text = string.Concat(TextList.text, listObjetos);
-            string listObstaculos = LoadListLevel4(cola, GM.Gm.ObstaculosList, null);
-
-        }
-    }
-
-
-
-    /// <summary>
-    /// Busca en el txt los objetos que el usuario debe guardar en la maleta
-    /// </summary>
-    private string LoadListLevel4(Queue<string> cola, List<string> list, string fin)
-    {
-        string line;
-        StringBuilder finalList = new StringBuilder();
-        bool vacio = false;
-
-        // Tramo de la ropa que el usuario debe buscar
-        line = cola.Dequeue();
-        while ((fin != null && !line.Equals(fin)) || (fin == null && !vacio))
-        {
-            List<string> entries = line.Split(',').Select(x => x.Trim()).Where(x => !string.IsNullOrWhiteSpace(x)).ToList();
-            entries.ForEach(objeto =>
-            {
-                list.Add(objeto);
-                finalList.AppendLine(string.Concat("- ", objeto));
-            });
-
-            if (cola.Count > 0)
-                line = cola.Dequeue();
-            else
-                vacio = true;
-        }
-        return finalList.ToString();
-    }
-
-    /// <summary>
-    /// Recoge del fichero las prendas según los parámetros.
-    /// </summary>
-    /// <param name="cola">Cola con la lista de objetos a procesar.</param>
-    /// <param name="genero">Genero de la prenda a recoger.</param>
-    /// <param name="fin">Hasta donde leemos del fichero.</param>
-    private void GetPrendas(Queue<string> cola, Genero genero, string fin)
-    {
-        StringBuilder finalList = new StringBuilder();
-        string objeto = cola.Dequeue();
-        while (!objeto.Equals(fin))
-        {
-            if (GM.Gm.Genero == genero || genero == Genero.NEUTRAL)
-            {
-                GM.Gm.List.Add(objeto);
-                finalList.AppendLine(string.Concat("- ", objeto));
-            }
-            objeto = cola.Dequeue();
-        }
-
-        TextList.text = string.Concat(TextList.text, finalList.ToString());
-    }
-
-    /// <summary>
-    /// Recoge del fichero los objetos de escena según los parámetros.
-    /// </summary>
-    /// <param name="cola">Cola con la lista de objetos a procesar.</param>
-    /// <param name="genero">Genero de la prenda a recoger.</param>
-    /// <param name="fin">Hasta donde leemos del fichero.</param>
-    private void GetSceneObj(Queue<string> cola, Genero genero, string fin)
-    {
-        string objeto = cola.Dequeue();
-        while (!objeto.Equals(fin))
-        {
-            if (GM.Gm.Genero == genero || genero == Genero.NEUTRAL)
-            {
-                GM.Gm.SceneObjects.Add(objeto);
-            }
-            objeto = cola.Dequeue();
-        }
-    }
 
 
 

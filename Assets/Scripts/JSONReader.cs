@@ -10,7 +10,7 @@ public class JSONReader : MonoBehaviour
        public string [] objectList_M;
        public string[] objectList_F ;
        public string[] objectList_N ;
-       public StorePoint[] storePoints ;
+       public StorePoint[] storagePoints ;
     }
     [System.Serializable]
     public class StorePoint

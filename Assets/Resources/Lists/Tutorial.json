@@ -1,26 +1,15 @@
 {
       "objectList_M": [
-            "Jersey",
-            "Bermudas"
       ],
       "objectList_F": [
-            "Blusa verde",
-            "Deportivas"
       ],
       "objectList_N": [
-            "Bote de medicinas",
-            "Peine"
+            "Camiseta amarilla"
       ],
       "storagePoints": [
             {
                   "name": "Bedroom_DresserDrawer_above",
-                  "objects": [
-                        {
-                              "name": "Libro",
-                              "position": 1,
-                              "gender": "N"
-                        }
-                  ]
+                  "objects": []
             },
             {
                   "name": "Bedroom_DresserDrawer_top",
@@ -33,16 +22,6 @@
             {
                   "name": "Bedroom_DresserDrawer_bottom",
                   "objects": [
-                        {
-                              "name": "Guion de viajes",
-                              "position": 5,
-                              "gender": "N"
-                        },
-                        {
-                              "name": "Pijama de invierno",
-                              "position": 2,
-                              "gender": "N"
-                        }
                   ]
             },
             {
@@ -52,11 +31,6 @@
             {
                   "name": "Bedroom_ClosetDrawer_middle",
                   "objects": [
-                        {
-                              "name": "Bermudas",
-                              "position": 3,
-                              "gender": "N"
-                        }
                   ]
             },
             {
@@ -67,17 +41,7 @@
                   "name": "Bedroom_ClosetDoor",
                   "objects": [
                         {
-                              "name": "Jersey",
-                              "position": 0,
-                              "gender": "M"
-                        },
-                        {
-                              "name": "Blusa verde",
-                              "position": 0,
-                              "gender": "F"
-                        },
-                        {
-                              "name": "Camisa roja",
+                              "name": "Camiseta amarilla",
                               "position": 1,
                               "gender": "N"
                         }
@@ -110,31 +74,16 @@
             {
                   "name": "Bathroom_hanger",
                   "objects": [
-                        {
-                              "name": "Toalla",
-                              "position": 0,
-                              "gender": "N"
-                        }
                   ]
             },
             {
                   "name": "Bathroom_cabinet_above",
                   "objects": [
-                        {
-                              "name": "Colonia",
-                              "position": 0,
-                              "gender": "N"
-                        }
                   ]
             },
             {
                   "name": "Bathroom_medicineCabinet",
                   "objects": [
-                        {
-                              "name": "Bote de medicinas",
-                              "position": 1,
-                              "gender": "N"
-                        }
                   ]
             },
             {
