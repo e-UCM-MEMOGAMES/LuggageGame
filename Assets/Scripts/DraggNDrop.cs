@@ -107,6 +107,8 @@ public class DraggNDrop : MonoBehaviour
         transform.position = StartPoint;
         if (ItsInTarget)
         {
+            Debug.Log("lol");
+
             Maleta.SaveObject(ObjetoMaleta);
             ObjetoMaleta.SetTwin(gameObject);
             gameObject.SetActive(false);
@@ -118,7 +120,7 @@ public class DraggNDrop : MonoBehaviour
     {
         if (collision == null)
             throw new ArgumentNullException(nameof(collision));
-
+        Debug.Log("Ontrigger");
         ItsInTarget = true;
 
     }

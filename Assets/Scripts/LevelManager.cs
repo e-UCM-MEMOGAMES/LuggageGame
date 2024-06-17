@@ -429,6 +429,7 @@ public class LevelManager : MonoBehaviour
 
             bttnEnd.gameObject.SetActive(false);
             buttonBackToRoom.SetActive(true);
+            buttonBathroom.gameObject.SetActive(false);
 
             buttonBathroom.GetComponent<Image>().sprite = bttnBathroom[1];
             Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[1];
@@ -559,26 +560,29 @@ public class LevelManager : MonoBehaviour
         //    cad.Append(s);
 
         int starsCompleted=0;
-        if (luggage.ObjetosErroneosGuardados.Count() == 0)
+        if (luggage.ObjetosGuardados.Count() == luggage.ObjetosList.Count())
         {
             starsCompleted++;
             stars[0].transform.GetChild(0).gameObject.SetActive(true);
-          
+
+            if (luggage.ObjetosErroneosGuardados.Count() == 0)
+            {
+                starsCompleted++;
+                stars[1].transform.GetChild(0).gameObject.SetActive(true);
+              
+                if (checkOpportunities == maxcheckOpportunities)
+                {
+                    starsCompleted++;
+                    stars[2].transform.GetChild(0).gameObject.SetActive(true);
+
+                }
+            }
+
         }
         wrongObjectsText.text = luggage.ObjetosErroneosGuardados.Count().ToString();
-        if (luggage.ObjetosGuardados.Count()== luggage.ObjetosList.Count())
-        {
-            starsCompleted++;
-            stars[1].transform.GetChild(0).gameObject.SetActive(true);
-            
-        }
+     
         correctObjectsText.text = luggage.ObjetosGuardados.Count().ToString() + " / " + luggage.ObjetosList.Count().ToString();
-        if (checkOpportunities==maxcheckOpportunities)
-        {
-            starsCompleted++;
-            stars[2].transform.GetChild(0).gameObject.SetActive(true);
-           
-        }
+       
         finalOpportunitiesText.text = (maxcheckOpportunities - checkOpportunities).ToString() + " / " + maxcheckOpportunities.ToString();
 
         if (PlayerPrefs.GetInt(LevelNameGlobal)<= starsCompleted)
