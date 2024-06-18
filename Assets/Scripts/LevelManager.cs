@@ -15,7 +15,7 @@ using static CheckBox;
 public class LevelManager : MonoBehaviour
 {
 
-    enum State { BATHROOM, ROOM, DRAWER, LUGGAGE, FIRSTAIDKIT, END };
+    enum State { BATHROOM, BEDROOM, DRAWER, LUGGAGE, FIRSTAIDKIT, END };
     public enum ObjectType { Clothes, Shoes, Others, ObjectTypeSize };
     string LevelNameGlobal;
     JSONReader jsonReader;
@@ -82,8 +82,8 @@ public class LevelManager : MonoBehaviour
     public Camera bathroomCam;
     public Camera drawerCam;
     public Camera firstAidKitCam;
-    public GameObject buttonBathroom;
-    public Sprite[] bttnBathroom;
+    public GameObject roomButton;
+    public Sprite[] roomsButton;
     [SerializeField]
     private List<Sprite> _tiposSuelos;
     [SerializeField]
@@ -112,8 +112,8 @@ public class LevelManager : MonoBehaviour
     /// </summary>
     public Text TextList { get; set; }
 
-    // 0 = Room & 1 = Bathroom
-    int myActualRoom = 0;
+    // 1 = Room & 0 = Bathroom
+    int myActualRoom = 1;
     //public Image
     void Start()
     {
@@ -131,12 +131,12 @@ public class LevelManager : MonoBehaviour
         GM.Gm.Genero = (Genero)PlayerPrefs.GetInt("genre", -1);
         SetLevel();
 
-        state = State.ROOM;
+        state = State.BEDROOM;
         roomCam.gameObject.SetActive(true);
         bathroomCam.gameObject.SetActive(false);
         drawerCam.gameObject.SetActive(false);
         firstAidKitCam.gameObject.SetActive(false);
-        buttonBathroom.SetActive(true);
+        roomButton.SetActive(true);
         buttonBackToRoom.SetActive(false);
         initialLuggagePos = luggage.transform.position;
         initialLuggageScale = luggage.transform.localScale;
@@ -259,7 +259,7 @@ public class LevelManager : MonoBehaviour
     }
 
     /// <summary>
-    /// Generar la lista d eobjetos a poner en la maleta en UI
+    /// Generar la lista de objetos a poner en la maleta en UI
     /// </summary>
     private void showList()
     {
@@ -297,9 +297,9 @@ public class LevelManager : MonoBehaviour
                     actualCheckboxYPosition += YOffsetBetweenCheckBox;
                 }
                 objectLists[i].contentText.text = string.Concat(objectLists[i].contentText.text, finalList.ToString());
-
+                actualLineYPosition += 1.5f*YOffsetBetweenLine;
             }
-            actualLineYPosition += YOffsetBetweenLine;
+          
         }
 
 
@@ -352,6 +352,7 @@ public class LevelManager : MonoBehaviour
                 {
                     string objectName = info.storagePoints[i].objects[j].name;
                     GM.Gm.SceneObjects.Add(objectName);
+                    Debug.Log(objectName);
                     storageDictionary.TryGetValue(info.storagePoints[i].name, out List<Transform> l);
 
                     GameObject go = objectsDictionary[objectName].go;
@@ -364,53 +365,6 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// Recoge del fichero los objetos de escena según los parámetros.
-    /// </summary>
-    /// <param name="cola">Cola con la lista de objetos a procesar.</param>
-    /// <param name="genero">Genero de la prenda a recoger.</param>
-    /// <param name="fin">Hasta donde leemos del fichero.</param>
-    private void GetSceneObj(Queue<string> cola, Genero genero, string fin)
-    {
-        if (GM.Gm.Genero == genero || genero == Genero.NEUTRAL)
-        {
-            string objeto = cola.Dequeue();
-
-            List<string> listObj;
-            int j = 0;
-            listObj = new List<string>(objeto.Split(',').Select(o => o.Trim()));
-            Debug.Log(listObj[0]);
-            while (!listObj[0].Equals(fin))
-            {
-
-                Debug.Log("&&&&&&&&&&&&&&& List : " + listObj[0] + " " + listObj[1] + " " + listObj[2]);
-                if (listObj.Count == 3)
-                {
-                    GM.Gm.SceneObjects.Add(listObj[0]);
-
-                    storageDictionary.TryGetValue(listObj[1], out List<Transform> l);
-
-                    objectsDictionary[listObj[0]].go.transform.SetParent(l[int.Parse(listObj[2])]);
-                    objectsDictionary[listObj[0]].go.transform.localPosition = new Vector3(0, 0, 0);
-                    objectsDictionary[listObj[0]].go.SetActive(true);
-                }
-
-                objeto = cola.Dequeue();
-                Debug.Log("a");
-                listObj = new List<string>(objeto.Split(',').Select(o => o.Trim()));
-                j++;
-            }
-
-        }
-        else
-        {
-            string objeto = cola.Dequeue();
-            while (!objeto.Equals(fin))
-            {
-                objeto = cola.Dequeue();
-            }
-        }
-    }
     public void addToLuggage(string o)
     {
         checkBoxDictionary[o].SetCheckBoxState(CheckBoxState.Correct);
@@ -424,15 +378,13 @@ public class LevelManager : MonoBehaviour
         if (state != State.END)
         {
             state = State.FIRSTAIDKIT;
-            bathroomCam.gameObject.SetActive(false);
             firstAidKitCam.gameObject.SetActive(true);
+            bathroomCam.gameObject.SetActive(false);
 
             bttnEnd.gameObject.SetActive(false);
             buttonBackToRoom.SetActive(true);
-            buttonBathroom.gameObject.SetActive(false);
+            roomButton.gameObject.SetActive(false);
 
-            buttonBathroom.GetComponent<Image>().sprite = bttnBathroom[1];
-            Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[1];
             Tracker.T.Accessible.Accessed("FirstAidKit", AccessibleTracker.Accessible.Screen);
         }
     }
@@ -443,25 +395,23 @@ public class LevelManager : MonoBehaviour
         {
             bttnEnd.gameObject.SetActive(false);
             state = State.DRAWER;
-            roomCam.gameObject.SetActive(false);
+
             drawerCam.gameObject.SetActive(true);
 
-            if (myActualRoom == 0)
+            if (myActualRoom == (int)State.BEDROOM)
             {
-                buttonBathroom.GetComponent<Image>().sprite = bttnBathroom[0];
-                Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[0];
+                roomCam.gameObject.SetActive(false);
             }
-            else if (myActualRoom == 1)
+            else if (myActualRoom == (int)State.BATHROOM)
             {
-                buttonBathroom.GetComponent<Image>().sprite = bttnBathroom[1];
-                Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[1];
+                bathroomCam.gameObject.SetActive(false);
             }
             buttonBackToRoom.SetActive(true);
-            buttonBathroom.SetActive(false);
-            drawerImage.SetActive(true);
+            roomButton.SetActive(false);
 
             if (drawer != null)
             {
+                drawerImage.SetActive(true);
                 currentDrawer = drawer;
                 currentDrawer.SetActive(true);
                 luggage.transform.position = initialLuggagePos;
@@ -475,9 +425,9 @@ public class LevelManager : MonoBehaviour
     {
         if (state != State.END)
         {
-            if (currentDrawer != null) currentDrawer.SetActive(false);
+          
+           // if (currentDrawer != null) currentDrawer.SetActive(false);
             GoToDrawer(null);
-            drawerImage.SetActive(false);
             state = State.LUGGAGE;
             luggage.gameObject.SetActive(true);
             luggage.transform.position = new Vector3(0, 19f, luggage.transform.position.z);
@@ -487,29 +437,35 @@ public class LevelManager : MonoBehaviour
 
     }
 
-    public void BackToRoom()
+    public void GoToBedRoom()
     {
         // boton salir de la maleta
         if (state != State.END)
         {
-            if (myActualRoom == 0)
+            if (state == State.LUGGAGE || state == State.DRAWER)
             {
-                state = State.ROOM;
-                roomCam.gameObject.SetActive(true);
+                drawerCam.gameObject.SetActive(false);
+            }
+            else if (state == (int)State.BATHROOM)
+            {
                 bathroomCam.gameObject.SetActive(false);
             }
-            else if (myActualRoom == 1)
-            {
-                state = State.BATHROOM;
-                roomCam.gameObject.SetActive(false);
-                bathroomCam.gameObject.SetActive(true);
-            }
-            buttonBathroom.SetActive(true);
-            drawerCam.gameObject.SetActive(false);
+
+            state = State.BEDROOM;
+            myActualRoom = (int)State.BEDROOM;
+
+            bttnEnd.gameObject.SetActive(true);
+
+
+            roomButton.GetComponent<Image>().sprite = roomsButton[(int)State.BEDROOM];
+            Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[(int)State.BEDROOM];
+
+            roomCam.gameObject.SetActive(true);
+
+
             if (currentDrawer != null)
                 currentDrawer.SetActive(false);
-            buttonBackToRoom.SetActive(false);
-            bttnEnd.gameObject.SetActive(true);
+         
         }
     }
 
@@ -517,37 +473,63 @@ public class LevelManager : MonoBehaviour
     {
         if (state != State.END)
         {
-            bttnEnd.gameObject.SetActive(true);
+            if (state == State.LUGGAGE || state == State.DRAWER )
+            {
+                drawerCam.gameObject.SetActive(false);
+            }
+            else if(state == State.FIRSTAIDKIT)
+            {
+                firstAidKitCam.gameObject.SetActive(false);
+            }
+            else
+            {
+                roomCam.gameObject.SetActive(false);
+            }
             state = State.BATHROOM;
-            buttonBathroom.GetComponent<Image>().sprite = bttnBathroom[1];
-            Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[1];
-            drawerCam.gameObject.SetActive(false);
-            roomCam.gameObject.SetActive(false);
+            myActualRoom = (int)State.BATHROOM;
+
+            bttnEnd.gameObject.SetActive(true);
+
+           
+            roomButton.GetComponent<Image>().sprite = roomsButton[(int)State.BATHROOM];
+            Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[(int)State.BATHROOM];
+
             bathroomCam.gameObject.SetActive(true);
-            buttonBackToRoom.SetActive(false);
+            if (currentDrawer != null)
+                currentDrawer.SetActive(false);
             Tracker.T.Accessible.Accessed("Bathroom", AccessibleTracker.Accessible.Screen);
         }
 
     }
-    public void BathRoomButton()
+    public void RoomButton()
     {
-        if (currentDrawer != null) currentDrawer.SetActive(false);
-        if (myActualRoom == 1)
+       // if (currentDrawer != null) currentDrawer.SetActive(false);
+
+        if (myActualRoom == (int)State.BATHROOM)
         {
-            myActualRoom = 0;
             Tracker.T.setVar("RoomButtom", 1);
-            BackToRoom();
-            buttonBathroom.GetComponent<Image>().sprite = bttnBathroom[0];
-            Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[0];
+            GoToBedRoom();
+         
         }
         else
         {
-            myActualRoom = 1;
             Tracker.T.setVar("BathRoomButton", 1);
             GoToBathroom();
         }
     }
-
+    public void BackToRoomButton()
+    {
+        roomButton.SetActive(true);
+        buttonBackToRoom.SetActive(false);
+        if (myActualRoom == (int)State.BATHROOM)
+        {
+            GoToBathroom();
+        }
+        else if (myActualRoom == (int)State.BEDROOM)
+        {
+            GoToBedRoom();
+        }
+    }
     public void End()
     {
         state = State.END;
@@ -595,7 +577,7 @@ public class LevelManager : MonoBehaviour
         }
         objectsPanel.SetActive(true);
         bttnEnd.gameObject.SetActive(false);
-        buttonBathroom.SetActive(false);
+        roomButton.SetActive(false);
         endPanel.gameObject.SetActive(true);
         //endPanel.GetComponentInChildren<Text>().text = cad.ToString();
         Tracker.T.setVar("EndButton", 1);

@@ -1,25 +1,34 @@
 {
       "objectList_M": [
-            "Bañador",
-            "Bermudas"
+            "Zapatos de tela",
+            "Riñonera"
       ],
       "objectList_F": [
-            "Bikini",
-            "Vestido"
+            "Tacones",
+            "Bolso"
       ],
       "objectList_N": [
-            "Toalla",
-            "Guía de viajes",
-            "Gorra",
-            "Pasta de dientes"
+            "Pantalones largos",
+            "Bote de medicinas",
+            "Camiseta amarilla",
+            "Cinturón",
+            "Colonia",
+            "Abrigo",
+            "Calcetines"
+            
       ],
       "storagePoints": [
             {
                   "name": "Bedroom_DresserDrawer_above",
                   "objects": [
                         {
-                              "name": "Gorra",
+                              "name": "Libro",
                               "position": 0,
+                              "gender": "N"
+                        },
+                        {
+                              "name": "Cinturón",
+                              "position": 1,
                               "gender": "N"
                         }
                   ]
@@ -28,8 +37,8 @@
                   "name": "Bedroom_DresserDrawer_top",
                   "objects": [
                         {
-                              "name": "Camiseta de tirantes",
-                              "position": 2,
+                              "name": "Pantalones largos",
+                              "position": 4,
                               "gender": "N"
                         }
                   ]
@@ -55,25 +64,20 @@
             {
                   "name": "Bedroom_ClosetDrawer_middle",
                   "objects": [
-                        {
-                              "name": "Bermudas",
-                              "position": 0,
-                              "gender": "M"
-                        }
                   ]
             },
             {
                   "name": "Bedroom_ClosetDrawer_bottom",
                   "objects": [
                         {
-                              "name": "Bikini",
-                              "position": 3,
-                              "gender": "F"
+                              "name": "Calcetines",
+                              "position": 0,
+                              "gender": "N"
                         },
                         {
-                              "name": "Bañador",
+                              "name": "Bufanda",
                               "position": 3,
-                              "gender": "M"
+                              "gender": "N"
                         }
                   ]
             },
@@ -83,17 +87,6 @@
                         {
                               "name": "Camiseta amarilla",
                               "position": 1,
-                              "gender": "M"
-                        },
-                        
-                        {
-                              "name": "Vestido",
-                              "position":  1     ,
-                              "gender": "F"
-                        },
-                        {
-                              "name": "Camisa roja",
-                              "position": 0,
                               "gender": "N"
                         }
                   ]
@@ -102,21 +95,50 @@
                   "name": "Bedroom_CoatRack",
                   "objects": [
                         {
-                              "name": "Vestido",
+                              "name": "Abrigo",
                               "position": 0,
-                              "gender": "F"
+                              "gender": "N"
                         }
                   ]
             },
             {
                   "name": "Bedroom_ShoeRack",
-                  "objects": [
-                      
-                  ]
+                  "objects": [   {
+                        "name": "Botas",
+                        "position": 5,
+                        "gender": "N"
+                  },
+                  {
+                        "name": "Tacones",
+                        "position": 3,
+                        "gender": "F"
+                  },
+                  {
+                        "name": "Zapatos de tela",
+                        "position": 3,
+                        "gender": "M"
+                  }
+            ]
             },
             {
                   "name": "Bedroom_ShoeRack_above",
-                  "objects": []
+                  "objects": [
+                        {
+                              "name": "Bolso",
+                              "position": 0,
+                              "gender": "F"
+                        },
+                        {
+                              "name": "Riñonera",
+                              "position": 0,
+                              "gender": "M"
+                        },
+                        {
+                              "name": "Gafas de ski",
+                              "position": 1,
+                              "gender": "N"
+                        }
+                  ]
             },
             {
                   "name": "Bathroom_hanger",
@@ -126,8 +148,6 @@
                               "position": 0,
                               "gender": "N"
                         }
-                  
-                  
                   ]
             },
             {
@@ -138,37 +158,29 @@
                               "position": 0,
                               "gender": "N"
                         }
-                  
                   ]
             },
             {
                   "name": "Bathroom_medicineCabinet",
                   "objects": [
+                        {
+                              "name": "Bote de medicinas",
+                              "position": 2,
+                              "gender": "N"           
+                        }
                   ]
             },
             {
                   "name": "Bathroom_cabinet_top",
                   "objects": [
-                        {
-                              "name": "Peine",
-                              "position": 0,
-                              "gender": "N"
-                        },
-                        {
-                              "name": "Pasta de dientes",
-                              "position": 5,
-                              "gender": "N"
-                        }
-                  
                   ]
             },
             {
                   "name": "Bathroom_cabinet_bottom",
                   "objects": [
-                        
                         {
-                              "name": "Pareo",
-                              "position": 1,
+                              "name": "Neceser",
+                              "position": 3,
                               "gender": "N"
                         }
                   ]

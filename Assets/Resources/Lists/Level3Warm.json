@@ -1,24 +1,33 @@
 {
       "objectList_M": [
-            "Bañador",
-            "Bermudas"
+            "Camisa hawaiana",
+            "Riñonera",
+            "Zapatos de tela"
       ],
       "objectList_F": [
-            "Bikini",
-            "Vestido"
+            "Falda",
+            "Bolso",
+            "Tacones"
       ],
       "objectList_N": [
-            "Toalla",
-            "Guía de viajes",
-            "Gorra",
-            "Pasta de dientes"
+            "Camiseta de tirantes",
+            "Pareo",
+            "Camiseta verde",
+            "Neceser",
+            "Cinturón",
+            "Libro"
       ],
       "storagePoints": [
             {
                   "name": "Bedroom_DresserDrawer_above",
                   "objects": [
                         {
-                              "name": "Gorra",
+                              "name": "Cinturón",
+                              "position": 1,
+                              "gender": "N"
+                        },
+                        {
+                              "name": "Libro",
                               "position": 0,
                               "gender": "N"
                         }
@@ -27,23 +36,23 @@
             {
                   "name": "Bedroom_DresserDrawer_top",
                   "objects": [
-                        {
-                              "name": "Camiseta de tirantes",
-                              "position": 2,
-                              "gender": "N"
-                        }
+                       
                   ]
             },
             {
                   "name": "Bedroom_DresserDrawer_middle",
-                  "objects": []
+                  "objects": [  {
+                        "name": "Camisa hawaiana",
+                        "position": 1,
+                        "gender": "M"
+                  }]
             },
             {
                   "name": "Bedroom_DresserDrawer_bottom",
                   "objects": [
                         {
                               "name": "Guía de viajes",
-                              "position": 0,
+                              "position": 4,
                               "gender": "N"
                         }
                   ]
@@ -56,44 +65,33 @@
                   "name": "Bedroom_ClosetDrawer_middle",
                   "objects": [
                         {
-                              "name": "Bermudas",
-                              "position": 0,
-                              "gender": "M"
-                        }
-                  ]
+                              "name": "Reloj",
+                              "position": 5,
+                              "gender": "N"
+                        }    ,
+                        {
+                              "name": "Falda",
+                              "position": 2,
+                              "gender": "F"
+                        }  
+                           ]
             },
             {
                   "name": "Bedroom_ClosetDrawer_bottom",
                   "objects": [
-                        {
-                              "name": "Bikini",
-                              "position": 3,
-                              "gender": "F"
-                        },
-                        {
-                              "name": "Bañador",
-                              "position": 3,
-                              "gender": "M"
-                        }
                   ]
             },
             {
                   "name": "Bedroom_ClosetDoor",
                   "objects": [
                         {
-                              "name": "Camiseta amarilla",
-                              "position": 1,
-                              "gender": "M"
-                        },
-                        
-                        {
-                              "name": "Vestido",
-                              "position":  1     ,
-                              "gender": "F"
-                        },
-                        {
-                              "name": "Camisa roja",
+                              "name": "Camiseta de tirantes",
                               "position": 0,
+                              "gender": "N"
+                        },
+                        {
+                              "name": "Camiseta verde",
+                              "position": 1,
                               "gender": "N"
                         }
                   ]
@@ -101,22 +99,40 @@
             {
                   "name": "Bedroom_CoatRack",
                   "objects": [
-                        {
-                              "name": "Vestido",
-                              "position": 0,
-                              "gender": "F"
-                        }
+
                   ]
             },
             {
                   "name": "Bedroom_ShoeRack",
                   "objects": [
-                      
+                        {
+                              "name": "Chanclas",
+                              "position": 2,
+                              "gender": "N"
+                        },
+                        {
+                              "name": "Tacones",
+                              "position": 0,
+                              "gender": "F"
+                        },
+                        {
+                              "name": "Zapatos de tela",
+                              "position": 0,
+                              "gender": "M"
+                        }
                   ]
             },
             {
                   "name": "Bedroom_ShoeRack_above",
-                  "objects": []
+                  "objects": [
+ 
+                        {
+                              "name": "Gafas de buceo",
+                              "position": 0,
+                              "gender": "N"
+                        }
+
+                  ]
             },
             {
                   "name": "Bathroom_hanger",
@@ -133,30 +149,31 @@
             {
                   "name": "Bathroom_cabinet_above",
                   "objects": [
-                        {
-                              "name": "Colonia",
-                              "position": 0,
-                              "gender": "N"
-                        }
-                  
+                        
                   ]
             },
             {
                   "name": "Bathroom_medicineCabinet",
                   "objects": [
+                        
+                        {
+                              "name": "Bote de medicinas",
+                              "position": 0,
+                              "gender": "N"
+                        }
                   ]
             },
             {
                   "name": "Bathroom_cabinet_top",
                   "objects": [
                         {
-                              "name": "Peine",
+                              "name": "Pasta de dientes",
                               "position": 0,
                               "gender": "N"
                         },
                         {
-                              "name": "Pasta de dientes",
-                              "position": 5,
+                              "name": "Cepillo de dientes",
+                              "position": 3,
                               "gender": "N"
                         }
                   
@@ -165,12 +182,18 @@
             {
                   "name": "Bathroom_cabinet_bottom",
                   "objects": [
+                        {
+                              "name": "Neceser",
+                              "position":2,
+                              "gender": "N"
+                        },
                         
                         {
                               "name": "Pareo",
-                              "position": 1,
+                              "position": 5,
                               "gender": "N"
                         }
+
                   ]
             }
       ]

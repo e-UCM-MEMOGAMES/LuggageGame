@@ -1,46 +1,81 @@
 {
       "objectList_M": [
-            "Bañador",
-            "Bermudas"
+            "Pijama de invierno"
       ],
       "objectList_F": [
-            "Bikini",
-            "Vestido"
+            "Pijama de seda"
       ],
       "objectList_N": [
-            "Toalla",
+            "Pantalones largos",
+            "Abrigo",
+            "Jersey",
             "Guía de viajes",
-            "Gorra",
-            "Pasta de dientes"
+            "Bufanda"
       ],
       "storagePoints": [
             {
                   "name": "Bedroom_DresserDrawer_above",
                   "objects": [
-                        {
-                              "name": "Gorra",
-                              "position": 0,
-                              "gender": "N"
-                        }
                   ]
             },
             {
                   "name": "Bedroom_DresserDrawer_top",
                   "objects": [
+
                         {
-                              "name": "Camiseta de tirantes",
-                              "position": 2,
+                              "name": "Bufanda",
+                              "position": 5,
                               "gender": "N"
                         }
                   ]
             },
             {
                   "name": "Bedroom_DresserDrawer_middle",
-                  "objects": []
+                  "objects": [
+                  ]
             },
             {
                   "name": "Bedroom_DresserDrawer_bottom",
                   "objects": [
+                        {
+                              "name": "Gorro",
+                              "position": 5,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bedroom_ClosetDrawer_top",
+                  "objects": [
+                        {
+                              "name": "Pijama de invierno",
+                              "position": 3,
+                              "gender": "M"
+                        }, {
+                              "name": "Pijama de seda",
+                              "position": 3,
+                              "gender": "F"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bedroom_ClosetDrawer_middle",
+                  "objects": [
+                        {
+                              "name": "Pantalones largos",
+                              "position": 4,
+                              "gender": "N"
+                        }
+                  ]
+            },
+            {
+                  "name": "Bedroom_ClosetDrawer_bottom",
+                  "objects": [
+                        {
+                              "name": "Calcetines",
+                              "position": 4,
+                              "gender": "N"
+                        },
                         {
                               "name": "Guía de viajes",
                               "position": 0,
@@ -49,51 +84,11 @@
                   ]
             },
             {
-                  "name": "Bedroom_ClosetDrawer_top",
-                  "objects": []
-            },
-            {
-                  "name": "Bedroom_ClosetDrawer_middle",
-                  "objects": [
-                        {
-                              "name": "Bermudas",
-                              "position": 0,
-                              "gender": "M"
-                        }
-                  ]
-            },
-            {
-                  "name": "Bedroom_ClosetDrawer_bottom",
-                  "objects": [
-                        {
-                              "name": "Bikini",
-                              "position": 3,
-                              "gender": "F"
-                        },
-                        {
-                              "name": "Bañador",
-                              "position": 3,
-                              "gender": "M"
-                        }
-                  ]
-            },
-            {
                   "name": "Bedroom_ClosetDoor",
                   "objects": [
                         {
-                              "name": "Camiseta amarilla",
+                              "name": "Jersey",
                               "position": 1,
-                              "gender": "M"
-                        },
-                        
-                        {
-                              "name": "Vestido",
-                              "position":  1     ,
-                              "gender": "F"
-                        },
-                        {
-                              "name": "Camisa roja",
-                              "position": 0,
                               "gender": "N"
                         }
                   ]
@@ -102,48 +97,54 @@
                   "name": "Bedroom_CoatRack",
                   "objects": [
                         {
-                              "name": "Vestido",
-                              "position": 0,
-                              "gender": "F"
+                              "name": "Abrigo",
+                              "position": 1,
+                              "gender": "N"
                         }
+
                   ]
             },
             {
                   "name": "Bedroom_ShoeRack",
                   "objects": [
-                      
                   ]
             },
             {
                   "name": "Bedroom_ShoeRack_above",
-                  "objects": []
+                  "objects": [
+
+                        {
+                              "name": "Gafas de ski",
+                              "position": 2,
+                              "gender": "N"
+                        }
+
+                  ]
             },
             {
                   "name": "Bathroom_hanger",
-                  "objects": [
-                        {
-                              "name": "Toalla",
-                              "position": 0,
-                              "gender": "N"
-                        }
-                  
-                  
-                  ]
+                  "objects": []
             },
             {
                   "name": "Bathroom_cabinet_above",
                   "objects": [
+                        
                         {
                               "name": "Colonia",
                               "position": 0,
                               "gender": "N"
                         }
-                  
                   ]
             },
             {
                   "name": "Bathroom_medicineCabinet",
                   "objects": [
+
+                        {
+                              "name": "Bote de medicinas",
+                              "position": 0,
+                              "gender": "N"
+                        }
                   ]
             },
             {
@@ -151,27 +152,14 @@
                   "objects": [
                         {
                               "name": "Peine",
-                              "position": 0,
-                              "gender": "N"
-                        },
-                        {
-                              "name": "Pasta de dientes",
                               "position": 5,
                               "gender": "N"
                         }
-                  
                   ]
             },
             {
                   "name": "Bathroom_cabinet_bottom",
-                  "objects": [
-                        
-                        {
-                              "name": "Pareo",
-                              "position": 1,
-                              "gender": "N"
-                        }
-                  ]
+                  "objects": []
             }
       ]
 }
