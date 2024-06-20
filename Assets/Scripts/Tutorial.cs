@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 
@@ -14,15 +15,13 @@ public class Tutorial : MonoBehaviour
 
     Text texto;
 
-    enum State { CLICK, DRAGNDROP, LUGGAGE, OVERINFO, PULLOVER, BACKTOROOM, DRAWER, BATHROOM, BACKTHROOM, END, NULL, CAMISETAAMARILLA }
+    enum State { NONE,CLICK, DRAGNDROP, LUGGAGE, OVERINFO, PULLOVER, BACKTOROOM, DRAWER, BATHROOM, BACKTHROOM, END, NULL, CAMISETAAMARILLA,CLICKLIST, CLICKEDLIST,BACKFROMLIST }
     State state;
     // Use this for initialization
     void Start()
     {
-        state = State.CLICK;
-        texto = panel.GetComponentInChildren<Text>();
-        texto.text = "Pulse sobre la camiseta amarilla y mantenga pulsado.";
-        manoAnimator.SetInteger("step", 0);
+        state = State.NONE;
+        panel.SetActive(false);
     }
     private void Update()
     {
@@ -46,8 +45,9 @@ public class Tutorial : MonoBehaviour
             }
             else if (state == State.BACKTHROOM)
             {
-                state = State.END;
-                panel.SetActive(false);
+                state = State.CLICKLIST;
+                panel.SetActive(true);
+                texto.text = "Aqui puedes echar un ojo a la lista de objetos en caso de que se te ha olvidado.";
                 manoAnimator.SetInteger("step", 8);
             }
             else if (state == State.NULL)
@@ -103,6 +103,13 @@ public class Tutorial : MonoBehaviour
                 manoAnimator.SetInteger("step", 3);
             }
         }
+        else if (state == State.CLICKLIST )
+        {
+            state = State.CLICKEDLIST;
+            texto.text = "Aqui puedes echar un ojo a la lista de objetos en caso de que se te ha olvidado.";
+            panel.SetActive(true);
+
+        }
         else if (state == State.END && camara.gameObject.activeSelf)
         {
             state = State.NULL;
@@ -110,7 +117,27 @@ public class Tutorial : MonoBehaviour
             panel.SetActive(true);
         }
     }
+    public void ButtonList()
+    {
+        if (state == State.CLICKEDLIST)
+        {
+            state = State.BACKFROMLIST;
+            texto.text = "Cuidado que cada revisión resta una oportunidad. Ya no podrás volver a revisar cuando agoten todos los intentos.";
+            mano.SetActive(false);
+        }
+        
+    }
+    public void ButtonBack()
+    {
+        if (state == State.BACKFROMLIST)
+        {
+            state = State.END;
+            mano.SetActive(true);
+            manoAnimator.SetInteger("step", 9);
 
+        }
+
+    }
     public void ButtonBackToRoom()
     {
         if (state == State.BACKTOROOM)
@@ -139,6 +166,15 @@ public class Tutorial : MonoBehaviour
         }
 
     }
+    public void ButtonBegin()
+    {
+        state = State.CLICK;
+        texto = panel.GetComponentInChildren<Text>();
+        texto.text = "Pulse sobre la camiseta amarilla y mantenga pulsado.";
+        manoAnimator.SetInteger("step", 0);
+        panel.SetActive(true);
+    }
+   
     public void End()
     {
         panel.SetActive(false);

@@ -112,7 +112,7 @@ public class GM : MonoBehaviour
     {
         PlayerPrefs.SetInt("genre", g);
         Genero = (Genero)g;
-        LoadScene("Menu");
+        LoadScene("LevelSelector");
     }
 
     public void LoadScene(string scene)

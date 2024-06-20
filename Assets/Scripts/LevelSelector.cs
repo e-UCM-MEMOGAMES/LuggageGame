@@ -78,12 +78,12 @@ public class LevelSelector : MonoBehaviour
         ClimaButtons.SetActive(true);
         levelButtons.SetActive(false);
         GM.Gm.Genero = (Genero)PlayerPrefs.GetInt("genre", -1);
+           // SelectWeather(0);
 
-        if (!PlayerPrefs.HasKey("firstime"))
-        {
-            PlayerPrefs.SetInt("firstime", 1);
-            SelectWeather(0);
-        }
+        //if (!PlayerPrefs.HasKey("firstime"))
+        //{
+        //    PlayerPrefs.SetInt("firstime", 1);
+        //}
 
         //if (PlayerPrefs.GetInt("level3C") + PlayerPrefs.GetInt("level3W") >= 1) creditsButton.SetActive(true);
         //else creditsButton.SetActive(false);

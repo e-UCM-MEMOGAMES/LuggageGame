@@ -125,7 +125,7 @@ public class LevelManager : MonoBehaviour
         }
         level = GM.Gm.Level;
         InicializeDictionary();
-       // TextList = PanelList.GetComponentInChildren<Text>();
+        // TextList = PanelList.GetComponentInChildren<Text>();
 
         noteBookTr = noteBookGO.GetComponent<RectTransform>();
         GM.Gm.Genero = (Genero)PlayerPrefs.GetInt("genre", -1);
@@ -171,7 +171,7 @@ public class LevelManager : MonoBehaviour
         PanelList.SetActive(true);
         int l = GM.Gm.Level;
         LevelNameGlobal = string.Empty;
-        Debug.Log(level +" "+l);
+        Debug.Log(level + " " + l);
         if (l != 0)
         {
             switch (l)
@@ -297,9 +297,9 @@ public class LevelManager : MonoBehaviour
                     actualCheckboxYPosition += YOffsetBetweenCheckBox;
                 }
                 objectLists[i].contentText.text = string.Concat(objectLists[i].contentText.text, finalList.ToString());
-                actualLineYPosition += 1.5f*YOffsetBetweenLine;
+                actualLineYPosition += 1.5f * YOffsetBetweenLine;
             }
-          
+
         }
 
 
@@ -425,8 +425,8 @@ public class LevelManager : MonoBehaviour
     {
         if (state != State.END)
         {
-          
-           // if (currentDrawer != null) currentDrawer.SetActive(false);
+
+            // if (currentDrawer != null) currentDrawer.SetActive(false);
             GoToDrawer(null);
             state = State.LUGGAGE;
             luggage.gameObject.SetActive(true);
@@ -465,7 +465,7 @@ public class LevelManager : MonoBehaviour
 
             if (currentDrawer != null)
                 currentDrawer.SetActive(false);
-         
+
         }
     }
 
@@ -473,11 +473,11 @@ public class LevelManager : MonoBehaviour
     {
         if (state != State.END)
         {
-            if (state == State.LUGGAGE || state == State.DRAWER )
+            if (state == State.LUGGAGE || state == State.DRAWER)
             {
                 drawerCam.gameObject.SetActive(false);
             }
-            else if(state == State.FIRSTAIDKIT)
+            else if (state == State.FIRSTAIDKIT)
             {
                 firstAidKitCam.gameObject.SetActive(false);
             }
@@ -490,7 +490,7 @@ public class LevelManager : MonoBehaviour
 
             bttnEnd.gameObject.SetActive(true);
 
-           
+
             roomButton.GetComponent<Image>().sprite = roomsButton[(int)State.BATHROOM];
             Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[(int)State.BATHROOM];
 
@@ -503,13 +503,13 @@ public class LevelManager : MonoBehaviour
     }
     public void RoomButton()
     {
-       // if (currentDrawer != null) currentDrawer.SetActive(false);
+        // if (currentDrawer != null) currentDrawer.SetActive(false);
 
         if (myActualRoom == (int)State.BATHROOM)
         {
             Tracker.T.setVar("RoomButtom", 1);
             GoToBedRoom();
-         
+
         }
         else
         {
@@ -535,42 +535,48 @@ public class LevelManager : MonoBehaviour
         state = State.END;
         StringBuilder cad = new StringBuilder();
 
-      //  cad.AppendLine(luggage.Check(level));
+        //  cad.AppendLine(luggage.Check(level));
 
         //string s = luggage.GetObjetosErroneos();
         //if (s.Length > 0)
         //    cad.Append(s);
 
-        int starsCompleted=0;
-        if (luggage.ObjetosGuardados.Count() == luggage.ObjetosList.Count())
+        int starsCompleted = 0;
+        if (luggage.ObjetosGuardados.Count() > luggage.ObjetosList.Count()/2.0f)
         {
             starsCompleted++;
             stars[0].transform.GetChild(0).gameObject.SetActive(true);
-
-            if (luggage.ObjetosErroneosGuardados.Count() == 0)
+            if (luggage.ObjetosGuardados.Count() == luggage.ObjetosList.Count())
             {
                 starsCompleted++;
+
                 stars[1].transform.GetChild(0).gameObject.SetActive(true);
-              
-                if (checkOpportunities == maxcheckOpportunities)
+                if (luggage.ObjetosErroneosGuardados.Count() == 0)
                 {
                     starsCompleted++;
+
                     stars[2].transform.GetChild(0).gameObject.SetActive(true);
+                    if (checkOpportunities == maxcheckOpportunities)
+                    {
+                        starsCompleted++;
 
+                        stars[3].transform.GetChild(0).gameObject.SetActive(true);
+                    }
                 }
-            }
 
+            }
         }
         wrongObjectsText.text = luggage.ObjetosErroneosGuardados.Count().ToString();
-     
+
         correctObjectsText.text = luggage.ObjetosGuardados.Count().ToString() + " / " + luggage.ObjetosList.Count().ToString();
-       
+
         finalOpportunitiesText.text = (maxcheckOpportunities - checkOpportunities).ToString() + " / " + maxcheckOpportunities.ToString();
 
-        if (PlayerPrefs.GetInt(LevelNameGlobal)<= starsCompleted)
+        if (PlayerPrefs.GetInt(LevelNameGlobal) <= starsCompleted)
             PlayerPrefs.SetInt(LevelNameGlobal, starsCompleted);
         Debug.Log(LevelNameGlobal + " " + PlayerPrefs.GetInt(LevelNameGlobal));
-        for(int i = 0; i < GM.Gm.List.Count(); i++) {
+        for (int i = 0; i < GM.Gm.List.Count(); i++)
+        {
             CheckBox c = checkBoxDictionary[GM.Gm.List[i]];
             if (c.GetCheckBoxState() == CheckBoxState.None)
                 c.SetCheckBoxState(CheckBoxState.Wrong);
@@ -581,7 +587,7 @@ public class LevelManager : MonoBehaviour
         endPanel.gameObject.SetActive(true);
         //endPanel.GetComponentInChildren<Text>().text = cad.ToString();
         Tracker.T.setVar("EndButton", 1);
-      //  Tracker.T.setVar("Resultado: " + cad.Length, cad.ToString());
+        //  Tracker.T.setVar("Resultado: " + cad.Length, cad.ToString());
         Tracker.T.Completable.Completed(LevelNameGlobal, CompletableTracker.Completable.Level, true);
     }
 }

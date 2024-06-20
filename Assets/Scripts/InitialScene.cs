@@ -30,11 +30,18 @@ public class InitialScene : MonoBehaviour
    {
         if (speech == 0)
         {
-            title.SetActive(false);
-            play.SetActive(false);
-            men.SetActive(true);
-            speechBubbles[speech].SetActive(true);
-            speech++;
+            if (!PlayerPrefs.HasKey("genre"))
+            {
+                title.SetActive(false);
+                play.SetActive(false);
+                men.SetActive(true);
+                speechBubbles[speech].SetActive(true);
+                speech++;
+            }
+            else
+                GM.Gm.LoadScene("LevelSelector");
+
+           
         }
         else
         {
@@ -49,14 +56,12 @@ public class InitialScene : MonoBehaviour
     public void ConfigGenre()
     {
         Debug.Log((Genero)PlayerPrefs.GetInt("genre"));
-        if (!PlayerPrefs.HasKey("genre"))
-        {
+
             men.SetActive(false);
             playMini.SetActive(false);
             speechBubbles[speech - 1].SetActive(false);
             genre.SetActive(true);
-        }
-        else
-            GM.Gm.LoadScene("LevelSelector");
+        
+     
     }
 }
