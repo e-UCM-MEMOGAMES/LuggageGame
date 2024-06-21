@@ -12,6 +12,7 @@ public class Luggage : MonoBehaviour
     public Sprite emptyLuggage, fullLuggage;
     [SerializeField]
     private LevelManager levelMng;
+    private AudioManager audioMng;
     #endregion
 
     #region Atributos
@@ -51,6 +52,7 @@ public class Luggage : MonoBehaviour
 
     void Start()
     {
+        audioMng = AudioManager.Instance;
         ObjetosGuardados = new List<string>();
         ObjetosErroneosGuardados = new List<string>();
     }
@@ -70,6 +72,7 @@ public class Luggage : MonoBehaviour
     /// <param name="obj">Objeto a guardar.</param>
     public void SaveObject(Item obj)
     {
+        audioMng.Play(GameSound.PutIn);
         NumItemsSaved++;
         obj.gameObject.SetActive(true);
         if (NumItemsSaved == 1)
@@ -96,6 +99,7 @@ public class Luggage : MonoBehaviour
     /// <param name="obj"></param>
     public void RemoveObject(Item obj)
     {
+        audioMng.Play(GameSound.ThrowOut);
         NumItemsSaved--;
         obj.gameObject.SetActive(false);
         if (NumItemsSaved == 0)

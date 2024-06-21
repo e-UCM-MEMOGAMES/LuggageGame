@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static Assets.Scripts.Constantes;
@@ -12,6 +13,7 @@ public class InitialScene : MonoBehaviour
     public GameObject men;
     public GameObject[] speechBubbles;
     public bool saveGame;
+    private AudioManager audioManager;
 
     int speech;
     void Start()
@@ -24,6 +26,8 @@ public class InitialScene : MonoBehaviour
         men.SetActive(false);
         genre.SetActive(false);
         foreach (GameObject go in speechBubbles) go.SetActive(false);
+        audioManager= AudioManager.Instance;
+        audioManager.Play((int)GameSound.MenuBGM);
     }
 
    public void SetSpeechBubble()

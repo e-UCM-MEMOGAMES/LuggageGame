@@ -14,7 +14,7 @@ using static CheckBox;
 
 public class LevelManager : MonoBehaviour
 {
-
+    private AudioManager audioMng;
     enum State { BATHROOM, BEDROOM, DRAWER, LUGGAGE, FIRSTAIDKIT, END };
     public enum ObjectType { Clothes, Shoes, Others, ObjectTypeSize };
     string LevelNameGlobal;
@@ -117,6 +117,8 @@ public class LevelManager : MonoBehaviour
     //public Image
     void Start()
     {
+        audioMng = AudioManager.Instance;
+        audioMng.Play(GameSound.LevelBGM);
         jsonReader = GetComponent<JSONReader>();
 
         for (int i = 0; i < objectLists.Count; i++)
