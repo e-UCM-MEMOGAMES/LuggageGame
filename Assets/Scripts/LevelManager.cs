@@ -119,6 +119,7 @@ public class LevelManager : MonoBehaviour
     {
         audioMng = AudioManager.Instance;
         audioMng.Play(GameSound.LevelBGM);
+        audioMng.Play(GameSound.NoteBook);
         jsonReader = GetComponent<JSONReader>();
 
         for (int i = 0; i < objectLists.Count; i++)
@@ -238,6 +239,7 @@ public class LevelManager : MonoBehaviour
     {
         if (checkOpportunities > 0)
         {
+            audioMng.Play(GameSound.NoteBook);
             checkOpportunities--;
             objectsPanel.SetActive(true);
             noteBookPanel.SetActive(true);
@@ -379,6 +381,8 @@ public class LevelManager : MonoBehaviour
     {
         if (state != State.END)
         {
+            audioMng.Play(GameSound.MedicineOpen);
+
             state = State.FIRSTAIDKIT;
             firstAidKitCam.gameObject.SetActive(true);
             bathroomCam.gameObject.SetActive(false);
@@ -413,6 +417,8 @@ public class LevelManager : MonoBehaviour
 
             if (drawer != null)
             {
+                audioMng.Play(GameSound.DrawerOpen);
+
                 drawerImage.SetActive(true);
                 currentDrawer = drawer;
                 currentDrawer.SetActive(true);
@@ -523,6 +529,16 @@ public class LevelManager : MonoBehaviour
     {
         roomButton.SetActive(true);
         buttonBackToRoom.SetActive(false);
+        if (state== State.FIRSTAIDKIT)
+        {
+            audioMng.Play(GameSound.MedicineClose);
+
+        }
+       else if (state == State.DRAWER)
+        {
+            audioMng.Play(GameSound.DrawerClose);
+
+        }
         if (myActualRoom == (int)State.BATHROOM)
         {
             GoToBathroom();

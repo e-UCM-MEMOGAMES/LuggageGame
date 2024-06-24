@@ -8,6 +8,7 @@ public class Drawer : MonoBehaviour
     public LevelManager lvlMngr;
     public GameObject drawer;
     SpriteRenderer spRenderer;
+
     void Start()
     {
         spRenderer = GetComponent<SpriteRenderer>();
@@ -35,6 +36,7 @@ public class Drawer : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject()) return;
         if (Input.GetMouseButtonUp(0))
         {
+
             lvlMngr.GoToDrawer(drawer);
         }
     }

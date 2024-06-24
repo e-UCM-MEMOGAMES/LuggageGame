@@ -17,11 +17,12 @@ using UnityEngine;
             if (_instance == null)
             {
                 _instance = (T)this;
-            }
+               DontDestroyOnLoad(gameObject);
+        }
             else if (_instance != (T)this)
             {
                 Destroy(gameObject);
             }
-            DontDestroyOnLoad(gameObject);
+          
         }
     }

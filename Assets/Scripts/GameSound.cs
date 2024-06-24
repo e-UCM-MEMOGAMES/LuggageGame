@@ -18,7 +18,8 @@
         PutIn,
         ThrowOut,
         NoteBook,
-        Star
+        Star,
+        AirPlane
     }
     public enum ChannelType
     {

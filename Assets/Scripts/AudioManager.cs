@@ -62,7 +62,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         if (!GUI.changed)
             return;
 
-        // Set/update the names of entities to replace the generic 'element' name in Unity Inspector's array view
+       // Set / update the names of entities to replace the generic 'element' name in Unity Inspector's array view
         foreach (var s in _soundList)
             s.SetName();
 
@@ -86,7 +86,10 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
                 continue;
 
             else
+            {
                 _soundMap.Add(s.soundType, s);
+                Debug.Log(s.soundType);
+            }
         }
 
 
@@ -145,11 +148,14 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
 
     public void PlayUISound(AudioClip clip)
     {
+        Debug.Log("UI");
         _uiSoundSource.PlayOneShot(clip);
     }
 
     public void PlaySceneSound(AudioClip clip)
     {
+        Debug.Log("scene");
+
         _sceneSoundSource.PlayOneShot(clip);
     }
 

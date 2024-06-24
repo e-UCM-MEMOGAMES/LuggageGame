@@ -26,12 +26,10 @@ public class LevelButton : MonoBehaviour
 
         if (GM.Gm.Clima == Assets.Scripts.Constantes.Clima.CALIDO)
         {
-            Debug.Log(PlayerPrefs.GetInt("Level" + level.ToString() + "Warm", 0));
             numStars = PlayerPrefs.GetInt("Level" + level.ToString() + "Warm", 0);
         }
         else { 
             PlayerPrefs.GetInt("Level" + level.ToString() + "Cold", 0);
-            Debug.Log(PlayerPrefs.GetInt("Level" + level.ToString() + "Cold", 0));
         }
 
         for (int i = 0; i < numStars; i++)

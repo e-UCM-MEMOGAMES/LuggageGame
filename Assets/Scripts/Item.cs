@@ -63,8 +63,16 @@ public class Item : MonoBehaviour
     /// </summary>
     private void OnMouseDown()
     {
+        panelInfo.SetActive(true);
+
         //StartPoint = transform.localPosition;
         Offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5));
+    }
+    private void OnMouseUp()
+    {
+        panelInfo.SetActive(false);
+
+      
     }
     /// <summary>
     /// Evento cuando se mantiene pulsado el objeto.
@@ -74,7 +82,7 @@ public class Item : MonoBehaviour
         Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5);
         transform.position = Camera.main.ScreenToWorldPoint(newPosition) + Offset;
         transform.position = new Vector3(transform.position.x, transform.position.y, -5);
-        panelInfo.SetActive(false);
+        panelInfo.SetActive(true);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

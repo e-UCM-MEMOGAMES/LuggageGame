@@ -19,6 +19,7 @@ namespace Assets.Scripts
             TextPanelInfo = PanelInfor.GetComponentInChildren<Text>();
         }
 
+
         private void OnMouseEnter()
         {
             if (!Input.GetMouseButtonUp(0))
@@ -33,9 +34,21 @@ namespace Assets.Scripts
         {
             PanelInfor.SetActive(false);
         }
+      
         private void OnMouseDrag()
         {
+            PanelInfor.SetActive(true);
+        }
+        private void OnMouseDown()
+        {
+            PanelInfor.SetActive(true);
+
+        }
+        private void OnMouseUp()
+        {
             PanelInfor.SetActive(false);
+
+
         }
     }
 }
