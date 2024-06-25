@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Assets.Scripts.Constantes;
+using Xasu.HighLevel;
 
 public class GM : MonoBehaviour
 {
@@ -46,7 +47,10 @@ public class GM : MonoBehaviour
             switch (value)
             {
                 case Clima.CALIDO:
-                    Tracker.T.setVar("Warm", 1);
+                   // Tracker.T.setVar("Warm", 1);
+                    //AccessibleTracker.Instance.Accessed("stage-1");
+
+                  //GameObjectTracker.Instance.Interacted("mesita");
                     break;
                 case Clima.FRIO:
                     Tracker.T.setVar("Cold", 1);

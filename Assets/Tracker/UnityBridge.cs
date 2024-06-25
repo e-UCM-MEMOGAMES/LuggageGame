@@ -130,7 +130,7 @@ namespace AssetPackage
                 }
                 else
                 {
-					UnityEngine.Debug.Log(String.Format("{0}: {1}", severity, msg));
+					//UnityEngine.Debug.Log(String.Format("{0}: {1}", severity, msg));
                 }
             }
         }

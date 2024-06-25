@@ -15,12 +15,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
                         _uiSoundSource,
                         _sceneSoundSource;
 
-    //[SerializeField]
-    //private AudioClip _buttonClip,
-    //                  _mainMenuClip,
-    //                  _levelClip;
-    // [SerializeField]
-    // private VolumeControl _volumeController;
+  
 
     /// <summary>
     /// This nested class holds all data related to the playback of a single AudioClip. Instances of this class are exposed to the Inspector through the SoundManager class.
@@ -62,7 +57,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         if (!GUI.changed)
             return;
 
-       // Set / update the names of entities to replace the generic 'element' name in Unity Inspector's array view
+        // Set / update the names of entities to replace the generic 'element' name in Unity Inspector's array view
         foreach (var s in _soundList)
             s.SetName();
 
@@ -166,7 +161,24 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     //}
 
 
-
+    public void BGMVolume(float volume)
+    {
+        Debug.Log(_musicSource + " " + _musicSource.volume);
+        _musicSource.volume = volume;
+    }
+    public void SoundEffectVolume(float volume)
+    {
+        _sceneSoundSource.volume = volume;
+        _uiSoundSource.volume = volume;
+    }
+    public float GetBGMVolume()
+    {
+        return _musicSource.volume;
+    }
+    public float GetSoundEffectVolume()
+    {
+        return _sceneSoundSource.volume;
+    }
 
     public void StopMusic()
     {

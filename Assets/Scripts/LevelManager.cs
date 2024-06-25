@@ -1,5 +1,4 @@
-﻿using RAGE.Analytics;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEditor;
@@ -11,6 +10,8 @@ using static Assets.Scripts.Constantes;
 using static JSONReader;
 using TMPro;
 using static CheckBox;
+using RAGE.Analytics;
+using Xasu.HighLevel;
 
 public class LevelManager : MonoBehaviour
 {
