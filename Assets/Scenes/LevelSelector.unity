@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 3915063}
   - component: {fileID: 3915066}
   - component: {fileID: 3915067}
+  - component: {fileID: 3915068}
   m_Layer: 5
   m_Name: "Fr\xEDo"
   m_TagString: Untagged
@@ -297,6 +298,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &3915068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3915061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: levelSelector-climateButton-cold
 --- !u!1 &12928285
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,6 +660,7 @@ GameObject:
   - component: {fileID: 187503580}
   - component: {fileID: 187503581}
   - component: {fileID: 187503578}
+  - component: {fileID: 187503582}
   m_Layer: 5
   m_Name: BotonSalir
   m_TagString: Untagged
@@ -782,6 +797,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &187503582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187503576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: levelSelector-exitButton
 --- !u!1 &198220055
 GameObject:
   m_ObjectHideFlags: 0
@@ -872,6 +900,7 @@ GameObject:
   - component: {fileID: 290050225}
   - component: {fileID: 290050224}
   - component: {fileID: 290050228}
+  - component: {fileID: 290050229}
   m_Layer: 5
   m_Name: Leve3
   m_TagString: Untagged
@@ -1043,6 +1072,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &290050229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 290050222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: levelSelector-levelButton-3
 --- !u!1 &308159235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,6 +1173,7 @@ GameObject:
   - component: {fileID: 349481142}
   - component: {fileID: 349481141}
   - component: {fileID: 349481144}
+  - component: {fileID: 349481145}
   m_Layer: 5
   m_Name: Volver
   m_TagString: Untagged
@@ -1278,6 +1321,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &349481145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 349481139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: levelSelector-returnButton
 --- !u!1 &378239821
 GameObject:
   m_ObjectHideFlags: 0
@@ -3405,6 +3461,7 @@ GameObject:
   - component: {fileID: 1071243277}
   - component: {fileID: 1071243280}
   - component: {fileID: 1071243281}
+  - component: {fileID: 1071243282}
   m_Layer: 5
   m_Name: "C\xE1lido"
   m_TagString: Untagged
@@ -3565,6 +3622,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &1071243282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071243275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: levelSelector-climateButton-warm
 --- !u!1 &1074689062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3653,6 +3723,7 @@ GameObject:
   - component: {fileID: 1101493792}
   - component: {fileID: 1101493795}
   - component: {fileID: 1101493796}
+  - component: {fileID: 1101493797}
   m_Layer: 5
   m_Name: Level1
   m_TagString: Untagged
@@ -3787,6 +3858,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &1101493797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1101493790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: levelSelector-levelButton-1
 --- !u!1 &1168300184
 GameObject:
   m_ObjectHideFlags: 0
@@ -4353,6 +4437,7 @@ GameObject:
   - component: {fileID: 1335338477}
   - component: {fileID: 1335338476}
   - component: {fileID: 1335338479}
+  - component: {fileID: 1335338480}
   m_Layer: 5
   m_Name: Tutorial
   m_TagString: Untagged
@@ -4500,6 +4585,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &1335338480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1335338474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: levelSelector-tutorialButton
 --- !u!1 &1355282943
 GameObject:
   m_ObjectHideFlags: 0
@@ -4879,6 +4977,7 @@ GameObject:
   - component: {fileID: 1512122134}
   - component: {fileID: 1512122133}
   - component: {fileID: 1512122136}
+  - component: {fileID: 1512122137}
   m_Layer: 5
   m_Name: Settings
   m_TagString: Untagged
@@ -5025,6 +5124,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &1512122137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512122131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: levelSelector-configButton
 --- !u!1 &1591606170
 GameObject:
   m_ObjectHideFlags: 0
@@ -5325,6 +5437,7 @@ GameObject:
   - component: {fileID: 1753003936}
   - component: {fileID: 1753003935}
   - component: {fileID: 1753003939}
+  - component: {fileID: 1753003940}
   m_Layer: 5
   m_Name: Leve2
   m_TagString: Untagged
@@ -5496,6 +5609,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &1753003940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753003933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: levelSelector-levelButton-2
 --- !u!1001 &1765794534
 PrefabInstance:
   m_ObjectHideFlags: 0

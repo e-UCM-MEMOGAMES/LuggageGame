@@ -129,7 +129,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 720102660}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1866355664}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d0041b37d7a61b49b8609e43c66106a, type: 3}
@@ -241,6 +241,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2019055862}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!1 &281014947 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2126446543636545577, guid: dc51f7c3df55c1743ba453c231c7839e,
+    type: 3}
+  m_PrefabInstance: {fileID: 720102660}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &419990416
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +397,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 720102660}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1860569816}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d0041b37d7a61b49b8609e43c66106a, type: 3}
@@ -1037,7 +1043,43 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 499532489}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4202916209840953678, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1866355669}
+    - targetCorrespondingSourceObject: {fileID: 2018098669518266345, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1866355668}
+    - targetCorrespondingSourceObject: {fileID: 2534180964730463416, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1866355667}
+    - targetCorrespondingSourceObject: {fileID: 6274399068120252490, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1866355670}
+    - targetCorrespondingSourceObject: {fileID: 3458760563988860279, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 739083820}
+    - targetCorrespondingSourceObject: {fileID: 3894533743963950014, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1935411789}
+    - targetCorrespondingSourceObject: {fileID: 2126446543636545577, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1741135242}
+    - targetCorrespondingSourceObject: {fileID: 8352943298502433026, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1030023501}
+    - targetCorrespondingSourceObject: {fileID: 8932927628497907718, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1860569817}
   m_SourcePrefab: {fileID: 100100000, guid: dc51f7c3df55c1743ba453c231c7839e, type: 3}
 --- !u!114 &720102661 stripped
 MonoBehaviour:
@@ -1045,7 +1087,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 720102660}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1030023500}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d0041b37d7a61b49b8609e43c66106a, type: 3}
@@ -1081,12 +1123,50 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 720102660}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 739083819}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d0041b37d7a61b49b8609e43c66106a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &739083819 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3458760563988860279, guid: dc51f7c3df55c1743ba453c231c7839e,
+    type: 3}
+  m_PrefabInstance: {fileID: 720102660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &739083820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 739083819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: tutorial-confirmFinishButton
+--- !u!1 &1030023500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8352943298502433026, guid: dc51f7c3df55c1743ba453c231c7839e,
+    type: 3}
+  m_PrefabInstance: {fileID: 720102660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1030023501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030023500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: tutorial-startButton
 --- !u!224 &1138563774 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1766763216655339050, guid: dc51f7c3df55c1743ba453c231c7839e,
@@ -1099,19 +1179,25 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 720102660}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1866355665}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d0041b37d7a61b49b8609e43c66106a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1204052492 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3894533743963950014, guid: dc51f7c3df55c1743ba453c231c7839e,
+    type: 3}
+  m_PrefabInstance: {fileID: 720102660}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1568613854 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3821670381892614809, guid: dc51f7c3df55c1743ba453c231c7839e,
     type: 3}
   m_PrefabInstance: {fileID: 720102660}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1866355663}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d0041b37d7a61b49b8609e43c66106a, type: 3}
@@ -1123,12 +1209,120 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 720102660}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 281014947}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d0041b37d7a61b49b8609e43c66106a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1741135242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281014947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: tutorial-finalReturnButton
+--- !u!1 &1860569816 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8932927628497907718, guid: dc51f7c3df55c1743ba453c231c7839e,
+    type: 3}
+  m_PrefabInstance: {fileID: 720102660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1860569817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860569816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: tutorial-returnFromNotebookButton
+--- !u!1 &1866355663 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2534180964730463416, guid: dc51f7c3df55c1743ba453c231c7839e,
+    type: 3}
+  m_PrefabInstance: {fileID: 720102660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1866355664 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2018098669518266345, guid: dc51f7c3df55c1743ba453c231c7839e,
+    type: 3}
+  m_PrefabInstance: {fileID: 720102660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1866355665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4202916209840953678, guid: dc51f7c3df55c1743ba453c231c7839e,
+    type: 3}
+  m_PrefabInstance: {fileID: 720102660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1866355666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6274399068120252490, guid: dc51f7c3df55c1743ba453c231c7839e,
+    type: 3}
+  m_PrefabInstance: {fileID: 720102660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1866355667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866355663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: tutorial-finishButton
+--- !u!114 &1866355668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866355664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: tutorial-backToRoomButton
+--- !u!114 &1866355669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866355665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: tutorial-changeRoomButton
+--- !u!114 &1866355670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866355666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: tutorial-notebookButton
 --- !u!1 &1874819514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,12 +1408,25 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 720102660}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1204052492}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d0041b37d7a61b49b8609e43c66106a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1935411789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204052492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: tutorial-cancelFinishButton
 --- !u!1 &2019055860
 GameObject:
   m_ObjectHideFlags: 0

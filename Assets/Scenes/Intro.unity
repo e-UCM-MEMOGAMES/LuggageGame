@@ -678,6 +678,7 @@ GameObject:
   - component: {fileID: 312659598}
   - component: {fileID: 312659601}
   - component: {fileID: 312659602}
+  - component: {fileID: 312659603}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -844,6 +845,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &312659603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312659596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: mainMenu-playButton
 --- !u!1 &352224820
 GameObject:
   m_ObjectHideFlags: 0
@@ -857,6 +871,7 @@ GameObject:
   - component: {fileID: 352224823}
   - component: {fileID: 352224822}
   - component: {fileID: 352224825}
+  - component: {fileID: 352224826}
   m_Layer: 5
   m_Name: Mujer
   m_TagString: Untagged
@@ -1004,6 +1019,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &352224826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352224820}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: mainMenu-genderButton-female
 --- !u!1 &469865623
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,6 +1160,7 @@ GameObject:
   - component: {fileID: 672432684}
   - component: {fileID: 672432683}
   - component: {fileID: 672432686}
+  - component: {fileID: 672432687}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1277,6 +1306,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &672432687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 672432681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: mainMenu-speech1Button
 --- !u!1 &695843315
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,6 +1912,7 @@ GameObject:
   - component: {fileID: 1432812810}
   - component: {fileID: 1432812809}
   - component: {fileID: 1432812812}
+  - component: {fileID: 1432812813}
   m_Layer: 5
   m_Name: Play2
   m_TagString: Untagged
@@ -2015,6 +2058,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &1432812813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1432812807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: mainMenu-play2Button
 --- !u!1001 &1439855407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2489,6 +2545,7 @@ GameObject:
   - component: {fileID: 1672366324}
   - component: {fileID: 1672366323}
   - component: {fileID: 1672366326}
+  - component: {fileID: 1672366327}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2634,6 +2691,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &1672366327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672366321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: mainMenu-speech2Button
 --- !u!1 &1675832102
 GameObject:
   m_ObjectHideFlags: 0
@@ -2726,6 +2796,7 @@ GameObject:
   - component: {fileID: 1870622877}
   - component: {fileID: 1870622876}
   - component: {fileID: 1870622879}
+  - component: {fileID: 1870622880}
   m_Layer: 5
   m_Name: Hombre
   m_TagString: Untagged
@@ -2873,6 +2944,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
+--- !u!114 &1870622880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870622874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: mainMenu-genderButton-male
 --- !u!1 &1941043477
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,8 +1,26 @@
 {
-      "online": "true",
-      "lrs_endpoint": "<your-lrs-endpoint>",
-      "auth_protocol": "basic", 
-      "auth_parameters": {
-          "username": "<your-username>",
-          "password": "<your-password>"
-      } }
+    "strict_mode": false,
+    "flush_interval": 1.0,
+    "simva": false,
+    "token": false,
+    "online": false,
+    "batch_size": 32,
+    "lrs_endpoint": "<your-lrs-endpoint>",
+    "fallback": false,
+    "auth_protocol": "basic",
+    "auth_parameters": {
+        "username": "<your-username>",
+        "password": "<your-password>",
+        "lrs_endpoint": "<your-lrs-endpoint+>"
+    },
+    "offline": true,
+    "trace_format": 0,
+    "file_name": "traces.log",
+    "backup": false,
+    "backup_file_name": "backup.log",
+    "backup_trace_format": 0,
+    "backup_endpoint": null,
+    "backup_request_config": null,
+    "backup_auth_protocol": null,
+    "backup_auth_parameters": null
+}

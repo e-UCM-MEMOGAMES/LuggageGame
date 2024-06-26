@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Assets.Scripts.Constantes;
 using Xasu.HighLevel;
+using Xasu;
+using System;
 
 public class GM : MonoBehaviour
 {
@@ -47,15 +49,16 @@ public class GM : MonoBehaviour
             switch (value)
             {
                 case Clima.CALIDO:
-                   // Tracker.T.setVar("Warm", 1);
-                    //AccessibleTracker.Instance.Accessed("stage-1");
-
-                  //GameObjectTracker.Instance.Interacted("mesita");
+                    Tracker.T.setVar("Warm", 1);
+                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Warm");
+                    //GameObjectTracker.Instance.Interacted("mesita");
                     break;
                 case Clima.FRIO:
+                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Cold");
                     Tracker.T.setVar("Cold", 1);
                     break;
                 default:
+                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Neutral");
                     Tracker.T.setVar("Warm & Cold", 1);
                     break;
             }
@@ -73,12 +76,16 @@ public class GM : MonoBehaviour
             switch (value)
             {
                 case Genero.HOMBRE:
+                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "Male");
                     Tracker.T.setVar("Male", 1);
                     break;
                 case Genero.MUJER:
+                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "Female");
                     Tracker.T.setVar("Female", 1);
                     break;
                 default:
+                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "Neutral");
+
                     Tracker.T.setVar("Male & Female", 1);
                     break;
             }
@@ -128,8 +135,16 @@ public class GM : MonoBehaviour
     /**
      * Método para el botón salir del menú
      */
-    public void DoExitGame()
+    public async void DoExitGame()
     {
+        var progress = new Progress<float>();
+        progress.ProgressChanged += (_, p) =>
+        {
+            Debug.Log("Finalization progress: " + p);
+        };
+        await XasuTracker.Instance.Finalize(progress);
+
+        Debug.Log("Tracker finalized");
         Application.Quit();
     }
 

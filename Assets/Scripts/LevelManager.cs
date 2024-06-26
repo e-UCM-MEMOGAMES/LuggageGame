@@ -12,6 +12,7 @@ using TMPro;
 using static CheckBox;
 using RAGE.Analytics;
 using Xasu.HighLevel;
+using UnityEditor.Experimental.GraphView;
 
 public class LevelManager : MonoBehaviour
 {
@@ -206,6 +207,8 @@ public class LevelManager : MonoBehaviour
         }
         else LevelNameGlobal = "Tutorial";
         LoadList(LevelNameGlobal);
+
+        Xasu.HighLevel.CompletableTracker.Instance.Initialized(LevelNameGlobal, Xasu.HighLevel.CompletableTracker.CompletableType.Level);
         Tracker.T.Completable.Initialized(LevelNameGlobal, CompletableTracker.Completable.Level);
 
     }
@@ -392,6 +395,8 @@ public class LevelManager : MonoBehaviour
             buttonBackToRoom.SetActive(true);
             roomButton.gameObject.SetActive(false);
 
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("level-FirstAidKit");
+
             Tracker.T.Accessible.Accessed("FirstAidKit", AccessibleTracker.Accessible.Screen);
         }
     }
@@ -425,6 +430,8 @@ public class LevelManager : MonoBehaviour
                 currentDrawer.SetActive(true);
                 luggage.transform.position = initialLuggagePos;
                 luggage.transform.localScale = initialLuggageScale;
+
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted("level-"+drawer.name);
                 Tracker.T.Accessible.Accessed(drawer.name, AccessibleTracker.Accessible.Screen);
             }
         }
@@ -441,6 +448,8 @@ public class LevelManager : MonoBehaviour
             luggage.gameObject.SetActive(true);
             luggage.transform.position = new Vector3(0, 19f, luggage.transform.position.z);
             luggage.transform.localScale = new Vector3(3.5f, 3.5f, 1);
+          
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("level-Luggage");
             Tracker.T.Accessible.Accessed("Luggage", AccessibleTracker.Accessible.Screen);
         }
 
@@ -506,7 +515,7 @@ public class LevelManager : MonoBehaviour
             bathroomCam.gameObject.SetActive(true);
             if (currentDrawer != null)
                 currentDrawer.SetActive(false);
-            Tracker.T.Accessible.Accessed("Bathroom", AccessibleTracker.Accessible.Screen);
+           
         }
 
     }
@@ -517,12 +526,15 @@ public class LevelManager : MonoBehaviour
         if (myActualRoom == (int)State.BATHROOM)
         {
             Tracker.T.setVar("RoomButtom", 1);
+            Xasu.HighLevel.AccessibleTracker.Instance.Accessed("BedRoom");
             GoToBedRoom();
 
         }
         else
         {
             Tracker.T.setVar("BathRoomButton", 1);
+            Xasu.HighLevel.AccessibleTracker.Instance.Accessed("BathRoom");
+
             GoToBathroom();
         }
     }
@@ -606,7 +618,10 @@ public class LevelManager : MonoBehaviour
         endPanel.gameObject.SetActive(true);
         //endPanel.GetComponentInChildren<Text>().text = cad.ToString();
         Tracker.T.setVar("EndButton", 1);
+
         //  Tracker.T.setVar("Resultado: " + cad.Length, cad.ToString());
         Tracker.T.Completable.Completed(LevelNameGlobal, CompletableTracker.Completable.Level, true);
+        Xasu.HighLevel.CompletableTracker.Instance.Completed(LevelNameGlobal, Xasu.HighLevel.CompletableTracker.CompletableType.Level).WithSuccess(true);
+
     }
 }

@@ -46,8 +46,12 @@ public class Item : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("dropLuggageObject-" + name);
+
             if (hasExit)
             {
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted("dropObjectfromLuggage-" + name);
+
                 panelInfo.SetActive(false);
                 luggage.RemoveObject(this);
                 twin.SetActive(true);
@@ -63,6 +67,8 @@ public class Item : MonoBehaviour
     /// </summary>
     private void OnMouseDown()
     {
+        Xasu.HighLevel.GameObjectTracker.Instance.Interacted("clickOnLuggageObject-" + name);
+
         panelInfo.SetActive(true);
 
         //StartPoint = transform.localPosition;
@@ -72,13 +78,15 @@ public class Item : MonoBehaviour
     {
         panelInfo.SetActive(false);
 
-      
+
     }
     /// <summary>
     /// Evento cuando se mantiene pulsado el objeto.
     /// </summary>
     private void OnMouseDrag()
     {
+        Xasu.HighLevel.GameObjectTracker.Instance.Interacted("dragLuggageObject-" + name);
+
         Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5);
         transform.position = Camera.main.ScreenToWorldPoint(newPosition) + Offset;
         transform.position = new Vector3(transform.position.x, transform.position.y, -5);

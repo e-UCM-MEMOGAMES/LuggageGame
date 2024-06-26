@@ -79,6 +79,7 @@ public class DraggNDrop : MonoBehaviour
         //if (EventSystem.current.IsPointerOverGameObject()) return;
 
         Tracker.T.setVar("Click en objeto", 1);
+        Xasu.HighLevel.GameObjectTracker.Instance.Interacted("clickOnObject-"+_objetoMaleta.name);
         StartPoint = transform.position;
         Offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, OFFSET_Z));
     }
@@ -89,7 +90,7 @@ public class DraggNDrop : MonoBehaviour
     private void OnMouseDrag()
     {
         //if (EventSystem.current.IsPointerOverGameObject()) return;
-
+        Xasu.HighLevel.GameObjectTracker.Instance.Interacted("dragObject-" + _objetoMaleta.name);
         Tracker.T.setVar("Objeto pulsado", 1);
         Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, OFFSET_Z);
         transform.position = Camera.main.ScreenToWorldPoint(newPosition) + Offset;
@@ -101,13 +102,13 @@ public class DraggNDrop : MonoBehaviour
     /// </summary>
     private void OnMouseUp()
     {
-       // if (EventSystem.current.IsPointerOverGameObject()) return;
-
+        // if (EventSystem.current.IsPointerOverGameObject()) return;
+        Xasu.HighLevel.GameObjectTracker.Instance.Interacted("dropObject-" + _objetoMaleta.name);
         Tracker.T.setVar("Deja de clickar en objeto", 1);
         transform.position = StartPoint;
         if (ItsInTarget)
         {
-            Debug.Log("lol");
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("saveObjectInLuggage-" + _objetoMaleta.name);
 
             Maleta.SaveObject(ObjetoMaleta);
             ObjetoMaleta.SetTwin(gameObject);

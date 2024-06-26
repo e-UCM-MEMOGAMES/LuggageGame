@@ -607,6 +607,7 @@ GameObject:
   - component: {fileID: 428639293}
   - component: {fileID: 428639294}
   - component: {fileID: 428639295}
+  - component: {fileID: 428639296}
   m_Layer: 5
   m_Name: Slider (1)
   m_TagString: Untagged
@@ -712,6 +713,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   channelType: 3
+--- !u!114 &428639296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 428639292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fb5d5df35a10443b07a2c7511a7584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderName: settingMenu-soundEffectVolumeSlider
 --- !u!1 &448237026
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1502,7 @@ GameObject:
   - component: {fileID: 920232949}
   - component: {fileID: 920232948}
   - component: {fileID: 920232947}
+  - component: {fileID: 920232950}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1616,6 +1631,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 920232945}
   m_CullTransparentMesh: 0
+--- !u!114 &920232950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920232945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: settingsMenu-restartCancelButton
 --- !u!1 &931618288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,6 +1655,7 @@ GameObject:
   - component: {fileID: 931618289}
   - component: {fileID: 931618290}
   - component: {fileID: 931618291}
+  - component: {fileID: 931618292}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1732,6 +1761,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   channelType: 2
+--- !u!114 &931618292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931618288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fb5d5df35a10443b07a2c7511a7584, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sliderName: settingMenu-musicVolumeSlider
 --- !u!1 &934274237
 GameObject:
   m_ObjectHideFlags: 0
@@ -1781,6 +1823,7 @@ GameObject:
   - component: {fileID: 1190526361}
   - component: {fileID: 1190526360}
   - component: {fileID: 1190526359}
+  - component: {fileID: 1190526363}
   m_Layer: 5
   m_Name: Volver
   m_TagString: Untagged
@@ -1929,6 +1972,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190526357}
   m_CullTransparentMesh: 0
+--- !u!114 &1190526363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1190526357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: settingsMenu-returnButton
 --- !u!1 &1202188399
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,6 +1997,7 @@ GameObject:
   - component: {fileID: 1202188403}
   - component: {fileID: 1202188402}
   - component: {fileID: 1202188401}
+  - component: {fileID: 1202188404}
   m_Layer: 5
   m_Name: Restart
   m_TagString: Untagged
@@ -2075,6 +2132,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202188399}
   m_CullTransparentMesh: 0
+--- !u!114 &1202188404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1202188399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: settingsMenu-resetButton
 --- !u!1 &1343180742
 GameObject:
   m_ObjectHideFlags: 0
@@ -2968,6 +3038,7 @@ GameObject:
   - component: {fileID: 2056161388}
   - component: {fileID: 2056161387}
   - component: {fileID: 2056161386}
+  - component: {fileID: 2056161389}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -3097,6 +3168,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2056161384}
   m_CullTransparentMesh: 0
+--- !u!114 &2056161389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056161384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonName: settingsMenu-restartConfirmButton
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
