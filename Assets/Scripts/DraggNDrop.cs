@@ -90,7 +90,7 @@ public class DraggNDrop : MonoBehaviour
     private void OnMouseDrag()
     {
         //if (EventSystem.current.IsPointerOverGameObject()) return;
-        Xasu.HighLevel.GameObjectTracker.Instance.Interacted("dragObject-" + _objetoMaleta.name);
+     
         Tracker.T.setVar("Objeto pulsado", 1);
         Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, OFFSET_Z);
         transform.position = Camera.main.ScreenToWorldPoint(newPosition) + Offset;

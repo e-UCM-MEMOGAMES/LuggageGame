@@ -7,6 +7,7 @@ using Xasu.HighLevel;
 using Xasu;
 using System;
 
+
 public class GM : MonoBehaviour
 {
     #region Variables Unity
@@ -49,17 +50,13 @@ public class GM : MonoBehaviour
             switch (value)
             {
                 case Clima.CALIDO:
-                    Tracker.T.setVar("Warm", 1);
                     Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Warm");
-                    //GameObjectTracker.Instance.Interacted("mesita");
                     break;
                 case Clima.FRIO:
                     Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Cold");
-                    Tracker.T.setVar("Cold", 1);
                     break;
                 default:
                     Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Neutral");
-                    Tracker.T.setVar("Warm & Cold", 1);
                     break;
             }
             _clima = (int)value;
@@ -73,22 +70,7 @@ public class GM : MonoBehaviour
     {
         get => (Genero)_genero; set
         {
-            switch (value)
-            {
-                case Genero.HOMBRE:
-                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "Male");
-                    Tracker.T.setVar("Male", 1);
-                    break;
-                case Genero.MUJER:
-                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "Female");
-                    Tracker.T.setVar("Female", 1);
-                    break;
-                default:
-                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "Neutral");
-
-                    Tracker.T.setVar("Male & Female", 1);
-                    break;
-            }
+            
             _genero = (int)value;
         }
     }
@@ -111,7 +93,7 @@ public class GM : MonoBehaviour
         List = new List<string>();
         ObstaculosList = new List<string>();
     }
-
+ 
     #endregion
 
     #region Métodos públicos

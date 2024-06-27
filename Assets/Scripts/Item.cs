@@ -85,7 +85,6 @@ public class Item : MonoBehaviour
     /// </summary>
     private void OnMouseDrag()
     {
-        Xasu.HighLevel.GameObjectTracker.Instance.Interacted("dragLuggageObject-" + name);
 
         Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5);
         transform.position = Camera.main.ScreenToWorldPoint(newPosition) + Offset;

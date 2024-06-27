@@ -2,8 +2,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Xasu;
 using static Assets.Scripts.Constantes;
-
+using System.Threading.Tasks;
+using UnityEngine.UI;
 public class InitialScene : MonoBehaviour
 {
     public GameObject title;
@@ -14,7 +16,7 @@ public class InitialScene : MonoBehaviour
     public GameObject[] speechBubbles;
     public bool saveGame;
     private AudioManager audioManager;
-
+    Button playButton;
     int speech;
     void Start()
     {
@@ -28,9 +30,25 @@ public class InitialScene : MonoBehaviour
         foreach (GameObject go in speechBubbles) go.SetActive(false);
         audioManager= AudioManager.Instance;
         audioManager.Play((int)GameSound.MenuBGM);
+        playButton = play.GetComponent<Button>();
+        InitTracker();
+
+    }
+ 
+    private async void InitTracker()
+    {
+   
+
+        playButton.interactable= false;
+        while (XasuTracker.Instance.Status.State == TrackerState.Uninitialized)
+        {
+            await Task.Yield();
+        }
+        playButton.interactable = true;
+        await Xasu.HighLevel.CompletableTracker.Instance.Initialized("MyGame", Xasu.HighLevel.CompletableTracker.CompletableType.Game);
     }
 
-   public void SetSpeechBubble()
+    public void SetSpeechBubble()
    {
         if (speech == 0)
         {

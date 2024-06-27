@@ -77,16 +77,7 @@ public class LevelSelector : MonoBehaviour
         levelSelected = -1;
         ClimaButtons.SetActive(true);
         levelButtons.SetActive(false);
-        GM.Gm.Genero = (Genero)PlayerPrefs.GetInt("genre", -1);
-           // SelectWeather(0);
-
-        //if (!PlayerPrefs.HasKey("firstime"))
-        //{
-        //    PlayerPrefs.SetInt("firstime", 1);
-        //}
-
-        //if (PlayerPrefs.GetInt("level3C") + PlayerPrefs.GetInt("level3W") >= 1) creditsButton.SetActive(true);
-        //else creditsButton.SetActive(false);
+ 
     }
 
     #endregion
@@ -115,12 +106,6 @@ public class LevelSelector : MonoBehaviour
         GM.Gm.Level = l;
         _decoration.SetActive(false);
         ClimaButtons.SetActive(false);
-
-        if (l == 0)
-        {
-            GM.Gm.Genero = Genero.NEUTRAL;
-            GM.Gm.Clima = Clima.AMBOS;
-        }
 
         Play();
     }
@@ -164,10 +149,6 @@ public class LevelSelector : MonoBehaviour
     }
     #endregion
 
-    #region Métodos privados
 
-
-
-    #endregion
 
 }

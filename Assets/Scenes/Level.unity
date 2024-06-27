@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonName: level-ReturnToRoomButton
+  buttonName: level-returnToRoomButton
 --- !u!1 &973462498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8932927628497907718, guid: dc51f7c3df55c1743ba453c231c7839e,
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonName: level-ReturnFromNoteBookButton
+  buttonName: level-returnFromNoteBookButton
 --- !u!1 &1121611791 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3458760563988860279, guid: dc51f7c3df55c1743ba453c231c7839e,
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonName: level-StartButton
+  buttonName: level-startButton
 --- !u!1001 &3807012848414786757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonName: level-ConfirmFinishButton
+  buttonName: level-confirmFinishButton
 --- !u!114 &3807012848414786767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1123,7 +1123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f89bd40899c4846bca49dc4931327a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonName: level-CancelFinishButton
+  buttonName: level-cancelFinishButton
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
