@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Xasu;
+using Xasu.HighLevel;
 using static Assets.Scripts.Constantes;
 using System.Threading.Tasks;
 using UnityEngine.UI;
@@ -33,19 +34,19 @@ public class InitialScene : MonoBehaviour
         playButton = play.GetComponent<Button>();
         InitTracker();
 
-    }
+    }       
  
     private async void InitTracker()
     {
-   
-
+        await XasuTracker.Instance.Init();
+        await Task.Yield();
         playButton.interactable= false;
         while (XasuTracker.Instance.Status.State == TrackerState.Uninitialized)
         {
             await Task.Yield();
         }
         playButton.interactable = true;
-        await Xasu.HighLevel.CompletableTracker.Instance.Initialized("MyGame", Xasu.HighLevel.CompletableTracker.CompletableType.Game);
+        //await Xasu.HighLevel.CompletableTracker.Instance.Initialized("MyGame", Xasu.HighLevel.CompletableTracker.CompletableType.Game);
     }
 
     public void SetSpeechBubble()
