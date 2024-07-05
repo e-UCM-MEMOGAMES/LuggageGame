@@ -1,0 +1,371 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: EnEs'Strings_en-US
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 381e72707fa25ff47b62981414a325a7, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 1141166501888
+    m_Localized: YES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1153485172736
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1189262585856
+    m_Localized: Are you sure you want to exit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1286796931072
+    m_Localized: 'Congratulations!
+
+      You got selected for a free trip'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1414970667008
+    m_Localized: You'll have to go make your luggage now!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4737568272384
+    m_Localized: Tap on the button down below to start!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4799652360192
+    m_Localized: Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4822817501184
+    m_Localized: Woman
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4879528685568
+    m_Localized: Select your gender
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4951440027648
+    m_Localized: Tap here to continue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 219731245330432
+    m_Localized: Luggage game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 220113489031168
+    m_Localized: Try to remember the following items and put them  in the suitcase. 
+      To unlock an objective, you need to complete the ones before it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 220481488875520
+    m_Localized: Objectives
+    m_Metadata:
+      m_Items: []
+  - m_Id: 220568038338560
+    m_Localized: Put more than half of the requested items in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 220733931450368
+    m_Localized: Put all requested items in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 220775060795392
+    m_Localized: Don't put any items that haven't been requested in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221170977927168
+    m_Localized: Don't look at the checklist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221417145823232
+    m_Localized: CHOTHES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221445746782208
+    m_Localized: OTHER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221495369592832
+    m_Localized: FOOTWEAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221565334777856
+    m_Localized: YES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221579918372864
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221603523915776
+    m_Localized: Are you sure you have finished?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221737011834880
+    m_Localized: End
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221762513203200
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221791151910912
+    m_Localized: Begin
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221811104215040
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222394166996992
+    m_Localized: YES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222411229425664
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222434004496384
+    m_Localized: Are you sure you want to exit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222544314691584
+    m_Localized: YES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222564116000768
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222590728859648
+    m_Localized: Are you sure you want to exit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222655572799488
+    m_Localized: YES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222676863086592
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222693992624128
+    m_Localized: Are you sure you want to exit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222784782528512
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222810120318976
+    m_Localized: Choose a difficulty level.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222978102194176
+    m_Localized: Select a destination for your vacation
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223068749492224
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223097283342336
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223120746278912
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223141063487488
+    m_Localized: Warm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223164874551296
+    m_Localized: Cold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223634833731584
+    m_Localized: Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223652248481792
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223697999949824
+    m_Localized: Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223729058770944
+    m_Localized: Choose a difficulty.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223761380077568
+    m_Localized: Warm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223777268101120
+    m_Localized: Cold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223795689484288
+    m_Localized: Luggage game
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223853474410496
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223875788107776
+    m_Localized: YES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223888064835584
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223910512750592
+    m_Localized: Are you sure you want to reset the game?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223959535775744
+    m_Localized: Reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223982386343936
+    m_Localized: Music
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223998869958656
+    m_Localized: Sound effects
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224087315247104
+    m_Localized: CLOTHES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224157615976448
+    m_Localized: OTHER
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224186581839872
+    m_Localized: FOOTWEAR
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224223512686592
+    m_Localized: YES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224241590136832
+    m_Localized: NO
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224259365597184
+    m_Localized: Are you sure you want to exit?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224371097661440
+    m_Localized: Finish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224395869220864
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224414949109760
+    m_Localized: Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224439670337536
+    m_Localized: Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224567529500672
+    m_Localized: Try to remember the following items and put them  in the suitcase. 
+      To unlock an objective, you need to complete the ones before it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 224607564132352
+    m_Localized: Objectives
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225059315838976
+    m_Localized: Put all requested items in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225094820622336
+    m_Localized: Don't put any items that haven't been requested in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225211992698880
+    m_Localized: 'Times the list was checked:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225281479733248
+    m_Localized: 'Not requested items:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225326270705664
+    m_Localized: 'Correct items:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225495678644224
+    m_Localized: Don't look at the checklist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225598938214400
+    m_Localized: Put in more than half of the requested items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225778970324992
+    m_Localized: 'Times the list was checked:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225801225302016
+    m_Localized: 'Not requested items:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 226022898462720
+    m_Localized: 'Correct items:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 226097955532800
+    m_Localized: Objectives
+    m_Metadata:
+      m_Items: []
+  - m_Id: 226485572136960
+    m_Localized: Put in more than half of the requested items
+    m_Metadata:
+      m_Items: []
+  - m_Id: 226580434710528
+    m_Localized: Don't put any items that haven't been requested in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 226629206077440
+    m_Localized: Put all requested items in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 226677537042432
+    m_Localized: Don't look at the checklist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 248732349296640
+    m_Localized: Cold
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

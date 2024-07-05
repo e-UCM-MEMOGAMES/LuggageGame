@@ -1,0 +1,168 @@
+{
+    "objects": [
+        {
+            "id": "Abrigo",
+            "translation": "Abrigo"
+        },
+        {
+            "id": "Blusa verde",
+            "translation": "Blusa verde"
+        },
+        {
+            "id": "Camisa roja",
+            "translation": "Camisa roja"
+        },
+        {
+            "id": "Camiseta amarilla",
+            "translation": "Camiseta amarilla"
+        },
+        {
+            "id": "Jersey",
+            "translation": "Jersey"
+        },
+        {
+            "id": "Camisa verde",
+            "translation": "Camisa verde"
+        },
+        {
+            "id": "Camiseta de tirantes",
+            "translation": "Camiseta de tirantes"
+        },
+        {
+            "id": "Pijama de verano",
+            "translation": "Pijama de verano"
+        },
+        {
+            "id": "Pijama de invierno",
+            "translation": "Pijama de invierno"
+        },
+        {
+            "id": "Vestido",
+            "translation": "Vestido"
+        },
+        {
+            "id": "Falda",
+            "translation": "Falda"
+        },
+        {
+            "id": "Bikini",
+            "translation": "Bikini"
+        },
+        {
+            "id": "Banador",
+            "translation": "Bañador"
+        },
+        {
+            "id": "Bermuda",
+            "translation": "Bermuda"
+        },
+        {
+            "id": "Pantalones largos",
+            "translation": "Pantalones largos"
+        },
+        {
+            "id": "Pantalones cortos",
+            "translation": "Pantalones cortos"
+        },
+        {
+            "id": "Calcetines",
+            "translation": "Calcetines"
+        },
+        {
+            "id": "Tacones",
+            "translation": "Tacones"
+        },
+        {
+            "id": "Deportivas",
+            "translation": "Deportivas"
+        },
+        {
+            "id": "Zapatos de tela",
+            "translation": "Zapatos de tela"
+        },
+        {
+            "id": "Chanclas",
+            "translation": "Chanclas"
+        },
+        {
+            "id": "Botas",
+            "translation": "Botas"
+        },
+        {
+            "id": "Gorra",
+            "translation": "Gorra"
+        },
+        {
+            "id": "Bolso",
+            "translation": "Bolso"
+        },
+        {
+            "id": "Rinonera",
+            "translation": "Riñonera"
+        },
+        {
+            "id": "Bufanda",
+            "translation": "Bufanda"
+        },
+        {
+            "id": "Gorro",
+            "translation": "Gorro"
+        },
+        {
+            "id": "Pareo",
+            "translation": "Pareo"
+        },
+        {
+            "id": "Cinturon",
+            "translation": "Cinturon"
+        },
+        {
+            "id": "Gafas de buceo",
+            "translation": "Gafas de buceo"
+        },
+        {
+            "id": "Gafas ski",
+            "translation": "Gafas ski"
+        },
+        {
+            "id": "Reloj",
+            "translation": "Reloj"
+        },
+        {
+            "id": "Guia de viajes",
+            "translation": "Guia de viajes"
+        },
+        {
+            "id": "Libro",
+            "translation": "Libro"
+        },
+        {
+            "id": "Neceser",
+            "translation": "Neceser"
+        },
+        {
+            "id": "Toalla",
+            "translation": "Toalla"
+        },
+        {
+            "id": "Peine",
+            "translation": "Peine"
+        },
+        {
+            "id": "Pasta de dientes",
+            "translation": "Pasta de dientes"
+        },
+        {
+            "id": "Cepillo de dientes",
+            "translation": "Cepillo de dientes"
+        },
+        {
+            "id": "Colonia",
+            "translation": "Colonia"
+        },
+        {
+            "id": "Bote de medicinas",
+            "translation": "Bote de medicinas"
+        }
+    ]
+}

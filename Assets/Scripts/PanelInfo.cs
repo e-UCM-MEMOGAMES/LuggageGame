@@ -14,6 +14,9 @@ namespace Assets.Scripts
 
         public Text TextPanelInfo { get; set; }
 
+        [SerializeField]
+        string id;
+
         void Start()
         {
             TextPanelInfo = PanelInfor.GetComponentInChildren<Text>();
@@ -27,7 +30,7 @@ namespace Assets.Scripts
                 Debug.Log("Posiciones del objeto: " + Input.mousePosition.x + " , " + Input.mousePosition.y + " , " + OFFSET_Z);
                 PanelInfor.SetActive(true);         
                 PanelInfor.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y+50, OFFSET_Z);
-                TextPanelInfo.text = name;
+                TextPanelInfo.text = id;
             }
         }
         private void OnMouseExit()
@@ -47,8 +50,6 @@ namespace Assets.Scripts
         private void OnMouseUp()
         {
             PanelInfor.SetActive(false);
-
-
         }
     }
 }

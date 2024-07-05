@@ -4,6 +4,7 @@ using System.Text;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Localization;
 using System.Linq;
 
 using static Assets.Scripts.Constantes;
@@ -12,6 +13,8 @@ using TMPro;
 using static CheckBox;
 using RAGE.Analytics;
 using Xasu.HighLevel;
+using UnityEngine.Localization.Settings;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 
 public class LevelManager : MonoBehaviour
 {
@@ -54,6 +57,7 @@ public class LevelManager : MonoBehaviour
     private Dictionary<string, ObjectsInfo> objectsDictionary;
     private Dictionary<string, CheckBox> checkBoxDictionary;
     private Dictionary<string, List<Transform>> storageDictionary;
+    public Dictionary<string, string> translationsDictionary { get; set; }
 
     //Lista de objetos en pantalla
     [SerializeField]
@@ -167,6 +171,7 @@ public class LevelManager : MonoBehaviour
 
         }
         checkBoxDictionary = new Dictionary<string, CheckBox>();
+        translationsDictionary = new Dictionary<string, string>();
     }
     private void SetLevel()
     {
@@ -218,6 +223,15 @@ public class LevelManager : MonoBehaviour
     {
         GM.Gm.List = new List<string>();
         GM.Gm.SceneObjects = new List<string>();
+
+        string local = "Localization/";
+        local = string.Concat(local, LocalizationSettings.SelectedLocale.Identifier.Code);
+        local = string.Concat(local, '/');
+        local = string.Concat(local, LocalizationSettings.SelectedLocale.Identifier.Code);
+
+        Debug.Log(local);
+        TextAsset localizationFile = (TextAsset)Resources.Load(local, typeof(TextAsset));
+        LoadTranslationTable(jsonReader.LoadTranslationFile(localizationFile.text));
 
         TextAsset jsonFile = (TextAsset)Resources.Load(string.Concat("Lists/", name), typeof(TextAsset));
         Debug.Log(jsonFile.text);
@@ -297,7 +311,7 @@ public class LevelManager : MonoBehaviour
                     c.SetCheckBoxState(CheckBoxState.None);
                     checkBoxDictionary.Add(objectLists[i].objectList[j], c);
 
-                    finalList.AppendLine(objectLists[i].objectList[j]);
+                    finalList.AppendLine(translationsDictionary[objectLists[i].objectList[j]]);
                     actualLineYPosition += YOffsetBetweenLine;
                     actualCheckboxYPosition += YOffsetBetweenCheckBox;
                 }
@@ -309,7 +323,6 @@ public class LevelManager : MonoBehaviour
 
 
     }
-
 
     /// <summary>
     /// Recoge del fichero las prendas según los parámetros.
@@ -367,6 +380,13 @@ public class LevelManager : MonoBehaviour
 
                 }
             }
+        }
+    }
+
+    private void LoadTranslationTable(TranslationInfo translations)
+    {
+        foreach(ObjectTranslation ti in translations.objects) {
+            translationsDictionary.Add(ti.id, ti.translation);
         }
     }
 

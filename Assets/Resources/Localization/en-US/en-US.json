@@ -1,0 +1,168 @@
+{
+    "objects": [
+        {
+            "id": "Abrigo",
+            "translation": "Coat"
+        },
+        {
+            "id": "Blusa verde",
+            "translation": "Green blouse"
+        },
+        {
+            "id": "Camisa roja",
+            "translation": "Red shirt"
+        },
+        {
+            "id": "Camiseta amarilla",
+            "translation": "Yellow shirt"
+        },
+        {
+            "id": "Jersey",
+            "translation": "Jersey"
+        },
+        {
+            "id": "Camisa verde",
+            "translation": "Green shirt"
+        },
+        {
+            "id": "Camiseta de tirantes",
+            "translation": "Tank top"
+        },
+        {
+            "id": "Pijama de verano",
+            "translation": "Summer pajama"
+        },
+        {
+            "id": "Pijama de invierno",
+            "translation": "Winter pajama"
+        },
+        {
+            "id": "Vestido",
+            "translation": "Dress"
+        },
+        {
+            "id": "Falda",
+            "translation": "Skirt"
+        },
+        {
+            "id": "Bikini",
+            "translation": "Bikini"
+        },
+        {
+            "id": "Banador",
+            "translation": "Swimsuit"
+        },
+        {
+            "id": "Bermuda",
+            "translation": "Bermuda"
+        },
+        {
+            "id": "Pantalones largos",
+            "translation": "Jeans"
+        },
+        {
+            "id": "Pantalones cortos",
+            "translation": "Shorts"
+        },
+        {
+            "id": "Calcetines",
+            "translation": "Socks"
+        },
+        {
+            "id": "Tacones",
+            "translation": "Heels"
+        },
+        {
+            "id": "Deportivas",
+            "translation": "Sneakers"
+        },
+        {
+            "id": "Zapatos de tela",
+            "translation": "Cloth shoes"
+        },
+        {
+            "id": "Chanclas",
+            "translation": "Sandals"
+        },
+        {
+            "id": "Botas",
+            "translation": "Boots"
+        },
+        {
+            "id": "Gorra",
+            "translation": "Cap"
+        },
+        {
+            "id": "Bolso",
+            "translation": "Bag"
+        },
+        {
+            "id": "Rinonera",
+            "translation": "Fanny pack"
+        },
+        {
+            "id": "Bufanda",
+            "translation": "Scarf"
+        },
+        {
+            "id": "Gorro",
+            "translation": "Beanie"
+        },
+        {
+            "id": "Pareo",
+            "translation": "Saron"
+        },
+        {
+            "id": "Cinturon",
+            "translation": "Belt"
+        },
+        {
+            "id": "Gafas de buceo",
+            "translation": "Diving goggles"
+        },
+        {
+            "id": "Gafas ski",
+            "translation": "Ski goggles"
+        },
+        {
+            "id": "Reloj",
+            "translation": "Watch"
+        },
+        {
+            "id": "Guia de viajes",
+            "translation": "Travel guide"
+        },
+        {
+            "id": "Libro",
+            "translation": "Book"
+        },
+        {
+            "id": "Neceser",
+            "translation": "Toiletry bag"
+        },
+        {
+            "id": "Toalla",
+            "translation": "Towel"
+        },
+        {
+            "id": "Peine",
+            "translation": "Comb"
+        },
+        {
+            "id": "Pasta de dientes",
+            "translation": "Toothpaste"
+        },
+        {
+            "id": "Cepillo de dientes",
+            "translation": "Toothbrush"
+        },
+        {
+            "id": "Colonia",
+            "translation": "Cologne"
+        },
+        {
+            "id": "Bote de medicinas",
+            "translation": "Bottle of pills"
+        }
+    ]
+}

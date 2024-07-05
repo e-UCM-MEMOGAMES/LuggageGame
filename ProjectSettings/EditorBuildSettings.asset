@@ -38,4 +38,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level.unity
     guid: ecf6e155f59eccc419252fe8a7b041bc
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 7e1a5c2fb93513a4bbb03bc6c424e57f,
+      type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: a4d225a3114a2724397485dc7821c261,
+      type: 2}

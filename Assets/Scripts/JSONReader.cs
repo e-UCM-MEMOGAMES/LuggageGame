@@ -5,6 +5,17 @@ using UnityEngine;
 public class JSONReader : MonoBehaviour
 {
     [System.Serializable]
+    public class TranslationInfo
+    {
+       public ObjectTranslation[] objects;
+    }
+    [System.Serializable]
+    public class ObjectTranslation
+    {
+       public string id;
+       public string translation;
+    }
+    [System.Serializable]
     public class LevelInfo
     {
        public string [] objectList_M;
@@ -31,6 +42,13 @@ public class JSONReader : MonoBehaviour
         LevelInfo levelInfo;
         levelInfo = JsonUtility.FromJson<LevelInfo>(file);
         return levelInfo;
+    }
+    
+    public TranslationInfo LoadTranslationFile(string file)
+    {
+        TranslationInfo translationInfo;
+        translationInfo = JsonUtility.FromJson<TranslationInfo>(file);
+        return translationInfo;
     }
 
 }
