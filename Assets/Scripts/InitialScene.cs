@@ -13,7 +13,6 @@ public class InitialScene : MonoBehaviour
     public GameObject play;
     public GameObject playMini;
     public GameObject genre;
-    public GameObject men;
     public GameObject[] speechBubbles;
     public bool saveGame;
     private AudioManager audioManager;
@@ -26,7 +25,6 @@ public class InitialScene : MonoBehaviour
 #endif
         speech = 0;
         playMini.SetActive(false);
-        men.SetActive(false);
         genre.SetActive(false);
         foreach (GameObject go in speechBubbles) go.SetActive(false);
         audioManager= AudioManager.Instance;
@@ -57,7 +55,6 @@ public class InitialScene : MonoBehaviour
             {
                 title.SetActive(false);
                 play.SetActive(false);
-                men.SetActive(true);
                 speechBubbles[speech].SetActive(true);
                 speech++;
             }
@@ -80,7 +77,6 @@ public class InitialScene : MonoBehaviour
     {
         Debug.Log((Genero)PlayerPrefs.GetInt("genre"));
 
-            men.SetActive(false);
             playMini.SetActive(false);
             speechBubbles[speech - 1].SetActive(false);
             genre.SetActive(true);

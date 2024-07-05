@@ -462,7 +462,7 @@ public class LevelManager : MonoBehaviour
             state = State.LUGGAGE;
             luggage.gameObject.SetActive(true);
             luggage.transform.position = new Vector3(0, 19f, luggage.transform.position.z);
-            luggage.transform.localScale = new Vector3(3.5f, 3.5f, 1);
+            luggage.transform.localScale = new Vector3(4.0f, 4.0f, 1);
           
             Xasu.HighLevel.GameObjectTracker.Instance.Interacted("checkLuggage");
         }
