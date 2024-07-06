@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,8 +13,7 @@ public class Tutorial : MonoBehaviour
     public GameObject panelInfoObject;
     public Animator manoAnimator;
     public GameObject camara;
-
-    Text texto;
+    TMP_Text texto;
 
     enum State { NONE,CLICK, DRAGNDROP, LUGGAGE, OVERINFO, PULLOVER, BACKTOROOM, DRAWER, BATHROOM, BACKTHROOM, END, NULL, CAMISETAAMARILLA,CLICKLIST, CLICKEDLIST,BACKFROMLIST }
     State state;
@@ -169,7 +169,7 @@ public class Tutorial : MonoBehaviour
     public void ButtonBegin()
     {
         state = State.CLICK;
-        texto = panel.GetComponentInChildren<Text>();
+        texto = panel.GetComponentInChildren<TMP_Text>();
         texto.text = "Pulse sobre la camiseta amarilla y mantenga pulsado.";
         manoAnimator.SetInteger("step", 0);
         panel.SetActive(true);

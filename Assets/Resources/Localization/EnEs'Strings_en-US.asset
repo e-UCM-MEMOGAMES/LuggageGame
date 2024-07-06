@@ -110,7 +110,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 221603523915776
-    m_Localized: Are you sure you have finished?
+    m_Localized: Are you sure you want to reset the game?
     m_Metadata:
       m_Items: []
   - m_Id: 221737011834880

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Assets.Scripts
@@ -12,14 +13,14 @@ namespace Assets.Scripts
 
         public GameObject PanelInfor { get => _panelInfo; set => _panelInfo = value; }    
 
-        public Text TextPanelInfo { get; set; }
+        public TMP_Text TextPanelInfo { get; set; }
 
         [SerializeField]
         string id;
 
         void Start()
         {
-            TextPanelInfo = PanelInfor.GetComponentInChildren<Text>();
+            TextPanelInfo = PanelInfor.GetComponentInChildren<TMP_Text>();
         }
 
 

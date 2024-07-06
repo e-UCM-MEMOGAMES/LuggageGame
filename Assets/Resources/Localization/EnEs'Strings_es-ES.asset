@@ -109,7 +109,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 221603523915776
-    m_Localized: "\xBFSeguro que quiere terminar ya?"
+    m_Localized: "\xBFSeguro que quiere resetear el juego?"
     m_Metadata:
       m_Items: []
   - m_Id: 221737011834880
@@ -241,7 +241,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 223959535775744
-    m_Localized: 'Resetear '
+    m_Localized: Resetear
     m_Metadata:
       m_Items: []
   - m_Id: 223982386343936

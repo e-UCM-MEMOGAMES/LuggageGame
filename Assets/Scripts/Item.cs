@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -8,7 +9,7 @@ public class Item : MonoBehaviour
 
     GameObject twin;
     public GameObject panelInfo;
-    Text nameInfo;
+    TMP_Text nameInfo;
     Vector3 StartPoint;
     Vector3 Offset;
     bool hasExit;
@@ -16,7 +17,7 @@ public class Item : MonoBehaviour
     void Start()
     {
         StartPoint = transform.localPosition;
-        nameInfo = panelInfo.GetComponentInChildren<Text>();
+        nameInfo = panelInfo.GetComponentInChildren<TMP_Text>();
         hasExit = false;
         luggage = transform.parent.GetComponent<Luggage>();
     }
