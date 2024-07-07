@@ -22,6 +22,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5cac4b0d62f391b4a9a88f63c86ea5e7
+    m_Address: Assets/Resources/Localization/EnEsAssets Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 02d2fcca34774cc4a928edf1a92169c4, type: 2}
   m_SchemaSet:

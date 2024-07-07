@@ -366,6 +366,77 @@ MonoBehaviour:
     m_Localized: Cold
     m_Metadata:
       m_Items: []
+  - m_Id: 972905560338432
+    m_Localized: Cold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 980179829846016
+    m_Localized: Drag the t-shirt into the suitcase and let go.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 980641584967680
+    m_Localized: Tap and hold on an item to reveal it's name.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 981056879783936
+    m_Localized: Not every drawer has an item inside it. Return to your room and
+      check the other drawers.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 981263440867328
+    m_Localized: You can tap here to check out the items you need in case you have
+      forgotten any.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 981342667075584
+    m_Localized: Tap and hold on the yellow t-shirt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007719978037248
+    m_Localized: Tap on the suitcase to check its contents.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1008035591024640
+    m_Localized: Tap on the icon down below to close the suitcase.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1008127668580352
+    m_Localized: You may check the contents of a drawer by tapping on it.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1008270274916352
+    m_Localized: You may drag an item out the suitacase to take it out.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1008625826066432
+    m_Localized: You can tap here to check out the items you need in case you have
+      forgotten any.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1009206221271040
+    m_Localized: Check your luggagee and tap on the plane icon to start your vacation.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010056146644992
+    m_Localized: The number indicates the number of times you may check the list.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010146311598080
+    m_Localized: Return the t-shirt to the suitcase.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010287504453632
+    m_Localized: You may tap on the icon at your right to go to the bathroom.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010463212236800
+    m_Localized: Check the drawers and tap the icon to return.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010595878072320
+    m_Localized: Tap and hold the yellow t-shirt.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

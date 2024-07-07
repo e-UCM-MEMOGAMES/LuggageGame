@@ -1031,6 +1031,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: -170.15479
       objectReference: {fileID: 0}
+    - target: {fileID: 1640403420389294739, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: id
+      value: Pijama de invierno
+      objectReference: {fileID: 0}
     - target: {fileID: 2445221738055353097, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: m_text
@@ -1095,6 +1100,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3711278134143397835, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: id
+      value: Camiseta verde
       objectReference: {fileID: 0}
     - target: {fileID: 3770758300998846538, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
@@ -1586,6 +1596,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8508763789412068546, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: id
+      value: Gafas de buceo
+      objectReference: {fileID: 0}
     - target: {fileID: 8605142299300773926, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: m_text
@@ -1635,6 +1650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8822857104088642674, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: id
+      value: Gafas de ski
       objectReference: {fileID: 0}
     - target: {fileID: 9028312131018858415, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
@@ -3081,6 +3101,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2019055862}
   - component: {fileID: 2019055861}
+  - component: {fileID: 2019055863}
   m_Layer: 9
   m_Name: Tutorial
   m_TagString: Untagged
@@ -3106,6 +3127,26 @@ MonoBehaviour:
   panelInfoObject: {fileID: 720102663}
   manoAnimator: {fileID: 233718079}
   camara: {fileID: 720102662}
+  textoTutorial:
+  - Sin soltar, arrastre la camiseta hasta la maleta y luego suelte.
+  - "Si pone el cursor sobre el objeto, aparecer\xE1 su nombre."
+  - "No todos los cajones tendr\xE1n algo dentro. Vuelva a la habitaci\xF3n y revise
+    el resto."
+  - Aqui puedes echar un ojo a la lista de objetos en caso de que se te ha olvidado.
+  - Pulse sobre la camiseta amarilla y mantenga pulsado.
+  - Haga click en la maleta para ver lo que ha metido.
+  - "Haga click sobre el icono de abajo para cerrar la maleta y volver atr\xE1s."
+  - Puede ver el contenido de los cajones haciendo click en ellos.
+  - Puede arrastrar el objeto fuera de la maleta para sacarlo.
+  - Aqui puedes echar un ojo a la lista de objetos en caso de que se te ha olvidado.
+  - "Revise su equipaje y haga click sobre el icono del avi\xF3n para terminar y
+    marcharse de viaje."
+  - "Cuidado que cada revisi\xF3n resta una oportunidad. Ya no podr\xE1s volver a
+    revisar cuando agoten todos los intentos."
+  - Vuelva a meter la camiseta amarilla en la maleta.
+  - "Puede hacer click en el icono de la derecha para ir al ba\xF1o."
+  - "Revise los cajones y haga click en el icono se\xF1alado para volver a la habitaci\xF3n"
+  - Pulse sobre la camiseta amarilla y mantenga pulsado.
 --- !u!4 &2019055862
 Transform:
   m_ObjectHideFlags: 0
@@ -3122,6 +3163,274 @@ Transform:
   - {fileID: 233718081}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2019055863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019055860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - rid: 3258602988037210125
+  references:
+    version: 2
+    RefIds:
+    - rid: 3258602988037210125
+      type: {class: TrackedMonoBehaviourObject, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 2019055861}
+        m_TrackedProperties:
+          items:
+          - rid: 3258602988037210126
+          - rid: 3258602988037210127
+          - rid: 3258602988037210128
+          - rid: 3258602988037210129
+          - rid: 3258602988037210130
+          - rid: 3258602988037210131
+          - rid: 3258602988037210132
+          - rid: 3258602988037210133
+          - rid: 3258602988037210134
+          - rid: 3258602988037210135
+          - rid: 3258602988037210136
+          - rid: 3258602988037210137
+          - rid: 3258602988037210138
+          - rid: 3258602988037210139
+          - rid: 3258602988037210140
+          - rid: 3258602988037210141
+        m_UpdateType: 1
+        m_Changed:
+          m_PersistentCalls:
+            m_Calls: []
+    - rid: 3258602988037210126
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 980179829846016
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[0]
+    - rid: 3258602988037210127
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 980641584967680
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[1]
+    - rid: 3258602988037210128
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 981056879783936
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[2]
+    - rid: 3258602988037210129
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 981263440867328
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[3]
+    - rid: 3258602988037210130
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 981342667075584
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[4]
+    - rid: 3258602988037210131
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1007719978037248
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[5]
+    - rid: 3258602988037210132
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1008035591024640
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[6]
+    - rid: 3258602988037210133
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1008127668580352
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[7]
+    - rid: 3258602988037210134
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1008270274916352
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[8]
+    - rid: 3258602988037210135
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1008625826066432
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[9]
+    - rid: 3258602988037210136
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1009206221271040
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[10]
+    - rid: 3258602988037210137
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1010056146644992
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[11]
+    - rid: 3258602988037210138
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1010146311598080
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[12]
+    - rid: 3258602988037210139
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1010287504453632
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[13]
+    - rid: 3258602988037210140
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1010463212236800
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[14]
+    - rid: 3258602988037210141
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1010595878072320
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: textoTutorial.Array.data[15]
 --- !u!224 &2046071400 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1584239617102708303, guid: dc51f7c3df55c1743ba453c231c7839e,
