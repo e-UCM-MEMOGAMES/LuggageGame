@@ -14,6 +14,9 @@ public class Item : MonoBehaviour
     Vector3 Offset;
     bool hasExit;
     Luggage luggage;
+    [SerializeField]
+    string id;
+
     void Start()
     {
         StartPoint = transform.localPosition;
@@ -102,5 +105,9 @@ public class Item : MonoBehaviour
 
         hasExit = true;
 
+    }
+    public string getID()
+    {
+        return id;
     }
 }

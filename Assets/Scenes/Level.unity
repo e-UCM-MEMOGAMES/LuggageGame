@@ -2080,6 +2080,11 @@ PrefabInstance:
       propertyPath: managedReferences[3258602941332062241].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4863596486040514661, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_Name
+      value: Blusa verde
+      objectReference: {fileID: 0}
     - target: {fileID: 4911449240842959488, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: m_IsActive
