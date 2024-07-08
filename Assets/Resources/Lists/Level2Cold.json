@@ -9,7 +9,7 @@
             "Pantalones largos",
             "Abrigo",
             "Jersey",
-            "Guía de viajes",
+            "Guia de viajes",
             "Bufanda"
       ],
       "storagePoints": [
@@ -77,7 +77,7 @@
                               "gender": "N"
                         },
                         {
-                              "name": "Guía de viajes",
+                              "name": "Guia de viajes",
                               "position": 0,
                               "gender": "N"
                         }

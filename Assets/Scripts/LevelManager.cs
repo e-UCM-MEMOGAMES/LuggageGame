@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using UnityEditor;
+
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.Localization;
+
 using System.Linq;
 
 using static Assets.Scripts.Constantes;
@@ -14,7 +14,6 @@ using static CheckBox;
 using RAGE.Analytics;
 using Xasu.HighLevel;
 using UnityEngine.Localization.Settings;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 
 public class LevelManager : MonoBehaviour
 {
@@ -357,15 +356,16 @@ public class LevelManager : MonoBehaviour
             {
                 if (info.storagePoints[i].objects[j].gender == gen || info.storagePoints[i].objects[j].gender == "N")
                 {
-                    string objectName = info.storagePoints[i].objects[j].name;
-                    GM.Gm.SceneObjects.Add(objectName);
-                    Debug.Log(objectName);
+                    string objectID = info.storagePoints[i].objects[j].name;
+                    GM.Gm.SceneObjects.Add(objectID);
+                    Debug.Log(objectID);
                     storageDictionary.TryGetValue(info.storagePoints[i].name, out List<Transform> l);
 
-                    GameObject go = objectsDictionary[objectName].go;
+                    GameObject go = objectsDictionary[objectID].go;
                     go.transform.SetParent(l[info.storagePoints[i].objects[j].position]);
                     go.transform.localPosition = new Vector3(0, 0, 0);
                     go.SetActive(true);
+                    go.GetComponent<DraggNDrop>().setName(LocalizationManager.Lm.getWord(objectID));
 
                 }
             }

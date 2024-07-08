@@ -1,5 +1,6 @@
 ﻿using RAGE.Analytics;
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -16,6 +17,9 @@ public class DraggNDrop : MonoBehaviour
     private int _clima;
     [SerializeField]
     private int _genero;
+    [SerializeField]
+    private TMP_Text nameInfo;
+    string translatedName = " ";
 
     #endregion
 
@@ -69,8 +73,14 @@ public class DraggNDrop : MonoBehaviour
         //GENERO = GM.Gm.Genero;
         ItsInTarget = false;
         Maleta = ObjetoMaleta.transform.parent.gameObject.GetComponent<Luggage>();
-    }
 
+    }
+    private void OnMouseEnter()
+    {
+        if (EventSystem.current.IsPointerOverGameObject()) return;
+        nameInfo.text = translatedName;
+
+    }
     /// <summary>
     /// Evento cuando se clicka el objeto.
     /// </summary>
@@ -135,5 +145,10 @@ public class DraggNDrop : MonoBehaviour
     }
 
     #endregion
+
+    public void setName(string name)
+    {
+        _objetoMaleta.SetName(translatedName = name);
+    }
 
 }

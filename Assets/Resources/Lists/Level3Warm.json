@@ -1,20 +1,21 @@
 {
       "objectList_M": [
             "Camisa hawaiana",
-            "Riñonera",
-            "Zapatos de tela"
+            "Rinonera",
+            "Zapatos de tela",
+            "Pijama de tirantes"
       ],
       "objectList_F": [
             "Falda",
             "Bolso",
-            "Tacones"
+            "Tacones",
+            "Pijama de seda"
       ],
       "objectList_N": [
             "Camiseta de tirantes",
             "Pareo",
-            "Camiseta verde",
             "Neceser",
-            "Cinturón",
+            "Cinturon",
             "Libro"
       ],
       "storagePoints": [
@@ -22,7 +23,7 @@
                   "name": "Bedroom_DresserDrawer_above",
                   "objects": [
                         {
-                              "name": "Cinturón",
+                              "name": "Cinturon",
                               "position": 1,
                               "gender": "N"
                         },
@@ -51,7 +52,7 @@
                   "name": "Bedroom_DresserDrawer_bottom",
                   "objects": [
                         {
-                              "name": "Guía de viajes",
+                              "name": "Guia de viajes",
                               "position": 4,
                               "gender": "N"
                         }
@@ -59,7 +60,20 @@
             },
             {
                   "name": "Bedroom_ClosetDrawer_top",
-                  "objects": []
+                  "objects": [
+                        {
+
+      
+                              "name": "Pijama de tirantes",
+                              "position": 2,
+                              "gender": "M"
+                        }    ,  {
+                              "name": "Pijama de seda",
+                              "position": 5,
+                              "gender": "F"
+                        }    
+
+                  ]
             },
             {
                   "name": "Bedroom_ClosetDrawer_middle",
@@ -88,18 +102,17 @@
                               "name": "Camiseta de tirantes",
                               "position": 0,
                               "gender": "N"
-                        },
-                        {
-                              "name": "Camiseta verde",
-                              "position": 1,
-                              "gender": "N"
                         }
                   ]
             },
             {
                   "name": "Bedroom_CoatRack",
                   "objects": [
-
+                        {
+                              "name": "Bolso",
+                              "position": 1,
+                              "gender": "F"
+                        }
                   ]
             },
             {
@@ -130,6 +143,11 @@
                               "name": "Gafas de buceo",
                               "position": 0,
                               "gender": "N"
+                        } , 
+                        {
+                              "name": "Rinonera",
+                              "position": 1,
+                              "gender": "M"
                         }
 
                   ]

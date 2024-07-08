@@ -6506,6 +6506,7 @@ GameObject:
   - component: {fileID: 1934042179}
   - component: {fileID: 1934042181}
   - component: {fileID: 1934042180}
+  - component: {fileID: 1934042182}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -6552,7 +6553,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ajustes
+  m_text: ESFSFEedstgft
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41e8f506bd9ec1b46a5f14ed6f382552, type: 2}
   m_sharedMaterial: {fileID: 5312309082972622527, guid: 41e8f506bd9ec1b46a5f14ed6f382552,
@@ -6630,6 +6631,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1934042178}
   m_CullTransparentMesh: 1
+--- !u!114 &1934042182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1934042178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - rid: 7917071053622083590
+  references:
+    version: 2
+    RefIds:
+    - rid: 7917071053622083590
+      type: {class: TrackedUGuiGraphic, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 1934042180}
+        m_TrackedProperties:
+          items:
+          - rid: 7917071053622083591
+        m_UpdateType: 0
+    - rid: 7917071053622083591
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1390149144584192
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: m_text
 --- !u!1 &2033868169
 GameObject:
   m_ObjectHideFlags: 0

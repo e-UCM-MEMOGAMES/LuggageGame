@@ -21,8 +21,8 @@
             "translation": "Jersey"
         },
         {
-            "id": "Camisa verde",
-            "translation": "Green shirt"
+            "id": "Camiseta verde",
+            "translation": "Green t-shirt"
         },
         {
             "id": "Camiseta de tirantes",
@@ -35,6 +35,10 @@
         {
             "id": "Pijama de invierno",
             "translation": "Winter pajama"
+        },
+        {
+            "id": "Pijama de seda",
+            "translation": "Silk pajama"
         },
         {
             "id": "Vestido",
@@ -53,7 +57,7 @@
             "translation": "Swimsuit"
         },
         {
-            "id": "Bermuda",
+            "id": "Bermudas",
             "translation": "Bermuda"
         },
         {
@@ -82,7 +86,7 @@
         },
         {
             "id": "Chanclas",
-            "translation": "Sandals"
+            "translation": "Flip-flops"
         },
         {
             "id": "Botas",
@@ -94,7 +98,7 @@
         },
         {
             "id": "Bolso",
-            "translation": "Bag"
+            "translation": "Handbag"
         },
         {
             "id": "Rinonera",

@@ -440,6 +440,18 @@ MonoBehaviour:
     m_Localized: Pulse sobre la camiseta amarilla y mantenga pulsado.
     m_Metadata:
       m_Items: []
+  - m_Id: 1386336887152640
+    m_Localized: "Cr\xE9ditos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1389778280030208
+    m_Localized: "\xBFSeguro que ha terminado?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1390149144584192
+    m_Localized: Ajustes
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

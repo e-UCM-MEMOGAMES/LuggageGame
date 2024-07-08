@@ -8,46 +8,37 @@ namespace Assets.Scripts
     {
         [SerializeField]
         private GameObject _panelInfo;
-      
+
         private float OFFSET_Z { get { return 10.0f; } }
 
-        public GameObject PanelInfor { get => _panelInfo; set => _panelInfo = value; }    
 
-        public TMP_Text TextPanelInfo { get; set; }
-
-        void Start()
-        {
-            TextPanelInfo = PanelInfor.GetComponentInChildren<TMP_Text>();
-            TextPanelInfo.text = LocalizationManager.Lm.getWord(name);
-            PanelInfor.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y+50, OFFSET_Z);
-        }
-
-
+     
         private void OnMouseEnter()
         {
             if (!Input.GetMouseButtonUp(0))
             {
+                _panelInfo.transform.position = new Vector3(Input.mousePosition.x, Input.mousePosition.y + 50, OFFSET_Z);
                 Debug.Log("Posiciones del objeto: " + Input.mousePosition.x + " , " + Input.mousePosition.y + " , " + OFFSET_Z);
-                PanelInfor.SetActive(true);         
+                _panelInfo.SetActive(true);
             }
         }
         private void OnMouseExit()
         {
-            PanelInfor.SetActive(false);
-        }
-      
-        private void OnMouseDrag()
-        {
-            PanelInfor.SetActive(true);
-        }
-        private void OnMouseDown()
-        {
-            PanelInfor.SetActive(true);
-
+            _panelInfo.SetActive(false);
         }
         private void OnMouseUp()
         {
-            PanelInfor.SetActive(false);
+            _panelInfo.SetActive(false);
+        }
+
+        private void OnMouseDrag()
+        {
+            _panelInfo.SetActive(true);
+        }
+        private void OnMouseDown()
+        {
+            _panelInfo.SetActive(true);
+
         }
     }
 }

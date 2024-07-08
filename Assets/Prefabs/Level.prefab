@@ -300,8 +300,8 @@ GameObject:
   - component: {fileID: 8587241026734563994}
   - component: {fileID: 3022007070837267816}
   - component: {fileID: 8850654476021371624}
-  - component: {fileID: 4880212699063842965}
   - component: {fileID: 36462320889312867}
+  - component: {fileID: 5289113938799138168}
   m_Layer: 9
   m_Name: Calcetines
   m_TagString: Untagged
@@ -436,21 +436,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 809500837488390332}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &4880212699063842965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 75681261115907814}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &36462320889312867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,6 +450,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5289113938799138168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75681261115907814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &94326631280688822
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +815,182 @@ Transform:
   - {fileID: 7894602684406026544}
   m_Father: {fileID: 4241134992825528161}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &334549599820203369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1790713485323874081}
+  - component: {fileID: 4848055107542054499}
+  - component: {fileID: 9161031461751156593}
+  - component: {fileID: 4063103509863128732}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1790713485323874081
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334549599820203369}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1969487100732400588}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &4848055107542054499
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334549599820203369}
+  m_CullTransparentMesh: 1
+--- !u!114 &9161031461751156593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334549599820203369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: "\xBFSeguro que ha terminado?"
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 41e8f506bd9ec1b46a5f14ed6f382552, type: 2}
+  m_sharedMaterial: {fileID: 5312309082972622527, guid: 41e8f506bd9ec1b46a5f14ed6f382552,
+    type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 57.68
+  m_fontSizeBase: 57.68
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: -218.81223, y: -122.74841, z: -216.6778, w: -19.212824}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &4063103509863128732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334549599820203369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - rid: 7917071053622083588
+  references:
+    version: 2
+    RefIds:
+    - rid: 7917071053622083588
+      type: {class: TrackedUGuiGraphic, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 9161031461751156593}
+        m_TrackedProperties:
+          items:
+          - rid: 7917071053622083589
+        m_UpdateType: 0
+    - rid: 7917071053622083589
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 1389778280030208
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: m_text
 --- !u!1 &351012292009550902
 GameObject:
   m_ObjectHideFlags: 0
@@ -1788,8 +1964,8 @@ GameObject:
   - component: {fileID: 5013236674024417048}
   - component: {fileID: 9078991056535297272}
   - component: {fileID: 4196882811607463318}
-  - component: {fileID: 6360953470661830998}
   - component: {fileID: 1978692845090590421}
+  - component: {fileID: 4565239820004834448}
   m_Layer: 9
   m_Name: Bote de medicinas
   m_TagString: Untagged
@@ -1924,21 +2100,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 2588566959271608568}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &6360953470661830998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 637332352024716750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &1978692845090590421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1951,6 +2114,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4565239820004834448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637332352024716750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &641493932637140747
 GameObject:
   m_ObjectHideFlags: 0
@@ -2461,8 +2637,8 @@ GameObject:
   - component: {fileID: 6997632358159901389}
   - component: {fileID: 7589141414107409219}
   - component: {fileID: 4550528340785976393}
-  - component: {fileID: 8471556180752050036}
   - component: {fileID: 6492688697521859054}
+  - component: {fileID: 153855605944468303}
   m_Layer: 9
   m_Name: Pijama de invierno
   m_TagString: Untagged
@@ -2597,21 +2773,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 2418986566518383596}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &8471556180752050036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998372207717212160}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &6492688697521859054
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2624,6 +2787,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &153855605944468303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998372207717212160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &1059340559258329319
 GameObject:
   m_ObjectHideFlags: 0
@@ -3170,8 +3346,8 @@ GameObject:
   - component: {fileID: 474334178367335142}
   - component: {fileID: 883815029738087143}
   - component: {fileID: 1290596929659627920}
-  - component: {fileID: 5137192470523075777}
   - component: {fileID: 2710698368472413703}
+  - component: {fileID: 3650579530607412625}
   m_Layer: 9
   m_Name: Pasta de dientes
   m_TagString: Untagged
@@ -3306,21 +3482,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 1918627096342657275}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &5137192470523075777
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1277446020101563114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &2710698368472413703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3333,6 +3496,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3650579530607412625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277446020101563114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &1327458361790615464
 GameObject:
   m_ObjectHideFlags: 0
@@ -3827,8 +4003,8 @@ GameObject:
   - component: {fileID: 1417749197545683975}
   - component: {fileID: 5802446425470424103}
   - component: {fileID: 8639285908112104509}
-  - component: {fileID: 5843578959499833714}
   - component: {fileID: 3575127433453185999}
+  - component: {fileID: 2319212382570248663}
   m_Layer: 9
   m_Name: Abrigo
   m_TagString: Untagged
@@ -3963,21 +4139,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 7462526979335982640}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &5843578959499833714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1471495715766186144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &3575127433453185999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3990,6 +4153,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2319212382570248663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471495715766186144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &1533188673510787013
 GameObject:
   m_ObjectHideFlags: 0
@@ -4199,7 +4375,7 @@ GameObject:
   - component: {fileID: 4403894416778774750}
   - component: {fileID: 3115487363637419024}
   - component: {fileID: 8658292429180396276}
-  - component: {fileID: 8272633694360595926}
+  - component: {fileID: 2280954653251317334}
   m_Layer: 9
   m_Name: Bikini
   m_TagString: Untagged
@@ -4334,8 +4510,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 7290594449561148112}
   _clima: 1
   _genero: 2
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &8272633694360595926
+--- !u!114 &2280954653251317334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4348,7 +4525,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &1639419939781946159
 GameObject:
   m_ObjectHideFlags: 0
@@ -4423,8 +4599,8 @@ GameObject:
   - component: {fileID: 3725651685038103961}
   - component: {fileID: 2237330487248129439}
   - component: {fileID: 8923534453069409656}
-  - component: {fileID: 1954557927978526109}
   - component: {fileID: 2563700072583658501}
+  - component: {fileID: 8672781150571188612}
   m_Layer: 9
   m_Name: "Ri\xF1onera"
   m_TagString: Untagged
@@ -4559,21 +4735,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 4784707709690833098}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &1954557927978526109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1696288402456918907}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &2563700072583658501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4586,6 +4749,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8672781150571188612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696288402456918907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &1759376604597724780
 GameObject:
   m_ObjectHideFlags: 0
@@ -4820,8 +4996,8 @@ GameObject:
   - component: {fileID: 5290785858620376141}
   - component: {fileID: 6457229721501486791}
   - component: {fileID: 7736483291438660506}
-  - component: {fileID: 6977022831432622439}
   - component: {fileID: 2781745588792295293}
+  - component: {fileID: 2517068521123650842}
   m_Layer: 9
   m_Name: Peine
   m_TagString: Untagged
@@ -4956,21 +5132,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 8545004290936385192}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &6977022831432622439
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1889038839602258502}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &2781745588792295293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4983,6 +5146,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2517068521123650842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1889038839602258502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &1927613111023947904
 GameObject:
   m_ObjectHideFlags: 0
@@ -4995,8 +5171,8 @@ GameObject:
   - component: {fileID: 8220841378737940159}
   - component: {fileID: 8455635360880198809}
   - component: {fileID: 6049599256729869991}
-  - component: {fileID: 8983283193605755064}
   - component: {fileID: 7452379371794660641}
+  - component: {fileID: 6286127165076081972}
   m_Layer: 9
   m_Name: Pijama
   m_TagString: Untagged
@@ -5131,21 +5307,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 5849184528091271213}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &8983283193605755064
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1927613111023947904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &7452379371794660641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5158,6 +5321,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6286127165076081972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927613111023947904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &1978794276214188925
 GameObject:
   m_ObjectHideFlags: 0
@@ -6391,7 +6567,7 @@ GameObject:
   - component: {fileID: 4684166275792556501}
   - component: {fileID: 1004012165843182197}
   - component: {fileID: 184429010302055624}
-  - component: {fileID: 6340476579694962203}
+  - component: {fileID: 3659668132154099709}
   m_Layer: 9
   m_Name: "Pantal\xF3n largo"
   m_TagString: Untagged
@@ -6526,8 +6702,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3062566630362579295}
   _clima: 2
   _genero: 1
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &6340476579694962203
+--- !u!114 &3659668132154099709
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6540,7 +6717,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &2337651279530783469
 GameObject:
   m_ObjectHideFlags: 0
@@ -6553,8 +6729,8 @@ GameObject:
   - component: {fileID: 6864357495887476185}
   - component: {fileID: 4695475376706424555}
   - component: {fileID: 9217922858228896089}
-  - component: {fileID: 4027886762594723050}
   - component: {fileID: 7287531939517608788}
+  - component: {fileID: 5743396545734626}
   m_Layer: 9
   m_Name: Vestido
   m_TagString: Untagged
@@ -6689,21 +6865,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 9031021756807015846}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &4027886762594723050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2337651279530783469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &7287531939517608788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6716,6 +6879,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5743396545734626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337651279530783469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &2369157785905312432
 GameObject:
   m_ObjectHideFlags: 0
@@ -7567,8 +7743,8 @@ GameObject:
   - component: {fileID: 5501549047652894460}
   - component: {fileID: 6777604577467820934}
   - component: {fileID: 3725634087055992410}
-  - component: {fileID: 3112937512228877591}
   - component: {fileID: 3685944237479806729}
+  - component: {fileID: 4753214269959704837}
   m_Layer: 9
   m_Name: "Ba\xF1ador"
   m_TagString: Untagged
@@ -7703,21 +7879,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 823940353809031815}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &3112937512228877591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2671083293209774483}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &3685944237479806729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7730,6 +7893,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4753214269959704837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2671083293209774483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &2702843985440775645
 GameObject:
   m_ObjectHideFlags: 0
@@ -7841,8 +8017,8 @@ GameObject:
   - component: {fileID: 9011275541940673144}
   - component: {fileID: 8788349274822332902}
   - component: {fileID: 4684473527185251416}
-  - component: {fileID: 5318117412805218466}
   - component: {fileID: 1583828071696975366}
+  - component: {fileID: 1271705453513165894}
   m_Layer: 9
   m_Name: Chanclas
   m_TagString: Untagged
@@ -7977,21 +8153,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 1794934911567895581}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &5318117412805218466
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2790780919743972736}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &1583828071696975366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8004,6 +8167,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1271705453513165894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2790780919743972736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &2805190069838714596
 GameObject:
   m_ObjectHideFlags: 0
@@ -8930,8 +9106,8 @@ GameObject:
   - component: {fileID: 7181274630700264549}
   - component: {fileID: 1703895046256477225}
   - component: {fileID: 9021041099903462418}
-  - component: {fileID: 825443215061227120}
   - component: {fileID: 8887514251954960667}
+  - component: {fileID: 3193673047443801545}
   m_Layer: 9
   m_Name: Pijama de verano
   m_TagString: Untagged
@@ -9066,21 +9242,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 1486431340878087413}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &825443215061227120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2918930944851820015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &8887514251954960667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9093,6 +9256,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3193673047443801545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2918930944851820015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &2947471117918110872
 GameObject:
   m_ObjectHideFlags: 0
@@ -9249,7 +9425,7 @@ GameObject:
   - component: {fileID: 2977617777834471512}
   - component: {fileID: 7667097801366760861}
   - component: {fileID: 3582443877144377127}
-  - component: {fileID: 1640839469167194509}
+  - component: {fileID: 733979120739429199}
   m_Layer: 9
   m_Name: Camiseta amarilla
   m_TagString: Untagged
@@ -9384,8 +9560,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3874510927793216492}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &1640839469167194509
+--- !u!114 &733979120739429199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9398,7 +9575,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &3024062588266605583
 GameObject:
   m_ObjectHideFlags: 0
@@ -10328,7 +10504,7 @@ GameObject:
   - component: {fileID: 2545705265436995680}
   - component: {fileID: 3793103319497748866}
   - component: {fileID: 5843725220377533139}
-  - component: {fileID: 5758969264871950550}
+  - component: {fileID: 5402085822794393701}
   m_Layer: 9
   m_Name: Bermudas
   m_TagString: Untagged
@@ -10463,8 +10639,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 5286869819476321164}
   _clima: 1
   _genero: 1
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &5758969264871950550
+--- !u!114 &5402085822794393701
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10477,7 +10654,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &3395918142258364743
 GameObject:
   m_ObjectHideFlags: 0
@@ -10582,8 +10758,8 @@ GameObject:
   - component: {fileID: 2052058258207672019}
   - component: {fileID: 2563179115149803726}
   - component: {fileID: 7026098782693876704}
-  - component: {fileID: 4686880511853149729}
   - component: {fileID: 2406141926595295354}
+  - component: {fileID: 2163936621858674696}
   m_Layer: 9
   m_Name: Nolotil
   m_TagString: Untagged
@@ -10718,21 +10894,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3729889299705980340}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &4686880511853149729
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3444675091661156784}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &2406141926595295354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10745,6 +10908,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2163936621858674696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3444675091661156784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &3450047823642657177
 GameObject:
   m_ObjectHideFlags: 0
@@ -11083,7 +11259,7 @@ GameObject:
   - component: {fileID: 5458198505890626543}
   - component: {fileID: 981476898661289992}
   - component: {fileID: 4300419205202710050}
-  - component: {fileID: 9026472030829023948}
+  - component: {fileID: 5748356772767143547}
   m_Layer: 9
   m_Name: "Ba\xF1ador"
   m_TagString: Untagged
@@ -11218,8 +11394,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 823940353809031815}
   _clima: 1
   _genero: 1
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &9026472030829023948
+--- !u!114 &5748356772767143547
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11232,7 +11409,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &3505664417888845747
 GameObject:
   m_ObjectHideFlags: 0
@@ -11675,7 +11851,7 @@ GameObject:
   - component: {fileID: 3298376155791906714}
   - component: {fileID: 2750228889975738084}
   - component: {fileID: 4189146657588867817}
-  - component: {fileID: 6158512884504164594}
+  - component: {fileID: 2923458703108861939}
   m_Layer: 9
   m_Name: Gorro
   m_TagString: Untagged
@@ -11810,8 +11986,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 6376198381079043190}
   _clima: 2
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &6158512884504164594
+--- !u!114 &2923458703108861939
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11824,7 +12001,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &3668203669008708016
 GameObject:
   m_ObjectHideFlags: 0
@@ -11898,7 +12074,7 @@ MonoBehaviour:
   - name: Camiseta amarilla
     go: {fileID: 3000392922858492742}
     type: 0
-  - name: "Gu\xEDa de viajes"
+  - name: Guia de viajes
     go: {fileID: 8444990533676468304}
     type: 2
   - name: Libro
@@ -11907,7 +12083,7 @@ MonoBehaviour:
   - name: Deportivas
     go: {fileID: 4112162564521977873}
     type: 1
-  - name: "Ri\xF1onera"
+  - name: Rinonera
     go: {fileID: 1696288402456918907}
     type: 2
   - name: Colonia
@@ -11931,7 +12107,7 @@ MonoBehaviour:
   - name: Camiseta de tirantes
     go: {fileID: 7641478150730954583}
     type: 0
-  - name: Pijama de verano
+  - name: Pijama de tirantes
     go: {fileID: 2918930944851820015}
     type: 0
   - name: Pijama de seda
@@ -11946,7 +12122,7 @@ MonoBehaviour:
   - name: Bikini
     go: {fileID: 8711083429356598655}
     type: 0
-  - name: "Ba\xF1ador"
+  - name: Banador
     go: {fileID: 2671083293209774483}
     type: 0
   - name: Pantalones cortos
@@ -11979,7 +12155,7 @@ MonoBehaviour:
   - name: Pareo
     go: {fileID: 4094487031078054406}
     type: 2
-  - name: "Cintur\xF3n"
+  - name: Cinturon
     go: {fileID: 4948715189523294720}
     type: 2
   - name: Gafas de buceo
@@ -12461,8 +12637,8 @@ GameObject:
   - component: {fileID: 4403471650607752036}
   - component: {fileID: 6648065663533201168}
   - component: {fileID: 2426388721535743421}
-  - component: {fileID: 274325756898166796}
   - component: {fileID: 5752595413037468758}
+  - component: {fileID: 6731238338324941923}
   m_Layer: 9
   m_Name: Falda
   m_TagString: Untagged
@@ -12597,21 +12773,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 806563320697786624}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &274325756898166796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3840919824505921956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &5752595413037468758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12624,6 +12787,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6731238338324941923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3840919824505921956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &3841866806531195049
 GameObject:
   m_ObjectHideFlags: 0
@@ -12771,182 +12947,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameSound: 1
---- !u!1 &4005975716237336466
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1332663900052696833}
-  - component: {fileID: 7557634807700363281}
-  - component: {fileID: 2420107183448889661}
-  - component: {fileID: 4839968872493471087}
-  m_Layer: 5
-  m_Name: Text (TMP)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1332663900052696833
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4005975716237336466}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.92222, y: 0.92222, z: 0.92222}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1969487100732400588}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 60.999992}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7557634807700363281
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4005975716237336466}
-  m_CullTransparentMesh: 1
---- !u!114 &2420107183448889661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4005975716237336466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_text: Are you sure you have finished?
-  m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 41e8f506bd9ec1b46a5f14ed6f382552, type: 2}
-  m_sharedMaterial: {fileID: 5312309082972622527, guid: 41e8f506bd9ec1b46a5f14ed6f382552,
-    type: 2}
-  m_fontSharedMaterials: []
-  m_fontMaterial: {fileID: 0}
-  m_fontMaterials: []
-  m_fontColor32:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
-  m_colorMode: 3
-  m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
-    topRight: {r: 1, g: 1, b: 1, a: 1}
-    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
-  m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
-  m_tintAllSprites: 0
-  m_StyleSheet: {fileID: 0}
-  m_TextStyleHashCode: -1183493901
-  m_overrideHtmlColors: 0
-  m_faceColor:
-    serializedVersion: 2
-    rgba: 4294967295
-  m_fontSize: 63.6
-  m_fontSizeBase: 63.6
-  m_fontWeight: 400
-  m_enableAutoSizing: 0
-  m_fontSizeMin: 18
-  m_fontSizeMax: 72
-  m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
-  m_textAlignment: 65535
-  m_characterSpacing: 0
-  m_wordSpacing: 0
-  m_lineSpacing: 0
-  m_lineSpacingMax: 0
-  m_paragraphSpacing: 0
-  m_charWidthMaxAdj: 0
-  m_enableWordWrapping: 1
-  m_wordWrappingRatios: 0.4
-  m_overflowMode: 0
-  m_linkedTextComponent: {fileID: 0}
-  parentLinkedComponent: {fileID: 0}
-  m_enableKerning: 1
-  m_enableExtraPadding: 0
-  checkPaddingRequired: 0
-  m_isRichText: 1
-  m_parseCtrlCharacters: 1
-  m_isOrthographic: 1
-  m_isCullingEnabled: 0
-  m_horizontalMapping: 0
-  m_verticalMapping: 0
-  m_uvLineOffset: 0
-  m_geometrySortingOrder: 0
-  m_IsTextObjectScaleStatic: 0
-  m_VertexBufferAutoSizeReduction: 0
-  m_useMaxVisibleDescender: 1
-  m_pageToDisplay: 1
-  m_margin: {x: -269.97632, y: -79.58259, z: -277.02823, w: -69.508934}
-  m_isUsingLegacyAnimationComponent: 0
-  m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_baseMaterial: {fileID: 0}
-  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &4839968872493471087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4005975716237336466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_TrackedObjects:
-  - rid: 3258602941332062241
-  references:
-    version: 2
-    RefIds:
-    - rid: 3258602941332062241
-      type: {class: TrackedUGuiGraphic, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
-        asm: Unity.Localization}
-      data:
-        m_Target: {fileID: 0}
-        m_TrackedProperties:
-          items:
-          - rid: 3258602941332062242
-        m_UpdateType: 0
-    - rid: 3258602941332062242
-      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
-        asm: Unity.Localization}
-      data:
-        m_Localized:
-          m_TableReference:
-            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
-          m_TableEntryReference:
-            m_KeyId: 221603523915776
-            m_Key: 
-          m_FallbackState: 0
-          m_WaitForCompletion: 0
-          m_LocalVariables: []
-        m_PropertyPath: m_Text
 --- !u!1 &4014555812357228387
 GameObject:
   m_ObjectHideFlags: 0
@@ -13759,7 +13759,7 @@ GameObject:
   - component: {fileID: 600700088103227226}
   - component: {fileID: 584680359724916131}
   - component: {fileID: 4940402351381993623}
-  - component: {fileID: 54579347380867614}
+  - component: {fileID: 1158113024481161744}
   m_Layer: 9
   m_Name: Pareo
   m_TagString: Untagged
@@ -13894,8 +13894,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3269920341283316981}
   _clima: 1
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &54579347380867614
+--- !u!114 &1158113024481161744
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13908,7 +13909,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &4112162564521977873
 GameObject:
   m_ObjectHideFlags: 0
@@ -13921,8 +13921,8 @@ GameObject:
   - component: {fileID: 4794654750252256311}
   - component: {fileID: 8684660964549459248}
   - component: {fileID: 6411867766735365535}
-  - component: {fileID: 8011485173109076473}
   - component: {fileID: 9131299938552370111}
+  - component: {fileID: 1067519354498911442}
   m_Layer: 9
   m_Name: Deportivas
   m_TagString: Untagged
@@ -14057,21 +14057,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3853287508534777806}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &8011485173109076473
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4112162564521977873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &9131299938552370111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14084,6 +14071,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1067519354498911442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4112162564521977873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &4122380027172117824
 GameObject:
   m_ObjectHideFlags: 0
@@ -14597,8 +14597,8 @@ GameObject:
   - component: {fileID: 8600797835380489081}
   - component: {fileID: 101061489255474532}
   - component: {fileID: 81381240454691360}
-  - component: {fileID: 2389031805254331073}
   - component: {fileID: 7250170641390706368}
+  - component: {fileID: 7392271714505470766}
   m_Layer: 9
   m_Name: Jersey
   m_TagString: Untagged
@@ -14733,21 +14733,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 6151827928001707284}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &2389031805254331073
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4303375477566524880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &7250170641390706368
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14760,6 +14747,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7392271714505470766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4303375477566524880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &4352745645839950895
 GameObject:
   m_ObjectHideFlags: 0
@@ -15825,8 +15825,8 @@ GameObject:
   - component: {fileID: 8551890115770507671}
   - component: {fileID: 1477661754986635765}
   - component: {fileID: 132051187482413614}
-  - component: {fileID: 7186061771669251984}
   - component: {fileID: 774350795048812337}
+  - component: {fileID: 4705761863086616267}
   m_Layer: 9
   m_Name: "Pantal\xF3n largo"
   m_TagString: Untagged
@@ -15961,21 +15961,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3062566630362579295}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &7186061771669251984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4676978031649330543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &774350795048812337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15988,6 +15975,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4705761863086616267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4676978031649330543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &4706633278024841103
 GameObject:
   m_ObjectHideFlags: 0
@@ -16175,10 +16175,10 @@ GameObject:
   - component: {fileID: 1674222771563235687}
   - component: {fileID: 1079549389985176055}
   - component: {fileID: 2630325226705506717}
-  - component: {fileID: 6452343881356537781}
   - component: {fileID: 6493966780680576390}
+  - component: {fileID: 5973908018834637607}
   m_Layer: 9
-  m_Name: Blusa
+  m_Name: Blusa verde
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16311,21 +16311,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3859602402847070991}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &6452343881356537781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4863596486040514661}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &6493966780680576390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16338,6 +16325,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5973908018834637607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4863596486040514661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &4878844916907290884
 GameObject:
   m_ObjectHideFlags: 0
@@ -16699,8 +16699,8 @@ GameObject:
   - component: {fileID: 8564617672353729300}
   - component: {fileID: 3702869788105086755}
   - component: {fileID: 784983118237326943}
-  - component: {fileID: 512520926068172382}
   - component: {fileID: 3960986054943034226}
+  - component: {fileID: 5529258736282527447}
   m_Layer: 9
   m_Name: "Cintur\xF3n"
   m_TagString: Untagged
@@ -16835,21 +16835,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 8851415385212872277}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &512520926068172382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4948715189523294720}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &3960986054943034226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16862,6 +16849,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5529258736282527447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4948715189523294720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &4949474492429797911
 GameObject:
   m_ObjectHideFlags: 0
@@ -16873,8 +16873,8 @@ GameObject:
   - component: {fileID: 3015784771198704012}
   - component: {fileID: 2049766458445666560}
   - component: {fileID: 5568137008843964416}
-  - component: {fileID: 3889873418343245541}
   - component: {fileID: 8121672023655345957}
+  - component: {fileID: 55759646632847511}
   m_Layer: 9
   m_Name: Toalla
   m_TagString: Untagged
@@ -16957,21 +16957,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 6431949594513263463}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &3889873418343245541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4949474492429797911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!212 &8121672023655345957
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17024,6 +17011,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &55759646632847511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4949474492429797911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &4997729022728379343
 GameObject:
   m_ObjectHideFlags: 0
@@ -17049,7 +17049,7 @@ Transform:
   m_GameObject: {fileID: 4997729022728379343}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.89, y: -0.03, z: 0}
+  m_LocalPosition: {x: -1.84, y: -0.39, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17067,8 +17067,8 @@ GameObject:
   - component: {fileID: 6732051780440497595}
   - component: {fileID: 8927582320280913833}
   - component: {fileID: 5932850727073823609}
-  - component: {fileID: 3365978447674120800}
   - component: {fileID: 59903705346825610}
+  - component: {fileID: 6227409778351171010}
   m_Layer: 9
   m_Name: Bufanda
   m_TagString: Untagged
@@ -17203,21 +17203,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 4304010597980810403}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &3365978447674120800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5031879614646027463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &59903705346825610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17230,6 +17217,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6227409778351171010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5031879614646027463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &5070779442185936922
 GameObject:
   m_ObjectHideFlags: 0
@@ -17273,8 +17273,8 @@ GameObject:
   - component: {fileID: 5729751957259044747}
   - component: {fileID: 8833046592814414241}
   - component: {fileID: 5701551370087716532}
-  - component: {fileID: 159121467863187895}
   - component: {fileID: 8675889557360281563}
+  - component: {fileID: 4161989172606363170}
   m_Layer: 9
   m_Name: Bermudas
   m_TagString: Untagged
@@ -17409,21 +17409,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 5286869819476321164}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &159121467863187895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5154583048924010464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &8675889557360281563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17436,6 +17423,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4161989172606363170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5154583048924010464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &5156330165463261706
 GameObject:
   m_ObjectHideFlags: 0
@@ -18873,8 +18873,8 @@ GameObject:
   - component: {fileID: 1442177792969785348}
   - component: {fileID: 8065653037236831390}
   - component: {fileID: 3400136963571234956}
-  - component: {fileID: 2703761517532162396}
   - component: {fileID: 4263045394821491714}
+  - component: {fileID: 5757481517110737172}
   m_Layer: 9
   m_Name: Libro
   m_TagString: Untagged
@@ -19009,21 +19009,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 6263822650307969995}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &2703761517532162396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5504003032277235676}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &4263045394821491714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19036,6 +19023,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5757481517110737172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5504003032277235676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &5523453928984066547
 GameObject:
   m_ObjectHideFlags: 0
@@ -19254,8 +19254,8 @@ GameObject:
   - component: {fileID: 8671360442874337723}
   - component: {fileID: 1503214880035764578}
   - component: {fileID: 6874633660972694386}
-  - component: {fileID: 6700494572719265092}
   - component: {fileID: 5300273118110374905}
+  - component: {fileID: 4502777540493328539}
   m_Layer: 9
   m_Name: Camisa hawaiana
   m_TagString: Untagged
@@ -19390,21 +19390,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 4214782024121424881}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &6700494572719265092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5691892843480409606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &5300273118110374905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19417,6 +19404,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4502777540493328539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5691892843480409606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &5708939949878022562
 GameObject:
   m_ObjectHideFlags: 0
@@ -19428,6 +19428,7 @@ GameObject:
   - component: {fileID: 4923006764542576921}
   - component: {fileID: 3284833819838058469}
   - component: {fileID: 4999430721476210036}
+  - component: {fileID: 6867163919870992706}
   m_Layer: 5
   m_Name: ShoesTitleText
   m_TagString: Untagged
@@ -19546,12 +19547,99 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -27.784426, w: 0}
+  m_margin: {x: 0, y: 0, z: -27, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &6867163919870992706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5708939949878022562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69beb381e244f92449b8c4cf954630e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TrackedObjects:
+  - rid: 3258602941332062235
+  - rid: 3258602941332062415
+  references:
+    version: 2
+    RefIds:
+    - rid: 3258602941332062235
+      type: {class: TrackedUGuiGraphic, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 4999430721476210036}
+        m_TrackedProperties:
+          items:
+          - rid: 3258602941332062236
+          - rid: 3258602941332062421
+        m_UpdateType: 0
+    - rid: 3258602941332062236
+      type: {class: LocalizedStringProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_Localized:
+          m_TableReference:
+            m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+          m_TableEntryReference:
+            m_KeyId: 221495369592832
+            m_Key: 
+          m_FallbackState: 0
+          m_WaitForCompletion: 0
+          m_LocalVariables: []
+        m_PropertyPath: m_text
+    - rid: 3258602941332062415
+      type: {class: TrackedRectTransform, ns: UnityEngine.Localization.PropertyVariants.TrackedObjects,
+        asm: Unity.Localization}
+      data:
+        m_Target: {fileID: 4923006764542576921}
+        m_TrackedProperties:
+          items:
+          - rid: 3258602941332062416
+          - rid: 3258602941332062417
+    - rid: 3258602941332062416
+      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_PropertyPath: m_AnchoredPosition.x
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: es-ES
+          value: -178.59999
+        - localeIdentifier:
+            m_Code: en-US
+          value: -123.06149
+    - rid: 3258602941332062417
+      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_PropertyPath: m_SizeDelta.x
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: es-ES
+          value: 29.3422
+        - localeIdentifier:
+            m_Code: en-US
+          value: 88.7291
+    - rid: 3258602941332062421
+      type: {class: FloatTrackedProperty, ns: UnityEngine.Localization.PropertyVariants.TrackedProperties,
+        asm: Unity.Localization}
+      data:
+        m_PropertyPath: m_margin.z
+        m_VariantData:
+        - localeIdentifier:
+            m_Code: es-ES
+          value: -27
+        - localeIdentifier:
+            m_Code: en-US
+          value: -0.13880542
 --- !u!1 &5727055777417931380
 GameObject:
   m_ObjectHideFlags: 0
@@ -19564,8 +19652,8 @@ GameObject:
   - component: {fileID: 2265344515896184005}
   - component: {fileID: 2990348156908482217}
   - component: {fileID: 62800952799101144}
-  - component: {fileID: 1496198772477052812}
   - component: {fileID: 4760581851609595938}
+  - component: {fileID: 6076863055650438116}
   m_Layer: 9
   m_Name: Camiseta verde
   m_TagString: Untagged
@@ -19700,21 +19788,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3194299648452083890}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &1496198772477052812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5727055777417931380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &4760581851609595938
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19727,6 +19802,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6076863055650438116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5727055777417931380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &5801160837378325234
 GameObject:
   m_ObjectHideFlags: 0
@@ -19975,8 +20063,8 @@ GameObject:
   - component: {fileID: 9048614068802209273}
   - component: {fileID: 5579366258026731484}
   - component: {fileID: 7861063060987816547}
-  - component: {fileID: 7633709675638328660}
   - component: {fileID: 1373298852034251959}
+  - component: {fileID: 3484289179575098201}
   m_Layer: 9
   m_Name: "Pantal\xF3n corto"
   m_TagString: Untagged
@@ -20111,21 +20199,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3885566182420888256}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &7633709675638328660
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5853507663969953950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &1373298852034251959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20138,6 +20213,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3484289179575098201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5853507663969953950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &5965268245842072585
 GameObject:
   m_ObjectHideFlags: 0
@@ -20150,7 +20238,7 @@ GameObject:
   - component: {fileID: 8589960110083906566}
   - component: {fileID: 800713035146499103}
   - component: {fileID: 61062980146819013}
-  - component: {fileID: 1640403420389294739}
+  - component: {fileID: 6607579918447767234}
   m_Layer: 9
   m_Name: Pijama de invierno
   m_TagString: Untagged
@@ -20285,8 +20373,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 2418986566518383596}
   _clima: 2
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &1640403420389294739
+--- !u!114 &6607579918447767234
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20299,7 +20388,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &5968482061142138327
 GameObject:
   m_ObjectHideFlags: 0
@@ -21750,7 +21838,7 @@ GameObject:
   - component: {fileID: 1101804928745238100}
   - component: {fileID: 4674174504828253243}
   - component: {fileID: 6792086155933012749}
-  - component: {fileID: 4671662625631938597}
+  - component: {fileID: 8286994845963182799}
   m_Layer: 9
   m_Name: Pasta de dientes
   m_TagString: Untagged
@@ -21885,8 +21973,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 1918627096342657275}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &4671662625631938597
+--- !u!114 &8286994845963182799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21899,7 +21988,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &6380941217249810433
 GameObject:
   m_ObjectHideFlags: 0
@@ -22141,8 +22229,8 @@ GameObject:
   - component: {fileID: 5556722767020777678}
   - component: {fileID: 8771041788688891836}
   - component: {fileID: 746693648090613631}
-  - component: {fileID: 248718813439797820}
   - component: {fileID: 69433948452569616}
+  - component: {fileID: 8196732794346849539}
   m_Layer: 9
   m_Name: Gorro
   m_TagString: Untagged
@@ -22277,21 +22365,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 6376198381079043190}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &248718813439797820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6457005715263298229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &69433948452569616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22304,6 +22379,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8196732794346849539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6457005715263298229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &6470768991545472107
 GameObject:
   m_ObjectHideFlags: 0
@@ -22378,8 +22466,8 @@ GameObject:
   - component: {fileID: 7136349388454608279}
   - component: {fileID: 7453973011762674375}
   - component: {fileID: 3740380861759198844}
-  - component: {fileID: 7272246136627583820}
   - component: {fileID: 4323233932482848558}
+  - component: {fileID: 4022403147906343639}
   m_Layer: 9
   m_Name: Ibuprofeno
   m_TagString: Untagged
@@ -22514,21 +22602,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 4881772694170214903}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &7272246136627583820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6501861120872357557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &4323233932482848558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22541,6 +22616,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4022403147906343639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501861120872357557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &6505090762424083125
 GameObject:
   m_ObjectHideFlags: 0
@@ -22877,8 +22965,8 @@ GameObject:
   - component: {fileID: 7445650908232808814}
   - component: {fileID: 5835512907668890551}
   - component: {fileID: 1368796797147772631}
-  - component: {fileID: 4655521661173591543}
   - component: {fileID: 1149416661973883578}
+  - component: {fileID: 3531092728404501109}
   m_Layer: 9
   m_Name: Zapatos de mujer
   m_TagString: Untagged
@@ -23013,21 +23101,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3454494419969319346}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &4655521661173591543
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6765140405394556734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &1149416661973883578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23040,6 +23115,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &3531092728404501109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6765140405394556734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &6793810685410558925
 GameObject:
   m_ObjectHideFlags: 0
@@ -23334,8 +23422,8 @@ GameObject:
   - component: {fileID: 8585286596031595917}
   - component: {fileID: 8443169956940493089}
   - component: {fileID: 5931223442925553954}
-  - component: {fileID: 5433309305536505714}
   - component: {fileID: 7652630048491031302}
+  - component: {fileID: 4206148157204951521}
   m_Layer: 9
   m_Name: Neceser
   m_TagString: Untagged
@@ -23470,21 +23558,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 5762032309593678089}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &5433309305536505714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6986366754472220725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &7652630048491031302
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23497,6 +23572,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4206148157204951521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6986366754472220725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &6987376738770191926
 GameObject:
   m_ObjectHideFlags: 0
@@ -23917,7 +24005,7 @@ GameObject:
   - component: {fileID: 8571013488576788009}
   - component: {fileID: 7786657651153008498}
   - component: {fileID: 3513307142710357044}
-  - component: {fileID: 8508763789412068546}
+  - component: {fileID: 8570455711468778349}
   m_Layer: 9
   m_Name: Gafas de buceo
   m_TagString: Untagged
@@ -24052,8 +24140,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 2763131034046695522}
   _clima: 1
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &8508763789412068546
+--- !u!114 &8570455711468778349
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24066,7 +24155,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &7137459668961164018
 GameObject:
   m_ObjectHideFlags: 0
@@ -24174,7 +24262,7 @@ GameObject:
   - component: {fileID: 4738003779620909969}
   - component: {fileID: 2798787557657369341}
   - component: {fileID: 4061915067023372570}
-  - component: {fileID: 1847688831825205832}
+  - component: {fileID: 5669412224333054865}
   m_Layer: 9
   m_Name: Bufanda
   m_TagString: Untagged
@@ -24309,8 +24397,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 4304010597980810403}
   _clima: 2
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &1847688831825205832
+--- !u!114 &5669412224333054865
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24323,7 +24412,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &7302041352147460433
 GameObject:
   m_ObjectHideFlags: 0
@@ -24336,8 +24424,8 @@ GameObject:
   - component: {fileID: 4434937733525410390}
   - component: {fileID: 6320612974930406252}
   - component: {fileID: 6962646894580311189}
-  - component: {fileID: 1303194128298607042}
   - component: {fileID: 5804020646149475214}
+  - component: {fileID: 6502262316501153002}
   m_Layer: 9
   m_Name: Bolso
   m_TagString: Untagged
@@ -24444,7 +24532,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.038687795, y: -0.0031132698}
+  m_Offset: {x: 0.07907128, y: 0.039708376}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -24455,7 +24543,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8064235, y: 2.694429}
+  m_Size: {x: 2.6263218, y: 4.5785613}
   m_EdgeRadius: 0
 --- !u!114 &6962646894580311189
 MonoBehaviour:
@@ -24472,21 +24560,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 4080009056098930572}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &1303194128298607042
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7302041352147460433}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &5804020646149475214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24499,6 +24574,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6502262316501153002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7302041352147460433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &7342128502178682030
 GameObject:
   m_ObjectHideFlags: 0
@@ -24963,9 +25051,9 @@ RectTransform:
   m_LocalScale: {x: 0.3990022, y: 0.3990022, z: 0.3990022}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1790713485323874081}
   - {fileID: 3029585207033782768}
   - {fileID: 3006463748663612690}
-  - {fileID: 1332663900052696833}
   m_Father: {fileID: 1766763216655339050}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -25333,8 +25421,8 @@ GameObject:
   - component: {fileID: 783306489329795993}
   - component: {fileID: 6183802080273176855}
   - component: {fileID: 7515153733413894171}
-  - component: {fileID: 4008936650363630822}
   - component: {fileID: 1912092675513477186}
+  - component: {fileID: 6811941030473516994}
   m_Layer: 9
   m_Name: Camiseta de tirantes
   m_TagString: Untagged
@@ -25469,21 +25557,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 7888061784048637745}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &4008936650363630822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7641478150730954583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &1912092675513477186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25496,6 +25571,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6811941030473516994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7641478150730954583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &7689491183236432163
 GameObject:
   m_ObjectHideFlags: 0
@@ -26087,8 +26175,8 @@ GameObject:
   - component: {fileID: 1369186555198599891}
   - component: {fileID: 4730082722695187903}
   - component: {fileID: 5583068087815087438}
-  - component: {fileID: 1711587496177477872}
   - component: {fileID: 8219143089437912014}
+  - component: {fileID: 6413458557923494806}
   m_Layer: 9
   m_Name: Zapatos de hombre
   m_TagString: Untagged
@@ -26223,21 +26311,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 1293115822046697448}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &1711587496177477872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7811034312846534606}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &8219143089437912014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26250,6 +26325,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6413458557923494806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7811034312846534606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &7828835152992816997
 GameObject:
   m_ObjectHideFlags: 0
@@ -26262,8 +26350,8 @@ GameObject:
   - component: {fileID: 896732713612599850}
   - component: {fileID: 6355911384638802386}
   - component: {fileID: 3719945502058154578}
-  - component: {fileID: 7235485509644571066}
   - component: {fileID: 1675161311591360889}
+  - component: {fileID: 4436650924910804765}
   m_Layer: 9
   m_Name: Reloj
   m_TagString: Untagged
@@ -26398,21 +26486,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3127797076579126818}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &7235485509644571066
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7828835152992816997}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &1675161311591360889
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26425,6 +26500,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4436650924910804765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7828835152992816997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &7833726378679346407
 GameObject:
   m_ObjectHideFlags: 0
@@ -26437,8 +26525,8 @@ GameObject:
   - component: {fileID: 6159602810145191242}
   - component: {fileID: 7820343503403195125}
   - component: {fileID: 8243030880748126730}
-  - component: {fileID: 5208124532891710564}
   - component: {fileID: 7113710240082458250}
+  - component: {fileID: 2301971271825797951}
   m_Layer: 9
   m_Name: Colonia
   m_TagString: Untagged
@@ -26573,21 +26661,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 6914275578519911621}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &5208124532891710564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7833726378679346407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &7113710240082458250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26600,6 +26675,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2301971271825797951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7833726378679346407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &7842834293672475558
 GameObject:
   m_ObjectHideFlags: 0
@@ -26680,8 +26768,8 @@ GameObject:
   - component: {fileID: 8558795696582095539}
   - component: {fileID: 2484496448361474099}
   - component: {fileID: 8922528541175986892}
-  - component: {fileID: 3799778704452697997}
   - component: {fileID: 2147416947156693882}
+  - component: {fileID: 8905172928450070778}
   m_Layer: 9
   m_Name: Camisa roja
   m_TagString: Untagged
@@ -26816,21 +26904,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3608538983503248133}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &3799778704452697997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8028824298525659671}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &2147416947156693882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26843,6 +26918,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &8905172928450070778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8028824298525659671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &8043477703291521544
 GameObject:
   m_ObjectHideFlags: 0
@@ -27189,8 +27277,8 @@ GameObject:
   - component: {fileID: 8747757860484926500}
   - component: {fileID: 1637374730936792085}
   - component: {fileID: 5343052985948932077}
-  - component: {fileID: 1552023354458340156}
   - component: {fileID: 7887107727360523292}
+  - component: {fileID: 285668631151032114}
   m_Layer: 9
   m_Name: Cepillo de dientes
   m_TagString: Untagged
@@ -27325,21 +27413,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 5571309405190673636}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &1552023354458340156
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8221245544319537428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &7887107727360523292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27352,6 +27427,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &285668631151032114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8221245544319537428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &8273116571462195467
 GameObject:
   m_ObjectHideFlags: 0
@@ -27944,7 +28032,7 @@ GameObject:
   - component: {fileID: 514072111187054944}
   - component: {fileID: 1674785465864231917}
   - component: {fileID: 7686045264271817494}
-  - component: {fileID: 8062499519281537786}
+  - component: {fileID: 3043857326262765377}
   m_Layer: 9
   m_Name: "Gu\xEDa de viajes"
   m_TagString: Untagged
@@ -28079,8 +28167,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 8330045834232407829}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &8062499519281537786
+--- !u!114 &3043857326262765377
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28093,7 +28182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &8479819559574918672
 GameObject:
   m_ObjectHideFlags: 0
@@ -28456,8 +28544,8 @@ GameObject:
   - component: {fileID: 776948269650627301}
   - component: {fileID: 6143200459408532127}
   - component: {fileID: 5133531577777961893}
-  - component: {fileID: 2696134275887104766}
   - component: {fileID: 9055265797657469383}
+  - component: {fileID: 7650673690602281949}
   m_Layer: 9
   m_Name: "Gu\xEDa de viajes"
   m_TagString: Untagged
@@ -28592,21 +28680,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 8330045834232407829}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &2696134275887104766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8516314945523915618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &9055265797657469383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28619,6 +28694,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7650673690602281949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8516314945523915618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &8584655864534982013
 GameObject:
   m_ObjectHideFlags: 0
@@ -28776,7 +28864,7 @@ GameObject:
   - component: {fileID: 4185704826652725719}
   - component: {fileID: 6130511216136572950}
   - component: {fileID: 8044788058374256791}
-  - component: {fileID: 8822857104088642674}
+  - component: {fileID: 591604370866536739}
   m_Layer: 9
   m_Name: Gafas de ski
   m_TagString: Untagged
@@ -28911,8 +28999,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 661020416870189082}
   _clima: 2
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &8822857104088642674
+--- !u!114 &591604370866536739
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -28925,7 +29014,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &8709498472730912510
 GameObject:
   m_ObjectHideFlags: 0
@@ -28969,8 +29057,8 @@ GameObject:
   - component: {fileID: 7861004588333619798}
   - component: {fileID: 3596328110155153117}
   - component: {fileID: 9185472682061675247}
-  - component: {fileID: 2306224953821979627}
   - component: {fileID: 6749340013957718499}
+  - component: {fileID: 1745659802137570991}
   m_Layer: 9
   m_Name: Bikini
   m_TagString: Untagged
@@ -29105,21 +29193,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 7290594449561148112}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &2306224953821979627
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8711083429356598655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &6749340013957718499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29132,6 +29207,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1745659802137570991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711083429356598655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &8754723151014729563
 GameObject:
   m_ObjectHideFlags: 0
@@ -29522,7 +29610,7 @@ GameObject:
   - component: {fileID: 8035072303595984567}
   - component: {fileID: 2453710237646344109}
   - component: {fileID: 406556270382944363}
-  - component: {fileID: 6162121996090324852}
+  - component: {fileID: 8183888668107065199}
   m_Layer: 9
   m_Name: Botas
   m_TagString: Untagged
@@ -29657,8 +29745,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 2049649404311924931}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &6162121996090324852
+--- !u!114 &8183888668107065199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29671,7 +29760,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &8844049313618000453
 GameObject:
   m_ObjectHideFlags: 0
@@ -30702,7 +30790,7 @@ GameObject:
   - component: {fileID: 2311132809452311124}
   - component: {fileID: 8601542366456425221}
   - component: {fileID: 3415806311214134132}
-  - component: {fileID: 622090580631346564}
+  - component: {fileID: 8235454069635070251}
   m_Layer: 9
   m_Name: Peine
   m_TagString: Untagged
@@ -30837,8 +30925,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 8545004290936385192}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &622090580631346564
+--- !u!114 &8235454069635070251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -30851,7 +30940,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &9137714512265950484
 GameObject:
   m_ObjectHideFlags: 0
@@ -30864,8 +30952,8 @@ GameObject:
   - component: {fileID: 4415148295875551442}
   - component: {fileID: 4482673369703046694}
   - component: {fileID: 7393102356510882973}
-  - component: {fileID: 5833555159769589332}
   - component: {fileID: 657037075529309655}
+  - component: {fileID: 5110465619670945958}
   m_Layer: 9
   m_Name: Gorra
   m_TagString: Untagged
@@ -31000,21 +31088,8 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3249194636628141063}
   _clima: 0
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &5833555159769589332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9137714512265950484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!114 &657037075529309655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31027,6 +31102,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53d7f6fd7c2d97449699835fb4bf8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5110465619670945958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9137714512265950484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d90d1af1af65644db772a94b70093f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panelInfo: {fileID: 8844049313618000453}
 --- !u!1 &9168517228979531459
 GameObject:
   m_ObjectHideFlags: 0
@@ -31123,7 +31211,7 @@ GameObject:
   - component: {fileID: 3941895577422061439}
   - component: {fileID: 6962894053443334765}
   - component: {fileID: 4459662051166638309}
-  - component: {fileID: 3711278134143397835}
+  - component: {fileID: 5844995832054074427}
   m_Layer: 9
   m_Name: Camiseta verde
   m_TagString: Untagged
@@ -31258,8 +31346,9 @@ MonoBehaviour:
   _objetoMaleta: {fileID: 3194299648452083890}
   _clima: 1
   _genero: 0
+  nameInfo: {fileID: 8544354936869119091}
   GENERO: 0
---- !u!114 &3711278134143397835
+--- !u!114 &5844995832054074427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -31272,7 +31361,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panelInfo: {fileID: 8844049313618000453}
-  id: 
 --- !u!1 &9187179680899768901
 GameObject:
   m_ObjectHideFlags: 0

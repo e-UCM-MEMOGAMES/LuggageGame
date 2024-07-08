@@ -21,8 +21,8 @@
             "translation": "Jersey"
         },
         {
-            "id": "Camisa verde",
-            "translation": "Camisa verde"
+            "id": "Camiseta verde",
+            "translation": "Camiseta verde"
         },
         {
             "id": "Camiseta de tirantes",
@@ -31,6 +31,10 @@
         {
             "id": "Pijama de verano",
             "translation": "Pijama de verano"
+        },
+        {
+            "id": "Pijama de seda",
+            "translation": "Pijama de seda"
         },
         {
             "id": "Pijama de invierno",
@@ -53,8 +57,8 @@
             "translation": "Bañador"
         },
         {
-            "id": "Bermuda",
-            "translation": "Bermuda"
+            "id": "Bermudas",
+            "translation": "Bermudas"
         },
         {
             "id": "Pantalones largos",
@@ -121,8 +125,8 @@
             "translation": "Gafas de buceo"
         },
         {
-            "id": "Gafas ski",
-            "translation": "Gafas ski"
+            "id": "Gafas de ski",
+            "translation": "Gafas de ski"
         },
         {
             "id": "Reloj",
@@ -130,7 +134,7 @@
         },
         {
             "id": "Guia de viajes",
-            "translation": "Guia de viajes"
+            "translation": "Guía de viajes"
         },
         {
             "id": "Libro",

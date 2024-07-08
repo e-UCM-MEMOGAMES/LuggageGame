@@ -90,7 +90,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 221417145823232
-    m_Localized: CHOTHES
+    m_Localized: CLOTHES
     m_Metadata:
       m_Items: []
   - m_Id: 221445746782208
@@ -435,6 +435,18 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1010595878072320
     m_Localized: Tap and hold the yellow t-shirt.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1386336887152640
+    m_Localized: Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1389778280030208
+    m_Localized: Are you sure you have finished?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1390149144584192
+    m_Localized: Settings
     m_Metadata:
       m_Items: []
   references:

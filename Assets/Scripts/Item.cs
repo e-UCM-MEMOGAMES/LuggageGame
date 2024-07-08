@@ -14,8 +14,7 @@ public class Item : MonoBehaviour
     Vector3 Offset;
     bool hasExit;
     Luggage luggage;
-    [SerializeField]
-    string id;
+    string translatedName=" ";
 
     void Start()
     {
@@ -32,14 +31,14 @@ public class Item : MonoBehaviour
     private void OnMouseEnter()
     {
         if (EventSystem.current.IsPointerOverGameObject()) return;
+        nameInfo.text = translatedName;
         panelInfo.SetActive(true);
-        nameInfo.text = name;
-
     }
     private void OnMouseExit()
     {
         panelInfo.SetActive(false);
     }
+
     private void OnMouseOver()
     {
         if (EventSystem.current.IsPointerOverGameObject()) return;
@@ -74,16 +73,10 @@ public class Item : MonoBehaviour
         Xasu.HighLevel.GameObjectTracker.Instance.Interacted("clickOnLuggageObject-" + name);
 
         panelInfo.SetActive(true);
-
         //StartPoint = transform.localPosition;
         Offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5));
     }
-    private void OnMouseUp()
-    {
-        panelInfo.SetActive(false);
-
-
-    }
+ 
     /// <summary>
     /// Evento cuando se mantiene pulsado el objeto.
     /// </summary>
@@ -93,9 +86,13 @@ public class Item : MonoBehaviour
         Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5);
         transform.position = Camera.main.ScreenToWorldPoint(newPosition) + Offset;
         transform.position = new Vector3(transform.position.x, transform.position.y, -5);
-        panelInfo.SetActive(true);
     }
+    private void OnMouseUp()
+    {
+        panelInfo.SetActive(false);
 
+
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision == null)
@@ -106,8 +103,8 @@ public class Item : MonoBehaviour
         hasExit = true;
 
     }
-    public string getID()
+    public void SetName(string n)
     {
-        return id;
+        translatedName = n;
     }
 }

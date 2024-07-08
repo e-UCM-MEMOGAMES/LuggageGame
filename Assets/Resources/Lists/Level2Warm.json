@@ -1,6 +1,6 @@
 {
       "objectList_M": [
-            "Bañador",
+            "Banador",
             "Bermudas"
       ],
       "objectList_F": [
@@ -9,7 +9,7 @@
       ],
       "objectList_N": [
             "Toalla",
-            "Guía de viajes",
+            "Guia de viajes",
             "Gorra",
             "Pasta de dientes"
       ],
@@ -42,7 +42,7 @@
                   "name": "Bedroom_DresserDrawer_bottom",
                   "objects": [
                         {
-                              "name": "Guía de viajes",
+                              "name": "Guia de viajes",
                               "position": 0,
                               "gender": "N"
                         }
@@ -71,7 +71,7 @@
                               "gender": "F"
                         },
                         {
-                              "name": "Bañador",
+                              "name": "Banador",
                               "position": 3,
                               "gender": "M"
                         }
