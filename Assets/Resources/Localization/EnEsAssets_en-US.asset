@@ -17,7 +17,27 @@ MonoBehaviour:
   m_SharedData: {fileID: 11400000, guid: 5cac4b0d62f391b4a9a88f63c86ea5e7, type: 2}
   m_Metadata:
     m_Items: []
-  m_TableData: []
+  m_TableData:
+  - m_Id: 751854744150016
+    m_Localized: 41e8f506bd9ec1b46a5f14ed6f382552
+    m_Metadata:
+      m_Items: []
+  - m_Id: 751856954548224
+    m_Localized: 41e8f506bd9ec1b46a5f14ed6f382552[Gotham-Rounded-Bold SDF Material]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 751939674611712
+    m_Localized: 41e8f506bd9ec1b46a5f14ed6f382552
+    m_Metadata:
+      m_Items: []
+  - m_Id: 751939687194624
+    m_Localized: 41e8f506bd9ec1b46a5f14ed6f382552[Gotham-Rounded-Bold SDF Material]
+    m_Metadata:
+      m_Items: []
+  - m_Id: 752104091328512
+    m_Localized: "ad8520ea053918948b007e1af36e75c9[Bot\xF3n]"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

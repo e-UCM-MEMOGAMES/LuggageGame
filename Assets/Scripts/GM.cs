@@ -124,7 +124,8 @@ public class GM : MonoBehaviour
         {
             Debug.Log("Finalization progress: " + p);
         };
-        await XasuTracker.Instance.Finalize(progress);
+        
+        XasuTracker.Instance.Finalize(progress);
 
         Debug.Log("Tracker finalized");
         Application.Quit();

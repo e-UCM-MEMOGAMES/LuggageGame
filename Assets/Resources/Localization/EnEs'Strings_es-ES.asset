@@ -452,6 +452,42 @@ MonoBehaviour:
     m_Localized: Ajustes
     m_Metadata:
       m_Items: []
+  - m_Id: 1730597096693760
+    m_Localized: Idioma
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1730901649301504
+    m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1731001238855680
+    m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1731110034907136
+    m_Localized: Ingles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1738889273450496
+    m_Localized: "G\xE9nero"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1739914424262656
+    m_Localized: Hombre
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1739926512246784
+    m_Localized: Mujer
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757148798427136
+    m_Localized: "Ingl\xE9s"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757169874804736
+    m_Localized: "Espa\xF1ol"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

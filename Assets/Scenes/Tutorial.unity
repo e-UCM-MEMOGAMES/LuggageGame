@@ -1096,6 +1096,11 @@ PrefabInstance:
       propertyPath: m_text
       value: "No meter ning\xFAn objeto innecesario"
       objectReference: {fileID: 0}
+    - target: {fileID: 3395918142258364743, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3697451116908001130, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: m_IsActive
@@ -1661,6 +1666,11 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Intente memorizar los siguientes objetos e introducirlos a la maleta. 
         Para cumplir un objetivo debes hacer conseguido los anteriores. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9182904205627018088, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9187179680899768901, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}

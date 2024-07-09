@@ -13,6 +13,7 @@ public class InitialScene : MonoBehaviour
     public GameObject play;
     public GameObject playMini;
     public GameObject genre;
+    public GameObject languageSelector;
     public GameObject[] speechBubbles;
     public bool saveGame;
     private AudioManager audioManager;
@@ -21,34 +22,36 @@ public class InitialScene : MonoBehaviour
     void Start()
     {
 #if UNITY_EDITOR
-        if(!saveGame)PlayerPrefs.DeleteAll();
+        if (!saveGame) PlayerPrefs.DeleteAll();
 #endif
         speech = 0;
         playMini.SetActive(false);
         genre.SetActive(false);
         foreach (GameObject go in speechBubbles) go.SetActive(false);
-        audioManager= AudioManager.Instance;
+        audioManager = AudioManager.Instance;
         audioManager.Play((int)GameSound.MenuBGM);
         playButton = play.GetComponent<Button>();
         InitTracker();
-
-    }       
+       
  
+    }
     private async void InitTracker()
     {
         await XasuTracker.Instance.Init();
         await Task.Yield();
-        playButton.interactable= false;
+        playButton.interactable = false;
         while (XasuTracker.Instance.Status.State == TrackerState.Uninitialized)
         {
             await Task.Yield();
         }
         playButton.interactable = true;
         //await Xasu.HighLevel.CompletableTracker.Instance.Initialized("MyGame", Xasu.HighLevel.CompletableTracker.CompletableType.Game);
+        languageSelector.SetActive(!PlayerPrefs.HasKey("genre"));
+
     }
 
     public void SetSpeechBubble()
-   {
+    {
         if (speech == 0)
         {
             if (!PlayerPrefs.HasKey("genre"))
@@ -61,7 +64,7 @@ public class InitialScene : MonoBehaviour
             else
                 GM.Gm.LoadScene("LevelSelector");
 
-           
+
         }
         else
         {
@@ -71,16 +74,16 @@ public class InitialScene : MonoBehaviour
         }
 
         if (speech == speechBubbles.Length) playMini.SetActive(true);
-   }
+    }
 
     public void ConfigGenre()
     {
         Debug.Log((Genero)PlayerPrefs.GetInt("genre"));
 
-            playMini.SetActive(false);
-            speechBubbles[speech - 1].SetActive(false);
-            genre.SetActive(true);
-        
-     
+        playMini.SetActive(false);
+        speechBubbles[speech - 1].SetActive(false);
+        genre.SetActive(true);
+
+
     }
 }

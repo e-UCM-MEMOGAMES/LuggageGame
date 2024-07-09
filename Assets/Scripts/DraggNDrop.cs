@@ -1,5 +1,6 @@
 ﻿using RAGE.Analytics;
 using System;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -20,6 +21,7 @@ public class DraggNDrop : MonoBehaviour
     [SerializeField]
     private TMP_Text nameInfo;
     string translatedName = " ";
+    string id = " ";
 
     #endregion
 
@@ -49,7 +51,7 @@ public class DraggNDrop : MonoBehaviour
     /// <summary>
     /// Maleta del juego.
     /// </summary>
-    public Luggage Maleta { get; set; }
+    public Luggage luggage { get; set; }
 
     public bool ItsInTarget { get; set; }
 
@@ -72,7 +74,7 @@ public class DraggNDrop : MonoBehaviour
     
         //GENERO = GM.Gm.Genero;
         ItsInTarget = false;
-        Maleta = ObjetoMaleta.transform.parent.gameObject.GetComponent<Luggage>();
+        luggage = ObjetoMaleta.transform.parent.gameObject.GetComponent<Luggage>();
 
     }
     private void OnMouseEnter()
@@ -84,12 +86,12 @@ public class DraggNDrop : MonoBehaviour
     /// <summary>
     /// Evento cuando se clicka el objeto.
     /// </summary>
-    private void OnMouseDown()
+    private  void OnMouseDown()
     {
         //if (EventSystem.current.IsPointerOverGameObject()) return;
 
-        Tracker.T.setVar("Click en objeto", 1);
-        Xasu.HighLevel.GameObjectTracker.Instance.Interacted("clickOnObject-"+_objetoMaleta.name);
+         Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "clickOn", "sceneObject" } }) ;
+
         StartPoint = transform.position;
         Offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, OFFSET_Z));
     }
@@ -101,29 +103,31 @@ public class DraggNDrop : MonoBehaviour
     {
         //if (EventSystem.current.IsPointerOverGameObject()) return;
      
-        Tracker.T.setVar("Objeto pulsado", 1);
         Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, OFFSET_Z);
         transform.position = Camera.main.ScreenToWorldPoint(newPosition) + Offset;
         transform.position = new Vector3(transform.position.x, transform.position.y, -5);
+
+
     }
 
     /// <summary>
     /// Evento cuando se deja de clickar el objeto.
     /// </summary>
-    private void OnMouseUp()
+    private  void OnMouseUp()
     {
         // if (EventSystem.current.IsPointerOverGameObject()) return;
-        Xasu.HighLevel.GameObjectTracker.Instance.Interacted("dropObject-" + _objetoMaleta.name);
-        Tracker.T.setVar("Deja de clickar en objeto", 1);
+
+
         transform.position = StartPoint;
         if (ItsInTarget)
         {
-            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("saveObjectInLuggage-" + _objetoMaleta.name);
 
-            Maleta.SaveObject(ObjetoMaleta);
+            luggage.SaveObject(ObjetoMaleta);
             ObjetoMaleta.SetTwin(gameObject);
             gameObject.SetActive(false);
         }
+        else  Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "dropBack", "sceneObject" } });
+
         ItsInTarget = false;
     }
 
@@ -131,7 +135,6 @@ public class DraggNDrop : MonoBehaviour
     {
         if (collision == null)
             throw new ArgumentNullException(nameof(collision));
-        Debug.Log("Ontrigger");
         ItsInTarget = true;
 
     }
@@ -146,9 +149,9 @@ public class DraggNDrop : MonoBehaviour
 
     #endregion
 
-    public void setName(string name)
+    public void setName(string i,string name)
     {
-        _objetoMaleta.SetName(translatedName = name);
+        _objetoMaleta.SetName(id=i,translatedName = name);
     }
 
 }

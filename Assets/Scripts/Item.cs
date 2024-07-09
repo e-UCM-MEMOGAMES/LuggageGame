@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -14,6 +15,8 @@ public class Item : MonoBehaviour
     Vector3 Offset;
     bool hasExit;
     Luggage luggage;
+
+    string id = " ";
     string translatedName=" ";
 
     void Start()
@@ -39,7 +42,7 @@ public class Item : MonoBehaviour
         panelInfo.SetActive(false);
     }
 
-    private void OnMouseOver()
+    private  void  OnMouseOver()
     {
         if (EventSystem.current.IsPointerOverGameObject()) return;
         if (Input.mousePosition.x == 0 || Input.mousePosition.y == 0 || Input.mousePosition.x == Screen.width - 1 || Input.mousePosition.y == Screen.height - 1)
@@ -49,16 +52,16 @@ public class Item : MonoBehaviour
         }
         if (Input.GetMouseButtonUp(0))
         {
-            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("dropLuggageObject-" + name);
+      
 
             if (hasExit)
             {
-                Xasu.HighLevel.GameObjectTracker.Instance.Interacted("dropObjectfromLuggage-" + name);
-
                 panelInfo.SetActive(false);
                 luggage.RemoveObject(this);
                 twin.SetActive(true);
             }
+            else  Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "dropBack", "luggageObject" } });
+
             hasExit = false;
             transform.localPosition = StartPoint;
 
@@ -68,9 +71,9 @@ public class Item : MonoBehaviour
     /// <summary>
     /// Evento cuando se clicka el objeto.
     /// </summary>
-    private void OnMouseDown()
+    private  void OnMouseDown()
     {
-        Xasu.HighLevel.GameObjectTracker.Instance.Interacted("clickOnLuggageObject-" + name);
+         Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "clickOn", "luggageObject" } });
 
         panelInfo.SetActive(true);
         //StartPoint = transform.localPosition;
@@ -82,7 +85,6 @@ public class Item : MonoBehaviour
     /// </summary>
     private void OnMouseDrag()
     {
-
         Vector3 newPosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 5);
         transform.position = Camera.main.ScreenToWorldPoint(newPosition) + Offset;
         transform.position = new Vector3(transform.position.x, transform.position.y, -5);
@@ -103,8 +105,14 @@ public class Item : MonoBehaviour
         hasExit = true;
 
     }
-    public void SetName(string n)
+    public void SetName(string i,string n)
     {
+        id = i;
         translatedName = n;
     }
+    public string GetID()
+    {
+        return id;
+    }
+
 }

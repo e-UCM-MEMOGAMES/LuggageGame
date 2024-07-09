@@ -119,10 +119,6 @@ public class LevelSelector : MonoBehaviour
         SceneManager.LoadScene(levelPlay);
     }
 
-    public void Credits()
-    {
-        SceneManager.LoadScene("Créditos");
-    }
 
     public void SelectWeather(int level)
     {

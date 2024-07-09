@@ -14,9 +14,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_TableCollectionName: EnEsAssets
   m_TableCollectionNameGuidString: 5cac4b0d62f391b4a9a88f63c86ea5e7
-  m_Entries: []
+  m_Entries:
+  - m_Id: 751854744150016
+    m_Key: Settings/Canvas/Dropdown/Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 751856954548224
+    m_Key: Settings/Canvas/Dropdown/Label 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 751939674611712
+    m_Key: Settings/Canvas/Dropdown/Template/Viewport/Content/Item/Item Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 751939687194624
+    m_Key: Settings/Canvas/Dropdown/Template/Viewport/Content/Item/Item Label 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 752104091328512
+    m_Key: Settings/Canvas/Dropdown
+    m_Metadata:
+      m_Items: []
   m_Metadata:
-    m_Items: []
+    m_Items:
+    - rid: 7917071074816163853
+    - rid: 7917071074816163856
+    - rid: 7917071074816163865
   m_KeyGenerator:
     rid: 3258602988037210122
   references:
@@ -27,3 +50,41 @@ MonoBehaviour:
         asm: Unity.Localization}
       data:
         m_CustomEpoch: 1720349559409
+    - rid: 7917071074816163853
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 751854744150016
+          m_TableCodes:
+          - es-ES
+          - en-US
+        - m_KeyId: 751939674611712
+          m_TableCodes:
+          - es-ES
+          - en-US
+        m_TypeString: TMPro.TMP_FontAsset, Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+    - rid: 7917071074816163856
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 751856954548224
+          m_TableCodes:
+          - es-ES
+          - en-US
+        - m_KeyId: 751939687194624
+          m_TableCodes:
+          - es-ES
+          - en-US
+        m_TypeString: UnityEngine.Material, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+    - rid: 7917071074816163865
+      type: {class: AssetTypeMetadata, ns: UnityEngine.Localization.Metadata, asm: Unity.Localization}
+      data:
+        m_Entries:
+        - m_KeyId: 752104091328512
+          m_TableCodes:
+          - en-US
+          - es-ES
+        m_TypeString: UnityEngine.Sprite, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null

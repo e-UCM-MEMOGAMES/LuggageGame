@@ -439,6 +439,42 @@ MonoBehaviour:
     m_Key: LevelSelector/Canvas/Clima/Ajustes/Text (TMP)
     m_Metadata:
       m_Items: []
+  - m_Id: 1730597096693760
+    m_Key: Settings/Canvas/Text (TMP) (3)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1730901649301504
+    m_Key: Settings/Canvas/Dropdown/Label
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1731001238855680
+    m_Key: Settings/Canvas/Dropdown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1731110034907136
+    m_Key: Settings/Canvas/Dropdown 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1738889273450496
+    m_Key: Settings/Canvas/GameObject/Text (TMP) (3)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1739914424262656
+    m_Key: Settings/Canvas/Language/Dropdown (1)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1739926512246784
+    m_Key: Settings/Canvas/Language/Dropdown (1) 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757148798427136
+    m_Key: Settings/Canvas/Language/Dropdown
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1757169874804736
+    m_Key: Settings/Canvas/Language/Dropdown 1
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -14,6 +14,7 @@ using static CheckBox;
 using RAGE.Analytics;
 using Xasu.HighLevel;
 using UnityEngine.Localization.Settings;
+using UnityEditor.Experimental.GraphView;
 
 public class LevelManager : MonoBehaviour
 {
@@ -299,6 +300,7 @@ public class LevelManager : MonoBehaviour
                     c.SetCheckBoxState(CheckBoxState.None);
                     checkBoxDictionary.Add(objectLists[i].objectList[j], c);
 
+
                     finalList.AppendLine(LocalizationManager.Lm.getWord(objectLists[i].objectList[j]));
                     actualLineYPosition += YOffsetBetweenLine;
                     actualCheckboxYPosition += YOffsetBetweenCheckBox;
@@ -365,7 +367,7 @@ public class LevelManager : MonoBehaviour
                     go.transform.SetParent(l[info.storagePoints[i].objects[j].position]);
                     go.transform.localPosition = new Vector3(0, 0, 0);
                     go.SetActive(true);
-                    go.GetComponent<DraggNDrop>().setName(LocalizationManager.Lm.getWord(objectID));
+                    go.GetComponent<DraggNDrop>().setName(objectID, LocalizationManager.Lm.getWord(objectID));
 
                 }
             }
@@ -395,7 +397,7 @@ public class LevelManager : MonoBehaviour
             buttonBackToRoom.SetActive(true);
             roomButton.gameObject.SetActive(false);
 
-            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("checkFirstAidKit");
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("FirstAidKit").WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "open", "storagePoint" } });
 
         }
     }
@@ -430,7 +432,7 @@ public class LevelManager : MonoBehaviour
                 luggage.transform.position = initialLuggagePos;
                 luggage.transform.localScale = initialLuggageScale;
 
-                Xasu.HighLevel.GameObjectTracker.Instance.Interacted("check"+drawer.name);
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted(drawer.name).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "open", "storagePoint" } }); ;
             }
         }
     }
@@ -446,8 +448,8 @@ public class LevelManager : MonoBehaviour
             luggage.gameObject.SetActive(true);
             luggage.transform.position = new Vector3(0, 19f, luggage.transform.position.z);
             luggage.transform.localScale = new Vector3(4.0f, 4.0f, 1);
-          
-            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("checkLuggage");
+
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("Luggage").WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "check", "luggage" } }); ;
         }
 
     }
@@ -512,7 +514,7 @@ public class LevelManager : MonoBehaviour
             bathroomCam.gameObject.SetActive(true);
             if (currentDrawer != null)
                 currentDrawer.SetActive(false);
-           
+
         }
 
     }
@@ -536,15 +538,20 @@ public class LevelManager : MonoBehaviour
     {
         roomButton.SetActive(true);
         buttonBackToRoom.SetActive(false);
-        if (state== State.FIRSTAIDKIT)
+        if (state == State.FIRSTAIDKIT)
         {
             audioMng.Play(GameSound.MedicineClose);
-
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("FirstAidKit").WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "close", "storagePoint" } });
         }
-       else if (state == State.DRAWER)
+        else if (state == State.DRAWER)
         {
             audioMng.Play(GameSound.DrawerClose);
-
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted(currentDrawer.name).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "close", "storagePoint" } });
+            currentDrawer = null;
+        }
+        else if (state == State.LUGGAGE)
+        {
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("Luggage").WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "close", "luggage" } });
         }
         if (myActualRoom == (int)State.BATHROOM)
         {
@@ -560,14 +567,10 @@ public class LevelManager : MonoBehaviour
         state = State.END;
         StringBuilder cad = new StringBuilder();
 
-        //  cad.AppendLine(luggage.Check(level));
 
-        //string s = luggage.GetObjetosErroneos();
-        //if (s.Length > 0)
-        //    cad.Append(s);
 
         int starsCompleted = 0;
-        if (luggage.ObjetosGuardados.Count() > luggage.ObjetosList.Count()/2.0f)
+        if (luggage.ObjetosGuardados.Count() > luggage.ObjetosList.Count() / 2.0f)
         {
             starsCompleted++;
             stars[0].transform.GetChild(0).gameObject.SetActive(true);
@@ -611,8 +614,11 @@ public class LevelManager : MonoBehaviour
         roomButton.SetActive(false);
         endPanel.gameObject.SetActive(true);
 
-        Tracker.T.Completable.Completed(LevelNameGlobal, CompletableTracker.Completable.Level, true);
-        Xasu.HighLevel.CompletableTracker.Instance.Completed(LevelNameGlobal, Xasu.HighLevel.CompletableTracker.CompletableType.Level).WithSuccess(true);
+        Xasu.HighLevel.CompletableTracker.Instance.Completed(LevelNameGlobal, Xasu.HighLevel.CompletableTracker.CompletableType.Level).WithSuccess(true).WithScore(starsCompleted / 4.0).WithResultExtensions(new Dictionary<string, object> {
+            {Application.identifier + "://" + "wrongObjects", luggage.ObjetosErroneosGuardados.Count().ToString()},
+            {Application.identifier + "://" + "correctObjects", luggage.ObjetosGuardados.Count().ToString() + " / " + luggage.ObjetosList.Count().ToString()},
+            { Application.identifier + "://" +"checkListOpportunities", (maxcheckOpportunities - checkOpportunities).ToString() + " / " + maxcheckOpportunities.ToString()},
+        });
 
     }
 }

@@ -70,7 +70,7 @@ public class Luggage : MonoBehaviour
     /// Guarda un objeto en la maleta.
     /// </summary>
     /// <param name="obj">Objeto a guardar.</param>
-    public void SaveObject(Item obj)
+    public  void SaveObject(Item obj)
     {
         audioMng.Play(GameSound.PutIn);
         NumItemsSaved++;
@@ -78,18 +78,17 @@ public class Luggage : MonoBehaviour
         if (NumItemsSaved == 1)
             Targets.ForEach(target => target.ChangeSprite(fullLuggage));
 
-        if (ObjetosList.Contains(obj.name))
+        if (ObjetosList.Contains(obj.GetID()))
         {
-            ObjetosGuardados.Add(obj.name);
-            Tracker.T.setVar("Objeto guardado", 1);
-            Debug.Log("Correcto");
-            levelMng.addToLuggage(obj.name);
+            ObjetosGuardados.Add(obj.GetID());
+             Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "saveInto", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "correctObject-luggageProgression",ObjetosGuardados.Count / (double) ObjetosList.Count } });
+
+            levelMng.addToLuggage(obj.GetID());
         }
         else
         {
-            ObjetosErroneosGuardados.Add(obj.name);
-            Tracker.T.setVar("Objeto erróneo guardado", 1);
-            Debug.Log("Correcto");
+            ObjetosErroneosGuardados.Add(obj.GetID());
+             Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "saveInto", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "wrongObject-luggageProgression", ObjetosGuardados.Count / (double)ObjetosList.Count } });
         }
     }
 
@@ -97,7 +96,7 @@ public class Luggage : MonoBehaviour
     /// Quita un objeto de la maleta.
     /// </summary>
     /// <param name="obj"></param>
-    public void RemoveObject(Item obj)
+    public  void RemoveObject(Item obj)
     {
         audioMng.Play(GameSound.ThrowOut);
         NumItemsSaved--;
@@ -105,16 +104,16 @@ public class Luggage : MonoBehaviour
         if (NumItemsSaved == 0)
             Targets.ForEach(target => target.ChangeSprite(emptyLuggage));
 
-        if (ObjetosGuardados.Contains(obj.name))
+        if (ObjetosGuardados.Contains(obj.GetID()))
         {
-            ObjetosGuardados.Remove(obj.name);
-            Tracker.T.setVar("Objeto quitado", 1);
-            levelMng.removefromLuggage(obj.name);
+            ObjetosGuardados.Remove(obj.GetID());
+             Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "removeFrom", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "correctObject-luggageProgression", ObjetosGuardados.Count / (double)ObjetosList.Count } });
+            levelMng.removefromLuggage(obj.GetID());
         }
         else
         {
-            ObjetosErroneosGuardados.Remove(obj.name);
-            Tracker.T.setVar("Objeto erróneo quitado", 1);
+            ObjetosErroneosGuardados.Remove(obj.GetID());
+             Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "removeFrom", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "wrongObject-luggageProgression", ObjetosGuardados.Count / (double)ObjetosList.Count } });
         }
     }
 
