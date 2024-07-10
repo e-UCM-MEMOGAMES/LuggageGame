@@ -10,7 +10,7 @@ public class LocalizationManager : MonoBehaviour
 {
     public static LocalizationManager Lm;
     
-    public Dictionary<string, string> translationsDictionary { get; set; }
+    public static Dictionary<string, string> translationsDictionary { get; set; }
 
     private void Awake()
     {
@@ -27,10 +27,11 @@ public class LocalizationManager : MonoBehaviour
 
     private void Start()
     {
-
+        translationsDictionary = new Dictionary<string, string>();
         LoadTranslations();
     }
 
+    //carga una tabla de traducciones del idioma seleccionado
     public void LoadTranslations()
     {
         string local = "Localization/";
@@ -39,30 +40,24 @@ public class LocalizationManager : MonoBehaviour
         local = string.Concat(local, LocalizationSettings.SelectedLocale.Identifier.Code);
         TextAsset localizationFile = (TextAsset)Resources.Load(local, typeof(TextAsset));
         LoadTranslationTable(GetComponent<JSONReader>().LoadTranslationFile(localizationFile.text));
-        Debug.Log(LocalizationSettings.SelectedLocale); 
-        Debug.Log(localizationFile.text);
     }
+    //cambia el idioma de juego al indicado por index. 
     public void ChangeLanguage(int index)
     {
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
         LoadTranslations();
     }
-
+    //metodo auxiliar de LoadTranslations, se encarga de relacionar las traducciones con su correspondiente id
     private void LoadTranslationTable(TranslationInfo translations)
     {
-        translationsDictionary = new Dictionary<string, string>();
+        translationsDictionary.Clear();
 
         foreach (ObjectTranslation ti in translations.objects)
-        {
-            Debug.Log(ti.translation);
             translationsDictionary.Add(ti.id, ti.translation);
-        }
     }
-
+    //devuelve la traduccion de la palabra con id "word"
     public string getWord(string word)
     {
-        Debug.Log(translationsDictionary.Count+" "+ translationsDictionary[word]);
-
         return translationsDictionary[word];
     }
 }
