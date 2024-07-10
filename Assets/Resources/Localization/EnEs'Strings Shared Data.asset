@@ -475,6 +475,34 @@ MonoBehaviour:
     m_Key: Settings/Canvas/Language/Dropdown 1
     m_Metadata:
       m_Items: []
+  - m_Id: 2078416248676352
+    m_Key: Settings/Canvas/Warning/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2080132008419328
+    m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2080370274246656
+    m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo (1)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2081388177301504
+    m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo (4)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2081557434245120
+    m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo (2)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2081611414937600
+    m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo (3)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2088170123599872
+    m_Key: Intro/Canvas/Text (TMP)
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

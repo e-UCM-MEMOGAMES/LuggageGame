@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Xasu;
 
 public class ButtonTracker : MonoBehaviour
 {
@@ -20,7 +21,9 @@ public class ButtonTracker : MonoBehaviour
 
     public async void Interacted()
     {
-        if (button != null )
+        if (XasuTracker.Instance.Status.State == TrackerState.Uninitialized) return;
+
+            if (button != null )
         {
             button.interactable = false;
             await Xasu.HighLevel.GameObjectTracker.Instance.Interacted(buttonName);

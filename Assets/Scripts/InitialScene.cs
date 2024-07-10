@@ -9,15 +9,14 @@ using System.Threading.Tasks;
 using UnityEngine.UI;
 public class InitialScene : MonoBehaviour
 {
-    public GameObject title;
-    public GameObject play;
+    public GameObject loginScene;
+    public GameObject playScene;
     public GameObject playMini;
     public GameObject genre;
     public GameObject languageSelector;
     public GameObject[] speechBubbles;
     public bool saveGame;
     private AudioManager audioManager;
-    Button playButton;
     int speech;
     void Start()
     {
@@ -30,23 +29,24 @@ public class InitialScene : MonoBehaviour
         foreach (GameObject go in speechBubbles) go.SetActive(false);
         audioManager = AudioManager.Instance;
         audioManager.Play((int)GameSound.MenuBGM);
-        playButton = play.GetComponent<Button>();
-        InitTracker();
-       
- 
+
+        if (!PlayerPrefs.HasKey("newGame")) PlayerPrefs.SetInt("newGame", 1);
+        else PlayerPrefs.SetInt("newGame", 0);
+        languageSelector.SetActive((PlayerPrefs.GetInt("newGame") == 1));
     }
-    private async void InitTracker()
+    public async void InitTracker()
     {
+        playScene.SetActive(false);
+        loginScene.SetActive(true);
         await XasuTracker.Instance.Init();
         await Task.Yield();
-        playButton.interactable = false;
         while (XasuTracker.Instance.Status.State == TrackerState.Uninitialized)
         {
             await Task.Yield();
         }
-        playButton.interactable = true;
+        loginScene.SetActive(false);
+        SetSpeechBubble();
         //await Xasu.HighLevel.CompletableTracker.Instance.Initialized("MyGame", Xasu.HighLevel.CompletableTracker.CompletableType.Game);
-        languageSelector.SetActive(!PlayerPrefs.HasKey("genre"));
 
     }
 
@@ -54,10 +54,9 @@ public class InitialScene : MonoBehaviour
     {
         if (speech == 0)
         {
-            if (!PlayerPrefs.HasKey("genre"))
+            if ( PlayerPrefs.GetInt("newGame")==1)
             {
-                title.SetActive(false);
-                play.SetActive(false);
+
                 speechBubbles[speech].SetActive(true);
                 speech++;
             }

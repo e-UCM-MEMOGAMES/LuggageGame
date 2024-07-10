@@ -488,6 +488,34 @@ MonoBehaviour:
     m_Localized: "Espa\xF1ol"
     m_Metadata:
       m_Items: []
+  - m_Id: 2078416248676352
+    m_Localized: "\xBFSeguro que quiere borrar todo el dato del juego?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2080132008419328
+    m_Localized: Objetivo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2080370274246656
+    m_Localized: "No meter ning\xFAn objeto innecesario"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2081388177301504
+    m_Localized: "Introducir m\xE1s de la mitad de los objetos pedidos"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2081557434245120
+    m_Localized: Introducir todos los objetos pedidos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2081611414937600
+    m_Localized: No haber consultado la lista
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2088170123599872
+    m_Localized: "Inicie sesi\xF3n en la p\xE1gina que se le muestra..."
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

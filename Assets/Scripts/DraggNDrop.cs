@@ -90,7 +90,7 @@ public class DraggNDrop : MonoBehaviour
     {
         //if (EventSystem.current.IsPointerOverGameObject()) return;
 
-         Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "clickOn", "sceneObject" } }) ;
+         Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { "https://" + "clickOn", "sceneObject" } }) ;
 
         StartPoint = transform.position;
         Offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, OFFSET_Z));
@@ -126,7 +126,7 @@ public class DraggNDrop : MonoBehaviour
             ObjetoMaleta.SetTwin(gameObject);
             gameObject.SetActive(false);
         }
-        else  Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { Application.identifier + "://" + "dropBack", "sceneObject" } });
+        else  Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { "https://" + "dropBack", "sceneObject" } });
 
         ItsInTarget = false;
     }

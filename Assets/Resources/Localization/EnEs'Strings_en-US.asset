@@ -485,6 +485,34 @@ MonoBehaviour:
     m_Localized: Spanis
     m_Metadata:
       m_Items: []
+  - m_Id: 2078416248676352
+    m_Localized: Are you sure you want to delete all the game data?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2080132008419328
+    m_Localized: Objectives
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2080370274246656
+    m_Localized: Don't put any items that haven't been requested in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2081388177301504
+    m_Localized: Put more than half of the requested items in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2081557434245120
+    m_Localized: Put all requested items in
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2081611414937600
+    m_Localized: Don't look at the checklist
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2088170123599872
+    m_Localized: Please log in to the page you are shown on...
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -104,6 +104,12 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
 
         _musicSource.loop = true;
 
+        if (PlayerPrefs.HasKey("musicVolume"))
+            _musicSource.volume = PlayerPrefs.GetFloat("musicVolume");
+
+        if (PlayerPrefs.HasKey("soundVolume"))
+            _musicSource.volume = PlayerPrefs.GetFloat("soundVolume");
+
     }
 
     public void Play(int s)
@@ -163,13 +169,16 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
 
     public void BGMVolume(float volume)
     {
-        Debug.Log(_musicSource + " " + _musicSource.volume);
         _musicSource.volume = volume;
+        PlayerPrefs.SetFloat("musicVolume", volume);
+
     }
     public void SoundEffectVolume(float volume)
     {
         _sceneSoundSource.volume = volume;
         _uiSoundSource.volume = volume;
+        PlayerPrefs.SetFloat("soundVolume", volume);
+
     }
     public float GetBGMVolume()
     {

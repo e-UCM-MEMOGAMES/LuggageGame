@@ -24,13 +24,17 @@ public class GenderDropDown : MonoBehaviour
         if (dropdown.value==0)
         {
             GM.Gm.Genero=Assets.Scripts.Constantes.Genero.HOMBRE;
+            Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "man");
+
         }
         else
         {
             GM.Gm.Genero=Assets.Scripts.Constantes.Genero.MUJER;
+            Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "woman");
+
 
         }
-     
+
     }
 
 }

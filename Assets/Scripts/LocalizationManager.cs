@@ -1,15 +1,18 @@
 using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
 using UnityEngine.Localization.Settings;
 using UnityEngine.UI;
+using Xasu;
 using static JSONReader;
 
 public class LocalizationManager : MonoBehaviour
 {
     public static LocalizationManager Lm;
-    
+
     public static Dictionary<string, string> translationsDictionary { get; set; }
 
     private void Awake()
@@ -27,12 +30,13 @@ public class LocalizationManager : MonoBehaviour
 
     private void Start()
     {
-        translationsDictionary = new Dictionary<string, string>();
-        LoadTranslations();
+        if (PlayerPrefs.HasKey("setLanguage")) ChangeLanguage(PlayerPrefs.GetInt("setLanguage"));
+        else LoadTranslations();
+
     }
 
     //carga una tabla de traducciones del idioma seleccionado
-    public void LoadTranslations()
+    private void LoadTranslations()
     {
         string local = "Localization/";
         local = string.Concat(local, LocalizationSettings.SelectedLocale.Identifier.Code);
@@ -44,13 +48,18 @@ public class LocalizationManager : MonoBehaviour
     //cambia el idioma de juego al indicado por index. 
     public void ChangeLanguage(int index)
     {
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
+        if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+            Xasu.HighLevel.AlternativeTracker.Instance.Selected("language", LocalizationSettings.SelectedLocale.ToString());
         LoadTranslations();
+        PlayerPrefs.SetInt("setLanguage", index);
+
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
     }
     //metodo auxiliar de LoadTranslations, se encarga de relacionar las traducciones con su correspondiente id
     private void LoadTranslationTable(TranslationInfo translations)
     {
-        translationsDictionary.Clear();
+        translationsDictionary = new Dictionary<string, string>();
+
 
         foreach (ObjectTranslation ti in translations.objects)
             translationsDictionary.Add(ti.id, ti.translation);
