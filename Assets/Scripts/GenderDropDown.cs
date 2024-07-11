@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Xasu;
 
 public class GenderDropDown : MonoBehaviour
 {
@@ -21,16 +22,19 @@ public class GenderDropDown : MonoBehaviour
     }
     public void OnValueChanged()
     {
-        if (dropdown.value==0)
+
+        if (dropdown.value == 0)
         {
-            GM.Gm.Genero=Assets.Scripts.Constantes.Genero.HOMBRE;
-            Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "man");
+            GM.Gm.Genero = Assets.Scripts.Constantes.Genero.HOMBRE;
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+                Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "man");
 
         }
         else
         {
-            GM.Gm.Genero=Assets.Scripts.Constantes.Genero.MUJER;
-            Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "woman");
+            GM.Gm.Genero = Assets.Scripts.Constantes.Genero.MUJER;
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+                Xasu.HighLevel.AlternativeTracker.Instance.Selected("gender", "woman");
 
 
         }

@@ -46,6 +46,7 @@ public class JSONReader : MonoBehaviour
     
     public TranslationInfo LoadTranslationFile(string file)
     {
+        Debug.Log(file);
         TranslationInfo translationInfo;
         translationInfo = JsonUtility.FromJson<TranslationInfo>(file);
         return translationInfo;

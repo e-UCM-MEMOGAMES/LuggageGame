@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Xasu;
 
 public class SliderTracker : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class SliderTracker : MonoBehaviour
 
     public async void Interacted(float value)
     {
-        slider.interactable = false;
+        if (XasuTracker.Instance.Status.State == TrackerState.Uninitialized) return;
+            slider.interactable = false;
         await Xasu.HighLevel.GameObjectTracker.Instance.Interacted(sliderName);
         slider.interactable = true;
     }

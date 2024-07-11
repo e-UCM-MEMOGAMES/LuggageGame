@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Xasu;
 using static Assets.Scripts.Constantes;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -89,8 +90,9 @@ public class DraggNDrop : MonoBehaviour
     private  void OnMouseDown()
     {
         //if (EventSystem.current.IsPointerOverGameObject()) return;
+        if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
 
-         Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { "https://" + "clickOn", "sceneObject" } }) ;
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { "https://" + "clickOn", "sceneObject" } }) ;
 
         StartPoint = transform.position;
         Offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, OFFSET_Z));
@@ -126,7 +128,8 @@ public class DraggNDrop : MonoBehaviour
             ObjetoMaleta.SetTwin(gameObject);
             gameObject.SetActive(false);
         }
-        else  Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { "https://" + "dropBack", "sceneObject" } });
+        else if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { "https://" + "dropBack", "sceneObject" } });
 
         ItsInTarget = false;
     }

@@ -32,12 +32,12 @@ public class GM : MonoBehaviour
     /// Lista de objetos del nivel.
     /// </summary>+
     public List<string> SceneObjects { get; set; }
-    
+
     /// <summary>
     /// Manejado general del juego.
     /// </summary>
     public static GM Gm;
-   
+
     public List<string> ObstaculosList { get; set; }
 
     /// <summary>
@@ -47,17 +47,20 @@ public class GM : MonoBehaviour
     {
         get => (Clima)_clima; set
         {
-            switch (value)
+             if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
             {
-                case Clima.CALIDO:
-                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Warm");
-                    break;
-                case Clima.FRIO:
-                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Cold");
-                    break;
-                default:
-                    Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Neutral");
-                    break;
+                switch (value)
+                {
+                    case Clima.CALIDO:
+                        Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Warm");
+                        break;
+                    case Clima.FRIO:
+                        Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Cold");
+                        break;
+                    default:
+                        Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Neutral");
+                        break;
+                }
             }
             _clima = (int)value;
         }
@@ -70,7 +73,7 @@ public class GM : MonoBehaviour
     {
         get => (Genero)_genero; set
         {
-            
+
             _genero = (int)value;
         }
     }
@@ -93,7 +96,7 @@ public class GM : MonoBehaviour
         List = new List<string>();
         ObstaculosList = new List<string>();
     }
- 
+
     #endregion
 
     #region Métodos públicos
@@ -108,7 +111,7 @@ public class GM : MonoBehaviour
         LoadScene("LevelSelector");
     }
 
- 
+
     public void LoadScene(string scene)
     {
         SceneManager.LoadScene(scene);
@@ -124,7 +127,7 @@ public class GM : MonoBehaviour
         {
             Debug.Log("Finalization progress: " + p);
         };
-        
+
         XasuTracker.Instance.Finalize(progress);
 
         Debug.Log("Tracker finalized");

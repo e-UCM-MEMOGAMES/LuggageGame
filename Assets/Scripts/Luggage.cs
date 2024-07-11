@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using Xasu;
 
 public class Luggage : MonoBehaviour
 {
@@ -81,14 +82,18 @@ public class Luggage : MonoBehaviour
         if (ObjetosList.Contains(obj.GetID()))
         {
             ObjetosGuardados.Add(obj.GetID());
-             Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { "https://" + "saveInto", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { "https://" + "correctObject-luggageProgression",ObjetosGuardados.Count / (double) ObjetosList.Count } });
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { "https://" + "saveInto", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { "https://" + "correctObject-luggageProgression",ObjetosGuardados.Count / (double) ObjetosList.Count } });
 
             levelMng.addToLuggage(obj.GetID());
         }
         else
         {
             ObjetosErroneosGuardados.Add(obj.GetID());
-             Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { "https://" + "saveInto", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { "https://" + "wrongObject-luggageProgression", ObjetosGuardados.Count / (double)ObjetosList.Count } });
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { "https://" + "saveInto", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { "https://" + "wrongObject-luggageProgression", ObjetosGuardados.Count / (double)ObjetosList.Count } });
         }
     }
 
@@ -107,13 +112,17 @@ public class Luggage : MonoBehaviour
         if (ObjetosGuardados.Contains(obj.GetID()))
         {
             ObjetosGuardados.Remove(obj.GetID());
-             Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { "https://" + "removeFrom", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { "https://" + "correctObject-luggageProgression", ObjetosGuardados.Count / (double)ObjetosList.Count } });
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { "https://" + "removeFrom", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { "https://" + "correctObject-luggageProgression", ObjetosGuardados.Count / (double)ObjetosList.Count } });
             levelMng.removefromLuggage(obj.GetID());
         }
         else
         {
             ObjetosErroneosGuardados.Remove(obj.GetID());
-             Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { "https://" + "removeFrom", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { "https://" + "wrongObject-luggageProgression", ObjetosGuardados.Count / (double)ObjetosList.Count } });
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted(obj.GetID()).WithResultExtensions(new Dictionary<string, object> { { "https://" + "removeFrom", "luggage" } }).WithContextExtensions(new Dictionary<string, object> { { "https://" + "wrongObject-luggageProgression", ObjetosGuardados.Count / (double)ObjetosList.Count } });
         }
     }
 

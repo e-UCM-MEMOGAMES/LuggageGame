@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Xasu;
 using static System.Net.WebRequestMethods;
 
 [RequireComponent(typeof(BoxCollider2D))]
@@ -61,7 +62,8 @@ public class Item : MonoBehaviour
                 luggage.RemoveObject(this);
                 twin.SetActive(true);
             }
-            else  Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { "https://"+ "dropBack", "luggageObject" } });
+            else if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { { "https://"+ "dropBack", "luggageObject" } });
 
             hasExit = false;
             transform.localPosition = StartPoint;
@@ -74,7 +76,8 @@ public class Item : MonoBehaviour
     /// </summary>
     private  void OnMouseDown()
     {
-         Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { {  "https://" + "clickOn", "luggageObject" } });
+        if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+            Xasu.HighLevel.GameObjectTracker.Instance.Interacted(id).WithResultExtensions(new Dictionary<string, object> { {  "https://" + "clickOn", "luggageObject" } });
 
         panelInfo.SetActive(true);
         //StartPoint = transform.localPosition;

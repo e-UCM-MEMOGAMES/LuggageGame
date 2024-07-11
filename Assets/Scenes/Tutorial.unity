@@ -1511,6 +1511,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Return
       objectReference: {fileID: 0}
+    - target: {fileID: 7556226804279158439, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7667097801366760861, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: m_Size.x

@@ -7,6 +7,7 @@ using Xasu.HighLevel;
 using static Assets.Scripts.Constantes;
 using System.Threading.Tasks;
 using UnityEngine.UI;
+using Xasu.Config;
 public class InitialScene : MonoBehaviour
 {
     public GameObject loginScene;
@@ -37,14 +38,25 @@ public class InitialScene : MonoBehaviour
     public async void InitTracker()
     {
         playScene.SetActive(false);
-        loginScene.SetActive(true);
-        await XasuTracker.Instance.Init();
-        await Task.Yield();
-        while (XasuTracker.Instance.Status.State == TrackerState.Uninitialized)
+        bool hasConfig = false;
+        try
         {
-            await Task.Yield();
+            var trackerConfig = await TrackerConfigLoader.LoadLocalAsync();
+            hasConfig = true;
         }
-        loginScene.SetActive(false);
+        catch { Debug.Log("Tracker config not found."); }
+        if (hasConfig)
+        {
+
+            loginScene.SetActive(true); 
+            await XasuTracker.Instance.Init();
+            await Task.Yield();
+            while (XasuTracker.Instance.Status.State == TrackerState.Uninitialized)
+            {
+                await Task.Yield();
+            }
+            loginScene.SetActive(false);
+        }
         SetSpeechBubble();
         //await Xasu.HighLevel.CompletableTracker.Instance.Initialized("MyGame", Xasu.HighLevel.CompletableTracker.CompletableType.Game);
 
@@ -54,7 +66,7 @@ public class InitialScene : MonoBehaviour
     {
         if (speech == 0)
         {
-            if ( PlayerPrefs.GetInt("newGame")==1)
+            if (PlayerPrefs.GetInt("newGame") == 1)
             {
 
                 speechBubbles[speech].SetActive(true);

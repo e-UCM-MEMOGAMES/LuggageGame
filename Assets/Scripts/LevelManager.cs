@@ -14,6 +14,7 @@ using static CheckBox;
 using RAGE.Analytics;
 using Xasu.HighLevel;
 using UnityEngine.Localization.Settings;
+using Xasu;
 
 public class LevelManager : MonoBehaviour
 {
@@ -207,8 +208,8 @@ public class LevelManager : MonoBehaviour
         }
         else LevelNameGlobal = "Tutorial";
         LoadList(LevelNameGlobal);
-
-        Xasu.HighLevel.CompletableTracker.Instance.Initialized(LevelNameGlobal, Xasu.HighLevel.CompletableTracker.CompletableType.Level);
+        if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+            Xasu.HighLevel.CompletableTracker.Instance.Initialized(LevelNameGlobal, Xasu.HighLevel.CompletableTracker.CompletableType.Level);
 
     }
 
@@ -222,7 +223,6 @@ public class LevelManager : MonoBehaviour
         GM.Gm.SceneObjects = new List<string>();
 
         TextAsset jsonFile = (TextAsset)Resources.Load(string.Concat("Lists/", name), typeof(TextAsset));
-        Debug.Log(jsonFile.text);
         ReadLevelInfo(jsonReader.LoadFile(jsonFile.text));
 
         showList();
@@ -395,8 +395,9 @@ public class LevelManager : MonoBehaviour
             bttnEnd.gameObject.SetActive(false);
             buttonBackToRoom.SetActive(true);
             roomButton.gameObject.SetActive(false);
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
 
-            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("FirstAidKit").WithResultExtensions(new Dictionary<string, object> { { "https://" + "open", "storagePoint" } });
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted("FirstAidKit").WithResultExtensions(new Dictionary<string, object> { { "https://" + "open", "storagePoint" } });
 
         }
     }
@@ -430,8 +431,9 @@ public class LevelManager : MonoBehaviour
                 currentDrawer.SetActive(true);
                 luggage.transform.position = initialLuggagePos;
                 luggage.transform.localScale = initialLuggageScale;
+                if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
 
-                Xasu.HighLevel.GameObjectTracker.Instance.Interacted(drawer.name).WithResultExtensions(new Dictionary<string, object> { { "https://" + "open", "storagePoint" } }); ;
+                    Xasu.HighLevel.GameObjectTracker.Instance.Interacted(drawer.name).WithResultExtensions(new Dictionary<string, object> { { "https://" + "open", "storagePoint" } }); ;
             }
         }
     }
@@ -447,8 +449,9 @@ public class LevelManager : MonoBehaviour
             luggage.gameObject.SetActive(true);
             luggage.transform.position = new Vector3(0, 19f, luggage.transform.position.z);
             luggage.transform.localScale = new Vector3(4.0f, 4.0f, 1);
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
 
-            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("Luggage").WithResultExtensions(new Dictionary<string, object> { { "https://" + "check", "luggage" } }); ;
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted("Luggage").WithResultExtensions(new Dictionary<string, object> { { "https://" + "check", "luggage" } }); ;
         }
 
     }
@@ -522,13 +525,17 @@ public class LevelManager : MonoBehaviour
 
         if (myActualRoom == (int)State.BATHROOM)
         {
-            Xasu.HighLevel.AccessibleTracker.Instance.Accessed("BedRoom");
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+
+                Xasu.HighLevel.AccessibleTracker.Instance.Accessed("BedRoom");
             GoToBedRoom();
 
         }
         else
         {
-            Xasu.HighLevel.AccessibleTracker.Instance.Accessed("BathRoom");
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+
+                Xasu.HighLevel.AccessibleTracker.Instance.Accessed("BathRoom");
 
             GoToBathroom();
         }
@@ -540,17 +547,24 @@ public class LevelManager : MonoBehaviour
         if (state == State.FIRSTAIDKIT)
         {
             audioMng.Play(GameSound.MedicineClose);
-            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("FirstAidKit").WithResultExtensions(new Dictionary<string, object> { { "https://" + "close", "storagePoint" } });
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted("FirstAidKit").WithResultExtensions(new Dictionary<string, object> { { "https://" + "close", "storagePoint" } });
         }
         else if (state == State.DRAWER)
         {
             audioMng.Play(GameSound.DrawerClose);
-            Xasu.HighLevel.GameObjectTracker.Instance.Interacted(currentDrawer.name).WithResultExtensions(new Dictionary<string, object> { { "https://" + "close", "storagePoint" } });
+            currentDrawer.SetActive(false);
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted(currentDrawer.name).WithResultExtensions(new Dictionary<string, object> { { "https://" + "close", "storagePoint" } });
             currentDrawer = null;
         }
         else if (state == State.LUGGAGE)
         {
-            Xasu.HighLevel.GameObjectTracker.Instance.Interacted("Luggage").WithResultExtensions(new Dictionary<string, object> { { "https://" + "close", "luggage" } });
+            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
+
+                Xasu.HighLevel.GameObjectTracker.Instance.Interacted("Luggage").WithResultExtensions(new Dictionary<string, object> { { "https://" + "close", "luggage" } });
         }
         if (myActualRoom == (int)State.BATHROOM)
         {
@@ -613,8 +627,10 @@ public class LevelManager : MonoBehaviour
         roomButton.SetActive(false);
         endPanel.gameObject.SetActive(true);
 
+        if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
 
-        Xasu.HighLevel.CompletableTracker.Instance.Completed(LevelNameGlobal, Xasu.HighLevel.CompletableTracker.CompletableType.Level).WithSuccess(true).WithScore(starsCompleted / 4.0).WithResultExtensions(new Dictionary<string, object> {
+            Xasu.HighLevel.CompletableTracker.Instance.Completed(LevelNameGlobal, Xasu.HighLevel.CompletableTracker.CompletableType.Level).WithSuccess(true).WithResultExtensions(new Dictionary<string, object> {
+            {"https://" + "estrellasCompletas",starsCompleted },
             {"https://" + "wrongObjects", luggage.ObjetosErroneosGuardados.Count().ToString()},
             {"https://" + "correctObjects", luggage.ObjetosGuardados.Count().ToString() + " / " + luggage.ObjetosList.Count().ToString()},
             {"https://" +"checkListOpportunities", (maxcheckOpportunities - checkOpportunities).ToString() + " / " + maxcheckOpportunities.ToString()},

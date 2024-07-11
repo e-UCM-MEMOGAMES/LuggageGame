@@ -1,4 +1,4 @@
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -13,8 +13,8 @@ public class LocalizationManager : MonoBehaviour
 {
     public static LocalizationManager Lm;
 
-    public static Dictionary<string, string> translationsDictionary { get; set; }
-
+    Dictionary<string, string> translationsDictionary;
+    [SerializeField]  TranslationInfo INFO;
     private void Awake()
     {
         if (Lm == null)
@@ -26,6 +26,7 @@ public class LocalizationManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Lm.translationsDictionary = new Dictionary<string, string>();
     }
 
     private void Start()
@@ -43,30 +44,33 @@ public class LocalizationManager : MonoBehaviour
         local = string.Concat(local, '/');
         local = string.Concat(local, LocalizationSettings.SelectedLocale.Identifier.Code);
         TextAsset localizationFile = (TextAsset)Resources.Load(local, typeof(TextAsset));
-        LoadTranslationTable(GetComponent<JSONReader>().LoadTranslationFile(localizationFile.text));
+        Debug.Log(localizationFile.text);
+        Lm.INFO = (Lm.GetComponent<JSONReader>().LoadTranslationFile(localizationFile.text));
+        LoadTranslationTable(Lm.GetComponent<JSONReader>().LoadTranslationFile(localizationFile.text));
     }
     //cambia el idioma de juego al indicado por index. 
     public void ChangeLanguage(int index)
     {
         if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
             Xasu.HighLevel.AlternativeTracker.Instance.Selected("language", LocalizationSettings.SelectedLocale.ToString());
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
+        Debug.Log("Language"+ index + LocalizationSettings.SelectedLocale);
         LoadTranslations();
         PlayerPrefs.SetInt("setLanguage", index);
-
-        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[index];
     }
     //metodo auxiliar de LoadTranslations, se encarga de relacionar las traducciones con su correspondiente id
     private void LoadTranslationTable(TranslationInfo translations)
     {
-        translationsDictionary = new Dictionary<string, string>();
 
+        Lm.translationsDictionary.Clear();
 
-        foreach (ObjectTranslation ti in translations.objects)
-            translationsDictionary.Add(ti.id, ti.translation);
+            Debug.Log(translations.objects.Length);
+       foreach (ObjectTranslation ti in translations.objects)
+           Lm.translationsDictionary.Add(ti.id, ti.translation);
     }
     //devuelve la traduccion de la palabra con id "word"
     public string getWord(string word)
     {
-        return translationsDictionary[word];
+        return Lm.translationsDictionary[word];
     }
 }
