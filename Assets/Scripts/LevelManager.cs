@@ -118,7 +118,6 @@ public class LevelManager : MonoBehaviour
 
     // 1 = Room & 0 = Bathroom
     int myActualRoom = 1;
-    //public Image
     void Start()
     {
         audioMng = AudioManager.Instance;
@@ -230,6 +229,7 @@ public class LevelManager : MonoBehaviour
         luggage.InicializeList();
     }
 
+    //comenzar el nivel
     public void Ready()
     {
 
@@ -238,6 +238,7 @@ public class LevelManager : MonoBehaviour
 
 
     }
+    //oportunidades para revisar la lista de objetos
     public void Checklist()
     {
         if (checkOpportunities > 0)
@@ -382,6 +383,7 @@ public class LevelManager : MonoBehaviour
     {
         checkBoxDictionary[o].SetCheckBoxState(CheckBoxState.None);
     }
+    //abrir armario de botiquin
     public void GoToFirstAidKit()
     {
         if (state != State.END)
@@ -401,7 +403,7 @@ public class LevelManager : MonoBehaviour
 
         }
     }
-
+    //abrir un cajon
     public void GoToDrawer(GameObject drawer)
     {
         if (state != State.END)
@@ -437,7 +439,7 @@ public class LevelManager : MonoBehaviour
             }
         }
     }
-
+    //mirar la maleta
     public void GoToLuggage()
     {
         if (state != State.END)
@@ -520,6 +522,7 @@ public class LevelManager : MonoBehaviour
         }
 
     }
+    //boton para cambiar de habitacion
     public void RoomButton()
     {
 
@@ -540,6 +543,7 @@ public class LevelManager : MonoBehaviour
             GoToBathroom();
         }
     }
+    //boton cuando vuelve a la habitacion
     public void BackToRoomButton()
     {
         roomButton.SetActive(true);
@@ -581,7 +585,7 @@ public class LevelManager : MonoBehaviour
         StringBuilder cad = new StringBuilder();
 
 
-
+        //calcular las estrellas conseguidas
         int starsCompleted = 0;
         if (luggage.ObjetosGuardados.Count() > luggage.ObjetosList.Count() / 2.0f)
         {
@@ -615,18 +619,21 @@ public class LevelManager : MonoBehaviour
 
         if (PlayerPrefs.GetInt(LevelNameGlobal) <= starsCompleted)
             PlayerPrefs.SetInt(LevelNameGlobal, starsCompleted);
-        Debug.Log(LevelNameGlobal + " " + PlayerPrefs.GetInt(LevelNameGlobal));
+       
+        //actualizar el checkbox de los objetos de la lista
         for (int i = 0; i < GM.Gm.List.Count(); i++)
         {
             CheckBox c = checkBoxDictionary[GM.Gm.List[i]];
             if (c.GetCheckBoxState() == CheckBoxState.None)
                 c.SetCheckBoxState(CheckBoxState.Wrong);
         }
+
         objectsPanel.SetActive(true);
         bttnEnd.gameObject.SetActive(false);
         roomButton.SetActive(false);
         endPanel.gameObject.SetActive(true);
 
+        //mandar traza del estado del nivel
         if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
 
             Xasu.HighLevel.CompletableTracker.Instance.Completed(LevelNameGlobal, Xasu.HighLevel.CompletableTracker.CompletableType.Level).WithSuccess(true).WithResultExtensions(new Dictionary<string, object> {

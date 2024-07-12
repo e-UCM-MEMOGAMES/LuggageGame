@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Xasu;
 
+//mandar trazas cuando interactua con el slider
 public class SliderTracker : MonoBehaviour
 {
     Slider slider;

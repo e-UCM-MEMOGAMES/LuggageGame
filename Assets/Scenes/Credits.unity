@@ -525,8 +525,9 @@ MonoBehaviour:
   m_text: "Director: \n\nBALTASAR FERN\xC1NDEZ MANJ\xD3N\n\nAsesoras t\xE9cnicas:\n\nMARIA
     DEL CARMEN D\xCDAZ MARDOMINGO\nSARA GARC\xCDA HERRANZ\n\nJefe de desarrollo:\n\nDAVID
     P\xC9REZ COGOLLUDO\n\nDesarrolladores:\n\nDAVID P\xC9REZ COGOLLUDO\nMIGUEL JIM\xC9NEZ
-    RODR\xCDGUEZ\nMANUEL HIDALGO LORENTE\n\nGrafistas:\n\nPALOMA ASENSIO SOLANA\nROSA
-    M PEROMINGO GUZM\xC1N\nANA VALLECILLOS RUIZ\n"
+    RODR\xCDGUEZ\nMANUEL HIDALGO LORENTE\nNANXI QIN \nJIANUO WEN HU\n\nGrafistas:\n\nPALOMA
+    ASENSIO SOLANA\nROSA M PEROMINGO GUZM\xC1N\nANA VALLECILLOS RUIZ\nNANXI QIN\n\nArtista:\nNANXI
+    QIN\n\nM\xFAsica:\nNANXI QIN\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -936,7 +937,7 @@ MonoBehaviour:
     m_SelectedTrigger: Highlighted
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 0}
+  m_TargetGraphic: {fileID: 1972912416}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:

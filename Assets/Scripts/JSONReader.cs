@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Lectura de archivo de json
 public class JSONReader : MonoBehaviour
 {
     [System.Serializable]

@@ -35,6 +35,7 @@ public class InitialScene : MonoBehaviour
         else PlayerPrefs.SetInt("newGame", 0);
         languageSelector.SetActive((PlayerPrefs.GetInt("newGame") == 1));
     }
+    //Inicializacion del tracker si existe archivo config 
     public async void InitTracker()
     {
         playScene.SetActive(false);
@@ -58,10 +59,9 @@ public class InitialScene : MonoBehaviour
             loginScene.SetActive(false);
         }
         SetSpeechBubble();
-        //await Xasu.HighLevel.CompletableTracker.Instance.Initialized("MyGame", Xasu.HighLevel.CompletableTracker.CompletableType.Game);
 
     }
-
+    //Dialogo de introduccion
     public void SetSpeechBubble()
     {
         if (speech == 0)

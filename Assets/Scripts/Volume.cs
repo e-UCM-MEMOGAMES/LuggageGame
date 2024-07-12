@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//ajustar el volumen con el slider
 public class Volume : MonoBehaviour
 {
     [SerializeField]

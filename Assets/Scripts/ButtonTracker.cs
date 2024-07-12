@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Xasu;
 
+//mandar trazas con XasuTracker cuando interactua con el boton
 public class ButtonTracker : MonoBehaviour
 {
     Button button;
@@ -23,15 +24,16 @@ public class ButtonTracker : MonoBehaviour
     {
         if (XasuTracker.Instance.Status.State == TrackerState.Uninitialized) return;
 
-            if (button != null )
+        //si no es null manda la traza
+        if (button != null)
         {
             button.interactable = false;
             await Xasu.HighLevel.GameObjectTracker.Instance.Interacted(buttonName);
         }
-        if (button != null )
+        if (button != null)
 
             button.interactable = true;
-    
-}
+
+    }
 
 }

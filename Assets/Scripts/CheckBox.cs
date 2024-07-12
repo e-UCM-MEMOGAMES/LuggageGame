@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//checkbox para mostrar el estado de la lista de objetos que ha metido en la maleta
 public class CheckBox : MonoBehaviour
 {
     [SerializeField]

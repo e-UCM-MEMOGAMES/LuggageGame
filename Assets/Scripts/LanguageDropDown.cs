@@ -6,6 +6,7 @@ using UnityEngine.Localization.Settings;
 using UnityEngine.Localization;
 using UnityEngine.UI;
 
+//Drop down para cambiar de idioma
 public class LanguegeDropDown : MonoBehaviour
 {
     TMPro.TMP_Dropdown dropdown;

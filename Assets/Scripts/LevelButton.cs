@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//boton para seleccionar el nivel y mostrar las estrellas conseguidas
 public class LevelButton : MonoBehaviour
 {
     public int level;
@@ -14,7 +15,7 @@ public class LevelButton : MonoBehaviour
     {
         isBlocked = false;   
     }
-
+    //calcular las estrellas conseguidas segun clima y nivel 
     public void CalcStars()
     {
         int numStars = 0;

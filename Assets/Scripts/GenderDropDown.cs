@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Xasu;
 
+//Dropdown para cambiar el genero
 public class GenderDropDown : MonoBehaviour
 {
     TMPro.TMP_Dropdown dropdown;
