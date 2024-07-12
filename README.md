@@ -1,7 +1,7 @@
 
 ## Cómo modificar el archivo de niveles
 
-- Los ficheros a modificar están en Assets/Resources/Lists.
+- Los ficheros a modificar están en Assets/Resources/Lists. Por ejemplo, el nivel 1 con clima cálido sería Level1Warm.json
 - En el fichero hay 4 grandes apartados: "objectList_M" , "objectList_F" y "objectList_N" son la lista de objetos a meter en la maleta para hombre, mujer y neutro, respectivamente. Aquí solo hay que poner el nombre del objeto.
 - En "storagePoints" hay 16 puntos de almacenamiento. Simplemente hay que rellenar en el array de "objects" el nombre del objeto, su posición en ese sitio siendo un entero y el género M,F,N.
 - Los puntos naranjas que se muestran en las imágenes son los puntos de almacenamiento colocados en la escena. <br>
