@@ -1,4 +1,17 @@
 
+## Cómo modificar el archivo de niveles
+
+- Los ficheros a modificar están en Assets/Resources/Lists.
+- En el fichero hay 4 grandes apartados: "objectList_M" , "objectList_F" y "objectList_N" son la lista de objetos a meter en la maleta para hombre, mujer y neutro, respectivamente. Aquí solo hay que poner el nombre del objeto.
+- En "storagePoints" hay 16 puntos de almacenamiento. Simplemente hay que rellenar en el array de "objects" el nombre del objeto, su posición en ese sitio siendo un entero y el género M,F,N.
+- Los puntos naranjas que se muestran en las imágenes son los puntos de almacenamiento colocados en la escena. <br>
+ <br>
+ 
+  ![Nivel](/README_IMAGES/1.png "Nivel")
+  ![Nivel](/README_IMAGES/2.png "Nivel")
+  ![Nivel](/README_IMAGES/3.png "Nivel")
+  ![Nivel](/README_IMAGES/4.png "Nivel")
+
 ## Información necesaria para configurar el archivo de niveles
 
 ### Objetos
@@ -69,5 +82,4 @@ NOTA: Recomendable 12 objetos como máximo en la lista de objetos a guardar en l
 | **Encima del Lavabo** | Bathroom_cabinet_above | Baño | 1 (0)|
 | **Cajón superior del Lavabo** | Bathroom_cabinet_top | Baño | 6 (0-5)|
 | **Cajón inferior del Lavabo** | Bathroom_cabinet_bottom | Baño | 6 (0-5)|
-
 
