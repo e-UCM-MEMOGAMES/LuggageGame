@@ -1,6 +1,7 @@
 
 ## Información necesaria para configurar el archivo de niveles
 
+### Objetos
 NOTA: Recomendable 12 objetos como máximo en la lista de objetos a guardar en la maleta
 
 | Objeto ID | Escena | Puntos de almacenaje |
@@ -48,3 +49,25 @@ NOTA: Recomendable 12 objetos como máximo en la lista de objetos a guardar en l
 | **Toalla** | Baño | Percha |
 | **Colonia** | Baño | Encima del Armario de baño|
 | **Bote de medicinas** | Baño | Armario botiquín |
+
+### Puntos de almacenaje 
+
+| Puntos de almacenaje  | ID | Escena | Huecos disponibles (INT)|
+| ------------- | ------------- | ------------- | ------------- |
+| **Encima de la cómoda** | Bedroom_DresserDrawer_above | Dormitorio | 2 (0-1)|
+| **Cajón superior de la cómoda** | Bedroom_DresserDrawer_top | Dormitorio | 6 (0-5)|
+| **Cajón medio de la cómoda** | Bedroom_DresserDrawer_middle | Dormitorio | 6 (0-5)|
+| **Cajón inferior de la cómoda** | Bedroom_DresserDrawer_bottom | Dormitorio | 6 (0-5)|
+| **Puerta de Armario** | Bedroom_ClosetDoor | Dormitorio | 2 (0-1)|
+| **Cajón superior del armario** | Bedroom_ClosetDrawer_top | Dormitorio | 6 (0-5)|
+| **Cajón medio del armario** | Bedroom_ClosetDrawer_middle | Dormitorio | 6 (0-5)|
+| **Cajón inferior del armario** | Bedroom_ClosetDrawer_bottom | Dormitorio | 6 (0-5)|
+| **Perchero** | Bedroom_CoatRack | Dormitorio | 2 (0-1)|
+| **Encima del Zapatero** | Bedroom_ShoeRack_above | Dormitorio | 3 (0-2)|
+| **Zapatero** | Bedroom_ShoeRack | Dormitorio | 6 (0-5)|
+| **Percha** | Bathroom_hanger | Baño | 2 (0-1)|
+| **Encima del Lavabo** | Bathroom_cabinet_above | Baño | 1 (0)|
+| **Cajón superior del Lavabo** | Bathroom_cabinet_top | Baño | 6 (0-5)|
+| **Cajón inferior del Lavabo** | Bathroom_cabinet_bottom | Baño | 6 (0-5)|
+
+
