@@ -1873,6 +1873,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2303909689285849950, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.13
+      objectReference: {fileID: 0}
     - target: {fileID: 2420107183448889661, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: m_text
@@ -1951,7 +1956,7 @@ PrefabInstance:
     - target: {fileID: 3697451116908001130, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3770758300998846538, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
@@ -2063,6 +2068,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Put more than half of the requested items in
       objectReference: {fileID: 0}
+    - target: {fileID: 4720430431419384588, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.07
+      objectReference: {fileID: 0}
     - target: {fileID: 4832475987836883844, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: m_text
@@ -2154,6 +2164,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5295480342065624860, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.99
+      objectReference: {fileID: 0}
     - target: {fileID: 5307976084709802976, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: m_text
@@ -2163,6 +2178,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5571064883366840695, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.96
       objectReference: {fileID: 0}
     - target: {fileID: 6918094624944426386, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
@@ -2309,6 +2329,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Return
       objectReference: {fileID: 0}
+    - target: {fileID: 7979081812399814468, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8138956731047615577, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: blackScreen
@@ -2413,6 +2438,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901059523043956317, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -471.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 8901059523043956317, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -188.79
       objectReference: {fileID: 0}
     - target: {fileID: 8997312347469633169, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}

@@ -108,6 +108,9 @@ public class GM : MonoBehaviour
     {
         PlayerPrefs.SetInt("genre", g);
         Genero = (Genero)g;
+        Debug.Log(PlayerPrefs.GetInt("genre"));
+        Debug.Log(Genero);
+
         LoadScene("LevelSelector");
     }
 

@@ -17,6 +17,10 @@
             "translation": "Camiseta amarilla"
         },
         {
+            "id": "Camisa hawaiana",
+            "translation": "Camisa hawaiana"
+        },
+        {
             "id": "Jersey",
             "translation": "Jersey"
         },
@@ -29,8 +33,8 @@
             "translation": "Camiseta de tirantes"
         },
         {
-            "id": "Pijama de verano",
-            "translation": "Pijama de verano"
+            "id": "Pijama de tirantes",
+            "translation": "Pijama de tirantes"
         },
         {
             "id": "Pijama de seda",
