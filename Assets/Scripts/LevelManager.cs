@@ -96,6 +96,7 @@ public class LevelManager : MonoBehaviour
     public GameObject bttnEnd;
     public Luggage luggage;
     public GameObject drawerImage;
+    public GameObject blackScreen;
     Vector3 initialLuggagePos;
     Vector3 initialLuggageScale;
     GameObject currentDrawer = null;
@@ -135,9 +136,9 @@ public class LevelManager : MonoBehaviour
 
         noteBookTr = noteBookGO.GetComponent<RectTransform>();
         SetLevel();
-
         state = State.BEDROOM;
         roomCam.gameObject.SetActive(true);
+     //   roomCam.GetComponent<AspectRatioUtility>().Adjust();
         bathroomCam.gameObject.SetActive(false);
         drawerCam.gameObject.SetActive(false);
         firstAidKitCam.gameObject.SetActive(false);
@@ -153,6 +154,7 @@ public class LevelManager : MonoBehaviour
         endPanel.SetActive(false);
         checkOpportunities = maxcheckOpportunities;
         opportunitiesText.text = checkOpportunities.ToString();
+        blackScreen.gameObject.SetActive(true);
     }
     private void InicializeDictionary()
     {
@@ -232,10 +234,12 @@ public class LevelManager : MonoBehaviour
     //comenzar el nivel
     public void Ready()
     {
+        blackScreen.gameObject.SetActive(false);
+
 
         initialPanel.SetActive(false);
         objectsPanel.SetActive(false);
-
+        roomCam.GetComponent<AspectRatioUtility>().Adjust();
 
     }
     //oportunidades para revisar la lista de objetos
@@ -392,6 +396,7 @@ public class LevelManager : MonoBehaviour
 
             state = State.FIRSTAIDKIT;
             firstAidKitCam.gameObject.SetActive(true);
+            firstAidKitCam.GetComponent<AspectRatioUtility>().Adjust();
             bathroomCam.gameObject.SetActive(false);
 
             bttnEnd.gameObject.SetActive(false);
@@ -412,6 +417,7 @@ public class LevelManager : MonoBehaviour
             state = State.DRAWER;
 
             drawerCam.gameObject.SetActive(true);
+            drawerCam.GetComponent<AspectRatioUtility>().Adjust();
 
             if (myActualRoom == (int)State.BEDROOM)
             {
@@ -482,7 +488,7 @@ public class LevelManager : MonoBehaviour
             Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[(int)State.BEDROOM];
 
             roomCam.gameObject.SetActive(true);
-
+            roomCam.GetComponent<AspectRatioUtility>().Adjust();
 
             if (currentDrawer != null)
                 currentDrawer.SetActive(false);
@@ -516,6 +522,8 @@ public class LevelManager : MonoBehaviour
             Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[(int)State.BATHROOM];
 
             bathroomCam.gameObject.SetActive(true);
+            bathroomCam.GetComponent<AspectRatioUtility>().Adjust();
+
             if (currentDrawer != null)
                 currentDrawer.SetActive(false);
 
@@ -617,8 +625,13 @@ public class LevelManager : MonoBehaviour
 
         finalOpportunitiesText.text = (maxcheckOpportunities - checkOpportunities).ToString() + " / " + maxcheckOpportunities.ToString();
 
+        Debug.Log("hsfuh"+PlayerPrefs.GetInt(LevelNameGlobal));
+        Debug.Log(starsCompleted);
         if (PlayerPrefs.GetInt(LevelNameGlobal) <= starsCompleted)
+        { 
             PlayerPrefs.SetInt(LevelNameGlobal, starsCompleted);
+            Debug.Log("aaa" + PlayerPrefs.GetInt(LevelNameGlobal));
+        }
        
         //actualizar el checkbox de los objetos de la lista
         for (int i = 0; i < GM.Gm.List.Count(); i++)

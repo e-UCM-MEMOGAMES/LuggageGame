@@ -503,6 +503,10 @@ MonoBehaviour:
     m_Key: Intro/Canvas/Text (TMP)
     m_Metadata:
       m_Items: []
+  - m_Id: 31801445282156544
+    m_Key: "Credits/Canvas/Cr\xE9ditos/Text (TMP)"
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

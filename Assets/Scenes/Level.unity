@@ -953,6 +953,12 @@ MonoBehaviour:
           m_WaitForCompletion: 0
           m_LocalVariables: []
         m_PropertyPath: m_text
+--- !u!1 &1259099321 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7979081812399814468, guid: dc51f7c3df55c1743ba453c231c7839e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3807012848414786757}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1282016349 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4667653483088636861, guid: dc51f7c3df55c1743ba453c231c7839e,
@@ -2303,6 +2309,11 @@ PrefabInstance:
       propertyPath: m_text
       value: Return
       objectReference: {fileID: 0}
+    - target: {fileID: 8138956731047615577, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: blackScreen
+      value: 
+      objectReference: {fileID: 1259099321}
     - target: {fileID: 8394841759113491273, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

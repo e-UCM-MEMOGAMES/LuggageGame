@@ -29,8 +29,8 @@ public class LevelButton : MonoBehaviour
         {
             numStars = PlayerPrefs.GetInt("Level" + level.ToString() + "Warm", 0);
         }
-        else { 
-            PlayerPrefs.GetInt("Level" + level.ToString() + "Cold", 0);
+        else {
+            numStars = PlayerPrefs.GetInt("Level" + level.ToString() + "Cold", 0);
         }
 
         for (int i = 0; i < numStars; i++)
