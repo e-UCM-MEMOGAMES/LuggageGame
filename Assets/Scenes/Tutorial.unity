@@ -1546,6 +1546,36 @@ PrefabInstance:
       propertyPath: blackScreen
       value: 
       objectReference: {fileID: 806785622}
+    - target: {fileID: 8349695925143402889, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349695925143402889, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4941081
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349695925143402889, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349695925143402889, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -12.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349695925143402889, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349695925143402889, guid: dc51f7c3df55c1743ba453c231c7839e,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8394841759113491273, guid: dc51f7c3df55c1743ba453c231c7839e,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
