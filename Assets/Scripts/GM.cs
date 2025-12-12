@@ -1,9 +1,7 @@
-﻿using RAGE.Analytics;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using static Assets.Scripts.Constantes;
-using Xasu.HighLevel;
 using Xasu;
 using System;
 

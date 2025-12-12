@@ -3,7 +3,7 @@
 public class LuggageTarget : MonoBehaviour
 {
     bool over = false;
-    public LevelManager lvlMngr;
+    public LvlMngr lvlMngr;
     SpriteRenderer spR;
     private void Start()
     {

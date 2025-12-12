@@ -15,48 +15,48 @@ MonoBehaviour:
   m_TableCollectionName: EnEs'Strings
   m_TableCollectionNameGuidString: 381e72707fa25ff47b62981414a325a7
   m_Entries:
-  - m_Id: 1141166501888
-    m_Key: Level/Canvas/Warning/Button/Text
+  - m_Id: 219731245330432
+    m_Key: Intro/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1286796931072
+    m_Key: Intro/Speech1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4951440027648
+    m_Key: Intro/Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1414970667008
+    m_Key: Intro/Speech2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4737568272384
+    m_Key: Intro/Speech3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4879528685568
+    m_Key: Intro/Gender/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4799652360192
+    m_Key: Intro/Gender/Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4822817501184
+    m_Key: Intro/Gender/Woman
     m_Metadata:
       m_Items: []
   - m_Id: 1153485172736
     m_Key: Level1/Canvas/Warning/Button (1)/Text
     m_Metadata:
       m_Items: []
+  - m_Id: 1141166501888
+    m_Key: Level/Canvas/Warning/Button/Text
+    m_Metadata:
+      m_Items: []
   - m_Id: 1189262585856
     m_Key: Level1/Canvas/Warning/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1286796931072
-    m_Key: Intro/Canvas/Speech1/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1414970667008
-    m_Key: Intro/Canvas/Speech2/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4737568272384
-    m_Key: Intro/Canvas/Speech3/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4799652360192
-    m_Key: Intro/Canvas/Genero/Hombre/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4822817501184
-    m_Key: Intro/Canvas/Genero/Mujer/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4879528685568
-    m_Key: Intro/Canvas/Genero/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 4951440027648
-    m_Key: Intro/Canvas/Speech1/Text (1)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 219731245330432
-    m_Key: Intro/Canvas/Title
     m_Metadata:
       m_Items: []
   - m_Id: 220113489031168
@@ -213,10 +213,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 223777268101120
     m_Key: "Menu/Canvas/Clima/Fr\xEDo/Text (1)"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223795689484288
-    m_Key: Menu/Canvas/Titulo
     m_Metadata:
       m_Items: []
   - m_Id: 223853474410496
@@ -500,11 +496,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2088170123599872
-    m_Key: Intro/Canvas/Text (TMP)
+    m_Key: Intro/Login
     m_Metadata:
       m_Items: []
   - m_Id: 31801445282156544
-    m_Key: "Credits/Canvas/Cr\xE9ditos/Text (TMP)"
+    m_Key: Credits/Names
     m_Metadata:
       m_Items: []
   m_Metadata:

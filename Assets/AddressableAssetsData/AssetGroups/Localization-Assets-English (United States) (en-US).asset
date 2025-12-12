@@ -16,13 +16,7 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: a323fbd7d6991f94f99aa58d03b550f8
-  m_SerializeEntries:
-  - m_GUID: 41e8f506bd9ec1b46a5f14ed6f382552
-    m_Address: Gotham-Rounded-Bold SDF
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 02d2fcca34774cc4a928edf1a92169c4, type: 2}
   m_SchemaSet:

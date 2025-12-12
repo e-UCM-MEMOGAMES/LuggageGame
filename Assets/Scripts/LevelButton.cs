@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 //boton para seleccionar el nivel y mostrar las estrellas conseguidas
 public class LevelButton : MonoBehaviour

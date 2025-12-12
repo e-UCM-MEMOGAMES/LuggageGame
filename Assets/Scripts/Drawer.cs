@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 public class Drawer : MonoBehaviour
 {
 
-    public LevelManager lvlMngr;
+    public LvlMngr lvlMngr;
     public GameObject drawer;
     SpriteRenderer spRenderer;
 

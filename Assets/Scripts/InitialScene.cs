@@ -17,7 +17,7 @@ public class InitialScene : MonoBehaviour
     public GameObject languageSelector;
     public GameObject[] speechBubbles;
     public bool saveGame;
-    private AudioManager audioManager;
+    private AudMngr audioManager;
     int speech;
     void Start()
     {
@@ -28,7 +28,7 @@ public class InitialScene : MonoBehaviour
         playMini.SetActive(false);
         genre.SetActive(false);
         foreach (GameObject go in speechBubbles) go.SetActive(false);
-        audioManager = AudioManager.Instance;
+        audioManager = AudMngr.Instance;
         audioManager.Play((int)GameSound.MenuBGM);
 
         if (!PlayerPrefs.HasKey("newGame")) PlayerPrefs.SetInt("newGame", 1);

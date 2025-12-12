@@ -40,7 +40,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4737568272384
-    m_Localized: "\xA1Haga clic en el bot\xF3n de abajo para empezar!"
+    m_Localized: "\xA1Pulse el bot\xF3n de abajo para empezar!"
     m_Metadata:
       m_Items: []
   - m_Id: 4799652360192
@@ -56,7 +56,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4951440027648
-    m_Localized: "Haga click aqu\xED para continuar"
+    m_Localized: "Pulse aqu\xED para continuar"
     m_Metadata:
       m_Items: []
   - m_Id: 219731245330432
@@ -218,10 +218,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 223777268101120
     m_Localized: "Fr\xEDo"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223795689484288
-    m_Localized: El juego de la maleta
     m_Metadata:
       m_Items: []
   - m_Id: 223853474410496
@@ -517,13 +513,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 31801445282156544
-    m_Localized: "Director: \n\nBALTASAR FERN\xC1NDEZ MANJ\xD3N\n\nAsesoras t\xE9cnicas:\n\nMARIA
-      DEL CARMEN D\xCDAZ MARDOMINGO\nSARA GARC\xCDA HERRANZ\n\nJefe de desarrollo:\n\nDAVID
-      P\xC9REZ COGOLLUDO\n\nDesarrolladores:\n\nDAVID P\xC9REZ COGOLLUDO\nMIGUEL
+    m_Localized: "Director: \n\nBALTASAR FERN\xC1NDEZ MANJ\xD3N\n\n\nAsesoras t\xE9cnicas:\n\nMARIA
+      DEL CARMEN D\xCDAZ MARDOMINGO\nSARA GARC\xCDA HERRANZ\n\n\nJefe de desarrollo:\n\nDAVID
+      P\xC9REZ COGOLLUDO\n\n\nDesarrolladores:\n\nDAVID P\xC9REZ COGOLLUDO\nMIGUEL
       JIM\xC9NEZ RODR\xCDGUEZ\nMANUEL HIDALGO LORENTE\nNANXI QIN \nJIANUO WEN HU\nMATT
-      CASTELLANOS SILVA\n\nGrafistas:\n\nPALOMA ASENSIO SOLANA\nROSA M PEROMINGO
-      GUZM\xC1N\nANA VALLECILLOS RUIZ\nNANXI QIN\n\nArtista:\nNANXI QIN\n\nM\xFAsica:\nNANXI
-      QIN\n"
+      CASTELLANOS SILVA\n\n\nGrafistas:\n\nPALOMA ASENSIO SOLANA\nROSA M PEROMINGO
+      GUZM\xC1N\nANA VALLECILLOS RUIZ\nNANXI QIN\n\n\nM\xFAsica:\n\nNANXI QIN"
     m_Metadata:
       m_Items: []
   references:

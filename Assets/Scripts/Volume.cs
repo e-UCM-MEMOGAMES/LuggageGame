@@ -8,12 +8,12 @@ public class Volume : MonoBehaviour
 {
     [SerializeField]
     ChannelType channelType;
-    AudioManager audioMng;
+    AudMngr audioMng;
     Slider slider;
     // Start is called before the first frame update
     void Start()
     {
-        audioMng = AudioManager.Instance;
+        audioMng = AudMngr.Instance;
         slider = GetComponent<Slider>();
         if (channelType == ChannelType.BGM)
             slider.value = audioMng.GetBGMVolume();

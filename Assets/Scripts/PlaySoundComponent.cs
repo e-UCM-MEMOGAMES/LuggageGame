@@ -1,11 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-//componente pensado para añadir a cualquier objeto interactuable de la escena donde se define el tipo de sonido desde el inspector
+
 public class PlaySoundComponent : MonoBehaviour
 {
+    /// <summary>
+    /// Sonido que se reproduce
+    /// </summary> 
     [SerializeField]
     GameSound gameSound;
+    /// <summary>
+    /// Manager de sonidos
+    /// </summary> 
     AudioManager audioMng;
   
     // Start is called before the first frame update
@@ -13,10 +17,11 @@ public class PlaySoundComponent : MonoBehaviour
     {
         audioMng = AudioManager.Instance;
     }
+    /// <summary>
+    /// Reproduce el sonido
+    /// </summary> 
     public void PlaySound()
     {
         audioMng.Play(gameSound);
     }
-
-
 }

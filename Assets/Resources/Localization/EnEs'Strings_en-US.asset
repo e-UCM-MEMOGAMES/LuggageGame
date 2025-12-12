@@ -221,10 +221,6 @@ MonoBehaviour:
     m_Localized: Cold
     m_Metadata:
       m_Items: []
-  - m_Id: 223795689484288
-    m_Localized: Luggage game
-    m_Metadata:
-      m_Items: []
   - m_Id: 223853474410496
     m_Localized: Return
     m_Metadata:
@@ -514,12 +510,12 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 31801445282156544
-    m_Localized: "Director: \n\nBALTASAR FERN\xC1NDEZ MANJ\xD3N\n\nTechnical advisors:\n\nMARIA
-      DEL CARMEN D\xCDAZ MARDOMINGO\nSARA GARC\xCDA HERRANZ\n\nDevelopment Manager:\n\nDAVID
-      P\xC9REZ COGOLLUDO\n\nDevelopers:\n\nDAVID P\xC9REZ COGOLLUDO\nMIGUEL JIM\xC9NEZ
+    m_Localized: "Director: \n\nBALTASAR FERN\xC1NDEZ MANJ\xD3N\n\n\nTechnical advisors:\n\nMARIA
+      DEL CARMEN D\xCDAZ MARDOMINGO\nSARA GARC\xCDA HERRANZ\n\n\nDevelopment Manager:\n\nDAVID
+      P\xC9REZ COGOLLUDO\n\n\nDevelopers:\n\nDAVID P\xC9REZ COGOLLUDO\nMIGUEL JIM\xC9NEZ
       RODR\xCDGUEZ\nMANUEL HIDALGO LORENTE\nNANXI QIN \nJIANUO WEN HU\nMATT CASTELLANOS
-      SILVA\n\nGraphic designers:\n\nPALOMA ASENSIO SOLANA\nROSA M PEROMINGO GUZM\xC1N\nANA
-      VALLECILLOS RUIZ\nNANXI QIN\n\nArtists:\nNANXI QIN\n\nMusic:\nNANXI QIN\n"
+      SILVA\n\n\nGraphic designers:\n\nPALOMA ASENSIO SOLANA\nROSA M PEROMINGO GUZM\xC1N\nANA
+      VALLECILLOS RUIZ\nNANXI QIN\n\n\nMusic:\n\nNANXI QIN\n"
     m_Metadata:
       m_Items: []
   references:
