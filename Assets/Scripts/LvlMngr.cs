@@ -11,7 +11,6 @@ using static Assets.Scripts.Constantes;
 using static JSONReader;
 using TMPro;
 using static CheckBox;
-using RAGE.Analytics;
 using Xasu.HighLevel;
 using UnityEngine.Localization.Settings;
 using Xasu;
