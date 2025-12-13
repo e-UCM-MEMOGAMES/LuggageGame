@@ -11,12 +11,10 @@ public class MainMenuButtons : MonoBehaviour
     GameManager gameManager;
 
     [SerializeField]
-    GameObject languageSelectorScreen, menuScreen, startScreen, speechScreen, genderScreen;
+    GameObject titleScreen, speechScreen, genderScreen;
 
     [SerializeField]
     GameObject[] speechBubbles;
-
-    int currSpeech;
 
     [SerializeField]
     bool deleteSavedGame = true;
@@ -30,32 +28,24 @@ public class MainMenuButtons : MonoBehaviour
 
         gameManager = GameManager.Instance;
 
-        menuScreen.SetActive(false);
+        titleScreen.SetActive(true);
         speechScreen.SetActive(false);
         genderScreen.SetActive(false);
+
+        foreach (GameObject speech in speechBubbles)
+        {
+            speech.SetActive(false);
+        }
 
         if (!PlayerPrefs.HasKey(NEW_GAME_KEY) || 
             (PlayerPrefs.HasKey(NEW_GAME_KEY) && PlayerPrefs.GetInt(NEW_GAME_KEY) == (int)LoadGameValues.NEW_GAME)) 
         {
             PlayerPrefs.SetInt(NEW_GAME_KEY, (int)LoadGameValues.NEW_GAME);
-
-            languageSelectorScreen.SetActive(true);
-            currSpeech = -1;
         }
         else
         {
             PlayerPrefs.SetInt(NEW_GAME_KEY, (int)LoadGameValues.LOAD_GAME);
-            HideLanguageScreen();
         }
-    }
-
-
-    public void HideLanguageScreen()
-    {
-        languageSelectorScreen.SetActive(false);
-        menuScreen.SetActive(true);
-
-        startScreen.SetActive(true);
     }
 
 
@@ -63,14 +53,9 @@ public class MainMenuButtons : MonoBehaviour
     {
         if (PlayerPrefs.GetInt(NEW_GAME_KEY) == (int)LoadGameValues.NEW_GAME)
         {
-            startScreen.SetActive(false);
+            titleScreen.SetActive(false);
             speechScreen.SetActive(true);
-
-            foreach (GameObject speech in speechBubbles)
-            {
-                speech.SetActive(false);
-            }
-            NextSpeech();
+            speechBubbles[0].SetActive(true);
         }
         else
         {
@@ -78,24 +63,6 @@ public class MainMenuButtons : MonoBehaviour
         }
     }
 
-    public void NextSpeech() 
-    {
-        if (currSpeech >= 0 && currSpeech < speechBubbles.Length)
-        {
-            speechBubbles[currSpeech].SetActive(false);
-        }
-        currSpeech++;
-        if (currSpeech >= 0 && currSpeech  < speechBubbles.Length)
-        {
-            speechBubbles[currSpeech].SetActive(true);
-        }
-    }
-
-    public void ShowGenderSelector()
-    {
-        speechScreen.SetActive(false);
-        genderScreen.SetActive(true);
-    }
 
     public void ChooseGender(int gender)
     {

@@ -1,9 +1,7 @@
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using Xasu.HighLevel;
 
-public class BtnTrack : MonoBehaviour
+public class ButtonTracker : MonoBehaviour
 {
     [SerializeField]
     string buttonName;
@@ -13,11 +11,11 @@ public class BtnTrack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //trackerManager = TrackerManager.Instance;
+        trackerManager = TrackerManager.Instance;
     }
 
     public void Track()
     {
-        //trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(buttonName));
+        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(buttonName));
     }
 }

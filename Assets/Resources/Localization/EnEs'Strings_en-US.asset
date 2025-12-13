@@ -110,7 +110,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 221603523915776
-    m_Localized: Are you sure you want to reset the game?
+    m_Localized: Do you want to reset the settings?
     m_Metadata:
       m_Items: []
   - m_Id: 221737011834880
@@ -231,10 +231,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 223888064835584
     m_Localized: NO
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223910512750592
-    m_Localized: Are you sure you want to reset the game?
     m_Metadata:
       m_Items: []
   - m_Id: 223959535775744
@@ -431,10 +427,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1010595878072320
     m_Localized: Tap and hold the yellow t-shirt.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1386336887152640
-    m_Localized: Credits
     m_Metadata:
       m_Items: []
   - m_Id: 1389778280030208

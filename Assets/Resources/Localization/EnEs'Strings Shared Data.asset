@@ -19,6 +19,18 @@ MonoBehaviour:
     m_Key: Intro/Title
     m_Metadata:
       m_Items: []
+  - m_Id: 1390149144584192
+    m_Key: Intro/Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222784782528512
+    m_Key: Intro/Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223097283342336
+    m_Key: Intro/Exit
+    m_Metadata:
+      m_Items: []
   - m_Id: 1286796931072
     m_Key: Intro/Speech1
     m_Metadata:
@@ -45,6 +57,26 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 4822817501184
     m_Key: Intro/Gender/Woman
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221811104215040
+    m_Key: Menus/Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223959535775744
+    m_Key: Settings/Reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221603523915776
+    m_Key: Settings/Reset/Warning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221565334777856
+    m_Key: Settings/Reset/Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221579918372864
+    m_Key: Settings/Reset/No
     m_Metadata:
       m_Items: []
   - m_Id: 1153485172736
@@ -87,24 +119,12 @@ MonoBehaviour:
     m_Key: Level/Level/Canvas/ObjectList/ClothesTitleText
     m_Metadata:
       m_Items: []
-  - m_Id: 221445746782208
-    m_Key: Level/Level/Canvas/ObjectList/OthersTitleText
-    m_Metadata:
-      m_Items: []
   - m_Id: 221495369592832
     m_Key: Level/Level/Canvas/ObjectList/ShoesTitleText
     m_Metadata:
       m_Items: []
-  - m_Id: 221565334777856
-    m_Key: Settings/Canvas/Botones/Warning/Button/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 221579918372864
-    m_Key: Settings/Canvas/Botones/Warning/Button1/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 221603523915776
-    m_Key: Settings/Canvas/Botones/Warning/Text
+  - m_Id: 221445746782208
+    m_Key: Level/Level/Canvas/ObjectList/OthersTitleText
     m_Metadata:
       m_Items: []
   - m_Id: 221737011834880
@@ -117,10 +137,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 221791151910912
     m_Key: Level/Level/Canvas/InitialPanel/Button/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 221811104215040
-    m_Key: Level/Level/Canvas/NotebookPanel/Volver/Text (TMP)
     m_Metadata:
       m_Items: []
   - m_Id: 222394166996992
@@ -159,10 +175,6 @@ MonoBehaviour:
     m_Key: Level4/Canvas/Warning/Text
     m_Metadata:
       m_Items: []
-  - m_Id: 222784782528512
-    m_Key: "LevelSelector/Canvas/Decorado/Bot\xF3nCreditos/Text"
-    m_Metadata:
-      m_Items: []
   - m_Id: 222810120318976
     m_Key: LevelSelector/Canvas/Levels/Text (1)
     m_Metadata:
@@ -173,10 +185,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 223068749492224
     m_Key: LevelSelector/Canvas/Levels/Volver/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223097283342336
-    m_Key: LevelSelector/Canvas/Clima/BotonSalir/Text (TMP)
     m_Metadata:
       m_Items: []
   - m_Id: 223120746278912
@@ -225,14 +233,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 223888064835584
     m_Key: Settings/Canvas/Warning/Button (1)/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223910512750592
-    m_Key: Settings/Canvas/Warning/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223959535775744
-    m_Key: Settings/Canvas/Botones/Reset/Text (TMP)
     m_Metadata:
       m_Items: []
   - m_Id: 223982386343936
@@ -423,16 +423,8 @@ MonoBehaviour:
     m_Key: Tutorial/Tutorial 15
     m_Metadata:
       m_Items: []
-  - m_Id: 1386336887152640
-    m_Key: Settings/Canvas/Botones/Credits/Text (TMP)
-    m_Metadata:
-      m_Items: []
   - m_Id: 1389778280030208
     m_Key: Level/Level/Canvas/Warning/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1390149144584192
-    m_Key: LevelSelector/Canvas/Clima/Ajustes/Text (TMP)
     m_Metadata:
       m_Items: []
   - m_Id: 1730597096693760

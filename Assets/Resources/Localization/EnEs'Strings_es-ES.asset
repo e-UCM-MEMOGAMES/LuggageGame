@@ -109,7 +109,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 221603523915776
-    m_Localized: "\xBFSeguro que quiere resetear el juego?"
+    m_Localized: "\xBFQuiere restablecer los ajustes?"
     m_Metadata:
       m_Items: []
   - m_Id: 221737011834880
@@ -165,7 +165,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 222784782528512
-    m_Localized: "Cr\xE9ditos."
+    m_Localized: "Cr\xE9ditos"
     m_Metadata:
       m_Items: []
   - m_Id: 222810120318976
@@ -232,12 +232,8 @@ MonoBehaviour:
     m_Localized: NO
     m_Metadata:
       m_Items: []
-  - m_Id: 223910512750592
-    m_Localized: "\xBFSeguro que quiere resetear el juego?"
-    m_Metadata:
-      m_Items: []
   - m_Id: 223959535775744
-    m_Localized: Resetear
+    m_Localized: Restablecer
     m_Metadata:
       m_Items: []
   - m_Id: 223982386343936
@@ -434,10 +430,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1010595878072320
     m_Localized: Pulse sobre la camiseta amarilla y mantenga pulsado.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1386336887152640
-    m_Localized: "Cr\xE9ditos"
     m_Metadata:
       m_Items: []
   - m_Id: 1389778280030208

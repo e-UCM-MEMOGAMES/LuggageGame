@@ -437,13 +437,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2fd0362e370c554cb4df5fb9d4da28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MENU_SCENE_NAME: Start
-  SETTINGS_SCENE_NAME: Settings
+  LANGUAGE_SCENE_NAME: Language
+  MENU_SCENE_NAME: Intro
+  SETTINGS_SCENE_NAME: Settins
   CREDITS_SCENE_NAME: Credits
-  LEVEL_SETTINGS_SCENE_NAME: LevelSettings
-  GAME_SCENE_NAME: Game
-  gamemodeElements: {fileID: 0}
-  levelItems: {fileID: 0}
+  LEVEL_SETTINGS_SCENE_NAME: LevelSelector
+  GAME_SCENE_NAME: Level
 --- !u!114 &1664974332139097464
 MonoBehaviour:
   m_ObjectHideFlags: 0

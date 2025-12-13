@@ -3,7 +3,7 @@ using UnityEngine.UI;
 using Xasu;
 
 //mandar trazas con XasuTracker cuando interactua con el boton
-public class ButtonTracker : MonoBehaviour
+public class BtTrack : MonoBehaviour
 {
     Button button;
     [SerializeField]
