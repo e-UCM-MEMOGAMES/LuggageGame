@@ -128,48 +128,12 @@ MonoBehaviour:
     m_Localized: Volver
     m_Metadata:
       m_Items: []
-  - m_Id: 222394166996992
-    m_Localized: SI
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222411229425664
-    m_Localized: NO
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222434004496384
-    m_Localized: "\xBFSeguro que quiere terminar ya?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222544314691584
-    m_Localized: SI
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222564116000768
-    m_Localized: NO
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222590728859648
-    m_Localized: "\xBFSeguro que quiere terminar ya?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222655572799488
-    m_Localized: SI
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222676863086592
-    m_Localized: NO
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222693992624128
-    m_Localized: "\xBFSeguro que quiere terminar ya?"
-    m_Metadata:
-      m_Items: []
   - m_Id: 222784782528512
     m_Localized: "Cr\xE9ditos"
     m_Metadata:
       m_Items: []
   - m_Id: 222810120318976
-    m_Localized: Seleccione un nivel de dificultad.
+    m_Localized: Seleccione un nivel de dificultad
     m_Metadata:
       m_Items: []
   - m_Id: 222978102194176
@@ -212,36 +176,20 @@ MonoBehaviour:
     m_Localized: Seleccione un nivel de dificultad.
     m_Metadata:
       m_Items: []
-  - m_Id: 223761380077568
-    m_Localized: "C\xE1lido"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223777268101120
-    m_Localized: "Fr\xEDo"
-    m_Metadata:
-      m_Items: []
   - m_Id: 223853474410496
     m_Localized: Volver
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223875788107776
-    m_Localized: SI
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223888064835584
-    m_Localized: NO
     m_Metadata:
       m_Items: []
   - m_Id: 223959535775744
     m_Localized: Restablecer
     m_Metadata:
       m_Items: []
-  - m_Id: 223982386343936
+  - m_Id: 191664723245023232
     m_Localized: "M\xFAsica"
     m_Metadata:
       m_Items: []
   - m_Id: 223998869958656
-    m_Localized: Efecto de sonido
+    m_Localized: Efectos de sonido
     m_Metadata:
       m_Items: []
   - m_Id: 224087315247104
@@ -353,14 +301,6 @@ MonoBehaviour:
     m_Localized: No haber consultado la lista
     m_Metadata:
       m_Items: []
-  - m_Id: 248732349296640
-    m_Localized: "Fr\xEDo"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 972905560338432
-    m_Localized: "Fr\xEDo"
-    m_Metadata:
-      m_Items: []
   - m_Id: 980179829846016
     m_Localized: Sin soltar, arrastre la camiseta hasta la maleta y luego suelte.
     m_Metadata:
@@ -444,36 +384,8 @@ MonoBehaviour:
     m_Localized: Idioma
     m_Metadata:
       m_Items: []
-  - m_Id: 1730901649301504
-    m_Localized: "Espa\xF1ol"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1731001238855680
-    m_Localized: "Espa\xF1ol"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1731110034907136
-    m_Localized: Ingles
-    m_Metadata:
-      m_Items: []
   - m_Id: 1738889273450496
     m_Localized: "G\xE9nero"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1739914424262656
-    m_Localized: Hombre
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1739926512246784
-    m_Localized: Mujer
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1757148798427136
-    m_Localized: "Ingl\xE9s"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1757169874804736
-    m_Localized: "Espa\xF1ol"
     m_Metadata:
       m_Items: []
   - m_Id: 2078416248676352

@@ -17,7 +17,7 @@ using Xasu;
 
 public class LvlMngr : MonoBehaviour
 {
-    private AudMngr audioMng;
+    private AudioManager audioMng;
     enum State { BATHROOM, BEDROOM, DRAWER, LUGGAGE, FIRSTAIDKIT, END };
     public enum ObjectType { Clothes, Shoes, Others, ObjectTypeSize };
     string LevelNameGlobal;
@@ -120,7 +120,7 @@ public class LvlMngr : MonoBehaviour
     int myActualRoom = 1;
     void Start()
     {
-        audioMng = AudMngr.Instance;
+        audioMng = AudioManager.Instance;
         audioMng.Play(GameSound.LevelBGM);
         audioMng.Play(GameSound.NoteBook);
         jsonReader = GetComponent<JSONReader>();

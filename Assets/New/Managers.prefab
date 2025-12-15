@@ -140,7 +140,7 @@ GameObject:
   - component: {fileID: 3930425954785596850}
   - component: {fileID: 2413921747549152415}
   m_Layer: 0
-  m_Name: Music
+  m_Name: BGM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 2690691956514438973}
   - component: {fileID: 3005395233402566959}
   m_Layer: 0
-  m_Name: UI
+  m_Name: SFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -437,12 +437,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2fd0362e370c554cb4df5fb9d4da28f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LANGUAGE_SCENE_NAME: Language
-  MENU_SCENE_NAME: Intro
-  SETTINGS_SCENE_NAME: Settins
-  CREDITS_SCENE_NAME: Credits
-  LEVEL_SETTINGS_SCENE_NAME: LevelSelector
-  GAME_SCENE_NAME: Level
 --- !u!114 &1664974332139097464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,9 +449,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f9a37436c871d4495d376aa28bee62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _musicSource: {fileID: 2413921747549152415}
-  _uiSoundSource: {fileID: 3005395233402566959}
-  _sceneSoundSource: {fileID: 2535580868940331673}
   _soundList:
   - Name: ButtonClicked
     channelType: 1
@@ -507,6 +498,9 @@ MonoBehaviour:
     channelType: 3
     soundType: 12
     audioClip: {fileID: 8300000, guid: 5b91cff42bdcf7e4fb365412196831ca, type: 3}
+  bgmSource: {fileID: 2413921747549152415}
+  sfxSource: {fileID: 3005395233402566959}
+  _sceneSoundSource: {fileID: 2535580868940331673}
 --- !u!114 &9155763384545475398
 MonoBehaviour:
   m_ObjectHideFlags: 0

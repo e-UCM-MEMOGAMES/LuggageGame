@@ -129,48 +129,12 @@ MonoBehaviour:
     m_Localized: Return
     m_Metadata:
       m_Items: []
-  - m_Id: 222394166996992
-    m_Localized: YES
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222411229425664
-    m_Localized: NO
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222434004496384
-    m_Localized: Are you sure you want to exit?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222544314691584
-    m_Localized: YES
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222564116000768
-    m_Localized: NO
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222590728859648
-    m_Localized: Are you sure you want to exit?
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222655572799488
-    m_Localized: YES
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222676863086592
-    m_Localized: NO
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222693992624128
-    m_Localized: Are you sure you want to exit?
-    m_Metadata:
-      m_Items: []
   - m_Id: 222784782528512
     m_Localized: Credits
     m_Metadata:
       m_Items: []
   - m_Id: 222810120318976
-    m_Localized: Choose a difficulty level.
+    m_Localized: Choose a difficulty level
     m_Metadata:
       m_Items: []
   - m_Id: 222978102194176
@@ -213,31 +177,15 @@ MonoBehaviour:
     m_Localized: Choose a difficulty.
     m_Metadata:
       m_Items: []
-  - m_Id: 223761380077568
-    m_Localized: Warm
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223777268101120
-    m_Localized: Cold
-    m_Metadata:
-      m_Items: []
   - m_Id: 223853474410496
     m_Localized: Return
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223875788107776
-    m_Localized: YES
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223888064835584
-    m_Localized: NO
     m_Metadata:
       m_Items: []
   - m_Id: 223959535775744
     m_Localized: Reset
     m_Metadata:
       m_Items: []
-  - m_Id: 223982386343936
+  - m_Id: 191664723245023232
     m_Localized: Music
     m_Metadata:
       m_Items: []
@@ -354,14 +302,6 @@ MonoBehaviour:
     m_Localized: Don't look at the checklist
     m_Metadata:
       m_Items: []
-  - m_Id: 248732349296640
-    m_Localized: Cold
-    m_Metadata:
-      m_Items: []
-  - m_Id: 972905560338432
-    m_Localized: Cold
-    m_Metadata:
-      m_Items: []
   - m_Id: 980179829846016
     m_Localized: Drag the t-shirt into the suitcase and let go.
     m_Metadata:
@@ -441,36 +381,8 @@ MonoBehaviour:
     m_Localized: Language
     m_Metadata:
       m_Items: []
-  - m_Id: 1730901649301504
-    m_Localized: English
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1731001238855680
-    m_Localized: Spanish
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1731110034907136
-    m_Localized: English
-    m_Metadata:
-      m_Items: []
   - m_Id: 1738889273450496
     m_Localized: Gender
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1739914424262656
-    m_Localized: Man
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1739926512246784
-    m_Localized: Woman
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1757148798427136
-    m_Localized: English
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1757169874804736
-    m_Localized: Spanish
     m_Metadata:
       m_Items: []
   - m_Id: 2078416248676352

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Xasu;
 
 //mandar trazas cuando interactua con el slider
-public class SliderTracker : MonoBehaviour
+public class SliderTrck : MonoBehaviour
 {
     Slider slider;
     [SerializeField]

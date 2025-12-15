@@ -1,0 +1,129 @@
+{
+	"objectList_M": [
+		"Camisa roja"
+	],
+	"objectList_F": [
+		"Jersey"
+	],
+	"objectList_N": [
+		"Pantalones largos",
+		"Botas",
+		"Peine"
+	],
+	"storagePoints": [
+		{
+			"name": "Bedroom_DresserDrawer_above",
+			"objects": []
+		},
+		{
+			"name": "Bedroom_DresserDrawer_top",
+			"objects": []
+		},
+		{
+			"name": "Bedroom_DresserDrawer_middle",
+			"objects": []
+		},
+		{
+			"name": "Bedroom_DresserDrawer_bottom",
+			"objects": [
+				{
+					"name": "Gorro",
+					"position": 5,
+					"gender": "N"
+				}
+			]
+		},
+		{
+			"name": "Bedroom_ClosetDrawer_top",
+			"objects": [
+				{
+					"name": "Pantalones largos",
+					"position": 2,
+					"gender": "N"
+				}
+			]
+		},
+		{
+			"name": "Bedroom_ClosetDrawer_middle",
+			"objects": []
+		},
+		{
+			"name": "Bedroom_ClosetDrawer_bottom",
+			"objects": []
+		},
+		{
+			"name": "Bedroom_ClosetDoor",
+			"objects": [
+				{
+					"name": "Camisa roja",
+					"position": 0,
+					"gender": "M"
+				},
+				{
+					"name": "Jersey",
+					"position": 0,
+					"gender": "F"
+				},
+				{
+					"name": "Camiseta amarilla",
+					"position": 1,
+					"gender": "N"
+				}
+			]
+		},
+		{
+			"name": "Bedroom_CoatRack",
+			"objects": []
+		},
+		{
+			"name": "Bedroom_ShoeRack",
+			"objects": [
+				{
+					"name": "Deportivas",
+					"position": 5,
+					"gender": "N"
+				},
+				{
+					"name": "Botas",
+					"position": 0,
+					"gender": "N"
+				}
+			]
+		},
+		{
+			"name": "Bedroom_ShoeRack_above",
+			"objects": []
+		},
+		{
+			"name": "Bathroom_hanger",
+			"objects": []
+		},
+		{
+			"name": "Bathroom_cabinet_above",
+			"objects": []
+		},
+		{
+			"name": "Bathroom_medicineCabinet",
+			"objects": []
+		},
+		{
+			"name": "Bathroom_cabinet_top",
+			"objects": [
+				{
+					"name": "Peine",
+					"position": 4,
+					"gender": "N"
+				},
+				{
+					"name": "Cepillo de dientes",
+					"position": 0,
+					"gender": "N"
+				}
+			]
+		},
+		{
+			"name": "Bathroom_cabinet_bottom",
+			"objects": []
+		}
+	]
+}

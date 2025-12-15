@@ -15,6 +15,10 @@ MonoBehaviour:
   m_TableCollectionName: EnEs'Strings
   m_TableCollectionNameGuidString: 381e72707fa25ff47b62981414a325a7
   m_Entries:
+  - m_Id: 2088170123599872
+    m_Key: Intro/Login
+    m_Metadata:
+      m_Items: []
   - m_Id: 219731245330432
     m_Key: Intro/Title
     m_Metadata:
@@ -52,15 +56,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 4799652360192
-    m_Key: Intro/Gender/Man
+    m_Key: Menus/Gender/Man
     m_Metadata:
       m_Items: []
   - m_Id: 4822817501184
-    m_Key: Intro/Gender/Woman
+    m_Key: Menus/Gender/Woman
     m_Metadata:
       m_Items: []
   - m_Id: 221811104215040
     m_Key: Menus/Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 191664723245023232
+    m_Key: Settings/BGM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223998869958656
+    m_Key: Settings/SFX
     m_Metadata:
       m_Items: []
   - m_Id: 223959535775744
@@ -72,11 +84,39 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 221565334777856
-    m_Key: Settings/Reset/Yes
+    m_Key: Menus/Yes
     m_Metadata:
       m_Items: []
   - m_Id: 221579918372864
-    m_Key: Settings/Reset/No
+    m_Key: Menus/No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1738889273450496
+    m_Key: Settings/Gender/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1730597096693760
+    m_Key: Settings/Language/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222978102194176
+    m_Key: LevelSelector/Climate/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223141063487488
+    m_Key: LevelSelector/Climate/Warm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223164874551296
+    m_Key: LevelSelector/Climate/Cold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223120746278912
+    m_Key: LevelSelector/Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222810120318976
+    m_Key: LevelSelector/Levels/Title
     m_Metadata:
       m_Items: []
   - m_Id: 1153485172736
@@ -139,64 +179,8 @@ MonoBehaviour:
     m_Key: Level/Level/Canvas/InitialPanel/Button/Text (TMP)
     m_Metadata:
       m_Items: []
-  - m_Id: 222394166996992
-    m_Key: Level2/Canvas/Warning/Button/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222411229425664
-    m_Key: Level2/Canvas/Warning/Button (1)/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222434004496384
-    m_Key: Level2/Canvas/Warning/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222544314691584
-    m_Key: Level3/Canvas/Warning/Button/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222564116000768
-    m_Key: Level3/Canvas/Warning/Button (1)/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222590728859648
-    m_Key: Level3/Canvas/Warning/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222655572799488
-    m_Key: Level4/Canvas/Warning/Button/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222676863086592
-    m_Key: Level4/Canvas/Warning/Button (1)/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222693992624128
-    m_Key: Level4/Canvas/Warning/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222810120318976
-    m_Key: LevelSelector/Canvas/Levels/Text (1)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 222978102194176
-    m_Key: LevelSelector/Canvas/Clima/Text (2)
-    m_Metadata:
-      m_Items: []
   - m_Id: 223068749492224
     m_Key: LevelSelector/Canvas/Levels/Volver/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223120746278912
-    m_Key: LevelSelector/Canvas/Clima/Tutorial/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223141063487488
-    m_Key: "LevelSelector/Canvas/Clima/C\xE1lido/Text (TMP)"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223164874551296
-    m_Key: "LevelSelector/Canvas/Clima/Fr\xEDo/Text (TMP) (1)"
     m_Metadata:
       m_Items: []
   - m_Id: 223634833731584
@@ -215,32 +199,8 @@ MonoBehaviour:
     m_Key: Menu/Canvas/Decorado/Bocadillo/Text (1)
     m_Metadata:
       m_Items: []
-  - m_Id: 223761380077568
-    m_Key: "Menu/Canvas/Clima/C\xE1lido/Text (1)"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223777268101120
-    m_Key: "Menu/Canvas/Clima/Fr\xEDo/Text (1)"
-    m_Metadata:
-      m_Items: []
   - m_Id: 223853474410496
     m_Key: Settings/Canvas/Volver/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223875788107776
-    m_Key: Settings/Canvas/Warning/Button/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223888064835584
-    m_Key: Settings/Canvas/Warning/Button (1)/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223982386343936
-    m_Key: Settings/Canvas/Text (TMP) (1)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223998869958656
-    m_Key: Settings/Canvas/Text (TMP) (2)
     m_Metadata:
       m_Items: []
   - m_Id: 224087315247104
@@ -351,14 +311,6 @@ MonoBehaviour:
     m_Key: Tutorial/Level/Canvas/PanelFin/FinalObjective/Objetivo (3)
     m_Metadata:
       m_Items: []
-  - m_Id: 248732349296640
-    m_Key: "LevelSelector/Canvas/Clima/Fr\xEDo/Text (TMP)"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 972905560338432
-    m_Key: "LevelSelector/Canvas/Clima/Fr\xEDo/Text (TMP) (1) 1"
-    m_Metadata:
-      m_Items: []
   - m_Id: 980179829846016
     m_Key: Tutorial/Tutorial
     m_Metadata:
@@ -427,42 +379,6 @@ MonoBehaviour:
     m_Key: Level/Level/Canvas/Warning/Text (TMP)
     m_Metadata:
       m_Items: []
-  - m_Id: 1730597096693760
-    m_Key: Settings/Canvas/Text (TMP) (3)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1730901649301504
-    m_Key: Settings/Canvas/Dropdown/Label
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1731001238855680
-    m_Key: Settings/Canvas/Dropdown
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1731110034907136
-    m_Key: Settings/Canvas/Dropdown 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1738889273450496
-    m_Key: Settings/Canvas/GameObject/Text (TMP) (3)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1739914424262656
-    m_Key: Settings/Canvas/Language/Dropdown (1)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1739926512246784
-    m_Key: Settings/Canvas/Language/Dropdown (1) 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1757148798427136
-    m_Key: Settings/Canvas/Language/Dropdown
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1757169874804736
-    m_Key: Settings/Canvas/Language/Dropdown 1
-    m_Metadata:
-      m_Items: []
   - m_Id: 2078416248676352
     m_Key: Settings/Canvas/Warning/Text (TMP)
     m_Metadata:
@@ -485,10 +401,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 2081611414937600
     m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo (3)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2088170123599872
-    m_Key: Intro/Login
     m_Metadata:
       m_Items: []
   - m_Id: 31801445282156544

@@ -1,8 +1,6 @@
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Settings;
-using UnityEngine.UI;
 using Xasu.HighLevel;
 
 public class LanguageButton : MonoBehaviour
@@ -33,8 +31,10 @@ public class LanguageButton : MonoBehaviour
     public void SelectLanguage()
     {
         LocalizationSettings.SelectedLocale = locale;
-        trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected(locale.LocaleName, "Language"));
-        gameManager.ChangeScene(gameManager.MENU_SCENE_NAME);
-    }
+        int lid = LocalizationSettings.AvailableLocales.Locales.IndexOf(locale);
+        PlayerPrefs.SetInt(Defs.LANGUAGE_KEY, lid);
 
+        trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected(locale.LocaleName, "Language"));
+        gameManager.ChangeScene(Defs.MENU_SCENE_NAME);
+    }
 }

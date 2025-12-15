@@ -2,9 +2,13 @@ using UnityEngine;
 
 public class MenuButtons : MonoBehaviour
 {
+    /// <summary>
+    /// Instancia del GameManager
+    /// </summary>
     GameManager gameManager;
 
-    //Staart is called before the first frame update
+
+    //Start is called before the first frame update
     void Start()
     {
         gameManager = GameManager.Instance;
@@ -23,6 +27,6 @@ public class MenuButtons : MonoBehaviour
     public void ResetGame()
     {
         PlayerPrefs.DeleteAll();
-        gameManager.ChangeScene(gameManager.LANGUAGE_SCENE_NAME);
+        gameManager.ChangeScene(Defs.LANGUAGE_SCENE_NAME);
     }
 }

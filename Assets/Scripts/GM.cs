@@ -28,7 +28,7 @@ public class GM : MonoBehaviour
 
     /// <summary>
     /// Lista de objetos del nivel.
-    /// </summary>+
+    /// </summary>
     public List<string> SceneObjects { get; set; }
 
     /// <summary>
@@ -78,7 +78,6 @@ public class GM : MonoBehaviour
 
     #endregion
 
-    #region Eventos
 
     private void Awake()
     {
@@ -95,57 +94,10 @@ public class GM : MonoBehaviour
         ObstaculosList = new List<string>();
     }
 
-    #endregion
-
-    #region Métodos públicos
-    /// <summary>
-    /// Método que setea en género del jugador dado un entero. 0 será neutral, 1 será hombre y 2 será mujer.
-    /// </summary>
-    /// <param name="g"></param>
-    public void SetGenre(int g)
-    {
-        PlayerPrefs.SetInt("genre", g);
-        Genero = (Genero)g;
-        Debug.Log(PlayerPrefs.GetInt("genre"));
-        Debug.Log(Genero);
-
-        LoadScene("LevelSelector");
-    }
-
-
-    public void LoadScene(string scene)
-    {
-        SceneManager.LoadScene(scene);
-    }
-
-    /**
-     * Método para el botón salir del menú
-     */
-    public async void DoExitGame()
-    {
-        var progress = new Progress<float>();
-        progress.ProgressChanged += (_, p) =>
-        {
-            Debug.Log("Finalization progress: " + p);
-        };
-
-        XasuTracker.Instance.Finalize(progress);
-
-        Debug.Log("Tracker finalized");
-        Application.Quit();
-    }
 
     public int Level
     {
         get { return _level; }
         set { _level = value; }
     }
-
-    public void RestartGame()
-    {
-        PlayerPrefs.DeleteAll();
-        LoadScene("Intro");
-    }
-    #endregion
-
 }

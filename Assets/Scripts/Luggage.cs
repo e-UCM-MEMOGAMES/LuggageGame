@@ -12,7 +12,7 @@ public class Luggage : MonoBehaviour
     public Sprite emptyLuggage, fullLuggage;
     [SerializeField]
     private LvlMngr levelMng;
-    private AudMngr audioMng;
+    private AudioManager audioMng;
     #endregion
 
     #region Atributos
@@ -52,7 +52,7 @@ public class Luggage : MonoBehaviour
 
     void Start()
     {
-        audioMng = AudMngr.Instance;
+        audioMng = AudioManager.Instance;
         ObjetosGuardados = new List<string>();
         ObjetosErroneosGuardados = new List<string>();
     }
