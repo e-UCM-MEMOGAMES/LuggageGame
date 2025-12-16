@@ -196,10 +196,10 @@ public class LvlMngr : MonoBehaviour
 
             switch (GM.Gm.Clima)
             {
-                case Clima.CALIDO:
+                case Defs.Climate.WARM:
                     LevelNameGlobal = string.Concat(LevelNameGlobal, "Warm");
                     break;
-                case Clima.FRIO:
+                case Defs.Climate.COLD:
                     LevelNameGlobal = string.Concat(LevelNameGlobal, "Cold");
                     break;
             }
@@ -326,7 +326,7 @@ public class LvlMngr : MonoBehaviour
     private void ReadLevelInfo(LevelInfo info)
     {
         string gen;
-        if (GM.Gm.Genero == Genero.HOMBRE) gen = "M";
+        if (GM.Gm.Genero == Defs.Gender.MALE) gen = "M";
         else gen = "F";
 
         //lectura de lista de objetos a introducir a la maleta

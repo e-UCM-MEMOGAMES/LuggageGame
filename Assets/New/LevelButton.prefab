@@ -723,7 +723,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1
+  m_text: X
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41e8f506bd9ec1b46a5f14ed6f382552, type: 2}
   m_sharedMaterial: {fileID: 5312309082972622527, guid: 41e8f506bd9ec1b46a5f14ed6f382552,
@@ -1032,7 +1032,7 @@ PrefabInstance:
     - target: {fileID: 2096393923729664955, guid: 4e82dc3642a991f4b90dc30f5380067d,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: OnSelected
+      value: Select
       objectReference: {fileID: 0}
     - target: {fileID: 2096393923729664955, guid: 4e82dc3642a991f4b90dc30f5380067d,
         type: 3}
@@ -1052,7 +1052,7 @@ PrefabInstance:
     - target: {fileID: 8260545132410232986, guid: 4e82dc3642a991f4b90dc30f5380067d,
         type: 3}
       propertyPath: buttonName
-      value: LevelSelector_LevelButton_1
+      value: LevelSelector_LevelButton_X
       objectReference: {fileID: 0}
     - target: {fileID: 9041480127784816005, guid: 4e82dc3642a991f4b90dc30f5380067d,
         type: 3}
@@ -1126,14 +1126,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16899daa5d39407429b9e615aa715222, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
-  stars:
-  - {fileID: 5188257121816280852}
-  - {fileID: 2307960157577111286}
-  - {fileID: 6721224755882564654}
-  - {fileID: 2430326064008460890}
-  blocked: {fileID: 4128924085482314838}
-  lvlSelector: {fileID: 0}
+  levelNumber: 1
+  levelText: {fileID: 7490758660789290041}
+  obtainedStars:
+  - {fileID: 8853169502490770386}
+  - {fileID: 4541968726193731067}
+  - {fileID: 6646023871704495536}
+  - {fileID: 221139979241594071}
+  lockedImg: {fileID: 4128924085482314838}
+  preUnlocked: 0
 --- !u!224 &2659265009274376683 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1105153573065340625, guid: 4e82dc3642a991f4b90dc30f5380067d,

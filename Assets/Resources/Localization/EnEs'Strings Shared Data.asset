@@ -119,64 +119,52 @@ MonoBehaviour:
     m_Key: LevelSelector/Levels/Title
     m_Metadata:
       m_Items: []
-  - m_Id: 1153485172736
-    m_Key: Level1/Canvas/Warning/Button (1)/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1141166501888
-    m_Key: Level/Canvas/Warning/Button/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1189262585856
-    m_Key: Level1/Canvas/Warning/Text
-    m_Metadata:
-      m_Items: []
   - m_Id: 220113489031168
-    m_Key: Level/Level/Canvas/InitialPanel/Indication
+    m_Key: Level/InitialPanel/Instructions
     m_Metadata:
       m_Items: []
   - m_Id: 220481488875520
-    m_Key: Level/Level/Canvas/InitialPanel/Objective/Objetivo
+    m_Key: Level/InitialPanel/Objectives
     m_Metadata:
       m_Items: []
   - m_Id: 220568038338560
-    m_Key: Level/Level/Canvas/InitialPanel/Objective/Objetivo (4)
+    m_Key: Level/InitialPanel/Objective1
     m_Metadata:
       m_Items: []
   - m_Id: 220733931450368
-    m_Key: Level/Level/Canvas/InitialPanel/Objective/Objetivo (2)
+    m_Key: Level/InitialPanel/Objective2
     m_Metadata:
       m_Items: []
   - m_Id: 220775060795392
-    m_Key: Level/Level/Canvas/InitialPanel/Objective/Objetivo (1)
+    m_Key: Level/InitialPanel/Objective3
     m_Metadata:
       m_Items: []
   - m_Id: 221170977927168
-    m_Key: Level/Level/Canvas/InitialPanel/Objective/Objetivo (3)
+    m_Key: Level/InitialPanel/Objective4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221791151910912
+    m_Key: Level/InitialPanel/Start
     m_Metadata:
       m_Items: []
   - m_Id: 221417145823232
-    m_Key: Level/Level/Canvas/ObjectList/ClothesTitleText
+    m_Key: Level/List/ItemType/Clothes
     m_Metadata:
       m_Items: []
   - m_Id: 221495369592832
-    m_Key: Level/Level/Canvas/ObjectList/ShoesTitleText
+    m_Key: Level/List/ItemType/Footwear
     m_Metadata:
       m_Items: []
   - m_Id: 221445746782208
-    m_Key: Level/Level/Canvas/ObjectList/OthersTitleText
+    m_Key: Level/List/ItemType/Other
     m_Metadata:
       m_Items: []
   - m_Id: 221737011834880
     m_Key: Level/Level/Canvas/Fin/Text (TMP)
     m_Metadata:
       m_Items: []
-  - m_Id: 221762513203200
-    m_Key: Level/Level/Canvas/PanelFin/Volver (1)/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 221791151910912
-    m_Key: Level/Level/Canvas/InitialPanel/Button/Text (TMP)
+  - m_Id: 1189262585856
+    m_Key: Level1/Canvas/Warning/Text
     m_Metadata:
       m_Items: []
   - m_Id: 223068749492224
@@ -187,82 +175,6 @@ MonoBehaviour:
     m_Key: Menu/Canvas/Decorado/BotonSalir/Text
     m_Metadata:
       m_Items: []
-  - m_Id: 223652248481792
-    m_Key: "Menu/Canvas/Decorado/Bot\xF3nCreditos/Text"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223697999949824
-    m_Key: Menu/Canvas/Levels/Tutorial/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223729058770944
-    m_Key: Menu/Canvas/Decorado/Bocadillo/Text (1)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223853474410496
-    m_Key: Settings/Canvas/Volver/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224087315247104
-    m_Key: Tutorial/Level/Canvas/ObjectList/ClothesTitleText
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224157615976448
-    m_Key: Tutorial/Level/Canvas/ObjectList/OthersTitleText
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224186581839872
-    m_Key: Tutorial/Level/Canvas/ObjectList/ShoesTitleText
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224223512686592
-    m_Key: Tutorial/Level/Canvas/Warning/Button/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224241590136832
-    m_Key: Tutorial/Level/Canvas/Warning/Button (1)/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224259365597184
-    m_Key: Tutorial/Level/Canvas/Warning/Text
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224371097661440
-    m_Key: Tutorial/Level/Canvas/Fin/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224395869220864
-    m_Key: Tutorial/Level/Canvas/PanelFin/Volver (1)/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224414949109760
-    m_Key: Tutorial/Level/Canvas/InitialPanel/Button/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224439670337536
-    m_Key: Tutorial/Level/Canvas/NotebookPanel/Volver/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224567529500672
-    m_Key: Tutorial/Level/Canvas/InitialPanel/Indication
-    m_Metadata:
-      m_Items: []
-  - m_Id: 224607564132352
-    m_Key: Tutorial/Level/Canvas/InitialPanel/Objective/Objetivo
-    m_Metadata:
-      m_Items: []
-  - m_Id: 225059315838976
-    m_Key: Tutorial/Level/Canvas/InitialPanel/Objective/Objetivo (2)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 225094820622336
-    m_Key: Tutorial/Level/Canvas/InitialPanel/Objective/Objetivo (1)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 225211992698880
-    m_Key: Level/Level/Canvas/PanelFin/Objetivo (6)
-    m_Metadata:
-      m_Items: []
   - m_Id: 225281479733248
     m_Key: Level/Level/Canvas/PanelFin/Objetivo (5)
     m_Metadata:
@@ -271,44 +183,8 @@ MonoBehaviour:
     m_Key: Level/Level/Canvas/PanelFin/Objetivo (4)
     m_Metadata:
       m_Items: []
-  - m_Id: 225495678644224
-    m_Key: Tutorial/Level/Canvas/InitialPanel/Objective/Objetivo (3)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 225598938214400
-    m_Key: Tutorial/Level/Canvas/InitialPanel/Objective/Objetivo (4)
-    m_Metadata:
-      m_Items: []
   - m_Id: 225778970324992
     m_Key: Tutorial/Level/Canvas/PanelFin/Objetivo (6)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 225801225302016
-    m_Key: Tutorial/Level/Canvas/PanelFin/Objetivo (5)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 226022898462720
-    m_Key: Tutorial/Level/Canvas/PanelFin/Objetivo (4)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 226097955532800
-    m_Key: Tutorial/Level/Canvas/PanelFin/FinalObjective/Objetivo
-    m_Metadata:
-      m_Items: []
-  - m_Id: 226485572136960
-    m_Key: Tutorial/Level/Canvas/PanelFin/FinalObjective/Objetivo (4)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 226580434710528
-    m_Key: Tutorial/Level/Canvas/PanelFin/FinalObjective/Objetivo (1)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 226629206077440
-    m_Key: Tutorial/Level/Canvas/PanelFin/FinalObjective/Objetivo (2)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 226677537042432
-    m_Key: Tutorial/Level/Canvas/PanelFin/FinalObjective/Objetivo (3)
     m_Metadata:
       m_Items: []
   - m_Id: 980179829846016
@@ -379,28 +255,8 @@ MonoBehaviour:
     m_Key: Level/Level/Canvas/Warning/Text (TMP)
     m_Metadata:
       m_Items: []
-  - m_Id: 2078416248676352
-    m_Key: Settings/Canvas/Warning/Text (TMP)
-    m_Metadata:
-      m_Items: []
   - m_Id: 2080132008419328
     m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2080370274246656
-    m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo (1)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2081388177301504
-    m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo (4)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2081557434245120
-    m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo (2)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2081611414937600
-    m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo (3)
     m_Metadata:
       m_Items: []
   - m_Id: 31801445282156544

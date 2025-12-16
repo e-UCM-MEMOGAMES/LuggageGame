@@ -8,19 +8,6 @@ using System;
 
 public class GM : MonoBehaviour
 {
-    #region Variables Unity
-
-    [SerializeField]
-    private int _clima;
-    [SerializeField]
-    private int _genero;
-    [SerializeField]
-    private int _level;
-
-    #endregion
-
-    #region Atributos
-
     /// <summary>
     /// Lista de objetos a poner en la maleta.
     /// </summary>
@@ -38,46 +25,9 @@ public class GM : MonoBehaviour
 
     public List<string> ObstaculosList { get; set; }
 
-    /// <summary>
-    /// Clima del juego.
-    /// </summary>
-    public Clima Clima
-    {
-        get => (Clima)_clima; set
-        {
-             if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
-            {
-                switch (value)
-                {
-                    case Clima.CALIDO:
-                        Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Warm");
-                        break;
-                    case Clima.FRIO:
-                        Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Cold");
-                        break;
-                    default:
-                        Xasu.HighLevel.AlternativeTracker.Instance.Selected("climate", "Neutral");
-                        break;
-                }
-            }
-            _clima = (int)value;
-        }
-    }
-
-    /// <summary>
-    /// Género del juego.
-    /// </summary>
-    public Genero Genero
-    {
-        get => (Genero)_genero; set
-        {
-
-            _genero = (int)value;
-        }
-    }
-
-    #endregion
-
+    public int Level = 0;
+    public Defs.Climate Clima = Defs.Climate.COLD;
+    public Defs.Gender Genero = Defs.Gender.MALE;
 
     private void Awake()
     {
@@ -92,12 +42,5 @@ public class GM : MonoBehaviour
         }
         List = new List<string>();
         ObstaculosList = new List<string>();
-    }
-
-
-    public int Level
-    {
-        get { return _level; }
-        set { _level = value; }
     }
 }

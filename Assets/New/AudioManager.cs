@@ -45,7 +45,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         set
         {
             bgmSource.volume = value;
-            PlayerPrefs.SetFloat(Defs.BGM_VOLUME_KEY, value);
+            PlayerPrefs.SetFloat(Defs.BGM_VOLUME_PREFS_KEY, value);
         }
     }
 
@@ -55,7 +55,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         set
         {
             sfxSource.volume = value;
-            PlayerPrefs.SetFloat(Defs.SFX_VOLUME_KEY, value);
+            PlayerPrefs.SetFloat(Defs.SFX_VOLUME_PREFS_KEY, value);
         }
     }
 
@@ -115,13 +115,13 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
         bgmSource.loop = true;
 
 
-        if (PlayerPrefs.HasKey(Defs.BGM_VOLUME_KEY))
+        if (PlayerPrefs.HasKey(Defs.BGM_VOLUME_PREFS_KEY))
         {
-            bgmSource.volume = PlayerPrefs.GetFloat(Defs.BGM_VOLUME_KEY);
+            bgmSource.volume = PlayerPrefs.GetFloat(Defs.BGM_VOLUME_PREFS_KEY);
         }
-        if (PlayerPrefs.HasKey(Defs.SFX_VOLUME_KEY))
+        if (PlayerPrefs.HasKey(Defs.SFX_VOLUME_PREFS_KEY))
         {
-            sfxSource.volume = PlayerPrefs.GetFloat(Defs.SFX_VOLUME_KEY);
+            sfxSource.volume = PlayerPrefs.GetFloat(Defs.SFX_VOLUME_PREFS_KEY);
         }
     }
 

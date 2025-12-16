@@ -32,7 +32,7 @@ public class LanguageButton : MonoBehaviour
     {
         LocalizationSettings.SelectedLocale = locale;
         int lid = LocalizationSettings.AvailableLocales.Locales.IndexOf(locale);
-        PlayerPrefs.SetInt(Defs.LANGUAGE_KEY, lid);
+        PlayerPrefs.SetInt(Defs.LANGUAGE_PREFS_KEY, lid);
 
         trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected(locale.LocaleName, "Language"));
         gameManager.ChangeScene(Defs.MENU_SCENE_NAME);

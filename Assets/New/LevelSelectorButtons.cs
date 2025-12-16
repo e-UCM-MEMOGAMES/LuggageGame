@@ -50,9 +50,8 @@ public class LevelSelectorButtons : MonoBehaviour
         levels.SetActive(true);
     }
 
-    public void SelectLevel(int level)
+    public void SelectLevel()
     {
-        gameManager.Level = level;
         gameManager.ChangeScene(Defs.GAME_SCENE_NAME);
     }
 }

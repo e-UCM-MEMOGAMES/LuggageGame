@@ -66,15 +66,15 @@ public class SettingsMenu : MonoBehaviour
             languageDropdown.options.Add(new TMP_Dropdown.OptionData() { text = lcs[i].LocaleName });
         }
 
-        if (PlayerPrefs.HasKey(Defs.LANGUAGE_KEY))
+        if (PlayerPrefs.HasKey(Defs.LANGUAGE_PREFS_KEY))
         {
-            languageDropdown.SetValueWithoutNotify(PlayerPrefs.GetInt(Defs.LANGUAGE_KEY));
+            languageDropdown.SetValueWithoutNotify(PlayerPrefs.GetInt(Defs.LANGUAGE_PREFS_KEY));
         }
         else
         {
             int lid = lcs.IndexOf(LocalizationSettings.SelectedLocale);
             languageDropdown.SetValueWithoutNotify(lid);
-            PlayerPrefs.SetInt(Defs.LANGUAGE_KEY, lid);
+            PlayerPrefs.SetInt(Defs.LANGUAGE_PREFS_KEY, lid);
         }
         languageDropdown.RefreshShownValue();
     }
@@ -83,14 +83,13 @@ public class SettingsMenu : MonoBehaviour
     public void ChangeLanguage()
     {
         LocalizationSettings.SelectedLocale = lcs[languageDropdown.value];
-        PlayerPrefs.SetInt(Defs.LANGUAGE_KEY, languageDropdown.value);
+        PlayerPrefs.SetInt(Defs.LANGUAGE_PREFS_KEY, languageDropdown.value);
 
         trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected("Language", lcs[languageDropdown.value].LocaleName));
     }
     public void ChangeGender()
     {
-        PlayerPrefs.SetInt(Defs.GENDER_KEY, genderDropdown.value);
-        gameManager.PlayerGender = (Defs.Gender)PlayerPrefs.GetInt(Defs.GENDER_KEY);
+        gameManager.PlayerGender = (Defs.Gender)PlayerPrefs.GetInt(Defs.GENDER_PREFS_KEY);
     }
     public void SetBGMVolume()
     {

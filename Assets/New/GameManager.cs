@@ -27,6 +27,7 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
         set
         {
             playerGender = value;
+            PlayerPrefs.SetInt(Defs.GENDER_PREFS_KEY, (int)value);
             trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected("Gender", value.ToString()));
         }
     }

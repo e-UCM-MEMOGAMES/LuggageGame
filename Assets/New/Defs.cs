@@ -27,20 +27,23 @@ public static class Defs
     /// </summary>
     TUTORIAL_SCENE_NAME = "Tutorial",
 
-    NEW_GAME_KEY = "newGame",
-    GENDER_KEY = "gender",
+    NEW_GAME_PREFS_KEY = "newGame",
+    GENDER_PREFS_KEY = "gender",
     /// <summary>
     /// Id de la configuracion para el volumen de la musica de fondo en las preferencias
     /// </summary>
-    BGM_VOLUME_KEY = "bgmVolume",
+    BGM_VOLUME_PREFS_KEY = "bgmVolume",
     /// <summary>
     /// Id de la configuracion para el volumen de los efectos de sonido en las preferencias
     /// </summary>
-    SFX_VOLUME_KEY = "sfxVolume",
+    SFX_VOLUME_PREFS_KEY = "sfxVolume",
     /// <summary>
     /// Id de la configuracion para el idioma en las preferencias
     /// </summary>
-    LANGUAGE_KEY = "language";
+    LANGUAGE_PREFS_KEY = "language",
+
+    LEVEL_NAME_PREFS_KEY = "Level";
+
 
     public enum LoadGameValues { NEW_GAME = 0, LOAD_GAME = 1 };
 

@@ -41,21 +41,21 @@ public class MainMenuButtons : MonoBehaviour
             speech.SetActive(false);
         }
 
-        if (!PlayerPrefs.HasKey(Defs.NEW_GAME_KEY) || 
-            (PlayerPrefs.HasKey(Defs.NEW_GAME_KEY) && PlayerPrefs.GetInt(Defs.NEW_GAME_KEY) == (int)(Defs.LoadGameValues.NEW_GAME))) 
+        if (!PlayerPrefs.HasKey(Defs.NEW_GAME_PREFS_KEY) || 
+            (PlayerPrefs.HasKey(Defs.NEW_GAME_PREFS_KEY) && PlayerPrefs.GetInt(Defs.NEW_GAME_PREFS_KEY) == (int)(Defs.LoadGameValues.NEW_GAME))) 
         {
-            PlayerPrefs.SetInt(Defs.NEW_GAME_KEY, (int)(Defs.LoadGameValues.NEW_GAME));
+            PlayerPrefs.SetInt(Defs.NEW_GAME_PREFS_KEY, (int)(Defs.LoadGameValues.NEW_GAME));
         }
         else
         {
-            PlayerPrefs.SetInt(Defs.NEW_GAME_KEY, (int)(Defs.LoadGameValues.LOAD_GAME));
+            PlayerPrefs.SetInt(Defs.NEW_GAME_PREFS_KEY, (int)(Defs.LoadGameValues.LOAD_GAME));
         }
     }
 
 
     public void Play()
     {
-        if (PlayerPrefs.GetInt(Defs.NEW_GAME_KEY) == (int)(Defs.LoadGameValues.NEW_GAME))
+        if (PlayerPrefs.GetInt(Defs.NEW_GAME_PREFS_KEY) == (int)(Defs.LoadGameValues.NEW_GAME))
         {
             titleScreen.SetActive(false);
             speechScreen.SetActive(true);
@@ -63,23 +63,21 @@ public class MainMenuButtons : MonoBehaviour
         }
         else
         {
-            StartGame();
+            StartGame(PlayerPrefs.GetInt(Defs.GENDER_PREFS_KEY));
         }
     }
 
 
     public void ChooseGender(int gender)
     {
-        PlayerPrefs.SetInt(Defs.NEW_GAME_KEY, (int)(Defs.LoadGameValues.LOAD_GAME));
-        PlayerPrefs.SetInt(Defs.GENDER_KEY, gender);
-
-        StartGame();
+        PlayerPrefs.SetInt(Defs.NEW_GAME_PREFS_KEY, (int)(Defs.LoadGameValues.LOAD_GAME));
+        StartGame(gender);
     }
 
-    private void StartGame()
+    private void StartGame(int gender)
     {
-        PlayerPrefs.SetInt(Defs.NEW_GAME_KEY, (int)(Defs.LoadGameValues.NEW_GAME));
-        gameManager.PlayerGender = (Defs.Gender)PlayerPrefs.GetInt(Defs.GENDER_KEY);
+        PlayerPrefs.SetInt(Defs.NEW_GAME_PREFS_KEY, (int)(Defs.LoadGameValues.NEW_GAME));
+        gameManager.PlayerGender = (Defs.Gender)gender;
 
         gameManager.ChangeScene(Defs.LEVEL_SETTINGS_SCENE_NAME);
     }
