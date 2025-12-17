@@ -1,21 +1,23 @@
 {
-	"objectList_M": [
-		"Zapatos de tela",
-		"Rinonera"
-	],
-	"objectList_F": [
-		"Tacones",
-		"Bolso"
-	],
-	"objectList_N": [
-		"Pantalones largos",
-		"Bote de medicinas",
-		"Camiseta amarilla",
-		"Cinturon",
-		"Colonia",
-		"Abrigo",
-		"Calcetines"
-	],
+	"objectList": {
+		"M": [
+			"Zapatos de tela",
+			"Rinonera"
+		],
+		"F": [
+			"Tacones",
+			"Bolso"
+		],
+		"N": [
+			"Pantalones largos",
+			"Bote de medicinas",
+			"Camiseta amarilla",
+			"Cinturon",
+			"Colonia",
+			"Abrigo",
+			"Calcetines"
+		]
+	},
 	"storagePoints": [
 		{
 			"name": "Bedroom_DresserDrawer_above",

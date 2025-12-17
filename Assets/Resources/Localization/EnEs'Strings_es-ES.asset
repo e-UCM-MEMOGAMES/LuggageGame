@@ -105,11 +105,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 221737011834880
-    m_Localized: Finalizar
+    m_Localized: Terminar
     m_Metadata:
       m_Items: []
   - m_Id: 221791151910912
-    m_Localized: Comenzar
+    m_Localized: Empezar
     m_Metadata:
       m_Items: []
   - m_Id: 221811104215040
@@ -173,7 +173,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 225778970324992
-    m_Localized: 'Veces consultados la lista:'
+    m_Localized: 'Veces que se ha consultado la lista:'
     m_Metadata:
       m_Items: []
   - m_Id: 980179829846016

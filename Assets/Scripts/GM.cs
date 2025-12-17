@@ -1,10 +1,5 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using static Assets.Scripts.Constantes;
-using Xasu;
-using System;
-
 
 public class GM : MonoBehaviour
 {
@@ -28,19 +23,4 @@ public class GM : MonoBehaviour
     public int Level = 0;
     public Defs.Climate Clima = Defs.Climate.COLD;
     public Defs.Gender Genero = Defs.Gender.MALE;
-
-    private void Awake()
-    {
-        if (Gm == null)
-        {
-            Gm = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else if (Gm != this)
-        {
-            Destroy(gameObject);
-        }
-        List = new List<string>();
-        ObstaculosList = new List<string>();
-    }
 }

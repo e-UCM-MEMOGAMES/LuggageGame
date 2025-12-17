@@ -160,11 +160,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 221737011834880
-    m_Key: Level/Level/Canvas/Fin/Text (TMP)
+    m_Key: Level/End
     m_Metadata:
       m_Items: []
   - m_Id: 1189262585856
-    m_Key: Level1/Canvas/Warning/Text
+    m_Key: Level/End/Warning
     m_Metadata:
       m_Items: []
   - m_Id: 223068749492224
@@ -175,16 +175,16 @@ MonoBehaviour:
     m_Key: Menu/Canvas/Decorado/BotonSalir/Text
     m_Metadata:
       m_Items: []
-  - m_Id: 225281479733248
-    m_Key: Level/Level/Canvas/PanelFin/Objetivo (5)
+  - m_Id: 225778970324992
+    m_Key: Level/EndPanel/Objective1
     m_Metadata:
       m_Items: []
   - m_Id: 225326270705664
-    m_Key: Level/Level/Canvas/PanelFin/Objetivo (4)
+    m_Key: Level/EndPanel/Objective2
     m_Metadata:
       m_Items: []
-  - m_Id: 225778970324992
-    m_Key: Tutorial/Level/Canvas/PanelFin/Objetivo (6)
+  - m_Id: 225281479733248
+    m_Key: Level/EndPanel/Objective3
     m_Metadata:
       m_Items: []
   - m_Id: 980179829846016

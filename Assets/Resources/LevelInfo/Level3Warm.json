@@ -1,23 +1,25 @@
 {
-	"objectList_M": [
-		"Camisa hawaiana",
-		"Rinonera",
-		"Zapatos de tela",
-		"Pijama de tirantes"
-	],
-	"objectList_F": [
-		"Falda",
-		"Bolso",
-		"Tacones",
-		"Pijama de seda"
-	],
-	"objectList_N": [
-		"Camiseta de tirantes",
-		"Pareo",
-		"Neceser",
-		"Cinturon",
-		"Libro"
-	],
+	"objectList": {
+		"M": [
+			"Camisa hawaiana",
+			"Rinonera",
+			"Zapatos de tela",
+			"Pijama de tirantes"
+		],
+		"F": [
+			"Falda",
+			"Bolso",
+			"Tacones",
+			"Pijama de seda"
+		],
+		"N": [
+			"Camiseta de tirantes",
+			"Pareo",
+			"Neceser",
+			"Cinturon",
+			"Libro"
+		]
+	},
 	"storagePoints": [
 		{
 			"name": "Bedroom_DresserDrawer_above",

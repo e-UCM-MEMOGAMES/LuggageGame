@@ -1,9 +1,11 @@
 {
-	"objectList_M": [],
-	"objectList_F": [],
-	"objectList_N": [
-		"Camiseta amarilla"
-	],
+	"objectList": {
+		"M": [ ],
+		"F": [ ],
+		"N": [
+			"Camiseta amarilla"
+		]
+	},
 	"storagePoints": [
 		{
 			"name": "Bedroom_DresserDrawer_above",

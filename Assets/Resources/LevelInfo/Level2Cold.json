@@ -1,17 +1,19 @@
 {
-	"objectList_M": [
-		"Pijama de invierno"
-	],
-	"objectList_F": [
-		"Pijama de seda"
-	],
-	"objectList_N": [
-		"Pantalones largos",
-		"Abrigo",
-		"Jersey",
-		"Guia de viajes",
-		"Bufanda"
-	],
+	"objectList": {
+		"M": [
+			"Pijama de invierno"
+		],
+		"F": [
+			"Pijama de seda"
+		],
+		"N": [
+			"Pantalones largos",
+			"Abrigo",
+			"Jersey",
+			"Guia de viajes",
+			"Bufanda"
+		]
+	},
 	"storagePoints": [
 		{
 			"name": "Bedroom_DresserDrawer_above",

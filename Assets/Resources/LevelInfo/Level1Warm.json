@@ -1,16 +1,18 @@
 {
-	"objectList_M": [
-		"Camiseta verde",
-		"Bermudas"
-	],
-	"objectList_F": [
-		"Blusa verde",
-		"Falda"
-	],
-	"objectList_N": [
-		"Chanclas",
-		"Peine"
-	],
+	"objectList": {
+		"M": [
+			"Camiseta verde",
+			"Bermudas"
+		],
+		"F": [
+			"Blusa verde",
+			"Falda"
+		],
+		"N": [
+			"Chanclas",
+			"Peine"
+		]
+	},
 	"storagePoints": [
 		{
 			"name": "Bedroom_DresserDrawer_above",

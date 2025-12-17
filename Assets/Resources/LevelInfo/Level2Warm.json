@@ -1,18 +1,20 @@
 {
-	"objectList_M": [
-		"Banador",
+	"objectList": {
+		"M": [
+			"Banador",
 		"Bermudas"
-	],
-	"objectList_F": [
-		"Bikini",
+		],
+		"F": [
+			"Bikini",
 		"Vestido"
-	],
-	"objectList_N": [
-		"Toalla",
-		"Guia de viajes",
-		"Gorra",
-		"Pasta de dientes"
-	],
+		],
+		"N": [
+			"Toalla",
+			"Guia de viajes",
+			"Gorra",
+			"Pasta de dientes"
+		]
+	},
 	"storagePoints": [
 		{
 			"name": "Bedroom_DresserDrawer_above",
