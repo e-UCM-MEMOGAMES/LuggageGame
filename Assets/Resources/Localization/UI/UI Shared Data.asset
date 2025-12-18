@@ -167,14 +167,6 @@ MonoBehaviour:
     m_Key: Level/End/Warning
     m_Metadata:
       m_Items: []
-  - m_Id: 223068749492224
-    m_Key: LevelSelector/Canvas/Levels/Volver/Text (TMP)
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223634833731584
-    m_Key: Menu/Canvas/Decorado/BotonSalir/Text
-    m_Metadata:
-      m_Items: []
   - m_Id: 225778970324992
     m_Key: Level/EndPanel/Objective1
     m_Metadata:
@@ -249,10 +241,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1010595878072320
     m_Key: Tutorial/Tutorial 15
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1389778280030208
-    m_Key: Level/Level/Canvas/Warning/Text (TMP)
     m_Metadata:
       m_Items: []
   - m_Id: 2080132008419328

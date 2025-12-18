@@ -1,12 +1,4 @@
-using Newtonsoft.Json.Linq;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Analytics;
-using UnityEngine.Localization;
-using UnityEngine.Localization.Settings;
-using Xasu.HighLevel;
-using static GameManager;
 
 public class MainMenuButtons : MonoBehaviour
 {

@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 4558778388544957128}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -384.8044, y: 0.20928955, z: 1.539161}
+  m_LocalPosition: {x: 0, y: 0, z: 1.539161}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -155,7 +155,7 @@ Transform:
   m_GameObject: {fileID: 6206713260791390346}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -384.8044, y: 0.20928955, z: 1.539161}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -284,7 +284,7 @@ Transform:
   m_GameObject: {fileID: 6723039503805465552}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -384.8044, y: 0.20928955, z: 1.539161}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -416,7 +416,7 @@ Transform:
   m_GameObject: {fileID: 7654452115623405852}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 850.86755, y: 604.7175, z: -0.566031}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -463,31 +463,31 @@ MonoBehaviour:
     soundType: 3
     audioClip: {fileID: 8300000, guid: 750593d75f939c848acf4c1b9abaf40a, type: 3}
   - Name: DrawerOpen
-    channelType: 3
+    channelType: 1
     soundType: 4
     audioClip: {fileID: 8300000, guid: 7fe992d18692e214d9a7dfee0c46157c, type: 3}
   - Name: DrawerClose
-    channelType: 3
+    channelType: 1
     soundType: 5
     audioClip: {fileID: 8300000, guid: c2ff9827ca924a644b83117c11bc42b0, type: 3}
   - Name: MedicineOpen
-    channelType: 3
+    channelType: 1
     soundType: 6
     audioClip: {fileID: 8300000, guid: 776ce40d39fa3c343ace4c5fae34474e, type: 3}
   - Name: MedicineClose
-    channelType: 3
+    channelType: 1
     soundType: 7
     audioClip: {fileID: 8300000, guid: c352fac1cda029f46b630654099671bb, type: 3}
   - Name: NoteBook
-    channelType: 3
+    channelType: 1
     soundType: 10
     audioClip: {fileID: 8300000, guid: b30dc930b6c14e045bad1ec6a4b40860, type: 3}
   - Name: PutIn
-    channelType: 3
+    channelType: 1
     soundType: 8
     audioClip: {fileID: 8300000, guid: d08db151bc572d742a464a66b4c70484, type: 3}
   - Name: ThrowOut
-    channelType: 3
+    channelType: 1
     soundType: 9
     audioClip: {fileID: 8300000, guid: 05d3ad84a50bb024fa6e3ca04b584bdf, type: 3}
   - Name: Star
@@ -495,12 +495,11 @@ MonoBehaviour:
     soundType: 11
     audioClip: {fileID: 8300000, guid: bf8a76d5c359eed42a156dc2c2e3053b, type: 3}
   - Name: Star
-    channelType: 3
+    channelType: 1
     soundType: 12
     audioClip: {fileID: 8300000, guid: 5b91cff42bdcf7e4fb365412196831ca, type: 3}
   bgmSource: {fileID: 2413921747549152415}
   sfxSource: {fileID: 3005395233402566959}
-  _sceneSoundSource: {fileID: 2535580868940331673}
 --- !u!114 &9155763384545475398
 MonoBehaviour:
   m_ObjectHideFlags: 0

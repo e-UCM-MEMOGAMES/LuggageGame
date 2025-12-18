@@ -59,4 +59,10 @@ public static class Defs
 
     public enum ItemCategory { CLOTHING = 0, FOOTWEAR = 1, OTHER = 2 };
 
+    [System.Serializable]
+    public struct ItemInfo
+    {
+        public string Id;
+        public ItemProperties item;
+    }
 }

@@ -24,7 +24,7 @@ MonoBehaviour:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c1a5bb84433a17141bf30cd448301060
-    m_Address: Items_en-US
+    m_Address: UI_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US

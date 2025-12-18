@@ -1,53 +1,53 @@
 {
 	"objectList": {
 		"M": [
-			"Camisa hawaiana",
-			"Rinonera",
-			"Zapatos de tela",
-			"Pijama de tirantes"
+			"HawaiianShirt",
+			"FannyPack",
+			"ClothShoes",
+			"StrappyPajamas"
 		],
 		"F": [
-			"Falda",
-			"Bolso",
-			"Tacones",
-			"Pijama de seda"
+			"Skirt",
+			"Handbag",
+			"Heels",
+			"SilkPajamas"
 		],
 		"N": [
-			"Camiseta de tirantes",
-			"Pareo",
-			"Neceser",
-			"Cinturon",
-			"Libro"
+			"TankTop",
+			"Saron",
+			"ToiletryBag",
+			"Belt",
+			"Book1"
 		]
 	},
 	"storagePoints": [
 		{
-			"name": "Bedroom_DresserDrawer_above",
+			"id": "Bedroom_DresserDrawer_above",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Cinturon",
+						"id": "Belt",
 						"position": 1
 					},
 					{
-						"name": "Libro",
+						"id": "Book1",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_top",
+			"id": "Bedroom_DresserDrawer_top",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_middle",
+			"id": "Bedroom_DresserDrawer_middle",
 			"objects": {
 				"M": [
 					{
-						"name": "Camisa hawaiana",
+						"id": "HawaiianShirt",
 						"position": 1
 					}
 				],
@@ -56,30 +56,30 @@
 			}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_bottom",
+			"id": "Bedroom_DresserDrawer_bottom",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Guia de viajes",
+						"id": "TravelGuide",
 						"position": 4
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_top",
+			"id": "Bedroom_ClosetDrawer_top",
 			"objects": {
 				"M": [
 					{
-						"name": "Pijama de tirantes",
+						"id": "StrappyPajamas",
 						"position": 2
 					}
 				],
 				"F": [
 					{
-						"name": "Pijama de seda",
+						"id": "SilkPajamas",
 						"position": 5
 					}
 				],
@@ -87,17 +87,17 @@
 			}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_middle",
+			"id": "Bedroom_ClosetDrawer_middle",
 			"objects": {
 				"M": [
 					{
-						"name": "Reloj",
+						"id": "Watch",
 						"position": 5
 					}
 				],
 				"F": [
 					{
-						"name": "Falda",
+						"id": "Skirt",
 						"position": 2
 					}
 				],
@@ -105,29 +105,29 @@
 			}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_bottom",
+			"id": "Bedroom_ClosetDrawer_bottom",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_ClosetDoor",
+			"id": "Bedroom_ClosetDoor",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Camiseta de tirantes",
+						"id": "TankTop",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_CoatRack",
+			"id": "Bedroom_CoatRack",
 			"objects": {
 				"M": [],
 				"F": [
 					{
-						"name": "Bolso",
+						"id": "Handbag",
 						"position": 1
 					}
 				],
@@ -135,105 +135,105 @@
 			}
 		},
 		{
-			"name": "Bedroom_ShoeRack",
+			"id": "Bedroom_ShoeRack",
 			"objects": {
 				"M": [
 					{
-						"name": "Zapatos de tela",
+						"id": "ClothShoes",
 						"position": 0
 					}
 				],
 				"F": [
 					{
-						"name": "Tacones",
+						"id": "Heels",
 						"position": 0
 					}
 				],
 				"N": [
 					{
-						"name": "Chanclas",
+						"id": "FlipFlops",
 						"position": 2
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_ShoeRack_above",
+			"id": "Bedroom_ShoeRack_above",
 			"objects": {
 				"M": [
 					{
-						"name": "Rinonera",
+						"id": "FannyPack",
 						"position": 1
 					}
 				],
 				"F": [],
 				"N": [
 					{
-						"name": "Gafas de buceo",
+						"id": "DivingGoggles",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_hanger",
+			"id": "Bathroom_hanger",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Toalla",
+						"id": "Towel",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_cabinet_above",
+			"id": "Bathroom_cabinet_above",
 			"objects": {}
 		},
 		{
-			"name": "Bathroom_medicineCabinet",
+			"id": "Bathroom_medicineCabinet",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Bote de medicinas",
+						"id": "Pills1",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_cabinet_top",
+			"id": "Bathroom_cabinet_top",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Pasta de dientes",
+						"id": "Toothpaste",
 						"position": 0
 					},
 					{
-						"name": "Cepillo de dientes",
+						"id": "Toothbrush",
 						"position": 3
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_cabinet_bottom",
+			"id": "Bathroom_cabinet_bottom",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Neceser",
+						"id": "ToiletryBag",
 						"position": 2
 					},
 					{
-						"name": "Pareo",
+						"id": "Saron",
 						"position": 5
 					}
 				]

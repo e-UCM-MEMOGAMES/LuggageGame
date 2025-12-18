@@ -1,143 +1,143 @@
 {
 	"objectList": {
 		"M": [
-			"Camisa roja"
+			"RedShirt"
 		],
 		"F": [
 			"Jersey"
 		],
 		"N": [
-			"Pantalones largos",
-			"Botas",
-			"Peine"
+			"Jeans",
+			"Boots",
+			"Comb"
 		]
 	},
 	"storagePoints": [
 		{
-			"name": "Bedroom_DresserDrawer_above",
+			"id": "Bedroom_DresserDrawer_above",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_top",
+			"id": "Bedroom_DresserDrawer_top",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_middle",
+			"id": "Bedroom_DresserDrawer_middle",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_bottom",
+			"id": "Bedroom_DresserDrawer_bottom",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Gorro",
+						"id": "Beanie",
 						"position": 5
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_top",
+			"id": "Bedroom_ClosetDrawer_top",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Pantalones largos",
+						"id": "Jeans",
 						"position": 2
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_middle",
+			"id": "Bedroom_ClosetDrawer_middle",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_bottom",
+			"id": "Bedroom_ClosetDrawer_bottom",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_ClosetDoor",
+			"id": "Bedroom_ClosetDoor",
 			"objects": {
 				"M": [
 					{
-						"name": "Camisa roja",
+						"id": "RedShirt",
 						"position": 0
 					}
 				],
 				"F": [
 					{
-						"name": "Jersey",
+						"id": "Jersey",
 						"position": 0
 					}
 				],
 				"N": [
 					{
-						"name": "Camiseta amarilla",
+						"id": "YellowTShirt",
 						"position": 1
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_CoatRack",
+			"id": "Bedroom_CoatRack",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_ShoeRack",
+			"id": "Bedroom_ShoeRack",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Deportivas",
+						"id": "Sneakers",
 						"position": 5
 					},
 					{
-						"name": "Botas",
+						"id": "Boots",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_ShoeRack_above",
+			"id": "Bedroom_ShoeRack_above",
 			"objects": {}
 		},
 		{
-			"name": "Bathroom_hanger",
+			"id": "Bathroom_hanger",
 			"objects": {}
 		},
 		{
-			"name": "Bathroom_cabinet_above",
+			"id": "Bathroom_cabinet_above",
 			"objects": {}
 		},
 		{
-			"name": "Bathroom_medicineCabinet",
+			"id": "Bathroom_medicineCabinet",
 			"objects": {}
 		},
 		{
-			"name": "Bathroom_cabinet_top",
+			"id": "Bathroom_cabinet_top",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Peine",
+						"id": "Comb",
 						"position": 4
 					},
 					{
-						"name": "Cepillo de dientes",
+						"id": "Toothbrush",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_cabinet_bottom",
+			"id": "Bathroom_cabinet_bottom",
 			"objects": {}
 		}
 	]

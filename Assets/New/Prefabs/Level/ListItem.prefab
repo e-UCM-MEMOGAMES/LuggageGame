@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Name
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 41e8f506bd9ec1b46a5f14ed6f382552, type: 2}
   m_sharedMaterial: {fileID: 5312309082972622527, guid: 41e8f506bd9ec1b46a5f14ed6f382552,
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
+  m_fontSize: 18
   m_fontSizeBase: 13
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -150,9 +150,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StringReference:
     m_TableReference:
-      m_TableCollectionName: GUID:381e72707fa25ff47b62981414a325a7
+      m_TableCollectionName: 
     m_TableEntryReference:
-      m_KeyId: 221445746782208
+      m_KeyId: 0
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -185,8 +185,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5248942318602730511}
+  - component: {fileID: 654717137428483013}
   m_Layer: 5
-  m_Name: ItemListElement
+  m_Name: ListItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,6 +216,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &654717137428483013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2467886832605063040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f491a3100e73ba4c932fb02450abbda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  check: {fileID: 5783379491142897202}
+  cross: {fileID: 6643652285356365852}
+  localization: {fileID: 1823310559077001023}
 --- !u!1 &5783379491142897202
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,219 +1,219 @@
 {
 	"objectList": {
 		"M": [
-			"Zapatos de tela",
-			"Rinonera"
+			"ClothShoes",
+			"FannyPack"
 		],
 		"F": [
-			"Tacones",
-			"Bolso"
+			"Heels",
+			"Handbag"
 		],
 		"N": [
-			"Pantalones largos",
-			"Bote de medicinas",
-			"Camiseta amarilla",
-			"Cinturon",
-			"Colonia",
-			"Abrigo",
-			"Calcetines"
+			"Jeans",
+			"Pills1",
+			"YellowTShirt",
+			"Belt",
+			"Cologne",
+			"Coat",
+			"Socks"
 		]
 	},
 	"storagePoints": [
 		{
-			"name": "Bedroom_DresserDrawer_above",
+			"id": "Bedroom_DresserDrawer_above",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Libro",
+						"id": "Book1",
 						"position": 0
 					},
 					{
-						"name": "Cinturon",
+						"id": "Belt",
 						"position": 1
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_top",
+			"id": "Bedroom_DresserDrawer_top",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Pantalones largos",
+						"id": "Jeans",
 						"position": 4
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_middle",
+			"id": "Bedroom_DresserDrawer_middle",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_bottom",
+			"id": "Bedroom_DresserDrawer_bottom",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Guia de viajes",
+						"id": "TravelGuide",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_top",
+			"id": "Bedroom_ClosetDrawer_top",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_middle",
+			"id": "Bedroom_ClosetDrawer_middle",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_bottom",
+			"id": "Bedroom_ClosetDrawer_bottom",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Calcetines",
+						"id": "Socks",
 						"position": 0
 					},
 					{
-						"name": "Bufanda",
+						"id": "Scarf",
 						"position": 3
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_ClosetDoor",
+			"id": "Bedroom_ClosetDoor",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Camiseta amarilla",
+						"id": "YellowTShirt",
 						"position": 1
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_CoatRack",
+			"id": "Bedroom_CoatRack",
 			"objects": {
 				"M": [],
 				"F": [
 					{
-						"name": "Bolso",
+						"id": "Handbag",
 						"position": 1
 					}
 				],
 				"N": [
 					{
-						"name": "Abrigo",
+						"id": "Coat",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_ShoeRack",
+			"id": "Bedroom_ShoeRack",
 			"objects": {
 				"M": [
 					{
-						"name": "Zapatos de tela",
+						"id": "ClothShoes",
 						"position": 3
 					}
 				],
 				"F": [
 					{
-						"name": "Tacones",
+						"id": "Heels",
 						"position": 3
 					}
 				],
 				"N": [
 					{
-						"name": "Botas",
+						"id": "Boots",
 						"position": 5
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_ShoeRack_above",
+			"id": "Bedroom_ShoeRack_above",
 			"objects": {
 				"M": [
 					{
-						"name": "Rinonera",
+						"id": "FannyPack",
 						"position": 0
 					}
 				],
 				"F": [],
 				"N": [
 					{
-						"name": "Gafas de ski",
+						"id": "SkiGoggles",
 						"position": 1
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_hanger",
+			"id": "Bathroom_hanger",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Toalla",
+						"id": "Towel",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_cabinet_above",
+			"id": "Bathroom_cabinet_above",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Colonia",
+						"id": "Cologne",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_medicineCabinet",
+			"id": "Bathroom_medicineCabinet",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Bote de medicinas",
+						"id": "Pills1",
 						"position": 2
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_cabinet_top",
+			"id": "Bathroom_cabinet_top",
 			"objects": {}
 		},
 		{
-			"name": "Bathroom_cabinet_bottom",
+			"id": "Bathroom_cabinet_bottom",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Neceser",
+						"id": "ToiletryBag",
 						"position": 3
 					}
 				]

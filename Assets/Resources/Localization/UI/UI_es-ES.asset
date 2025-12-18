@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 1189262585856
-    m_Localized: "\xBFSeguro que quiere terminar ya?"
+    m_Localized: "\xBFSeguro que ha terminado?"
     m_Metadata:
       m_Items: []
   - m_Id: 1286796931072
@@ -128,10 +128,6 @@ MonoBehaviour:
     m_Localized: Seleccione su destino de vacaciones
     m_Metadata:
       m_Items: []
-  - m_Id: 223068749492224
-    m_Localized: Volver
-    m_Metadata:
-      m_Items: []
   - m_Id: 223097283342336
     m_Localized: Salir
     m_Metadata:
@@ -146,10 +142,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 223164874551296
     m_Localized: "Fr\xEDo"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 223634833731584
-    m_Localized: Salir
     m_Metadata:
       m_Items: []
   - m_Id: 223959535775744
@@ -245,10 +237,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1010595878072320
     m_Localized: Pulse sobre la camiseta amarilla y mantenga pulsado.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1389778280030208
-    m_Localized: "\xBFSeguro que ha terminado?"
     m_Metadata:
       m_Items: []
   - m_Id: 1390149144584192

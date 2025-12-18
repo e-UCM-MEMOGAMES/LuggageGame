@@ -1,74 +1,74 @@
 {
 	"objectList": {
 		"M": [
-			"Banador",
-			"Bermudas"
+			"Swimsuit",
+			"Bermuda"
 		],
 		"F": [
 			"Bikini",
-			"Vestido"
+			"Dress"
 		],
 		"N": [
-			"Toalla",
-			"Guia de viajes",
-			"Gorra",
-			"Pasta de dientes"
+			"Towel",
+			"TravelGuide",
+			"Cap",
+			"Toothpaste"
 		]
 	},
 	"storagePoints": [
 		{
-			"name": "Bedroom_DresserDrawer_above",
+			"id": "Bedroom_DresserDrawer_above",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Gorra",
+						"id": "Cap",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_top",
+			"id": "Bedroom_DresserDrawer_top",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Camiseta de tirantes",
+						"id": "TankTop",
 						"position": 2
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_middle",
+			"id": "Bedroom_DresserDrawer_middle",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_DresserDrawer_bottom",
+			"id": "Bedroom_DresserDrawer_bottom",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Guia de viajes",
+						"id": "TravelGuide",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_top",
+			"id": "Bedroom_ClosetDrawer_top",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_middle",
+			"id": "Bedroom_ClosetDrawer_middle",
 			"objects": {
 				"M": [
 					{
-						"name": "Bermudas",
+						"id": "Bermuda",
 						"position": 0
 					}
 				],
@@ -77,17 +77,17 @@
 			}
 		},
 		{
-			"name": "Bedroom_ClosetDrawer_bottom",
+			"id": "Bedroom_ClosetDrawer_bottom",
 			"objects": {
 				"M": [
 					{
-						"name": "Banador",
+						"id": "Swimsuit",
 						"position": 3
 					}
 				],
 				"F": [
 					{
-						"name": "Bikini",
+						"id": "Bikini",
 						"position": 3
 					}
 				],
@@ -95,35 +95,35 @@
 			}
 		},
 		{
-			"name": "Bedroom_ClosetDoor",
+			"id": "Bedroom_ClosetDoor",
 			"objects": {
 				"M": [
 					{
-						"name": "Camiseta amarilla",
+						"id": "YellowTShirt",
 						"position": 1
 					}
 				],
 				"F": [
 					{
-						"name": "Vestido",
+						"id": "Dress",
 						"position": 1
 					}
 				],
 				"N": [
 					{
-						"name": "Camisa roja",
+						"id": "RedShirt",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bedroom_CoatRack",
+			"id": "Bedroom_CoatRack",
 			"objects": {
 				"M": [],
 				"F": [
 					{
-						"name": "Vestido",
+						"id": "Dress",
 						"position": 0
 					}
 				],
@@ -131,68 +131,68 @@
 			}
 		},
 		{
-			"name": "Bedroom_ShoeRack",
+			"id": "Bedroom_ShoeRack",
 			"objects": {}
 		},
 		{
-			"name": "Bedroom_ShoeRack_above",
+			"id": "Bedroom_ShoeRack_above",
 			"objects": {}
 		},
 		{
-			"name": "Bathroom_hanger",
+			"id": "Bathroom_hanger",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Toalla",
+						"id": "Towel",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_cabinet_above",
+			"id": "Bathroom_cabinet_above",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Colonia",
+						"id": "Cologne",
 						"position": 0
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_medicineCabinet",
+			"id": "Bathroom_medicineCabinet",
 			"objects": {}
 		},
 		{
-			"name": "Bathroom_cabinet_top",
+			"id": "Bathroom_cabinet_top",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Peine",
+						"id": "Comb",
 						"position": 0
 					},
 					{
-						"name": "Pasta de dientes",
+						"id": "Toothpaste",
 						"position": 5
 					}
 				]
 			}
 		},
 		{
-			"name": "Bathroom_cabinet_bottom",
+			"id": "Bathroom_cabinet_bottom",
 			"objects": {
 				"M": [],
 				"F": [],
 				"N": [
 					{
-						"name": "Pareo",
+						"id": "Saron",
 						"position": 1
 					}
 				]

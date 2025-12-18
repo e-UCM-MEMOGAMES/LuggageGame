@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d77731556ef12794cbbe8daab21f5804, type: 3}
-  m_Name: GreenTshirt
+  m_Name: GreenTShirt
   m_EditorClassIdentifier: 
   Id: GreenTshirt
   LocalizedName:

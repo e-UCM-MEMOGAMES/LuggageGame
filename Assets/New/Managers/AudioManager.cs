@@ -3,7 +3,6 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 
-
 public class AudioManager : SingletonMonoBehaviour<AudioManager>
 {
     /// <summary>
@@ -36,8 +35,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
 
     [SerializeField]
     private AudioSource bgmSource,
-                        sfxSource,
-                        _sceneSoundSource;
+                        sfxSource;
 
     public float BGMVolume
     {
@@ -145,7 +143,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
             {
                 PlayBGMSound(_soundMap[sound].audioClip);
             }
-            else if (type == ChannelType.UI)
+            else if (type == ChannelType.SFX)
             {
                 PlayUISound(_soundMap[sound].audioClip);
             }
@@ -164,6 +162,7 @@ public class AudioManager : SingletonMonoBehaviour<AudioManager>
     {
         sfxSource.PlayOneShot(clip);
     }
+
     public void StopBGM()
     {
         bgmSource.Stop();
