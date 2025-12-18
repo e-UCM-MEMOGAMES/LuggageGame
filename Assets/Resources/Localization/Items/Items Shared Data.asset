@@ -1,0 +1,201 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Items Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Items
+  m_TableCollectionNameGuidString: 511f0aabace98a0428ad7b9aaa263c6a
+  m_Entries:
+  - m_Id: 522677710848
+    m_Key: Items/Coat
+    m_Metadata:
+      m_Items: []
+  - m_Id: 524904886272
+    m_Key: Items/GreenBlouse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 526561636352
+    m_Key: Items/RedShirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 527975116800
+    m_Key: Items/YellowTShirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 530516865024
+    m_Key: Items/HawaiianShirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 531833876480
+    m_Key: Items/Jersey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 533268328448
+    m_Key: Items/GreenTshirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 541786959872
+    m_Key: Items/TankTop
+    m_Metadata:
+      m_Items: []
+  - m_Id: 893919752192
+    m_Key: Items/StrappyPajamas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1006461317120
+    m_Key: Items/WinterPajamas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1037897625600
+    m_Key: Items/SilkPajamas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1054997803008
+    m_Key: Items/Dress
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1090267705344
+    m_Key: Items/Skirt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1100581498880
+    m_Key: Items/Bikini
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141207527424
+    m_Key: Items/Swimsuit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1188380864512
+    m_Key: Items/Bermuda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1200414322688
+    m_Key: Items/Jeans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1219137695744
+    m_Key: Items/Shorts
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1242764210176
+    m_Key: Items/Socks
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1255028355072
+    m_Key: Items/Heels
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1272304693248
+    m_Key: Items/Sneakers
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1288066887680
+    m_Key: Items/ClothShoes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1312943304704
+    m_Key: Items/FlipFlops
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1331205304320
+    m_Key: Items/Boots
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1359789486080
+    m_Key: Items/Cap
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1393125814272
+    m_Key: Items/Handbag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1408690876416
+    m_Key: Items/FannyPack
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1433722482688
+    m_Key: Items/Scarf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1452173225984
+    m_Key: Items/Beanie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1467079782400
+    m_Key: Items/Saron
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1508796329984
+    m_Key: Items/Belt
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1522167771136
+    m_Key: Items/DivingGoggles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1550147973120
+    m_Key: Items/SkiGoggles
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1567642415104
+    m_Key: Items/Watch
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1578631491584
+    m_Key: Items/TravelGuide
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1619261714432
+    m_Key: Items/Book
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1628967333888
+    m_Key: Items/ToiletryBag
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1683665252352
+    m_Key: Items/Towel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1703139405824
+    m_Key: Items/Comb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1711955832832
+    m_Key: Items/Toothpaste
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1728275869696
+    m_Key: Items/Toothbrush
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1748429500416
+    m_Key: Items/Cologne
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1781983932416
+    m_Key: Items/Pills
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3793010951327318019
+  references:
+    version: 2
+    RefIds:
+    - rid: 3793010951327318019
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1765988220001

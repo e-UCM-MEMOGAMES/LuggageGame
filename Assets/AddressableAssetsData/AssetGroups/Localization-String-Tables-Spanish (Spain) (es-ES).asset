@@ -18,11 +18,16 @@ MonoBehaviour:
   m_GUID: 8945556269f8a654696849459ab2c700
   m_SerializeEntries:
   - m_GUID: 4d0b14ace8c23dd4eb22250af4481e90
-    m_Address: EnEs'Strings_es-ES
+    m_Address: UI_es-ES
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es-ES
-    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8bf5b02a6d17dd47880525da212b6f0
+    m_Address: Items_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: 02d2fcca34774cc4a928edf1a92169c4, type: 2}

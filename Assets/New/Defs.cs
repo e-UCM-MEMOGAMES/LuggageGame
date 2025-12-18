@@ -56,4 +56,7 @@ public static class Defs
     /// Climas en los que se puede jugar
     /// </summary>
     public enum Climate { BOTH = 0, WARM = 1, COLD = 2 };
+
+    public enum ItemCategory { CLOTHING = 0, FOOTWEAR = 1, OTHER = 2 };
+
 }

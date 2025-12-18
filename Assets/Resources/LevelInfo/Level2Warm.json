@@ -2,11 +2,11 @@
 	"objectList": {
 		"M": [
 			"Banador",
-		"Bermudas"
+			"Bermudas"
 		],
 		"F": [
 			"Bikini",
-		"Vestido"
+			"Vestido"
 		],
 		"N": [
 			"Toalla",
@@ -18,153 +18,185 @@
 	"storagePoints": [
 		{
 			"name": "Bedroom_DresserDrawer_above",
-			"objects": [
-				{
-					"name": "Gorra",
-					"position": 0,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Gorra",
+						"position": 0
+					}
+				]
+			}
 		},
 		{
 			"name": "Bedroom_DresserDrawer_top",
-			"objects": [
-				{
-					"name": "Camiseta de tirantes",
-					"position": 2,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Camiseta de tirantes",
+						"position": 2
+					}
+				]
+			}
 		},
 		{
 			"name": "Bedroom_DresserDrawer_middle",
-			"objects": []
+			"objects": {}
 		},
 		{
 			"name": "Bedroom_DresserDrawer_bottom",
-			"objects": [
-				{
-					"name": "Guia de viajes",
-					"position": 0,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Guia de viajes",
+						"position": 0
+					}
+				]
+			}
 		},
 		{
 			"name": "Bedroom_ClosetDrawer_top",
-			"objects": []
+			"objects": {}
 		},
 		{
 			"name": "Bedroom_ClosetDrawer_middle",
-			"objects": [
-				{
-					"name": "Bermudas",
-					"position": 0,
-					"gender": "M"
-				}
-			]
+			"objects": {
+				"M": [
+					{
+						"name": "Bermudas",
+						"position": 0
+					}
+				],
+				"F": [],
+				"N": []
+			}
 		},
 		{
 			"name": "Bedroom_ClosetDrawer_bottom",
-			"objects": [
-				{
-					"name": "Bikini",
-					"position": 3,
-					"gender": "F"
-				},
-				{
-					"name": "Banador",
-					"position": 3,
-					"gender": "M"
-				}
-			]
+			"objects": {
+				"M": [
+					{
+						"name": "Banador",
+						"position": 3
+					}
+				],
+				"F": [
+					{
+						"name": "Bikini",
+						"position": 3
+					}
+				],
+				"N": []
+			}
 		},
 		{
 			"name": "Bedroom_ClosetDoor",
-			"objects": [
-				{
-					"name": "Camiseta amarilla",
-					"position": 1,
-					"gender": "M"
-				},
-				{
-					"name": "Vestido",
-					"position": 1,
-					"gender": "F"
-				},
-				{
-					"name": "Camisa roja",
-					"position": 0,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [
+					{
+						"name": "Camiseta amarilla",
+						"position": 1
+					}
+				],
+				"F": [
+					{
+						"name": "Vestido",
+						"position": 1
+					}
+				],
+				"N": [
+					{
+						"name": "Camisa roja",
+						"position": 0
+					}
+				]
+			}
 		},
 		{
 			"name": "Bedroom_CoatRack",
-			"objects": [
-				{
-					"name": "Vestido",
-					"position": 0,
-					"gender": "F"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [
+					{
+						"name": "Vestido",
+						"position": 0
+					}
+				],
+				"N": []
+			}
 		},
 		{
 			"name": "Bedroom_ShoeRack",
-			"objects": []
+			"objects": {}
 		},
 		{
 			"name": "Bedroom_ShoeRack_above",
-			"objects": []
+			"objects": {}
 		},
 		{
 			"name": "Bathroom_hanger",
-			"objects": [
-				{
-					"name": "Toalla",
-					"position": 0,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Toalla",
+						"position": 0
+					}
+				]
+			}
 		},
 		{
 			"name": "Bathroom_cabinet_above",
-			"objects": [
-				{
-					"name": "Colonia",
-					"position": 0,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Colonia",
+						"position": 0
+					}
+				]
+			}
 		},
 		{
 			"name": "Bathroom_medicineCabinet",
-			"objects": []
+			"objects": {}
 		},
 		{
 			"name": "Bathroom_cabinet_top",
-			"objects": [
-				{
-					"name": "Peine",
-					"position": 0,
-					"gender": "N"
-				},
-				{
-					"name": "Pasta de dientes",
-					"position": 5,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Peine",
+						"position": 0
+					},
+					{
+						"name": "Pasta de dientes",
+						"position": 5
+					}
+				]
+			}
 		},
 		{
 			"name": "Bathroom_cabinet_bottom",
-			"objects": [
-				{
-					"name": "Pareo",
-					"position": 1,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Pareo",
+						"position": 1
+					}
+				]
+			}
 		}
 	]
 }

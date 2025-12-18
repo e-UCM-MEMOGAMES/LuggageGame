@@ -1,11 +1,8 @@
 using Newtonsoft.Json.Linq;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class LevelManager : MonoBehaviour
 {
@@ -41,6 +38,7 @@ public class LevelManager : MonoBehaviour
 
         initialPanel.SetActive(true);
         itemList.SetActive(true);
+        notebookPanel.SetActive(false);
 
         LoadLevelItems();
     }

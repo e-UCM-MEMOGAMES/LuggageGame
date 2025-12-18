@@ -21,169 +21,203 @@
 	"storagePoints": [
 		{
 			"name": "Bedroom_DresserDrawer_above",
-			"objects": [
-				{
-					"name": "Libro",
-					"position": 0,
-					"gender": "N"
-				},
-				{
-					"name": "Cinturon",
-					"position": 1,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Libro",
+						"position": 0
+					},
+					{
+						"name": "Cinturon",
+						"position": 1
+					}
+				]
+			}
 		},
 		{
 			"name": "Bedroom_DresserDrawer_top",
-			"objects": [
-				{
-					"name": "Pantalones largos",
-					"position": 4,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Pantalones largos",
+						"position": 4
+					}
+				]
+			}
 		},
 		{
 			"name": "Bedroom_DresserDrawer_middle",
-			"objects": []
+			"objects": {}
 		},
 		{
 			"name": "Bedroom_DresserDrawer_bottom",
-			"objects": [
-				{
-					"name": "Guia de viajes",
-					"position": 0,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Guia de viajes",
+						"position": 0
+					}
+				]
+			}
 		},
 		{
 			"name": "Bedroom_ClosetDrawer_top",
-			"objects": []
+			"objects": {}
 		},
 		{
 			"name": "Bedroom_ClosetDrawer_middle",
-			"objects": []
+			"objects": {}
 		},
 		{
 			"name": "Bedroom_ClosetDrawer_bottom",
-			"objects": [
-				{
-					"name": "Calcetines",
-					"position": 0,
-					"gender": "N"
-				},
-				{
-					"name": "Bufanda",
-					"position": 3,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Calcetines",
+						"position": 0
+					},
+					{
+						"name": "Bufanda",
+						"position": 3
+					}
+				]
+			}
 		},
 		{
 			"name": "Bedroom_ClosetDoor",
-			"objects": [
-				{
-					"name": "Camiseta amarilla",
-					"position": 1,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Camiseta amarilla",
+						"position": 1
+					}
+				]
+			}
 		},
 		{
 			"name": "Bedroom_CoatRack",
-			"objects": [
-				{
-					"name": "Abrigo",
-					"position": 0,
-					"gender": "N"
-				},
-				{
-					"name": "Bolso",
-					"position": 1,
-					"gender": "F"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [
+					{
+						"name": "Bolso",
+						"position": 1
+					}
+				],
+				"N": [
+					{
+						"name": "Abrigo",
+						"position": 0
+					}
+				]
+			}
 		},
 		{
 			"name": "Bedroom_ShoeRack",
-			"objects": [
-				{
-					"name": "Botas",
-					"position": 5,
-					"gender": "N"
-				},
-				{
-					"name": "Tacones",
-					"position": 3,
-					"gender": "F"
-				},
-				{
-					"name": "Zapatos de tela",
-					"position": 3,
-					"gender": "M"
-				}
-			]
+			"objects": {
+				"M": [
+					{
+						"name": "Zapatos de tela",
+						"position": 3
+					}
+				],
+				"F": [
+					{
+						"name": "Tacones",
+						"position": 3
+					}
+				],
+				"N": [
+					{
+						"name": "Botas",
+						"position": 5
+					}
+				]
+			}
 		},
 		{
 			"name": "Bedroom_ShoeRack_above",
-			"objects": [
-				{
-					"name": "Rinonera",
-					"position": 0,
-					"gender": "M"
-				},
-				{
-					"name": "Gafas de ski",
-					"position": 1,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [
+					{
+						"name": "Rinonera",
+						"position": 0
+					}
+				],
+				"F": [],
+				"N": [
+					{
+						"name": "Gafas de ski",
+						"position": 1
+					}
+				]
+			}
 		},
 		{
 			"name": "Bathroom_hanger",
-			"objects": [
-				{
-					"name": "Toalla",
-					"position": 0,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Toalla",
+						"position": 0
+					}
+				]
+			}
 		},
 		{
 			"name": "Bathroom_cabinet_above",
-			"objects": [
-				{
-					"name": "Colonia",
-					"position": 0,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Colonia",
+						"position": 0
+					}
+				]
+			}
 		},
 		{
 			"name": "Bathroom_medicineCabinet",
-			"objects": [
-				{
-					"name": "Bote de medicinas",
-					"position": 2,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Bote de medicinas",
+						"position": 2
+					}
+				]
+			}
 		},
 		{
 			"name": "Bathroom_cabinet_top",
-			"objects": []
+			"objects": {}
 		},
 		{
 			"name": "Bathroom_cabinet_bottom",
-			"objects": [
-				{
-					"name": "Neceser",
-					"position": 3,
-					"gender": "N"
-				}
-			]
+			"objects": {
+				"M": [],
+				"F": [],
+				"N": [
+					{
+						"name": "Neceser",
+						"position": 3
+					}
+				]
+			}
 		}
 	]
 }

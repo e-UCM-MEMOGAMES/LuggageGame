@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77731556ef12794cbbe8daab21f5804, type: 3}
+  m_Name: Skirt
+  m_EditorClassIdentifier: 
+  Id: Skirt
+  LocalizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:511f0aabace98a0428ad7b9aaa263c6a
+    m_TableEntryReference:
+      m_KeyId: 1090267705344
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Img: {fileID: 2800000, guid: 9c4e2fee46fe5e3469fe080b73894967, type: 3}
+  StoredImg: {fileID: 2800000, guid: 297c9167ef5af0144abea4e0e3df24d0, type: 3}
+  Gender: 1
+  references:
+    version: 2
+    RefIds: []

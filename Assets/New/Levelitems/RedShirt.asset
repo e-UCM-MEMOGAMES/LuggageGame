@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77731556ef12794cbbe8daab21f5804, type: 3}
+  m_Name: RedShirt
+  m_EditorClassIdentifier: 
+  Id: RedShirt
+  LocalizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:511f0aabace98a0428ad7b9aaa263c6a
+    m_TableEntryReference:
+      m_KeyId: 526561636352
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Img: {fileID: 2800000, guid: 3226b2683ce114e4995a4ec9d0eb72b4, type: 3}
+  StoredImg: {fileID: 2800000, guid: f00fa8072006e124fa22c59724bf4fe3, type: 3}
+  Gender: 0
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,195 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Items_es-ES
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es-ES
+  m_SharedData: {fileID: 11400000, guid: 511f0aabace98a0428ad7b9aaa263c6a, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 522677710848
+    m_Localized: Abrigo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 524904886272
+    m_Localized: Blusa verde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 526561636352
+    m_Localized: Camisa roja
+    m_Metadata:
+      m_Items: []
+  - m_Id: 527975116800
+    m_Localized: Camiseta amarilla
+    m_Metadata:
+      m_Items: []
+  - m_Id: 530516865024
+    m_Localized: Camisa hawaiana
+    m_Metadata:
+      m_Items: []
+  - m_Id: 531833876480
+    m_Localized: Jersey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 533268328448
+    m_Localized: Camiseta verde
+    m_Metadata:
+      m_Items: []
+  - m_Id: 541786959872
+    m_Localized: Camiseta de tirantes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 893919752192
+    m_Localized: Pijama de tirantes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1037897625600
+    m_Localized: Pijama de seda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1006461317120
+    m_Localized: Pijama de invierno
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1054997803008
+    m_Localized: Vestido
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1090267705344
+    m_Localized: Falda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1100581498880
+    m_Localized: Bikini
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1141207527424
+    m_Localized: "Ba\xF1ador"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1188380864512
+    m_Localized: Bermudas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1200414322688
+    m_Localized: Pantalones largos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1219137695744
+    m_Localized: Pantalones cortos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1242764210176
+    m_Localized: Calcetines
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1255028355072
+    m_Localized: Tacones
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1272304693248
+    m_Localized: Deportivas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1288066887680
+    m_Localized: Zapatos de tela
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1312943304704
+    m_Localized: Chanclas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1331205304320
+    m_Localized: Botas
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1359789486080
+    m_Localized: Gorra
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1393125814272
+    m_Localized: Bolso
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1408690876416
+    m_Localized: "Ri\xF1onera"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1433722482688
+    m_Localized: Bufanda
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1452173225984
+    m_Localized: Gorro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1467079782400
+    m_Localized: Pareo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1508796329984
+    m_Localized: Cinturon
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1522167771136
+    m_Localized: Gafas de buceo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1550147973120
+    m_Localized: Gafas de ski
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1567642415104
+    m_Localized: Reloj
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1578631491584
+    m_Localized: "Gu\xEDa de viajes"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1619261714432
+    m_Localized: Libro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1628967333888
+    m_Localized: Neceser
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1683665252352
+    m_Localized: Toalla
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1703139405824
+    m_Localized: Peine
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1711955832832
+    m_Localized: Pasta de dientes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1728275869696
+    m_Localized: Cepillo de dientes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1748429500416
+    m_Localized: Colonia
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1781983932416
+    m_Localized: Bote de medicinas
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

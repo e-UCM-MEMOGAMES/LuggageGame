@@ -13,7 +13,7 @@ public class DraggNDrop : MonoBehaviour
     #region Variables Unity
 
     [SerializeField]
-    private Item _objetoMaleta;
+    private Itm _objetoMaleta;
     [SerializeField]
     private int _clima;
     [SerializeField]
@@ -36,7 +36,7 @@ public class DraggNDrop : MonoBehaviour
     /// <summary>
     /// Objeto que referencia al guardado en la maleta.
     /// </summary>
-    public Item ObjetoMaleta { get => _objetoMaleta; set => _objetoMaleta = value; }
+    public Itm ObjetoMaleta { get => _objetoMaleta; set => _objetoMaleta = value; }
 
     /// <summary>
     /// Clima del objeto.

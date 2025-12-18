@@ -70,7 +70,7 @@ public class Luggage : MonoBehaviour
     /// Guarda un objeto en la maleta.
     /// </summary>
     /// <param name="obj">Objeto a guardar.</param>
-    public  void SaveObject(Item obj)
+    public  void SaveObject(Itm obj)
     {
         audioMng.Play(GameSound.PutIn);
         NumItemsSaved++;
@@ -100,7 +100,7 @@ public class Luggage : MonoBehaviour
     /// Quita un objeto de la maleta.
     /// </summary>
     /// <param name="obj"></param>
-    public  void RemoveObject(Item obj)
+    public  void RemoveObject(Itm obj)
     {
         audioMng.Play(GameSound.ThrowOut);
         NumItemsSaved--;

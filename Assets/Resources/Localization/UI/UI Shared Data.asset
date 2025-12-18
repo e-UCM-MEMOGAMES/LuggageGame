@@ -1,0 +1,277 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: UI Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: UI
+  m_TableCollectionNameGuidString: 381e72707fa25ff47b62981414a325a7
+  m_Entries:
+  - m_Id: 2088170123599872
+    m_Key: Intro/Login
+    m_Metadata:
+      m_Items: []
+  - m_Id: 219731245330432
+    m_Key: Intro/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1390149144584192
+    m_Key: Intro/Settings
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222784782528512
+    m_Key: Intro/Credits
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223097283342336
+    m_Key: Intro/Exit
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1286796931072
+    m_Key: Intro/Speech1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4951440027648
+    m_Key: Intro/Next
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1414970667008
+    m_Key: Intro/Speech2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4737568272384
+    m_Key: Intro/Speech3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4879528685568
+    m_Key: Intro/Gender/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4799652360192
+    m_Key: Menus/Gender/Man
+    m_Metadata:
+      m_Items: []
+  - m_Id: 4822817501184
+    m_Key: Menus/Gender/Woman
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221811104215040
+    m_Key: Menus/Return
+    m_Metadata:
+      m_Items: []
+  - m_Id: 191664723245023232
+    m_Key: Settings/BGM
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223998869958656
+    m_Key: Settings/SFX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223959535775744
+    m_Key: Settings/Reset
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221603523915776
+    m_Key: Settings/Reset/Warning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221565334777856
+    m_Key: Menus/Yes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221579918372864
+    m_Key: Menus/No
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1738889273450496
+    m_Key: Settings/Gender/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1730597096693760
+    m_Key: Settings/Language/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222978102194176
+    m_Key: LevelSelector/Climate/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223141063487488
+    m_Key: LevelSelector/Climate/Warm
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223164874551296
+    m_Key: LevelSelector/Climate/Cold
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223120746278912
+    m_Key: LevelSelector/Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 222810120318976
+    m_Key: LevelSelector/Levels/Title
+    m_Metadata:
+      m_Items: []
+  - m_Id: 220113489031168
+    m_Key: Level/InitialPanel/Instructions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 220481488875520
+    m_Key: Level/InitialPanel/Objectives
+    m_Metadata:
+      m_Items: []
+  - m_Id: 220568038338560
+    m_Key: Level/InitialPanel/Objective1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 220733931450368
+    m_Key: Level/InitialPanel/Objective2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 220775060795392
+    m_Key: Level/InitialPanel/Objective3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221170977927168
+    m_Key: Level/InitialPanel/Objective4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221791151910912
+    m_Key: Level/InitialPanel/Start
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221417145823232
+    m_Key: Level/List/ItemType/Clothes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221495369592832
+    m_Key: Level/List/ItemType/Footwear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221445746782208
+    m_Key: Level/List/ItemType/Other
+    m_Metadata:
+      m_Items: []
+  - m_Id: 221737011834880
+    m_Key: Level/End
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1189262585856
+    m_Key: Level/End/Warning
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223068749492224
+    m_Key: LevelSelector/Canvas/Levels/Volver/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 223634833731584
+    m_Key: Menu/Canvas/Decorado/BotonSalir/Text
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225778970324992
+    m_Key: Level/EndPanel/Objective1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225326270705664
+    m_Key: Level/EndPanel/Objective2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 225281479733248
+    m_Key: Level/EndPanel/Objective3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 980179829846016
+    m_Key: Tutorial/Tutorial
+    m_Metadata:
+      m_Items: []
+  - m_Id: 980641584967680
+    m_Key: Tutorial/Tutorial 1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 981056879783936
+    m_Key: Tutorial/Tutorial 2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 981263440867328
+    m_Key: Tutorial/Tutorial 3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 981342667075584
+    m_Key: Tutorial/Tutorial 4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007719978037248
+    m_Key: Tutorial/Tutorial 5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1008035591024640
+    m_Key: Tutorial/Tutorial 6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1008127668580352
+    m_Key: Tutorial/Tutorial 7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1008270274916352
+    m_Key: Tutorial/Tutorial 8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1008625826066432
+    m_Key: Tutorial/Tutorial 9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1009206221271040
+    m_Key: Tutorial/Tutorial 10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010056146644992
+    m_Key: Tutorial/Tutorial 11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010146311598080
+    m_Key: Tutorial/Tutorial 12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010287504453632
+    m_Key: Tutorial/Tutorial 13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010463212236800
+    m_Key: Tutorial/Tutorial 14
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010595878072320
+    m_Key: Tutorial/Tutorial 15
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1389778280030208
+    m_Key: Level/Level/Canvas/Warning/Text (TMP)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2080132008419328
+    m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 31801445282156544
+    m_Key: Credits/Names
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3258602927527559192
+  references:
+    version: 2
+    RefIds:
+    - rid: 3258602927527559192
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1720115941013
