@@ -5,6 +5,6 @@ using UnityEngine.Localization;
 public class ItemProperties : ScriptableObject
 {
     public LocalizedString LocalizedName;
-    public Texture Img, StoredImg;
+    public GameObject ItemPrefab, StoredItemPrefab;
     public Defs.ItemCategory Category;
 }

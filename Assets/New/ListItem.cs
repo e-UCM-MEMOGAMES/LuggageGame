@@ -1,8 +1,3 @@
-using Newtonsoft.Json.Bson;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEditor.Localization.Editor;
 using UnityEngine;
 using UnityEngine.Localization;
 using UnityEngine.Localization.Components;

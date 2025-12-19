@@ -21,7 +21,6 @@ public class LuggageTarget : MonoBehaviour
     {
         if (over)
         {
-            lvlMngr.GoToLuggage();
         }
 
     }

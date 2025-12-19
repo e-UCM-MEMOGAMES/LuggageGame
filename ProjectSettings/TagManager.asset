@@ -13,8 +13,8 @@ TagManager:
   - UI
   - 
   - 
-  - Maleta
-  - Ropa
+  - Case
+  - Items
   - 
   - 
   - 
@@ -40,7 +40,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Bedroom
-    uniqueID: 1380132803
     locked: 0

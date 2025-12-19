@@ -2,23 +2,22 @@ using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using TMPro;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class LevelManager : MonoBehaviour
 {
     GameManager gameManager;
-
     AudioManager audioManager;
-
-    [SerializeField]
-    GameObject initialPanel, itemList, notebookPanel, endPanel, warning,
-    bedroom, bathroom;
 
     const int MAX_LIST_USES = 3;
     int remainingListUses = MAX_LIST_USES;
-    [SerializeField]
-    TextMeshProUGUI remainingListUsesText;
+    public int RemainingListUses
+    {
+        get { return remainingListUses; }
+        set { remainingListUses = value; }
+    }
+
 
     /// <summary>
     /// Ruta de los archivos de localizacion de los niveles
@@ -26,13 +25,8 @@ public class LevelManager : MonoBehaviour
     string levelItemsFilePath = Path.Combine("LevelInfo");
 
 
-    /// <summary>
-    /// Lista de objetos del nivel
-    /// </summary>
-    List<string> levelItems;
-
-    [SerializeField]
-    ItemsInfo itemsInfo;
+    [Header("Level settings")]
+    [SerializeField] List<Defs.ItemInfo> itemsInfo;
     Dictionary<string, ItemProperties> itemsInfoDict;
 
     struct LevelItem
@@ -43,14 +37,14 @@ public class LevelManager : MonoBehaviour
     }
     Dictionary<string, LevelItem> neededItems;
 
-    [SerializeField]
-    RectTransform itemsListTr, clothingTitleTr, footwearTitleTr, otherTitleTr;
+    [SerializeField] RectTransform itemsListTr;
+    [SerializeField] RectTransform clothingTitleTr;
+    [SerializeField] RectTransform footwearTitleTr;
+    [SerializeField] RectTransform otherTitleTr;
 
-    [SerializeField]
-    GameObject listItemPrefab;
+    [SerializeField] GameObject listItemPrefab;
 
     public List<string> ObstaculosList { get; set; }
-
 
 
     // Start is called before the first frame update
@@ -61,24 +55,13 @@ public class LevelManager : MonoBehaviour
 
         audioManager.Play(GameSound.LevelBGM);
 
-        bedroom.SetActive(true);
-        bathroom.SetActive(false);
-
-        warning.SetActive(false);
-        notebookPanel.SetActive(false);
-        initialPanel.SetActive(true);
-        endPanel.SetActive(false);
-        itemList.SetActive(true);
-
-        remainingListUsesText.text = remainingListUses.ToString();
-
-        LoadLevelItems();
+        LoadItems();
     }
 
-    private void LoadLevelItems()
+    private void LoadItems()
     {
         itemsInfoDict = new Dictionary<string, ItemProperties>();
-        foreach (Defs.ItemInfo item in itemsInfo.InfoList)
+        foreach (Defs.ItemInfo item in itemsInfo)
         {
             itemsInfoDict.Add(item.Id, item.item);
         }
@@ -98,19 +81,19 @@ public class LevelManager : MonoBehaviour
         TextAsset jsonFile = (TextAsset)Resources.Load(filePath, typeof(TextAsset));
         JObject jsonObject = JObject.Parse(jsonFile.text);
 
+        string genderInitial = (gameManager.PlayerGender.ToString()[0]).ToString();
         foreach (var obj in jsonObject)
         {
+            JToken items = obj.Value;
             if (obj.Key == "objectList")
             {
-                JToken items = obj.Value;
-                string genderInitial = (gameManager.PlayerGender.ToString()[0]).ToString();
-
                 LoadNeededItems(items, genderInitial);
                 LoadNeededItems(items, "N");
             }
             else if (obj.Key == "storagePoints")
             {
-
+                LoadScenarioItems(items, genderInitial);
+                LoadNeededItems(items, "N");
             }
         }
     }
@@ -150,45 +133,26 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-
-    public void StartGame()
+    private void LoadScenarioItems(JToken items, string gender)
     {
-        initialPanel.SetActive(false);
-        itemList.SetActive(false);
+
     }
 
-    public void ToggleItemList()
+    public void StoreItem(string id)
     {
-        if (!notebookPanel.activeSelf && remainingListUses > 0)
+        if (neededItems.ContainsKey(id))
         {
-            remainingListUses--;
-            remainingListUsesText.text = remainingListUses.ToString();
-            notebookPanel.SetActive(true);
-            itemList.SetActive(true);
-
-            audioManager.Play(GameSound.NoteBook);
-
-        }
-        else if (notebookPanel.activeSelf)
-        {
-            notebookPanel.SetActive(false);
-            itemList.SetActive(false);
-
-            audioManager.Play(GameSound.NoteBook);
         }
     }
+    public void ReturnItem(string id)
+    {
+        if (neededItems.ContainsKey(id))
+        {
+        }
+    }
+
     public void EndGame()
     {
-        endPanel.SetActive(true);
-        itemList.SetActive(true);
-        warning.SetActive(false);
 
-        audioManager.Play(GameSound.AirPlane);
-    }
-
-    public void Return()
-    {
-        gameManager.ChangeScene(Defs.LEVEL_SETTINGS_SCENE_NAME);
-        audioManager.Play(GameSound.MenuBGM);
     }
 }

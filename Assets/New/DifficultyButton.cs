@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //boton para seleccionar el nivel y mostrar las estrellas conseguidas
-public class LevelButton : MonoBehaviour
+public class DifficultyButton : MonoBehaviour
 {
     GameManager gameManager;
 

@@ -1,18 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Text;
-
 using UnityEngine;
 using UnityEngine.UI;
-
 using System.Linq;
-
-using static Assets.Scripts.Constantes;
 using static JSONReader;
 using TMPro;
 using static CheckBox;
-using Xasu.HighLevel;
-using UnityEngine.Localization.Settings;
 using Xasu;
 
 public class LvlMngr : MonoBehaviour
@@ -129,12 +122,11 @@ public class LvlMngr : MonoBehaviour
         {
             objectLists[i].objectList = new List<string>();
         }
-        level = GM.Gm.Level;
+        level = 1;
         InicializeDictionary();
         // TextList = PanelList.GetComponentInChildren<Text>();
 
         noteBookTr = noteBookGO.GetComponent<RectTransform>();
-        SetLevel();
         state = State.BEDROOM;
         roomCam.gameObject.SetActive(true);
      //   roomCam.GetComponent<AspectRatioUtility>().Adjust();
@@ -171,151 +163,6 @@ public class LvlMngr : MonoBehaviour
         }
         checkBoxDictionary = new Dictionary<string, CheckBox>();
     }
-    private void SetLevel()
-    {
-
-        PanelList.SetActive(true);
-        int l = GM.Gm.Level;
-        LevelNameGlobal = string.Empty;
-        Debug.Log(level + " " + l);
-        if (l != 0)
-        {
-            switch (l)
-            {
-                case 1:
-                    LevelNameGlobal = "Level1";
-                    break;
-                case 2:
-                    LevelNameGlobal = "Level2";
-                    break;
-                case 3:
-                    LevelNameGlobal = "Level3";
-                    break;
-            }
-
-
-            switch (GM.Gm.Clima)
-            {
-                case Defs.Climate.WARM:
-                    LevelNameGlobal = string.Concat(LevelNameGlobal, "Warm");
-                    break;
-                case Defs.Climate.COLD:
-                    LevelNameGlobal = string.Concat(LevelNameGlobal, "Cold");
-                    break;
-            }
-
-
-        }
-        else LevelNameGlobal = "Tutorial";
-        LoadList(LevelNameGlobal);
-        if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
-            Xasu.HighLevel.CompletableTracker.Instance.Initialized(LevelNameGlobal, Xasu.HighLevel.CompletableTracker.CompletableType.Level);
-
-    }
-
-    /// <summary>
-    /// Carga la lista de objetos a poner en la maleta.
-    /// </summary>
-    /// <param name="name">Nombre del fichero donde se van a cargar los datos.</param>
-    private void LoadList(string name)
-    {
-        GM.Gm.List = new List<string>();
-        GM.Gm.SceneObjects = new List<string>();
-
-        TextAsset jsonFile = (TextAsset)Resources.Load(string.Concat("Lists/", name), typeof(TextAsset));
-        ReadLevelInfo(jsonReader.LoadFile(jsonFile.text));
-
-        showList();
-
-        luggage.InicializeList();
-    }
-
-    //comenzar el nivel
-    public void Ready()
-    {
-        blackScreen.gameObject.SetActive(false);
-
-
-        initialPanel.SetActive(false);
-        objectsPanel.SetActive(false);
-        roomCam.GetComponent<AspectRatioUtility>().Adjust();
-
-    }
-    //oportunidades para revisar la lista de objetos
-    public void Checklist()
-    {
-        if (checkOpportunities > 0)
-        {
-            audioMng.Play(GameSound.NoteBook);
-            checkOpportunities--;
-            objectsPanel.SetActive(true);
-            noteBookPanel.SetActive(true);
-            opportunitiesText.text = checkOpportunities.ToString();
-        }
-    }
-    public void ReturnFromCheckList()
-    {
-
-        objectsPanel.SetActive(false);
-        noteBookPanel.SetActive(false);
-    }
-
-    /// <summary>
-    /// Añadir a la categoria correspondiente de objeto
-    /// </summary>
-    private void addToList(string o)
-    {
-        ObjectType type = objectsDictionary[o].type;
-        objectLists[(int)type].objectList.Add(o);
-    }
-
-    /// <summary>
-    /// Generar la lista de objetos a poner en la maleta en UI
-    /// </summary>
-    private void showList()
-    {
-
-        float actualLineYPosition = 0;
-        float actualCheckboxYPosition;
-
-        for (int i = 0; i < objectLists.Count; i++)
-        {
-            if (objectLists[i].objectList.Count == 0)
-            {
-                objectLists[i].contentGO.SetActive(false);
-                objectLists[i].titleGO.SetActive(false);
-            }
-            else
-            {
-                StringBuilder finalList = new StringBuilder();
-
-                objectLists[i].titleTr.localPosition += actualLineYPosition * Vector3.up;
-                objectLists[i].contentTr.localPosition += actualLineYPosition * Vector3.up;
-                actualCheckboxYPosition = objectLists[i].contentTr.localPosition.y + 4;
-                for (int j = 0; j < objectLists[i].objectList.Count; j++)
-                {
-                    GameObject checkbox = Instantiate(checkBoxPrefab, new Vector3(0, 0, 0),
-                    checkBoxPrefab.transform.rotation, noteBookTr);
-
-                    RectTransform checkboxTr = checkbox.GetComponent<RectTransform>();
-                    checkboxTr.localPosition = new Vector2(objectLists[i].contentTr.localPosition.x - 35, actualCheckboxYPosition);
-                    CheckBox c = checkbox.GetComponent<CheckBox>();
-                    c.SetCheckBoxState(CheckBoxState.None);
-                    checkBoxDictionary.Add(objectLists[i].objectList[j], c);
-
-
-                    finalList.AppendLine(LocalizationManager.Lm.getWord(objectLists[i].objectList[j]));
-                    actualLineYPosition += YOffsetBetweenLine;
-                    actualCheckboxYPosition += YOffsetBetweenCheckBox;
-                }
-                objectLists[i].contentText.text = string.Concat(objectLists[i].contentText.text, finalList.ToString());
-                actualLineYPosition += 1.5f * YOffsetBetweenLine;
-            }
-
-        }
-
-
-    }
 
     /// <summary>
     /// Recoge del fichero las prendas según los parámetros.
@@ -325,34 +172,7 @@ public class LvlMngr : MonoBehaviour
     /// <param name="fin">Hasta donde leemos del fichero.</param>
     private void ReadLevelInfo(LevelInfo info)
     {
-        string gen;
-        if (GM.Gm.Genero == Defs.Gender.MALE) gen = "M";
-        else gen = "F";
-
-        //lectura de lista de objetos a introducir a la maleta
-        if (gen == "M")
-        {
-            for (int i = 0; i < info.objectList_M.Length; ++i)
-            {
-                GM.Gm.List.Add(info.objectList_M[i]);
-                addToList(info.objectList_M[i]);
-            }
-        }
-        else
-        {
-            for (int i = 0; i < info.objectList_F.Length; ++i)
-            {
-                GM.Gm.List.Add(info.objectList_F[i]);
-                addToList(info.objectList_F[i]);
-            }
-        }
-
-        for (int i = 0; i < info.objectList_N.Length; ++i)
-        {
-            GM.Gm.List.Add(info.objectList_N[i]);
-            addToList(info.objectList_N[i]);
-        }
-
+        string gen = "";
         //objetos de escena
         for (int i = 0; i < info.storagePoints.Length; ++i)
         {
@@ -362,7 +182,7 @@ public class LvlMngr : MonoBehaviour
                 if (info.storagePoints[i].objects[j].gender == gen || info.storagePoints[i].objects[j].gender == "N")
                 {
                     string objectID = info.storagePoints[i].objects[j].name;
-                    GM.Gm.SceneObjects.Add(objectID);
+                    //GM.Gm.SceneObjects.Add(objectID);
                     Debug.Log(objectID);
                     storageDictionary.TryGetValue(info.storagePoints[i].name, out List<Transform> l);
 
@@ -395,7 +215,6 @@ public class LvlMngr : MonoBehaviour
 
             state = State.FIRSTAIDKIT;
             firstAidKitCam.gameObject.SetActive(true);
-            firstAidKitCam.GetComponent<AspectRatioUtility>().Adjust();
             bathroomCam.gameObject.SetActive(false);
 
             bttnEnd.gameObject.SetActive(false);
@@ -416,7 +235,6 @@ public class LvlMngr : MonoBehaviour
             state = State.DRAWER;
 
             drawerCam.gameObject.SetActive(true);
-            drawerCam.GetComponent<AspectRatioUtility>().Adjust();
 
             if (myActualRoom == (int)State.BEDROOM)
             {
@@ -444,148 +262,8 @@ public class LvlMngr : MonoBehaviour
             }
         }
     }
-    //mirar la maleta
-    public void GoToLuggage()
-    {
-        if (state != State.END)
-        {
-
-            // if (currentDrawer != null) currentDrawer.SetActive(false);
-            GoToDrawer(null);
-            state = State.LUGGAGE;
-            luggage.gameObject.SetActive(true);
-            luggage.transform.position = new Vector3(0, 19f, luggage.transform.position.z);
-            luggage.transform.localScale = new Vector3(4.0f, 4.0f, 1);
-            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
-
-                Xasu.HighLevel.GameObjectTracker.Instance.Interacted("Luggage").WithResultExtensions(new Dictionary<string, object> { { "https://" + "check", "luggage" } }); ;
-        }
-
-    }
-
-    public void GoToBedRoom()
-    {
-        // boton salir de la maleta
-        if (state != State.END)
-        {
-            if (state == State.LUGGAGE || state == State.DRAWER)
-            {
-                drawerCam.gameObject.SetActive(false);
-            }
-            else if (state == (int)State.BATHROOM)
-            {
-                bathroomCam.gameObject.SetActive(false);
-            }
-
-            state = State.BEDROOM;
-            myActualRoom = (int)State.BEDROOM;
-
-            bttnEnd.gameObject.SetActive(true);
 
 
-            roomButton.GetComponent<Image>().sprite = roomsButton[(int)State.BEDROOM];
-            Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[(int)State.BEDROOM];
-
-            roomCam.gameObject.SetActive(true);
-            roomCam.GetComponent<AspectRatioUtility>().Adjust();
-
-            if (currentDrawer != null)
-                currentDrawer.SetActive(false);
-
-        }
-    }
-
-    void GoToBathroom()
-    {
-        if (state != State.END)
-        {
-            if (state == State.LUGGAGE || state == State.DRAWER)
-            {
-                drawerCam.gameObject.SetActive(false);
-            }
-            else if (state == State.FIRSTAIDKIT)
-            {
-                firstAidKitCam.gameObject.SetActive(false);
-            }
-            else
-            {
-                roomCam.gameObject.SetActive(false);
-            }
-            state = State.BATHROOM;
-            myActualRoom = (int)State.BATHROOM;
-
-            bttnEnd.gameObject.SetActive(true);
-
-
-            roomButton.GetComponent<Image>().sprite = roomsButton[(int)State.BATHROOM];
-            Suelo.GetComponent<SpriteRenderer>().sprite = TiposSuelos[(int)State.BATHROOM];
-
-            bathroomCam.gameObject.SetActive(true);
-            bathroomCam.GetComponent<AspectRatioUtility>().Adjust();
-
-            if (currentDrawer != null)
-                currentDrawer.SetActive(false);
-
-        }
-
-    }
-    //boton para cambiar de habitacion
-    public void RoomButton()
-    {
-
-        if (myActualRoom == (int)State.BATHROOM)
-        {
-            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
-
-                Xasu.HighLevel.AccessibleTracker.Instance.Accessed("BedRoom");
-            GoToBedRoom();
-
-        }
-        else
-        {
-            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
-
-                Xasu.HighLevel.AccessibleTracker.Instance.Accessed("BathRoom");
-
-            GoToBathroom();
-        }
-    }
-    //boton cuando vuelve a la habitacion
-    public void BackToRoomButton()
-    {
-        roomButton.SetActive(true);
-        buttonBackToRoom.SetActive(false);
-        if (state == State.FIRSTAIDKIT)
-        {
-            audioMng.Play(GameSound.MedicineClose);
-            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
-
-                Xasu.HighLevel.GameObjectTracker.Instance.Interacted("FirstAidKit").WithResultExtensions(new Dictionary<string, object> { { "https://" + "close", "storagePoint" } });
-        }
-        else if (state == State.DRAWER)
-        {
-            audioMng.Play(GameSound.DrawerClose);
-            currentDrawer.SetActive(false);
-            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
-
-                Xasu.HighLevel.GameObjectTracker.Instance.Interacted(currentDrawer.name).WithResultExtensions(new Dictionary<string, object> { { "https://" + "close", "storagePoint" } });
-            currentDrawer = null;
-        }
-        else if (state == State.LUGGAGE)
-        {
-            if (XasuTracker.Instance.Status.State != TrackerState.Uninitialized)
-
-                Xasu.HighLevel.GameObjectTracker.Instance.Interacted("Luggage").WithResultExtensions(new Dictionary<string, object> { { "https://" + "close", "luggage" } });
-        }
-        if (myActualRoom == (int)State.BATHROOM)
-        {
-            GoToBathroom();
-        }
-        else if (myActualRoom == (int)State.BEDROOM)
-        {
-            GoToBedRoom();
-        }
-    }
     public void End()
     {
         state = State.END;
@@ -633,9 +311,9 @@ public class LvlMngr : MonoBehaviour
         }
        
         //actualizar el checkbox de los objetos de la lista
-        for (int i = 0; i < GM.Gm.List.Count(); i++)
+        for (int i = 0; i < /*GM.Gm.List.Count()*/ 10; i++)
         {
-            CheckBox c = checkBoxDictionary[GM.Gm.List[i]];
+            CheckBox c = checkBoxDictionary[/*GM.Gm.List[i]*/"2"];
             if (c.GetCheckBoxState() == CheckBoxState.None)
                 c.SetCheckBoxState(CheckBoxState.Wrong);
         }

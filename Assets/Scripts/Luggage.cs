@@ -58,7 +58,7 @@ public class Luggage : MonoBehaviour
     }
     public void InicializeList()
     {
-        ObjetosList = GM.Gm.List;
+        //ObjetosList = GM.Gm.List;
     }
     void Update() { }
 
