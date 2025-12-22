@@ -368,7 +368,7 @@ MonoBehaviour:
   - {fileID: 1150078392}
   - {fileID: 735895509}
   - {fileID: 1477905523}
-  deleteSavedGame: 0
+  deleteSavedGame: 1
 --- !u!1 &192988877
 GameObject:
   m_ObjectHideFlags: 0

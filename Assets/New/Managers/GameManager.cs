@@ -47,7 +47,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public int Level 
     {
         get { return level; }
-        set { level = value; }
+        set 
+        { 
+            level = value;
+            trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected("Level", value.ToString()));
+        }
     }
 
     // Start is called before the first frame update

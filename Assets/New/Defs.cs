@@ -55,14 +55,12 @@ public static class Defs
     /// <summary>
     /// Climas en los que se puede jugar
     /// </summary>
-    public enum Climate { BOTH = 0, WARM = 1, COLD = 2 };
+    public enum Climate { BOTH, WARM, COLD };
 
     public enum ItemCategory { CLOTHING = 0, FOOTWEAR = 1, OTHER = 2 };
 
-    [System.Serializable]
-    public struct ItemInfo
+    public static string GetLevelSaveKey(int levelNumber, Climate climate)
     {
-        public string Id;
-        public ItemProperties item;
+        return $"{LEVEL_NAME_PREFS_KEY}_{levelNumber.ToString()}_{climate.ToString()}";
     }
 }

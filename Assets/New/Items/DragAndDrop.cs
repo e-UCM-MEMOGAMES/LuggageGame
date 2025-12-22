@@ -1,13 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
-    public LevelManager levelManager;
+    LevelManager levelManager;
     string id = "";
-    public GameObject oppositeObj;
+    GameObject oppositeObj;
     Vector3 initialPos;
     RectTransform originalParent;
     int originalIndex = 0;
@@ -15,7 +13,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     [SerializeField]
     bool stored = false;
 
-    public GameObject caseObj;
+    GameObject caseObj;
     bool dragging, colliding = false;
 
     // Start is called before the first frame update
@@ -53,6 +51,8 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         dragging = true;
         transform.parent = caseObj.transform.parent;
         transform.SetSiblingIndex(caseObj.transform.GetSiblingIndex() + 1);
+
+        // TODO: TRACKER
     }
     public void OnDrag(PointerEventData pointerEventData)
     {
@@ -79,18 +79,23 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         transform.position = initialPos;
         transform.parent = originalParent;
         transform.SetSiblingIndex(originalIndex);
+
+        // TODO: TRACKER
     }
 
     public void OnPointerEnter(PointerEventData pointerEventData)
     {
         if (!dragging)
         {
-            Debug.Log("Help");
+            Debug.Log("PointerEnter");
         }
     }
 
     public void OnPointerExit(PointerEventData pointerEventData)
     {
-
+        if (!dragging)
+        {
+            Debug.Log("PointerExit");
+        }
     }
 }

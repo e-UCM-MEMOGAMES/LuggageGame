@@ -15,7 +15,7 @@ public enum GameSound
     MedicineOpen,
     MedicineClose,
     PutIn,
-    ThrowOut,
+    TakeOut,
     NoteBook,
     Star,
     AirPlane

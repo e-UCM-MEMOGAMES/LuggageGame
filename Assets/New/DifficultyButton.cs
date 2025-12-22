@@ -14,7 +14,8 @@ public class DifficultyButton : MonoBehaviour
     TextMeshProUGUI levelText;
 
     [SerializeField]
-    GameObject[] obtainedStars;
+    Animation[] unlockedStarsAnimation;
+
 
     [SerializeField]
     GameObject lockedImg;
@@ -24,36 +25,51 @@ public class DifficultyButton : MonoBehaviour
 
     Button button;
 
-
-    void Start()
+    private void Awake()
     {
         gameManager = GameManager.Instance;
         button = GetComponent<Button>();
+    }
 
+    void Start()
+    {
         levelText.text = levelNumber.ToString();
+    }
 
-        Activate(false);
 
-        string levelName = $"{Defs.LEVEL_NAME_PREFS_KEY}_{levelNumber.ToString()}_{gameManager.Climate.ToString()}";
-        if (preUnlocked || PlayerPrefs.HasKey(levelName)) {
-            Activate(true);
+    private void OnEnable()
+    {
+        string prevLevelName = Defs.GetLevelSaveKey(levelNumber - 1, gameManager.Climate);
+        string levelName = Defs.GetLevelSaveKey(levelNumber, gameManager.Climate);
+        if (levelNumber == 1 || PlayerPrefs.HasKey(prevLevelName))
+        {
+            Unlock(true);
+        }
+        else
+        {
+            Unlock(false);
+        }
 
+        if (PlayerPrefs.HasKey(levelName))
+        {
             int unlockedStars = PlayerPrefs.GetInt(levelName);
             for (int i = 0; i < unlockedStars; i++)
             {
-                obtainedStars[i].SetActive(true);
+                unlockedStarsAnimation[i].gameObject.SetActive(true);
+                unlockedStarsAnimation[i].Play();
             }
         }
     }
 
-    private void Activate(bool active)
+    private void Unlock(bool unlocked)
     {
-        button.interactable = active;
-        lockedImg.SetActive(!active);
+        button.interactable = unlocked;
+        lockedImg.SetActive(!unlocked);
 
-        foreach (GameObject star in obtainedStars)
+        foreach (Animation star in unlockedStarsAnimation)
         {
-            star.transform.parent.gameObject.SetActive(active);
+            star.gameObject.SetActive(false);
+            star.gameObject.transform.parent.gameObject.SetActive(unlocked);
         }
     }
 

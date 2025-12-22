@@ -1,0 +1,75 @@
+{
+	"objectList": {
+		"M": [],
+		"F": [],
+		"N": [
+			"GreenBlouse"
+		]
+	},
+	"storagePoints": [
+		{
+			"id": "Bedroom_DresserDrawer_above",
+			"objects": {}
+		},
+		{
+			"id": "Bedroom_DresserDrawer_top",
+			"objects": {}
+		},
+		{
+			"id": "Bedroom_DresserDrawer_middle",
+			"objects": {}
+		},
+		{
+			"id": "Bedroom_DresserDrawer_bottom",
+			"objects": {}
+		},
+		{
+			"id": "Bedroom_ClosetDrawer_top",
+			"objects": {}
+		},
+		{
+			"id": "Bedroom_ClosetDrawer_middle",
+			"objects": {}
+		},
+		{
+			"id": "Bedroom_ClosetDrawer_bottom",
+			"objects": {}
+		},
+		{
+			"id": "Bedroom_ClosetDoor",
+			"objects": {}
+		},
+		{
+			"id": "Bedroom_CoatRack",
+			"objects": {}
+		},
+		{
+			"id": "Bedroom_ShoeRack",
+			"objects": {}
+		},
+		{
+			"id": "Bedroom_ShoeRack_above",
+			"objects": {}
+		},
+		{
+			"id": "Bathroom_hanger",
+			"objects": {}
+		},
+		{
+			"id": "Bathroom_cabinet_above",
+			"objects": {}
+		},
+		{
+			"id": "Bathroom_medicineCabinet",
+			"objects": {}
+		},
+		{
+			"id": "Bathroom_cabinet_top",
+			"objects": {}
+		},
+		{
+			"id": "Bathroom_cabinet_bottom",
+			"objects": {}
+		}
+	]
+}

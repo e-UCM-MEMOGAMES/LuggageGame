@@ -102,7 +102,7 @@ public class Luggage : MonoBehaviour
     /// <param name="obj"></param>
     public  void RemoveObject(Itm obj)
     {
-        audioMng.Play(GameSound.ThrowOut);
+        audioMng.Play(GameSound.TakeOut);
         NumItemsSaved--;
         obj.gameObject.SetActive(false);
         if (NumItemsSaved == 0)

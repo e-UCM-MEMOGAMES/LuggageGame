@@ -167,15 +167,15 @@ MonoBehaviour:
     m_Key: Level/End/Warning
     m_Metadata:
       m_Items: []
-  - m_Id: 225778970324992
+  - m_Id: 225326270705664
     m_Key: Level/EndPanel/Objective1
     m_Metadata:
       m_Items: []
-  - m_Id: 225326270705664
+  - m_Id: 225281479733248
     m_Key: Level/EndPanel/Objective2
     m_Metadata:
       m_Items: []
-  - m_Id: 225281479733248
+  - m_Id: 225778970324992
     m_Key: Level/EndPanel/Objective3
     m_Metadata:
       m_Items: []

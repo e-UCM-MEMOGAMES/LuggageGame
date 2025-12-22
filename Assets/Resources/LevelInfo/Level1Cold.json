@@ -14,7 +14,7 @@
 	},
 	"storagePoints": [
 		{
-			"id": "Bedroom_DresserDrawer_above",
+			"id": "Bedroom_Drawer",
 			"objects": {}
 		},
 		{
@@ -60,7 +60,7 @@
 			"objects": {}
 		},
 		{
-			"id": "Bedroom_ClosetDoor",
+			"id": "Bedroom_Closet",
 			"objects": {
 				"M": [
 					{
@@ -108,11 +108,11 @@
 			"objects": {}
 		},
 		{
-			"id": "Bathroom_hanger",
+			"id": "Bathroom_Hanger",
 			"objects": {}
 		},
 		{
-			"id": "Bathroom_cabinet_above",
+			"id": "Bathroom_sink",
 			"objects": {}
 		},
 		{
@@ -120,7 +120,7 @@
 			"objects": {}
 		},
 		{
-			"id": "Bathroom_cabinet_top",
+			"id": "Bathroom_SinkDrawer_top",
 			"objects": {
 				"M": [],
 				"F": [],
@@ -137,7 +137,7 @@
 			}
 		},
 		{
-			"id": "Bathroom_cabinet_bottom",
+			"id": "Bathroom_SinkDrawer_bottom",
 			"objects": {}
 		}
 	]

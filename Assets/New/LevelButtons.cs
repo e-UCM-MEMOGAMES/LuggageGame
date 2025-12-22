@@ -24,6 +24,16 @@ public class LevelButtons : MonoBehaviour
     [SerializeField] GameObject bathroom;
     [SerializeField] GameObject bedroomCaseView;
     [SerializeField] GameObject bathroomCaseView;
+    [SerializeField] GameObject cabinet;
+    [SerializeField] GameObject drawer;
+
+
+    [Header("Case")]
+    [SerializeField] RectTransform topViewCase;
+    [SerializeField] Vector3 caseScaleDrawer;
+    [SerializeField] float caseYDrawer;
+    Vector3 topViewCaseScale;
+    float topViewCaseY;
 
 
     // Start is called before the first frame update
@@ -33,6 +43,9 @@ public class LevelButtons : MonoBehaviour
         audioManager = AudioManager.Instance;
 
         levelManager = GetComponent<LevelManager>();
+
+        topViewCaseScale = new Vector3(topViewCase.localScale.x, topViewCase.localScale.y, topViewCase.localScale.z);
+        topViewCaseY = topViewCase.position.y;
 
         GoToBedroom();
         CloseCase();
@@ -84,6 +97,8 @@ public class LevelButtons : MonoBehaviour
 
         bathroom.SetActive(false);
         bathroomCaseView.SetActive(false);
+
+        cabinet.SetActive(false);
     }
 
     public void GoToBathroom()
@@ -93,18 +108,46 @@ public class LevelButtons : MonoBehaviour
 
         bathroom.SetActive(true);
         bathroomCaseView.SetActive(true);
+
+        cabinet.SetActive(false);
     }
+
+    public void GoToCabinet()
+    {
+        bedroom.SetActive(false);
+        bedroomCaseView.SetActive(false);
+
+        bedroom.SetActive(false);
+        bathroomCaseView.SetActive(false);
+
+        cabinet.SetActive(true);
+    }
+
+    public void GoToDrawer()
+    {
+        OpenCase();
+
+        drawer.SetActive(true);
+        
+        topViewCase.localScale = caseScaleDrawer;
+        topViewCase.position = new Vector3(topViewCase.position.x, caseYDrawer, topViewCase.position.z);
+    }
+
 
     public void OpenCase()
     {
         roomsView.SetActive(false);
         caseView.SetActive(true);
-
     }
     public void CloseCase()
     {
         roomsView.SetActive(true);
         caseView.SetActive(false);
+
+        drawer.SetActive(false);
+
+        topViewCase.localScale = topViewCaseScale;
+        topViewCase.position = new Vector3(topViewCase.position.x, topViewCaseY, topViewCase.position.z);
     }
 
     public void EndGame()

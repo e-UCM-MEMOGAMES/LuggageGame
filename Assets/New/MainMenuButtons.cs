@@ -62,13 +62,12 @@ public class MainMenuButtons : MonoBehaviour
 
     public void ChooseGender(int gender)
     {
-        PlayerPrefs.SetInt(Defs.NEW_GAME_PREFS_KEY, (int)(Defs.LoadGameValues.LOAD_GAME));
         StartGame(gender);
     }
 
     private void StartGame(int gender)
     {
-        PlayerPrefs.SetInt(Defs.NEW_GAME_PREFS_KEY, (int)(Defs.LoadGameValues.NEW_GAME));
+        PlayerPrefs.SetInt(Defs.NEW_GAME_PREFS_KEY, (int)(Defs.LoadGameValues.LOAD_GAME));
         gameManager.PlayerGender = (Defs.Gender)gender;
 
         gameManager.ChangeScene(Defs.LEVEL_SETTINGS_SCENE_NAME);
