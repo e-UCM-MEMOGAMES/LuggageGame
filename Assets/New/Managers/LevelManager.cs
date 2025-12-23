@@ -28,22 +28,36 @@ public class LevelManager : MonoBehaviour
     string levelItemsFilePath = Path.Combine("LevelInfo");
 
 
-    [Header("Level settings")]
+    [Header("Items settings")]
     [SerializeField] ItemsInfo itemsInfo;
     Dictionary<string, ItemProperties> itemsInfoDict;
-
-    [SerializeField] SpawnpointsInfo spawnpointsInfo;
-    Dictionary<string, Defs.SpawnType> spawnpointsInfoDict;
 
     Dictionary<string, ListItem> neededItems;
     HashSet<string> scenarioItems;
     HashSet<string> storedItems;
 
+    [SerializeField] GameObject itemNamePanel;
+    [SerializeField] TextMeshProUGUI itemNamePanelText;
+    RectTransform itemNamePanelTr;
+
+
+    [Header("Spawnpoints settings")]
+    [SerializeField] Spawnpoint[] spawnpoints;
+
+    [System.Serializable]
+    public struct Spawnpoint
+    {
+        public SpawnpointProperties PointProperties;
+        public RectTransform[] Points;
+    }
+    Dictionary<string, Spawnpoint> spawnpointsInfoDict;
+
+
+    [Header("Item list")]
     [SerializeField] RectTransform itemsListTr;
     [SerializeField] RectTransform clothingTitleTr;
     [SerializeField] RectTransform footwearTitleTr;
     [SerializeField] RectTransform otherTitleTr;
-
     [SerializeField] GameObject listItemPrefab;
 
     [Header("Case")]
@@ -73,6 +87,9 @@ public class LevelManager : MonoBehaviour
 
         caseImg.sprite = emptyTexture;
 
+        itemNamePanel.SetActive(false);
+        itemNamePanelTr = itemNamePanel.GetComponent<RectTransform>();
+
         audioManager.Play(GameSound.LevelBGM);
 
 
@@ -83,14 +100,18 @@ public class LevelManager : MonoBehaviour
             {
                 itemsInfoDict.Add(item.Id, item);
             }
-            else
+            else if (Random.Range(0, 2) > 0)
             {
-                if (Random.Range(0, 2) > 0)
-                {
-                    itemsInfoDict[item.Id] = item;
-                }
+                itemsInfoDict[item.Id] = item;
             }
         }
+
+        spawnpointsInfoDict = new Dictionary<string, Spawnpoint>();
+        foreach (Spawnpoint point in spawnpoints)
+        {
+            spawnpointsInfoDict.Add(point.PointProperties.Id, point);
+        }
+
         neededItems = new Dictionary<string, ListItem>();
         scenarioItems = new HashSet<string>();
         storedItems = new HashSet<string>();
@@ -102,33 +123,6 @@ public class LevelManager : MonoBehaviour
 
     private void LoadItems()
     {
-        itemsInfoDict = new Dictionary<string, ItemProperties>();
-        foreach (ItemProperties item in itemsInfo.List)
-        {
-            if (!itemsInfoDict.ContainsKey(item.Id))
-            {
-                itemsInfoDict.Add(item.Id, item);
-            }
-            else if (Random.Range(0, 2) > 0) 
-            {
-                itemsInfoDict[item.Id] = item;
-            }
-        }
-
-        spawnpointsInfoDict = new Dictionary<string, Defs.SpawnType>();
-        foreach (SpawnpointProperties point in spawnpointsInfo.List)
-        {
-            spawnpointsInfoDict.Add(point.Id, point.SpawnType);
-        }
-
-        neededItems = new Dictionary<string, ListItem>();
-        scenarioItems = new HashSet<string>();
-        storedItems = new HashSet<string>();
-
-        // TEST
-        gameManager.Level = 2;
-        gameManager.Climate = Defs.Climate.WARM;
-
         string climate = gameManager.Climate.ToString().ToLower();
         climate = char.ToUpper(climate[0]) + climate.Substring(1);
         string fileName = gameManager.Level == 0 ? "Tutorial" : $"Level{gameManager.Level}{climate}";
@@ -158,6 +152,10 @@ public class LevelManager : MonoBehaviour
                 LoadScenarioItems(items, "N");
             }
         }
+
+        GameObject help = Instantiate(itemsInfoDict["Handbag"].SceneItemPrefab, GameObject.Find("lmaohelp").transform);
+        DragAndDrop dragNDrop = help.GetComponent<DragAndDrop>();
+        dragNDrop.Initialize(this, itemsInfoDict["Handbag"].Id, null, normalCase);
     }
 
     private void LoadNeededItems(JToken items, string gender)
@@ -198,6 +196,30 @@ public class LevelManager : MonoBehaviour
 
     }
 
+
+    public void PointerEnterItem(string id, RectTransform objectRectTr)
+    {
+        itemNamePanel.SetActive(true);
+
+        itemNamePanelTr.position = objectRectTr.position;
+        //Vector3 panelPos = objectRectTr.position + new Vector3(0, objectRectTr.sizeDelta.y * (1 - objectRectTr.anchoredPosition.y) + itemNamePanelTr.sizeDelta.y / 2, 0);
+        //if (itemNamePanelTr.position.y + itemNamePanelTr.sizeDelta.y / 2 > canvas)
+
+        //itemNamePanel.transform.position = panelPos;
+
+
+        if (itemsInfoDict.ContainsKey(id))
+        {
+            itemNamePanelText.text = itemsInfoDict[id].LocalizedName.GetLocalizedString();
+        }
+    }
+
+    public void PointerOutItem()
+    {
+        itemNamePanel.SetActive(false);
+        itemNamePanelText.text = "";
+    }
+
     public void StoreItem(string id)
     {
         storedItems.Add(id);
@@ -227,6 +249,7 @@ public class LevelManager : MonoBehaviour
             neededItems[id].SetObtained(false);
         }
     }
+
 
     public void EndGame()
     {

@@ -4,10 +4,12 @@ using UnityEngine.EventSystems;
 public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     LevelManager levelManager;
+
     string id = "";
     GameObject oppositeObj;
+
     Vector3 initialPos;
-    RectTransform originalParent;
+    RectTransform rectTr, originalParent;
     int originalIndex = 0;
 
     [SerializeField]
@@ -16,10 +18,12 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     GameObject caseObj;
     bool dragging, colliding = false;
 
+
     // Start is called before the first frame update
     void Start()
     {
         initialPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        rectTr = GetComponent<RectTransform>();
         originalParent = gameObject.transform.parent.GetComponent<RectTransform>();
         originalIndex = transform.GetSiblingIndex();
 
@@ -37,10 +41,10 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     }
 
 
-    public void Initialize(LevelManager lm, string i, GameObject opposite, GameObject caseO)
+    public void Initialize(LevelManager lm, string itemId, GameObject opposite, GameObject caseO)
     {
         levelManager = lm;
-        id = i;
+        id = itemId;
         oppositeObj = opposite;
 
         caseObj = caseO;
@@ -56,6 +60,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     }
     public void OnDrag(PointerEventData pointerEventData)
     {
+        levelManager.PointerOutItem();
         transform.position = new Vector3(pointerEventData.position.x, pointerEventData.position.y, initialPos.z);
     }
 
@@ -87,7 +92,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         if (!dragging)
         {
-            Debug.Log("PointerEnter");
+            levelManager.PointerEnterItem(id, rectTr);
         }
     }
 
@@ -95,7 +100,7 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     {
         if (!dragging)
         {
-            Debug.Log("PointerExit");
+            levelManager.PointerOutItem();
         }
     }
 }

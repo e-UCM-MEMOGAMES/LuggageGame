@@ -5,4 +5,5 @@ public class SpawnpointProperties : ScriptableObject
 {
     public string Id;
     public Defs.SpawnType SpawnType;
+    public Defs.SpawnPivot SpawnPivot;
 }

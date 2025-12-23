@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Sink_Drawer_top
   SpawnType: 1
+  SpawnPivot: 1

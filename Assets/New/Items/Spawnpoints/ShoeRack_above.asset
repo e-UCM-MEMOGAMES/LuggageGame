@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: ShoeRack_above
   m_EditorClassIdentifier: 
   Id: ShoeRack_above
+  SpawnType: 0
+  SpawnPivot: 2

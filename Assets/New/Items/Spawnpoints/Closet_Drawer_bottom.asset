@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Closet_Drawer_bottom
   SpawnType: 1
+  SpawnPivot: 1

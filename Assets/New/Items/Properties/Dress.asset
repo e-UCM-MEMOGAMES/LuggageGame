@@ -22,9 +22,13 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  Img: {fileID: 2800000, guid: 095faabac0230d943bb3961af827f827, type: 3}
-  StoredImg: {fileID: 2800000, guid: 47d2e7aacc0757043bbe668b96890cb2, type: 3}
-  Gender: 1
+  Category: 0
+  SceneItemPrefab: {fileID: 1115541656025644697, guid: 83cac77651741f141b24682df2f86476,
+    type: 3}
+  DrawerItemPrefab: {fileID: 622018069513496308, guid: e75b3bd257a8ee54095d3f607b1bf34e,
+    type: 3}
+  StoredItemPrefab: {fileID: 6321704507992328914, guid: 9e77713611b4d3040bb164e15da86920,
+    type: 3}
   references:
     version: 2
     RefIds: []

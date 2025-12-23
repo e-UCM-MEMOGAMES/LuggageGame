@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Dresser
   m_EditorClassIdentifier: 
   Id: Dresser
+  SpawnType: 0
+  SpawnPivot: 2

@@ -60,6 +60,7 @@ public static class Defs
     public enum ItemCategory { CLOTHING, FOOTWEAR, OTHER };
 
     public enum SpawnType { REGULAR, STORED };
+    public enum SpawnPivot { TOP, MIDDLE, BOTTOM};
 
 
     public static string GetLevelSaveKey(int levelNumber, Climate climate)

@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: Dresser_Drawer_middle
   SpawnType: 1
+  SpawnPivot: 1

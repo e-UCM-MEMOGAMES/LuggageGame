@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: Sink
   m_EditorClassIdentifier: 
   Id: Sink
+  SpawnType: 0
+  SpawnPivot: 2

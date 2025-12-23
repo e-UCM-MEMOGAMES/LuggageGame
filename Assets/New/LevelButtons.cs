@@ -29,7 +29,7 @@ public class LevelButtons : MonoBehaviour
 
 
     [Header("Case")]
-    [SerializeField] RectTransform topViewCase;
+    [SerializeField] RectTransform caseOpened;
     [SerializeField] Vector3 caseScaleDrawer;
     [SerializeField] float caseYDrawer;
     Vector3 topViewCaseScale;
@@ -44,8 +44,8 @@ public class LevelButtons : MonoBehaviour
 
         levelManager = GetComponent<LevelManager>();
 
-        topViewCaseScale = new Vector3(topViewCase.localScale.x, topViewCase.localScale.y, topViewCase.localScale.z);
-        topViewCaseY = topViewCase.position.y;
+        topViewCaseScale = new Vector3(caseOpened.localScale.x, caseOpened.localScale.y, caseOpened.localScale.z);
+        topViewCaseY = caseOpened.localPosition.y;
 
         GoToBedroom();
         CloseCase();
@@ -129,8 +129,8 @@ public class LevelButtons : MonoBehaviour
 
         drawer.SetActive(true);
         
-        topViewCase.localScale = caseScaleDrawer;
-        topViewCase.position = new Vector3(topViewCase.position.x, caseYDrawer, topViewCase.position.z);
+        caseOpened.localScale = caseScaleDrawer;
+        caseOpened.localPosition = new Vector3(caseOpened.localPosition.x, caseYDrawer, caseOpened.localPosition.z);
     }
 
 
@@ -144,10 +144,15 @@ public class LevelButtons : MonoBehaviour
         roomsView.SetActive(true);
         caseView.SetActive(false);
 
+
+        if (drawer.activeSelf)
+        {
+            audioManager.Play(GameSound.DrawerClose);
+        }
         drawer.SetActive(false);
 
-        topViewCase.localScale = topViewCaseScale;
-        topViewCase.position = new Vector3(topViewCase.position.x, topViewCaseY, topViewCase.position.z);
+        caseOpened.localScale = topViewCaseScale;
+        caseOpened.localPosition = new Vector3(caseOpened.localPosition.x, topViewCaseY, caseOpened.localPosition.z);
     }
 
     public void EndGame()

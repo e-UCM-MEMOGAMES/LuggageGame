@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de0b9d0ff3d4fd46ab0b7ba00f81364, type: 3}
   m_Name: Cabinet
   m_EditorClassIdentifier: 
-  Id: Closet
+  Id: Cabinet
+  SpawnType: 0
+  SpawnPivot: 2
