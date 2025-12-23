@@ -57,7 +57,10 @@ public static class Defs
     /// </summary>
     public enum Climate { BOTH, WARM, COLD };
 
-    public enum ItemCategory { CLOTHING = 0, FOOTWEAR = 1, OTHER = 2 };
+    public enum ItemCategory { CLOTHING, FOOTWEAR, OTHER };
+
+    public enum SpawnType { REGULAR, STORED };
+
 
     public static string GetLevelSaveKey(int levelNumber, Climate climate)
     {

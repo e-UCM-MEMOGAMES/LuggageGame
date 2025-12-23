@@ -123,7 +123,7 @@ public class LevelButtons : MonoBehaviour
         cabinet.SetActive(true);
     }
 
-    public void GoToDrawer()
+    public void GoToDrawer(GameObject drawerItems)
     {
         OpenCase();
 

@@ -14,19 +14,7 @@
 	},
 	"storagePoints": [
 		{
-			"id": "Bedroom_Drawer",
-			"objects": {}
-		},
-		{
-			"id": "Bedroom_DresserDrawer_top",
-			"objects": {}
-		},
-		{
-			"id": "Bedroom_DresserDrawer_middle",
-			"objects": {}
-		},
-		{
-			"id": "Bedroom_DresserDrawer_bottom",
+			"id": "Dresser_Drawer_bottom",
 			"objects": {
 				"M": [],
 				"F": [],
@@ -39,7 +27,7 @@
 			}
 		},
 		{
-			"id": "Bedroom_ClosetDrawer_top",
+			"id": "Closet_Drawer_top",
 			"objects": {
 				"M": [],
 				"F": [],
@@ -52,15 +40,7 @@
 			}
 		},
 		{
-			"id": "Bedroom_ClosetDrawer_middle",
-			"objects": {}
-		},
-		{
-			"id": "Bedroom_ClosetDrawer_bottom",
-			"objects": {}
-		},
-		{
-			"id": "Bedroom_Closet",
+			"id": "Closet",
 			"objects": {
 				"M": [
 					{
@@ -83,11 +63,7 @@
 			}
 		},
 		{
-			"id": "Bedroom_CoatRack",
-			"objects": {}
-		},
-		{
-			"id": "Bedroom_ShoeRack",
+			"id": "ShoeRack",
 			"objects": {
 				"M": [],
 				"F": [],
@@ -104,23 +80,7 @@
 			}
 		},
 		{
-			"id": "Bedroom_ShoeRack_above",
-			"objects": {}
-		},
-		{
-			"id": "Bathroom_Hanger",
-			"objects": {}
-		},
-		{
-			"id": "Bathroom_sink",
-			"objects": {}
-		},
-		{
-			"id": "Bathroom_medicineCabinet",
-			"objects": {}
-		},
-		{
-			"id": "Bathroom_SinkDrawer_top",
+			"id": "Sink_Drawer_top",
 			"objects": {
 				"M": [],
 				"F": [],
@@ -135,10 +95,6 @@
 					}
 				]
 			}
-		},
-		{
-			"id": "Bathroom_SinkDrawer_bottom",
-			"objects": {}
 		}
 	]
 }

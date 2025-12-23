@@ -38,7 +38,7 @@ Ejemplo: ```Tutorial.json```
 		...
 		
 		{
-			"id": "Bedroom_Closet",
+			"id": "Closet",
 			"objects": {
 				"M": [],
 				"F": [],
@@ -51,7 +51,7 @@ Ejemplo: ```Tutorial.json```
 			}
 		},
 		{
-			"id": "Bedroom_CoatRack",
+			"id": "Rack",
 			"objects": {
 				"M": [],
 				"F": [],
@@ -125,19 +125,20 @@ Ejemplo: ```Tutorial.json```
 
 | Puntos de almacenaje  | ID (```string```) | Escena | Huecos disponibles (```int```)|
 | ------------- | ------------- | ------------- | ------------- |
-| **Encima de la cómoda** | ```Bedroom_Drawer``` | Dormitorio | 2 (0-1)|
-| **Cajón medio de la cómoda** | ```Bedroom_DresserDrawer_middle``` | Dormitorio | 6 (0-5)|
-| **Cajón inferior de la cómoda** | ```Bedroom_DresserDrawer_bottom``` | Dormitorio | 6 (0-5)|
-| **Cajón superior de la cómoda** | ```Bedroom_DresserDrawer_top``` | Dormitorio | 6 (0-5)|
-| **Puerta de Armario** | ```Bedroom_Closet``` | Dormitorio | 2 (0-1)|
-| **Cajón inferior del armario** | ```Bedroom_ClosetDrawer_bottom``` | Dormitorio | 6 (0-5)|
-| **Cajón medio del armario** | ```Bedroom_ClosetDrawer_middle``` | Dormitorio | 6 (0-5)|
-| **Cajón superior del armario** | ```Bedroom_ClosetDrawer_top``` | Dormitorio | 6 (0-5)|
-| **Perchero** | ```Bedroom_CoatRack``` | Dormitorio | 2 (0-1)|
-| **Encima del Zapatero** | ```Bedroom_ShoeRack_above``` | Dormitorio | 3 (0-2)|
-| **Zapatero** | ```Bedroom_ShoeRack``` | Dormitorio | 6 (0-5)|
+| **Encima de la cómoda** | ```Dresser``` | Dormitorio | 2 (0-1)|
+| **Cajón inferior de la cómoda** | ```Dresser_Drawer_bottom``` | Dormitorio | 6 (0-5)|
+| **Cajón medio de la cómoda** | ```Dresser_Drawer_middle``` | Dormitorio | 6 (0-5)|
+| **Cajón superior de la cómoda** | ```Dresser_Drawer_top``` | Dormitorio | 6 (0-5)|
+| **Puerta de Armario** | ```Closet``` | Dormitorio | 2 (0-1)|
+| **Cajón inferior del armario** | ```Closet_Drawer_bottom``` | Dormitorio | 6 (0-5)|
+| **Cajón medio del armario** | ```Closet_Drawer_middle``` | Dormitorio | 6 (0-5)|
+| **Cajón superior del armario** | ```Closet_Drawer_top``` | Dormitorio | 6 (0-5)|
+| **Perchero** | ```Rack``` | Dormitorio | 2 (0-1)|
+| **Encima del Zapatero** | ```ShoeRack_above``` | Dormitorio | 3 (0-2)|
+| **Zapatero** | ```ShoeRack``` | Dormitorio | 6 (0-5)|
 | **Percha** | ```Bathroom_Hanger``` | Baño | 2 (0-1)|
-| **Encima del Lavabo** | ```Bathroom_sink``` | Baño | 1 (0)|
-| **Cajón superior del Lavabo** | ```Bathroom_SinkDrawer_top``` | Baño | 6 (0-5)|
-| **Cajón inferior del Lavabo** | ```Bathroom_SinkDrawer_bottom``` | Baño | 6 (0-5)|
+| **Encima del Lavabo** | ```Sink``` | Baño | 1 (0)|
+| **Cajón superior del Lavabo** | ```Sink_Drawer_top``` | Baño | 6 (0-5)|
+| **Cajón inferior del Lavabo** | ```Sink_Drawer_bottom``` | Baño | 6 (0-5)|
+| **Armario de botiquín** | ```Cabinet``` | Baño | 3 (0-2) |
 

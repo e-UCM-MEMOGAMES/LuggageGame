@@ -43,10 +43,6 @@
 			}
 		},
 		{
-			"id": "Bedroom_DresserDrawer_middle",
-			"objects": {}
-		},
-		{
 			"id": "Bedroom_DresserDrawer_bottom",
 			"objects": {
 				"M": [],
@@ -58,10 +54,6 @@
 					}
 				]
 			}
-		},
-		{
-			"id": "Bedroom_ClosetDrawer_top",
-			"objects": {}
 		},
 		{
 			"id": "Bedroom_ClosetDrawer_middle",
@@ -131,14 +123,6 @@
 			}
 		},
 		{
-			"id": "Bedroom_ShoeRack",
-			"objects": {}
-		},
-		{
-			"id": "Bedroom_ShoeRack_above",
-			"objects": {}
-		},
-		{
 			"id": "Bathroom_hanger",
 			"objects": {
 				"M": [],
@@ -163,10 +147,6 @@
 					}
 				]
 			}
-		},
-		{
-			"id": "Bathroom_medicineCabinet",
-			"objects": {}
 		},
 		{
 			"id": "Bathroom_cabinet_top",

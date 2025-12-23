@@ -39,10 +39,6 @@
 			}
 		},
 		{
-			"id": "Bedroom_DresserDrawer_top",
-			"objects": {}
-		},
-		{
 			"id": "Bedroom_DresserDrawer_middle",
 			"objects": {
 				"M": [
@@ -103,10 +99,6 @@
 				],
 				"N": []
 			}
-		},
-		{
-			"id": "Bedroom_ClosetDrawer_bottom",
-			"objects": {}
 		},
 		{
 			"id": "Bedroom_ClosetDoor",
@@ -187,10 +179,6 @@
 					}
 				]
 			}
-		},
-		{
-			"id": "Bathroom_cabinet_above",
-			"objects": {}
 		},
 		{
 			"id": "Bathroom_medicineCabinet",

@@ -86,12 +86,12 @@ PrefabInstance:
     - target: {fileID: 792810272954100664, guid: d07f28c02419c8647a9617b8ed63c9cd,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.3401
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 792810272954100664, guid: d07f28c02419c8647a9617b8ed63c9cd,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 1.3401
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 792810272954100664, guid: d07f28c02419c8647a9617b8ed63c9cd,
         type: 3}
@@ -117,7 +117,7 @@ PrefabInstance:
     - target: {fileID: 9124407937794690858, guid: d07f28c02419c8647a9617b8ed63c9cd,
         type: 3}
       propertyPath: m_Name
-      value: ScenarioItem (1) Variant
+      value: RedShirt
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

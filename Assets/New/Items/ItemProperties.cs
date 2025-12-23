@@ -6,6 +6,6 @@ public class ItemProperties : ScriptableObject
 {
     public string Id;
     public LocalizedString LocalizedName;
-    public GameObject ItemPrefab, StoredItemPrefab;
     public Defs.ItemCategory Category;
+    public GameObject SceneItemPrefab, DrawerItemPrefab, StoredItemPrefab;
 }

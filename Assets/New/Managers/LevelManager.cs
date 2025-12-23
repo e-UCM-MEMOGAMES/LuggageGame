@@ -32,6 +32,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] ItemsInfo itemsInfo;
     Dictionary<string, ItemProperties> itemsInfoDict;
 
+    [SerializeField] SpawnpointsInfo spawnpointsInfo;
+    Dictionary<string, Defs.SpawnType> spawnpointsInfoDict;
+
     Dictionary<string, ListItem> neededItems;
     HashSet<string> scenarioItems;
     HashSet<string> storedItems;
@@ -100,10 +103,24 @@ public class LevelManager : MonoBehaviour
     private void LoadItems()
     {
         itemsInfoDict = new Dictionary<string, ItemProperties>();
-        foreach (Defs.ItemInfo item in itemsInfo)
+        foreach (ItemProperties item in itemsInfo.List)
         {
-            itemsInfoDict.Add(item.Id, item.item);
+            if (!itemsInfoDict.ContainsKey(item.Id))
+            {
+                itemsInfoDict.Add(item.Id, item);
+            }
+            else if (Random.Range(0, 2) > 0) 
+            {
+                itemsInfoDict[item.Id] = item;
+            }
         }
+
+        spawnpointsInfoDict = new Dictionary<string, Defs.SpawnType>();
+        foreach (SpawnpointProperties point in spawnpointsInfo.List)
+        {
+            spawnpointsInfoDict.Add(point.Id, point.SpawnType);
+        }
+
         neededItems = new Dictionary<string, ListItem>();
         scenarioItems = new HashSet<string>();
         storedItems = new HashSet<string>();
