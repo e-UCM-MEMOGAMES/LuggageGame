@@ -12,89 +12,74 @@
 			"Comb"
 		]
 	},
-	"storagePoints": [
-		{
-			"id": "Dresser_Drawer_bottom",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Beanie",
-						"position": 5
-					}
-				]
-			}
+	"spawnpoints": {
+		"Dresser_Drawer_bottom": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Beanie",
+					"position": 5
+				}
+			]
 		},
-		{
-			"id": "Closet_Drawer_top",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Jeans",
-						"position": 2
-					}
-				]
-			}
+		"Closet_Drawer_top": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Jeans",
+					"position": 1
+				}
+			]
 		},
-		{
-			"id": "Closet",
-			"objects": {
-				"M": [
-					{
-						"id": "RedShirt",
-						"position": 0
-					}
-				],
-				"F": [
-					{
-						"id": "Jersey",
-						"position": 0
-					}
-				],
-				"N": [
-					{
-						"id": "YellowTShirt",
-						"position": 1
-					}
-				]
-			}
+		"Closet": {
+			"M": [
+				{
+					"id": "RedShirt",
+					"position": 0
+				}
+			],
+			"F": [
+				{
+					"id": "Jersey",
+					"position": 0
+				}
+			],
+			"N": [
+				{
+					"id": "YellowTShirt",
+					"position": 1
+				}
+			]
 		},
-		{
-			"id": "ShoeRack",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Sneakers",
-						"position": 5
-					},
-					{
-						"id": "Boots",
-						"position": 0
-					}
-				]
-			}
+		"ShoeRack": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Sneakers",
+					"position": 5
+				},
+				{
+					"id": "Boots",
+					"position": 0
+				}
+			]
 		},
-		{
-			"id": "Sink_Drawer_top",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Comb",
-						"position": 4
-					},
-					{
-						"id": "Toothbrush",
-						"position": 0
-					}
-				]
-			}
+		"Sink_Drawer_top": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Comb",
+					"position": 4
+				},
+				{
+					"id": "Toothbrush",
+					"position": 0
+				}
+			]
 		}
-	]
+	}
 }

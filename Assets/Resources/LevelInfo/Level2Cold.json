@@ -14,162 +14,119 @@
 			"Scarf"
 		]
 	},
-	"storagePoints": [
-		{
-			"id": "Bedroom_DresserDrawer_above",
-			"objects": {}
+	"spawnpoints": {
+		"Dresser_Drawer_top": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Scarf",
+					"position": 5
+				}
+			]
 		},
-		{
-			"id": "Bedroom_DresserDrawer_top",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Scarf",
-						"position": 5
-					}
-				]
-			}
+		"Dresser_Drawer_bottom": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Beanie",
+					"position": 5
+				}
+			]
 		},
-		{
-			"id": "Bedroom_DresserDrawer_bottom",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Beanie",
-						"position": 5
-					}
-				]
-			}
+		"Closet_Drawer_top": {
+			"M": [
+				{
+					"id": "WinterPajamas",
+					"position": 3
+				}
+			],
+			"F": [
+				{
+					"id": "SilkPajamas",
+					"position": 3
+				}
+			],
+			"N": []
 		},
-		{
-			"id": "Bedroom_ClosetDrawer_top",
-			"objects": {
-				"M": [
-					{
-						"id": "WinterPajamas",
-						"position": 3
-					}
-				],
-				"F": [
-					{
-						"id": "SilkPajamas",
-						"position": 3
-					}
-				],
-				"N": []
-			}
+		"Closet_Drawer_middle": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Jeans",
+					"position": 4
+				}
+			]
 		},
-		{
-			"id": "Bedroom_ClosetDrawer_middle",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Jeans",
-						"position": 4
-					}
-				]
-			}
+		"Closet_Drawer_bottom": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Socks",
+					"position": 4
+				},
+				{
+					"id": "TravelGuide",
+					"position": 0
+				}
+			]
 		},
-		{
-			"id": "Bedroom_ClosetDrawer_bottom",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Socks",
-						"position": 4
-					},
-					{
-						"id": "TravelGuide",
-						"position": 0
-					}
-				]
-			}
+		"Closet": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Jersey",
+					"position": 1
+				}
+			]
 		},
-		{
-			"id": "Bedroom_ClosetDoor",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Jersey",
-						"position": 1
-					}
-				]
-			}
+		"CoatRack": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Coat",
+					"position": 1
+				}
+			]
 		},
-		{
-			"id": "Bedroom_CoatRack",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Coat",
-						"position": 1
-					}
-				]
-			}
+		"ShoeRack_top": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "SkiGoggles",
+					"position": 2
+				}
+			]
 		},
-		{
-			"id": "Bedroom_ShoeRack_above",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "SkiGoggles",
-						"position": 2
-					}
-				]
-			}
+		"MirrorCabinet": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Cologne",
+					"position": 0
+				},
+				{
+					"id": "Comb",
+					"position": 5
+				}
+			]
 		},
-		{
-			"id": "Bathroom_cabinet_above",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Cologne",
-						"position": 0
-					}
-				]
-			}
-		},
-		{
-			"id": "Bathroom_medicineCabinet",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Pills1",
-						"position": 0
-					}
-				]
-			}
-		},
-		{
-			"id": "Bathroom_cabinet_top",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Comb",
-						"position": 5
-					}
-				]
-			}
+		"MedicineCabinet": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Pills1",
+					"position": 0
+				}
+			]
 		}
-	]
+	}
 }

@@ -6,7 +6,44 @@
 			"GreenBlouse"
 		]
 	},
-	"storagePoints": [
-		
-	]
+	"spawnpoints": {
+		"Bathroom_Hanger": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Towel",
+					"position": 0
+				}
+			]
+		},
+		"Closet": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "YellowTShirt",
+					"position": 0
+				},
+				{
+					"id": "RedShirt",
+					"position": 1
+				}
+			]
+		},
+		"Closet_Drawer_bottom": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "HawaiianShirt",
+					"position": 0
+				},
+				{
+					"id": "GreenBlouse",
+					"position": 4
+				}
+			]
+		}
+	}
 }

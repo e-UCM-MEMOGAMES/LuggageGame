@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77731556ef12794cbbe8daab21f5804, type: 3}
+  m_Name: Pills3
+  m_EditorClassIdentifier: 
+  Id: Pills3
+  LocalizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:511f0aabace98a0428ad7b9aaa263c6a
+    m_TableEntryReference:
+      m_KeyId: 1781983932416
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Category: 2
+  SceneItemPrefab: {fileID: 3349013264272810878, guid: b84cd3feaf70831498fb15b4792772be,
+    type: 3}
+  DrawerItemPrefab: {fileID: 2340508090823038801, guid: 9320eca911c05af4b8d4353d542c5e25,
+    type: 3}
+  StoredItemPrefab: {fileID: 588090145151468045, guid: f10387ef95dbf4640aa536712d4ee905,
+    type: 3}
+  references:
+    version: 2
+    RefIds: []

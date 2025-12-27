@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77731556ef12794cbbe8daab21f5804, type: 3}
+  m_Name: Scarf
+  m_EditorClassIdentifier: 
+  Id: Scarf
+  LocalizedName:
+    m_TableReference:
+      m_TableCollectionName: GUID:511f0aabace98a0428ad7b9aaa263c6a
+    m_TableEntryReference:
+      m_KeyId: 1433722482688
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  Category: 0
+  SceneItemPrefab: {fileID: 8889233584049614784, guid: addf98ef026319d4682f68475daac697,
+    type: 3}
+  DrawerItemPrefab: {fileID: 8799603498335156965, guid: 1e778be306f139445b00506d406f8ed6,
+    type: 3}
+  StoredItemPrefab: {fileID: 5913557907803591667, guid: 5f575bb764619574dba5df378dae8e46,
+    type: 3}
+  references:
+    version: 2
+    RefIds: []

@@ -15,168 +15,119 @@
 			"Toothpaste"
 		]
 	},
-	"storagePoints": [
-		{
-			"id": "Bedroom_DresserDrawer_above",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Cap",
-						"position": 0
-					}
-				]
-			}
+	"spawnpoints": {
+		"Dresser": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Cap",
+					"position": 0
+				}
+			]
 		},
-		{
-			"id": "Bedroom_DresserDrawer_top",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "TankTop",
-						"position": 2
-					}
-				]
-			}
+		"Dresser_Drawer_top": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "TankTop",
+					"position": 2
+				}
+			]
 		},
-		{
-			"id": "Bedroom_DresserDrawer_bottom",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "TravelGuide",
-						"position": 0
-					}
-				]
-			}
+		"Dresser_Drawer_bottom": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "TravelGuide",
+					"position": 0
+				}
+			]
 		},
-		{
-			"id": "Bedroom_ClosetDrawer_middle",
-			"objects": {
-				"M": [
-					{
-						"id": "Bermuda",
-						"position": 0
-					}
-				],
-				"F": [],
-				"N": []
-			}
+		"Dresser_Drawer_middle": {
+			"M": [
+				{
+					"id": "Bermuda",
+					"position": 0
+				}
+			],
+			"F": [],
+			"N": []
 		},
-		{
-			"id": "Bedroom_ClosetDrawer_bottom",
-			"objects": {
-				"M": [
-					{
-						"id": "Swimsuit",
-						"position": 3
-					}
-				],
-				"F": [
-					{
-						"id": "Bikini",
-						"position": 3
-					}
-				],
-				"N": []
-			}
+		"Closet_Drawer_bottom": {
+			"M": [
+				{
+					"id": "Swimsuit",
+					"position": 1
+				}
+			],
+			"F": [
+				{
+					"id": "Bikini",
+					"position": 3
+				}
+			],
+			"N": []
 		},
-		{
-			"id": "Bedroom_ClosetDoor",
-			"objects": {
-				"M": [
-					{
-						"id": "YellowTShirt",
-						"position": 1
-					}
-				],
-				"F": [
-					{
-						"id": "Dress",
-						"position": 1
-					}
-				],
-				"N": [
-					{
-						"id": "RedShirt",
-						"position": 0
-					}
-				]
-			}
+		"Closet": {
+			"M": [
+				{
+					"id": "YellowTShirt",
+					"position": 1
+				}
+			],
+			"F": [
+				{
+					"id": "Dress",
+					"position": 1
+				}
+			],
+			"N": [
+				{
+					"id": "RedShirt",
+					"position": 0
+				}
+			]
 		},
-		{
-			"id": "Bedroom_CoatRack",
-			"objects": {
-				"M": [],
-				"F": [
-					{
-						"id": "Dress",
-						"position": 0
-					}
-				],
-				"N": []
-			}
+		"Bathroom_hanger": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Towel",
+					"position": 0
+				}
+			]
 		},
-		{
-			"id": "Bathroom_hanger",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Towel",
-						"position": 0
-					}
-				]
-			}
+		"MirrorCabinet": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Cologne",
+					"position": 0
+				},
+				{
+					"id": "Comb",
+					"position": 4
+				},
+				{
+					"id": "Toothpaste",
+					"position": 5
+				}
+			]
 		},
-		{
-			"id": "Bathroom_cabinet_above",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Cologne",
-						"position": 0
-					}
-				]
-			}
-		},
-		{
-			"id": "Bathroom_cabinet_top",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Comb",
-						"position": 0
-					},
-					{
-						"id": "Toothpaste",
-						"position": 5
-					}
-				]
-			}
-		},
-		{
-			"id": "Bathroom_cabinet_bottom",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Saron",
-						"position": 1
-					}
-				]
-			}
+		"Sink_Drawer_bottom": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Sarong",
+					"position": 1
+				}
+			]
 		}
-	]
+	}
 }

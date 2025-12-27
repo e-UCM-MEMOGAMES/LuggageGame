@@ -13,103 +13,85 @@
 			"Comb"
 		]
 	},
-	"storagePoints": [
-		{
-			"id": "Bedroom_DresserDrawer_above",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Book1",
-						"position": 1
-					}
-				]
-			}
+	"spawnpoints": {
+		"Dresser": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Book1",
+					"position": 1
+				}
+			]
 		},
-		{
-			"id": "Bedroom_DresserDrawer_bottom",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "TravelGuide",
-						"position": 5
-					}
-				]
-			}
+		"Dresser_Drawer_bottom": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "TravelGuide",
+					"position": 5
+				}
+			]
 		},
-		{
-			"id": "Bedroom_ClosetDrawer_middle",
-			"objects": {
-				"M": [
-					{
-						"id": "Bermuda",
-						"position": 4
-					}
-				],
-				"F": [
-					{
-						"id": "Skirt",
-						"position": 4
-					}
-				],
-				"N": []
-			}
+		"Closet_Drawer_middle": {
+			"M": [
+				{
+					"id": "Bermuda",
+					"position": 4
+				}
+			],
+			"F": [
+				{
+					"id": "Skirt",
+					"position": 4
+				}
+			],
+			"N": []
 		},
-		{
-			"id": "Bedroom_ClosetDoor",
-			"objects": {
-				"M": [
-					{
-						"id": "GreenTShirt",
-						"position": 0
-					}
-				],
-				"F": [
-					{
-						"id": "GreenBlouse",
-						"position": 0
-					}
-				],
-				"N": [
-					{
-						"id": "RedShirt",
-						"position": 1
-					}
-				]
-			}
+		"Closet": {
+			"M": [
+				{
+					"id": "GreenTShirt",
+					"position": 0
+				}
+			],
+			"F": [
+				{
+					"id": "GreenBlouse",
+					"position": 0
+				}
+			],
+			"N": [
+				{
+					"id": "RedShirt",
+					"position": 1
+				}
+			]
 		},
-		{
-			"id": "Bedroom_ShoeRack",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Sneakers",
-						"position": 4
-					},
-					{
-						"id": "FlipFlops",
-						"position": 2
-					}
-				]
-			}
+		"ShoeRack": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Sneakers",
+					"position": 4
+				},
+				{
+					"id": "FlipFlops",
+					"position": 2
+				}
+			]
 		},
-		{
-			"id": "Bathroom_cabinet_top",
-			"objects": {
-				"M": [],
-				"F": [],
-				"N": [
-					{
-						"id": "Comb",
-						"position": 5
-					}
-				]
-			}
+		"MirrorCabinet": {
+			"M": [],
+			"F": [],
+			"N": [
+				{
+					"id": "Comb",
+					"position": 5
+				}
+			]
 		}
-	]
+	}
 }
