@@ -1,9 +1,12 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Xasu.HighLevel;
 
 public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
 {
     LevelManager levelManager;
+    TrackerManager trackerManager;
 
     string id = "";
     GameObject oppositeObj;
@@ -56,7 +59,11 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         transform.SetParent(caseObj.transform.parent, false);
         transform.SetSiblingIndex(caseObj.transform.GetSiblingIndex() + 1);
 
-        // TODO: TRACKER
+        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(stored ? "storedItem" : "scenarioItem")
+            .WithResultExtensions(new Dictionary<string, object> {
+                {"https://dragging",  id }
+            })
+        );
     }
     public void OnDrag(PointerEventData pointerEventData)
     {
@@ -85,7 +92,11 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         transform.SetParent(originalParent, false);
         transform.SetSiblingIndex(originalIndex);
 
-        // TODO: TRACKER
+        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(stored ? "storedItem" : "scenarioItem")
+            .WithResultExtensions(new Dictionary<string, object> {
+                {"https://dropping",  id }
+            })
+        );
     }
 
     public void OnPointerEnter(PointerEventData pointerEventData)

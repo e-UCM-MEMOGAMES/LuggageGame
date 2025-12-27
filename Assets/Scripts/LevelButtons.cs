@@ -1,12 +1,16 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Xasu.HighLevel;
 
 public class LevelButtons : MonoBehaviour
 {
     GameManager gameManager;
     AudioManager audioManager;
+    TrackerManager trackerManager;
 
     LevelManager levelManager;
+
 
     [Header("UI")]
     [SerializeField] GameObject initialPanel;
@@ -42,6 +46,7 @@ public class LevelButtons : MonoBehaviour
     {
         gameManager = GameManager.Instance;
         audioManager = AudioManager.Instance;
+        trackerManager = TrackerManager.Instance;
 
         levelManager = GetComponent<LevelManager>();
 
@@ -105,6 +110,8 @@ public class LevelButtons : MonoBehaviour
         bathroomCaseView.SetActive(false);
 
         cabinet.SetActive(false);
+
+        trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Bedroom"));
     }
 
     public void GoToBathroom()
@@ -116,6 +123,8 @@ public class LevelButtons : MonoBehaviour
         bathroomCaseView.SetActive(true);
 
         cabinet.SetActive(false);
+        
+        trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Bathroom"));
     }
 
     public void GoToCabinet(GameObject cabinetItems)
@@ -124,6 +133,12 @@ public class LevelButtons : MonoBehaviour
         cabinet.SetActive(true);
 
         ShowHiddenElements(cabinetItems);
+
+        trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Cabinet")
+            .WithResultExtensions(new Dictionary<string, object> {
+                {"https://cabinet", cabinetItems.name }
+            })
+        );
     }
     public void GoToDrawer(GameObject drawerItems)
     {
@@ -135,6 +150,12 @@ public class LevelButtons : MonoBehaviour
         caseOpened.localPosition = new Vector3(caseOpened.localPosition.x, caseYDrawer, caseOpened.localPosition.z);
 
         ShowHiddenElements(drawerItems);
+
+        trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Drawer")
+            .WithResultExtensions(new Dictionary<string, object> {
+                {"https://drawer", drawerItems.name }
+            })
+        );
     }
     private void ShowHiddenElements(GameObject items)
     {
@@ -150,10 +171,15 @@ public class LevelButtons : MonoBehaviour
         }
     }
 
-    public void OpenCase()
+    public void OpenCase(bool openingDrawer = true)
     {
         roomsView.SetActive(false);
         caseView.SetActive(true);
+
+        if (!openingDrawer)
+        {
+            trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Case", AccessibleTracker.AccessibleType.Inventory));
+        }
     }
     public void CloseCase()
     {

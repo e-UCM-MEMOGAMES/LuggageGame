@@ -1,16 +1,20 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Xasu.HighLevel;
 
 
 public class LevelManager : MonoBehaviour
 {
     GameManager gameManager;
     AudioManager audioManager;
-    TrackerManager trackerManager;
 
+    protected Stopwatch watch = Stopwatch.StartNew();
+    TrackerManager trackerManager;
+    CompletableTracker.CompletableType COMPLETABLE_TYPE = CompletableTracker.CompletableType.Level;
 
     const int MAX_LIST_USES = 3;
     int remainingListUses = MAX_LIST_USES;
@@ -55,7 +59,9 @@ public class LevelManager : MonoBehaviour
     {
         gameManager = GameManager.Instance;
         audioManager = AudioManager.Instance;
+
         trackerManager = TrackerManager.Instance;
+        watch.Start();
 
         foreach (GameObject star in unlockedStars)
         {
@@ -71,7 +77,7 @@ public class LevelManager : MonoBehaviour
         itemNamePanel.SetActive(false);
         itemNamePanelTr = itemNamePanel.GetComponent<RectTransform>();
 
-        // TODO: TRACKER
+        trackerManager.TrySendStatement(CompletableTracker.Instance.Initialized(Defs.GetLevelSaveKey(gameManager.Level, gameManager.Climate), COMPLETABLE_TYPE));
     }
 
     public void LoadItemsInfo(Dictionary<string, ItemProperties> info)
@@ -211,12 +217,21 @@ public class LevelManager : MonoBehaviour
         audioManager.Play(GameSound.PutIn);
         caseImg.sprite = fullTexture;
 
-        // TODO: TRACKER
-
+        string contextExtension = "incorrectItemProgression";
         if (neededItems.ContainsKey(id))
         {
             neededItems[id].SetObtained(true);
+            contextExtension = "correctItemProgression";
         }
+
+        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
+            .WithResultExtensions(new Dictionary<string, object> {
+                {"https://storeIn",  "suitcase" }
+            })
+            .WithContextExtensions(new Dictionary<string, object> {
+                {$"https://{contextExtension}",  $"{storedItems.Count / (double)neededItems.Count}" }
+            })
+        );
     }
     public void ReturnItem(string id)
     {
@@ -227,8 +242,21 @@ public class LevelManager : MonoBehaviour
             caseImg.sprite = emptyTexture;
         }
 
-        // TODO: TRACKER
+        string contextExtension = "incorrectItemProgression";
+        if (neededItems.ContainsKey(id))
+        {
+            neededItems[id].SetObtained(false);
+            contextExtension = "correctItemProgression";
+        }
 
+        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
+            .WithResultExtensions(new Dictionary<string, object> {
+                {"https://removeFrom",  "suitcase" }
+            })
+            .WithContextExtensions(new Dictionary<string, object> {
+                {$"https://{contextExtension}",  $"{storedItems.Count / (double)neededItems.Count}" }
+            })
+        );
         if (neededItems.ContainsKey(id))
         {
             neededItems[id].SetObtained(false);
@@ -293,8 +321,35 @@ public class LevelManager : MonoBehaviour
             PlayerPrefs.SetInt(levelName, totalStars);
         }
 
+        watch.Stop();
+        long completionTime = watch.ElapsedMilliseconds;
 
-        // TODO: TRACKER
+        List<string> correctItemsList = new List<string>();
+        List<string> wrongItemsList = new List<string>();
+
+        foreach (string item in storedItems) {
+            if (neededItems.ContainsKey(item))
+            {
+                correctItemsList.Add(item);
+            }
+            else
+            {
+                wrongItemsList.Add(item);
+            }
+        }
+
+        trackerManager.TrySendStatement(
+            CompletableTracker.Instance.Completed(levelName, COMPLETABLE_TYPE, watch.ElapsedMilliseconds)
+            .WithSuccess(true)
+            .WithResultExtensions(new Dictionary<string, object> {
+                {"https://stars", totalStars },
+                {"https://wrongItems", incorrectItems },
+                {"https://correctItems", $"{correctItems}/{neededItems.Count}" },
+                {"https://wrongItemsList", wrongItemsList },
+                {"https://correctItemsList", correctItemsList },
+                {"https://checkListOpportunities", $"{listUses}/{MAX_LIST_USES}" },
+            })
+        );
     }
 
 }
