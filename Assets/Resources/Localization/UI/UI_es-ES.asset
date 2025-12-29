@@ -169,11 +169,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 980179829846016
-    m_Localized: Sin soltar, arrastre la camiseta hasta la maleta y luego suelte.
+    m_Localized: Sin soltar, arrastre la camiseta hasta la maleta y luego suelte
     m_Metadata:
       m_Items: []
   - m_Id: 980641584967680
-    m_Localized: "Si pone el cursor sobre el objeto, aparecer\xE1 su nombre."
+    m_Localized: "Si pone el cursor sobre el objeto, aparecer\xE1 su nombre"
     m_Metadata:
       m_Items: []
   - m_Id: 981056879783936
@@ -191,7 +191,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1007719978037248
-    m_Localized: Haga click en la maleta para ver lo que ha metido.
+    m_Localized: Pulse en la maleta para ver lo que ha metido
     m_Metadata:
       m_Items: []
   - m_Id: 1008035591024640
@@ -251,8 +251,8 @@ MonoBehaviour:
     m_Localized: "G\xE9nero"
     m_Metadata:
       m_Items: []
-  - m_Id: 2080132008419328
-    m_Localized: Objetivo
+  - m_Id: 195977739431440384
+    m_Localized: Pulse sobre la camiseta amarilla y mantenga pulsado
     m_Metadata:
       m_Items: []
   - m_Id: 2088170123599872

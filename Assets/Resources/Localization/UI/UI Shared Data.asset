@@ -179,8 +179,16 @@ MonoBehaviour:
     m_Key: Level/EndPanel/Objective3
     m_Metadata:
       m_Items: []
+  - m_Id: 195977739431440384
+    m_Key: Tutorial/Panel1
+    m_Metadata:
+      m_Items: []
   - m_Id: 980179829846016
-    m_Key: Tutorial/Tutorial
+    m_Key: Tutorial/Panel2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1007719978037248
+    m_Key: Tutorial/Panel3
     m_Metadata:
       m_Items: []
   - m_Id: 980641584967680
@@ -197,10 +205,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 981342667075584
     m_Key: Tutorial/Tutorial 4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1007719978037248
-    m_Key: Tutorial/Tutorial 5
     m_Metadata:
       m_Items: []
   - m_Id: 1008035591024640
@@ -241,10 +245,6 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1010595878072320
     m_Key: Tutorial/Tutorial 15
-    m_Metadata:
-      m_Items: []
-  - m_Id: 2080132008419328
-    m_Key: Level/Level/Canvas/PanelFin/FinalObjective/Objetivo
     m_Metadata:
       m_Items: []
   - m_Id: 31801445282156544

@@ -8,7 +8,8 @@ public class LevelInfo : MonoBehaviour
 {
     GameManager gameManager;
     
-    [SerializeField] LevelManager levelManager;
+    [SerializeField] 
+    LevelManager levelManager;
 
     /// <summary>
     /// Ruta de los archivos de localizacion de los niveles
@@ -57,10 +58,7 @@ public class LevelInfo : MonoBehaviour
         {
             spawnpointsInfoDict.Add(point.PointProperties.Id, point);
         }
-
-
         LoadItems();
-
     }
 
 

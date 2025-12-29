@@ -136,7 +136,7 @@ public class LevelButtons : MonoBehaviour
 
         trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Cabinet")
             .WithResultExtensions(new Dictionary<string, object> {
-                {"https://cabinet", cabinetItems.name }
+                { "https://cabinet", cabinetItems.name }
             })
         );
     }
@@ -153,7 +153,7 @@ public class LevelButtons : MonoBehaviour
 
         trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Drawer")
             .WithResultExtensions(new Dictionary<string, object> {
-                {"https://drawer", drawerItems.name }
+                { "https://drawer", drawerItems.name }
             })
         );
     }

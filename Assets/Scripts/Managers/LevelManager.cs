@@ -28,6 +28,12 @@ public class LevelManager : MonoBehaviour
     Dictionary<string, ListItem> neededItems = new Dictionary<string, ListItem>();
     HashSet<string> storedItems = new HashSet<string>();
 
+    Dictionary<string, DragAndDrop> scenarioItems = new Dictionary<string, DragAndDrop>();
+    public Dictionary<string, DragAndDrop> ScenarioItems {
+        get { return scenarioItems; }
+        private set { }
+    }
+
     [Header("Item list")]
     [SerializeField] RectTransform itemsListTr;
     [SerializeField] RectTransform clothingTitleTr;
@@ -141,6 +147,9 @@ public class LevelManager : MonoBehaviour
 
             scenarioDragNdrop.Initialize(this, id, caseItem, spawnType == Defs.SpawnType.STORED ? topViewCase : normalCase);
             caseDragNDrop.Initialize(this, id, scenarioItem, topViewCase);
+
+            scenarioItems.Add(scenarioItem.name, scenarioDragNdrop);
+            scenarioItems.Add(caseItem.name, caseDragNDrop);
         }
     }
 
@@ -226,10 +235,10 @@ public class LevelManager : MonoBehaviour
 
         trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
             .WithResultExtensions(new Dictionary<string, object> {
-                {"https://storeIn",  "suitcase" }
+                { "https://storeIn",  "suitcase" }
             })
             .WithContextExtensions(new Dictionary<string, object> {
-                {$"https://{contextExtension}",  $"{storedItems.Count / (double)neededItems.Count}" }
+                { $"https://{contextExtension}",  $"{storedItems.Count / (double)neededItems.Count}" }
             })
         );
     }
@@ -251,10 +260,10 @@ public class LevelManager : MonoBehaviour
 
         trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
             .WithResultExtensions(new Dictionary<string, object> {
-                {"https://removeFrom",  "suitcase" }
+                { "https://removeFrom",  "suitcase" }
             })
             .WithContextExtensions(new Dictionary<string, object> {
-                {$"https://{contextExtension}",  $"{storedItems.Count / (double)neededItems.Count}" }
+                { $"https://{contextExtension}",  $"{storedItems.Count / (double)neededItems.Count}" }
             })
         );
         if (neededItems.ContainsKey(id))
@@ -342,12 +351,12 @@ public class LevelManager : MonoBehaviour
             CompletableTracker.Instance.Completed(levelName, COMPLETABLE_TYPE, watch.ElapsedMilliseconds)
             .WithSuccess(true)
             .WithResultExtensions(new Dictionary<string, object> {
-                {"https://stars", totalStars },
-                {"https://wrongItems", incorrectItems },
-                {"https://correctItems", $"{correctItems}/{neededItems.Count}" },
-                {"https://wrongItemsList", wrongItemsList },
-                {"https://correctItemsList", correctItemsList },
-                {"https://checkListOpportunities", $"{listUses}/{MAX_LIST_USES}" },
+                { "https://stars", totalStars },
+                { "https://wrongItems", incorrectItems },
+                { "https://correctItems", $"{correctItems}/{neededItems.Count}" },
+                { "https://wrongItemsList", wrongItemsList },
+                { "https://correctItemsList", correctItemsList },
+                { "https://checkListOpportunities", $"{listUses}/{MAX_LIST_USES}" },
             })
         );
     }

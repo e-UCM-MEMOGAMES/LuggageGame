@@ -170,7 +170,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 980179829846016
-    m_Localized: Drag the t-shirt into the suitcase and let go.
+    m_Localized: Drag the t-shirt into the suitcase and let go
     m_Metadata:
       m_Items: []
   - m_Id: 980641584967680
@@ -192,7 +192,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1007719978037248
-    m_Localized: Tap on the suitcase to check its contents.
+    m_Localized: Tap on the suitcase to check its contents
     m_Metadata:
       m_Items: []
   - m_Id: 1008035591024640
@@ -248,8 +248,8 @@ MonoBehaviour:
     m_Localized: Gender
     m_Metadata:
       m_Items: []
-  - m_Id: 2080132008419328
-    m_Localized: Objectives
+  - m_Id: 195977739431440384
+    m_Localized: Tap and hold the yellow t-shirt
     m_Metadata:
       m_Items: []
   - m_Id: 2088170123599872

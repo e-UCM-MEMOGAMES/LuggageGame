@@ -24,12 +24,15 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
     // Start is called before the first frame update
     void Start()
     {
+        trackerManager = TrackerManager.Instance;
+
         rectTr = GetComponent<RectTransform>();
         originalParent = gameObject.transform.parent.GetComponent<RectTransform>();
         originalIndex = transform.GetSiblingIndex();
 
         dragging = false;
         colliding = false;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -59,15 +62,19 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         transform.SetParent(caseObj.transform.parent, false);
         transform.SetSiblingIndex(caseObj.transform.GetSiblingIndex() + 1);
 
-        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(stored ? "storedItem" : "scenarioItem")
+        string location = "scenario";
+        if (stored)
+        {
+            location = "suitcase";
+        }
+        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
             .WithResultExtensions(new Dictionary<string, object> {
-                {"https://dragging",  id }
+                { $"https://draggingFrom", location}
             })
         );
     }
     public void OnDrag(PointerEventData pointerEventData)
     {
-        levelManager.PointerOutItem();
         transform.position = new Vector3(pointerEventData.position.x, pointerEventData.position.y, initialPos.z);
     }
 
@@ -87,14 +94,21 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             {
                 levelManager.ReturnItem(id);
             }
+            levelManager.PointerOutItem();
         }
         transform.localPosition = initialPos;
         transform.SetParent(originalParent, false);
         transform.SetSiblingIndex(originalIndex);
 
-        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(stored ? "storedItem" : "scenarioItem")
+
+        string location = "scenario";
+        if (stored)
+        {
+            location = "suitcase";
+        }
+        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
             .WithResultExtensions(new Dictionary<string, object> {
-                {"https://dropping",  id }
+                { $"https://droppingFrom", location}
             })
         );
     }

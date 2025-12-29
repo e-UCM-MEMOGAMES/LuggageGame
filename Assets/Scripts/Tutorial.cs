@@ -1,184 +1,112 @@
-﻿using System.Collections.Generic;
-using TMPro;
+using System.Collections;
+using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
-
+using UnityEngine.EventSystems;
 
 public class Tutorial : MonoBehaviour
 {
+    enum State { PANEL1, PANEL2, PANEL3 };
 
-    public GameObject mano;
-    public GameObject panel;
-    public GameObject camisetaAmarilla;
-    public GameObject panelInfoObject;
-    public Animator manoAnimator;
-    public GameObject camara;
-    public string[] textoTutorial;
-    TMP_Text texto;
+    [SerializeField]
+    LevelManager levelManager;
 
-    enum State { NONE, CLICK, DRAGNDROP, LUGGAGE, OVERINFO, PULLOVER, BACKTOROOM, DRAWER, BATHROOM, BACKTHROOM, END, NULL, CAMISETAAMARILLA,CLICKLIST, CLICKEDLIST,BACKFROMLIST }
-    State state;
-    // Use this for initialization
+    [SerializeField]
+    GameObject[] infoPanels;
+    
+    [SerializeField]
+    Animator handAnimator;
+
+    [SerializeField] 
+    GameObject neededItemPrefab, neededItemStoredPrefab;
+    GameObject neededItem, neededItemStored;
+    bool draggingNeededItem = false;
+
+    State currState;
+
+
+    // Start is called before the first frame update
     void Start()
     {
-        state = State.NONE;
-        panel.SetActive(false);
+        foreach (GameObject panel in infoPanels)
+        {
+            panel.SetActive(false);
+        }
+
+        currState = State.PANEL1;
+        ChangeState(0);
+
+        StartCoroutine(SetupNeededItem());
     }
-    private void Update()
+
+    // Update is called once per frame
+    void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (currState == State.PANEL1 && draggingNeededItem)
         {
-            if (state == State.CLICK)
-            {
-                state = State.DRAGNDROP;
-                texto.text = textoTutorial[0];
-                manoAnimator.SetInteger("step", 1);
-            }
-            else if (state == State.LUGGAGE)
-            {
-                state = State.OVERINFO;
-                texto.text = textoTutorial[1];
-            }
-            else if (state == State.DRAWER)
-            {
-                texto.text = textoTutorial[2];
-                
-            }
-            else if (state == State.BACKTHROOM)
-            {
-                state = State.CLICKLIST;
-                panel.SetActive(true);
-                texto.text = textoTutorial[3];
-                manoAnimator.SetInteger("step", 8);
-            }
-            else if (state == State.NULL)
-            {
-                panel.SetActive(false);
-                mano.SetActive(false);
-            }
-
-        }
-        if (Input.GetMouseButtonUp(0))
-        {
-            if (state == State.DRAGNDROP)
-            {
-                if (camisetaAmarilla.activeSelf)
-                {
-                    state = State.CLICK;
-                    texto.text = textoTutorial[4];
-                    manoAnimator.SetInteger("step", 0);
-                }
-                else
-                {
-                    state = State.LUGGAGE;
-                    texto.text = textoTutorial[5];
-                    manoAnimator.SetInteger("step", 2);
-                }
-            }
-            if (state == State.PULLOVER)
-            {
-                if (camisetaAmarilla.activeSelf)
-                {
-                    state = State.BACKTOROOM;
-                    texto.text = textoTutorial[6];
-                    manoAnimator.SetInteger("step", 4);
-                }
-            }
-            if(state == State.CAMISETAAMARILLA)
-            {
-                if (!camisetaAmarilla.activeSelf)
-                {
-                    state = State.DRAWER;
-                    texto.text = textoTutorial[7];
-                    manoAnimator.SetInteger("step", 5);
-                }
-            }
+            ChangeState(1);
+            handAnimator.SetInteger("step", (int)State.PANEL2);
         }
 
-        if (state == State.OVERINFO)
+        if (currState == State.PANEL2)
         {
-            if (panelInfoObject.activeSelf)
+            if (!draggingNeededItem && !neededItemStored.activeSelf)
             {
-                state = State.PULLOVER;
-                texto.text = textoTutorial[8];
-                manoAnimator.SetInteger("step", 3);
+                ChangeState(-1);
+                handAnimator.SetInteger("step", (int)State.PANEL1);
             }
-        }
-        else if (state == State.CLICKLIST )
-        {
-            state = State.CLICKEDLIST;
-            texto.text = textoTutorial[9];
-            panel.SetActive(true);
-
-        }
-        else if (state == State.END && camara.gameObject.activeSelf)
-        {
-            state = State.NULL;
-            texto.text = textoTutorial[10];
-            panel.SetActive(true);
+            else if (!draggingNeededItem && neededItemStored.activeSelf)
+            {
+                ChangeState(1);
+                handAnimator.SetInteger("step", (int)State.PANEL3);
+            }
         }
     }
-    public void ButtonList()
-    {
-        if (state == State.CLICKEDLIST)
-        {
-            state = State.BACKFROMLIST;
-            texto.text = textoTutorial[11];
-            mano.SetActive(false);
-        }
-        
-    }
-    public void ButtonBack()
-    {
-        if (state == State.BACKFROMLIST)
-        {
-            state = State.END;
-            mano.SetActive(true);
-            manoAnimator.SetInteger("step", 9);
 
-        }
-
-    }
-    public void ButtonBackToRoom()
+    private IEnumerator SetupNeededItem()
     {
-        if (state == State.BACKTOROOM)
+        yield return new WaitForEndOfFrame();
+
+        neededItem = AddDragEvents(neededItemPrefab);
+        neededItemStored = AddDragEvents(neededItemStoredPrefab);
+    }
+
+    private GameObject AddDragEvents(GameObject prefab)
+    {
+        string itemName = $"{prefab.name}(Clone)";
+        if (levelManager.ScenarioItems.ContainsKey(itemName))
         {
-            state = State.CAMISETAAMARILLA;
-            texto.text = textoTutorial[12];
-            manoAnimator.SetInteger("step", 2);
-           
+            GameObject item = levelManager.ScenarioItems[itemName].gameObject;
+            EventTrigger evtTrigger = item.AddComponent<EventTrigger>();
 
+            EventTrigger.Entry pointerdown = new EventTrigger.Entry();
+            pointerdown.eventID = EventTriggerType.PointerDown;
+            pointerdown.callback.AddListener((data) => {
+                draggingNeededItem = true;
+            });
+            evtTrigger.triggers.Add(pointerdown);
+
+            EventTrigger.Entry pointerup = new EventTrigger.Entry();
+            pointerup.eventID = EventTriggerType.PointerUp;
+            pointerup.callback.AddListener((data) => {
+                draggingNeededItem = false;
+            });
+            evtTrigger.triggers.Add(pointerup);
+
+            return item;
         }
-        else if (state == State.DRAWER)
+        return null;
+    }
+
+    private void ChangeState(int increase)
+    {
+        if ((int)currState >= 0 && infoPanels.Length > 0)
         {
-            state = State.BATHROOM;
-            texto.text = textoTutorial[13];
-            manoAnimator.SetInteger("step", 6);
+            infoPanels[(int)currState].SetActive(false);
         }
-    }
-    public void ButtonBathRoom()
-    {
-        if (state == State.BATHROOM)
+        currState += increase;
+        if ((int)currState < infoPanels.Length)
         {
-            state = State.BACKTHROOM;
-            texto.text = textoTutorial[14];
-            manoAnimator.SetInteger("step", 7);
-
+            infoPanels[(int)currState].SetActive(true);
         }
-
-    }
-    public void ButtonBegin()
-    {
-        state = State.CLICK;
-        texto = panel.GetComponentInChildren<TMP_Text>();
-        texto.text = textoTutorial[15];
-        manoAnimator.SetInteger("step", 0);
-        panel.SetActive(true);
-    }
-   
-    public void End()
-    {
-        panel.SetActive(false);
-        mano.SetActive(false);
     }
 }
