@@ -33,8 +33,8 @@ public class MainMenuButtons : MonoBehaviour
             speech.SetActive(false);
         }
 
-        if (!PlayerPrefs.HasKey(Defs.NEW_GAME_PREFS_KEY) || 
-            (PlayerPrefs.HasKey(Defs.NEW_GAME_PREFS_KEY) && PlayerPrefs.GetInt(Defs.NEW_GAME_PREFS_KEY) == (int)(Defs.LoadGameValues.NEW_GAME))) 
+        if (!PlayerPrefs.HasKey(Defs.NEW_GAME_PREFS_KEY) ||
+            (PlayerPrefs.HasKey(Defs.NEW_GAME_PREFS_KEY) && PlayerPrefs.GetInt(Defs.NEW_GAME_PREFS_KEY) == (int)(Defs.LoadGameValues.NEW_GAME)))
         {
             PlayerPrefs.SetInt(Defs.NEW_GAME_PREFS_KEY, (int)(Defs.LoadGameValues.NEW_GAME));
         }

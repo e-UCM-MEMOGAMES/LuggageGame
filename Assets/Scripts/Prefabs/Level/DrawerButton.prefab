@@ -125,6 +125,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2096393923729664955, guid: 4e82dc3642a991f4b90dc30f5380067d,
         type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096393923729664955, guid: 4e82dc3642a991f4b90dc30f5380067d,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096393923729664955, guid: 4e82dc3642a991f4b90dc30f5380067d,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096393923729664955, guid: 4e82dc3642a991f4b90dc30f5380067d,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096393923729664955, guid: 4e82dc3642a991f4b90dc30f5380067d,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2096393923729664955, guid: 4e82dc3642a991f4b90dc30f5380067d,
+        type: 3}
       propertyPath: m_Colors.m_HighlightedColor.b
       value: 1
       objectReference: {fileID: 0}

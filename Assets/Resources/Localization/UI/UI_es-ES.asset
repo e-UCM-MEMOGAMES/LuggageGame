@@ -173,21 +173,18 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 980641584967680
-    m_Localized: "Si pone el cursor sobre el objeto, aparecer\xE1 su nombre"
+    m_Localized: "Ponga el cursor sobre el objeto o pulse sobre \xE9l para ver su
+      nombre"
     m_Metadata:
       m_Items: []
   - m_Id: 981056879783936
-    m_Localized: "No todos los cajones tendr\xE1n algo dentro. Vuelva a la habitaci\xF3n
-      y revise el resto."
+    m_Localized: "No todos los cajones tendr\xE1n algo dentro. Ahora, vuelva a la
+      habitaci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 981263440867328
-    m_Localized: Aqui puedes echar un ojo a la lista de objetos en caso de que se
-      te ha olvidado.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 981342667075584
-    m_Localized: Pulse sobre la camiseta amarilla y mantenga pulsado.
+    m_Localized: "Pulse aqu\xED para revisar los objetos que necesita en caso de
+      que haya olvidado"
     m_Metadata:
       m_Items: []
   - m_Id: 1007719978037248
@@ -195,48 +192,37 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1008035591024640
-    m_Localized: "Haga click sobre el icono de abajo para cerrar la maleta y volver
-      atr\xE1s."
+    m_Localized: Pulse el icono de abajo para cerrar la maleta
     m_Metadata:
       m_Items: []
   - m_Id: 1008127668580352
-    m_Localized: Puede ver el contenido de los cajones haciendo click en ellos.
+    m_Localized: Puede ver el contenido de los cajones pulsando sobre ellos
     m_Metadata:
       m_Items: []
   - m_Id: 1008270274916352
-    m_Localized: Puede arrastrar el objeto fuera de la maleta para sacarlo.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1008625826066432
-    m_Localized: Aqui puedes echar un ojo a la lista de objetos en caso de que se
-      te ha olvidado.
+    m_Localized: Puede arrastrar el objeto fuera de la maleta para sacarlo
     m_Metadata:
       m_Items: []
   - m_Id: 1009206221271040
-    m_Localized: "Revise su equipaje y haga click sobre el icono del avi\xF3n para
-      terminar y marcharse de viaje."
+    m_Localized: "Revise su equipaje y pulse el icono del avi\xF3n para marcharse
+      de viaje"
     m_Metadata:
       m_Items: []
   - m_Id: 1010056146644992
-    m_Localized: "Cuidado que cada revisi\xF3n resta una oportunidad. Ya no podr\xE1s
-      volver a revisar cuando agoten todos los intentos."
+    m_Localized: "El n\xFAmero indica la cantidad de veces que se puede revisar la
+      lista. Una vez llegue a 0, no podr\xE1 volver a revisarla"
     m_Metadata:
       m_Items: []
   - m_Id: 1010146311598080
-    m_Localized: Vuelva a meter la camiseta amarilla en la maleta.
+    m_Localized: Vuelva a meter la camiseta amarilla en la maleta
     m_Metadata:
       m_Items: []
   - m_Id: 1010287504453632
-    m_Localized: "Puede hacer click en el icono de la derecha para ir al ba\xF1o."
+    m_Localized: "Puede pulsar el icono de la derecha para ir al ba\xF1o"
     m_Metadata:
       m_Items: []
   - m_Id: 1010463212236800
-    m_Localized: "Revise los cajones y haga click en el icono se\xF1alado para volver
-      a la habitaci\xF3n"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1010595878072320
-    m_Localized: Pulse sobre la camiseta amarilla y mantenga pulsado.
+    m_Localized: "Vuelva a pulsar el icono para volver a la habitaci\xF3n"
     m_Metadata:
       m_Items: []
   - m_Id: 1390149144584192
@@ -266,6 +252,10 @@ MonoBehaviour:
       JIM\xC9NEZ RODR\xCDGUEZ\nMANUEL HIDALGO LORENTE\nNANXI QIN \nJIANUO WEN HU\nMATT
       CASTELLANOS SILVA\n\n\nGrafistas:\n\nPALOMA ASENSIO SOLANA\nROSA M PEROMINGO
       GUZM\xC1N\nANA VALLECILLOS RUIZ\nNANXI QIN\n\n\nM\xFAsica:\n\nNANXI QIN"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 196735225763590144
+    m_Localized: (Pulse para continuar)
     m_Metadata:
       m_Items: []
   references:

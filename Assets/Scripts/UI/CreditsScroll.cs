@@ -18,7 +18,7 @@ public class CreditsScroll : MonoBehaviour
     void Start()
     {
         rectTr = GetComponent<RectTransform>();
-        rectTr.localPosition = new Vector3(rectTr.localPosition.x, - canvasRectTr.sizeDelta.y / 2 - topOffset, rectTr.localPosition.z);
+        rectTr.localPosition = new Vector3(rectTr.localPosition.x, -canvasRectTr.sizeDelta.y / 2 - topOffset, rectTr.localPosition.z);
 
         finalY = canvasRectTr.sizeDelta.y - rectTr.sizeDelta.y + bottomOffset;
     }

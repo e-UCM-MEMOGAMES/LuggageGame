@@ -12,7 +12,7 @@ public class SettingsMenu : MonoBehaviour
     /// Instancia del GameManager
     /// </summary>
     GameManager gameManager;
-    
+
     /// <summary>
     /// Instancia del AudioManager
     /// </summary>

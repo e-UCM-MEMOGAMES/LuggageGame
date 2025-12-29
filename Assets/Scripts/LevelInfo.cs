@@ -7,8 +7,8 @@ using UnityEngine;
 public class LevelInfo : MonoBehaviour
 {
     GameManager gameManager;
-    
-    [SerializeField] 
+
+    [SerializeField]
     LevelManager levelManager;
 
     /// <summary>
@@ -116,7 +116,7 @@ public class LevelInfo : MonoBehaviour
                     neededItems.Add(itemsInfoDict[item]);
                 }
             }
-        } 
+        }
     }
 
     private void LoadSceneItems(JToken items, string spawnpoint, string gender)
@@ -131,7 +131,7 @@ public class LevelInfo : MonoBehaviour
                     if (spawnpointsInfoDict[spawnpoint].Points.Count() > position)
                     {
                         levelManager.AddScenarioItem(
-                            (string)itemInfo["id"], 
+                            (string)itemInfo["id"],
                             spawnpointsInfoDict[spawnpoint].Points[position],
                             spawnpointsInfoDict[spawnpoint].PointProperties.SpawnType,
                             spawnpointsInfoDict[spawnpoint].PointProperties.SpawnPivot

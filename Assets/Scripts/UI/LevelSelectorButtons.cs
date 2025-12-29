@@ -35,7 +35,7 @@ public class LevelSelectorButtons : MonoBehaviour
     {
         gameManager.Climate = Defs.Climate.BOTH;
         gameManager.Level = 0;
-        gameManager.ChangeScene(Defs.TUTORIAL_SCENE_NAME);
+        SelectLevel();
     }
 
 

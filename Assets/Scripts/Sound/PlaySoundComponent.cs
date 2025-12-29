@@ -11,7 +11,7 @@ public class PlaySoundComponent : MonoBehaviour
     /// Manager de sonidos
     /// </summary> 
     AudioManager audioMng;
-  
+
     // Start is called before the first frame update
     void Start()
     {

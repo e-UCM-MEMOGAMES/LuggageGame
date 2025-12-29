@@ -192,59 +192,51 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 980641584967680
-    m_Key: Tutorial/Tutorial 1
-    m_Metadata:
-      m_Items: []
-  - m_Id: 981056879783936
-    m_Key: Tutorial/Tutorial 2
-    m_Metadata:
-      m_Items: []
-  - m_Id: 981263440867328
-    m_Key: Tutorial/Tutorial 3
-    m_Metadata:
-      m_Items: []
-  - m_Id: 981342667075584
-    m_Key: Tutorial/Tutorial 4
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1008035591024640
-    m_Key: Tutorial/Tutorial 6
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1008127668580352
-    m_Key: Tutorial/Tutorial 7
+    m_Key: Tutorial/Panel4
     m_Metadata:
       m_Items: []
   - m_Id: 1008270274916352
-    m_Key: Tutorial/Tutorial 8
+    m_Key: Tutorial/Panel5
     m_Metadata:
       m_Items: []
-  - m_Id: 1008625826066432
-    m_Key: Tutorial/Tutorial 9
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1009206221271040
-    m_Key: Tutorial/Tutorial 10
-    m_Metadata:
-      m_Items: []
-  - m_Id: 1010056146644992
-    m_Key: Tutorial/Tutorial 11
+  - m_Id: 1008035591024640
+    m_Key: Tutorial/Panel6
     m_Metadata:
       m_Items: []
   - m_Id: 1010146311598080
-    m_Key: Tutorial/Tutorial 12
+    m_Key: Tutorial/Panel7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1008127668580352
+    m_Key: Tutorial/Panel8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 981056879783936
+    m_Key: Tutorial/Panel9
     m_Metadata:
       m_Items: []
   - m_Id: 1010287504453632
-    m_Key: Tutorial/Tutorial 13
+    m_Key: Tutorial/Panel10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 981263440867328
+    m_Key: Tutorial/Panel11
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1010056146644992
+    m_Key: Tutorial/Panel12
+    m_Metadata:
+      m_Items: []
+  - m_Id: 196735225763590144
+    m_Key: Tutorial/PressToContinue
     m_Metadata:
       m_Items: []
   - m_Id: 1010463212236800
-    m_Key: Tutorial/Tutorial 14
+    m_Key: Tutorial/Panel13
     m_Metadata:
       m_Items: []
-  - m_Id: 1010595878072320
-    m_Key: Tutorial/Tutorial 15
+  - m_Id: 1009206221271040
+    m_Key: Tutorial/Panel14
     m_Metadata:
       m_Items: []
   - m_Id: 31801445282156544

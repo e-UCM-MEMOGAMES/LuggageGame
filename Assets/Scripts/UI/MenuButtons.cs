@@ -23,7 +23,7 @@ public class MenuButtons : MonoBehaviour
     {
         gameManager.ExitGame();
     }
-    
+
     public void ResetGame()
     {
         PlayerPrefs.DeleteAll();

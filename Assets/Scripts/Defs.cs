@@ -22,10 +22,7 @@ public static class Defs
     /// Nombre de la escena de juego
     /// </summary>
     GAME_SCENE_NAME = "Level",
-    /// <summary>
-    /// Nombre de la escena de juego
-    /// </summary>
-    TUTORIAL_SCENE_NAME = "Tutorial",
+
 
     NEW_GAME_PREFS_KEY = "newGame",
     GENDER_PREFS_KEY = "gender",
@@ -50,7 +47,7 @@ public static class Defs
     /// <summary>
     /// Posibles generos del jugador
     /// </summary>
-    public enum Gender { NEUTRAL = 0, MALE = 1, FEMALE = 2,  };
+    public enum Gender { NEUTRAL = 0, MALE = 1, FEMALE = 2, };
 
     /// <summary>
     /// Climas en los que se puede jugar
@@ -60,7 +57,7 @@ public static class Defs
     public enum ItemCategory { CLOTHING, FOOTWEAR, OTHER };
 
     public enum SpawnType { REGULAR, STORED, CABINET };
-    public enum SpawnPivot { TOP, MIDDLE, BOTTOM};
+    public enum SpawnPivot { TOP, MIDDLE, BOTTOM };
 
 
     public static string GetLevelSaveKey(int levelNumber, Climate climate)

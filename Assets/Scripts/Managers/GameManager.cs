@@ -44,11 +44,11 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     }
 
     int level;
-    public int Level 
+    public int Level
     {
         get { return level; }
-        set 
-        { 
+        set
+        {
             level = value;
             trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected("Level", value.ToString()));
         }

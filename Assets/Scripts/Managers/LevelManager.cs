@@ -16,6 +16,10 @@ public class LevelManager : MonoBehaviour
     TrackerManager trackerManager;
     CompletableTracker.CompletableType COMPLETABLE_TYPE = CompletableTracker.CompletableType.Level;
 
+    [Header("Tutorial")]
+    [SerializeField]
+    GameObject tutorial;
+
     const int MAX_LIST_USES = 3;
     int remainingListUses = MAX_LIST_USES;
     public int RemainingListUses
@@ -28,9 +32,19 @@ public class LevelManager : MonoBehaviour
     Dictionary<string, ListItem> neededItems = new Dictionary<string, ListItem>();
     HashSet<string> storedItems = new HashSet<string>();
 
-    Dictionary<string, DragAndDrop> scenarioItems = new Dictionary<string, DragAndDrop>();
-    public Dictionary<string, DragAndDrop> ScenarioItems {
-        get { return scenarioItems; }
+    public class ItemPair
+    {
+        public ItemPair(GameObject scenario, GameObject stored)
+        {
+            ScenarioItem = scenario;
+            StoredItem = stored;
+        }
+        public GameObject ScenarioItem, StoredItem;
+    }
+    Dictionary<string, ItemPair> scenarioStoredItemsPairs = new Dictionary<string, ItemPair>();
+    public Dictionary<string, ItemPair> ScenarioStoredItemsPairs
+    {
+        get { return scenarioStoredItemsPairs; }
         private set { }
     }
 
@@ -69,6 +83,12 @@ public class LevelManager : MonoBehaviour
         trackerManager = TrackerManager.Instance;
         watch.Start();
 
+        tutorial.SetActive(gameManager.Level == 0);
+
+        otherTitleTr.gameObject.SetActive(false);
+        clothingTitleTr.gameObject.SetActive(false);
+        footwearTitleTr.gameObject.SetActive(false);
+
         foreach (GameObject star in unlockedStars)
         {
             star.SetActive(false);
@@ -78,7 +98,6 @@ public class LevelManager : MonoBehaviour
         caseImg.sprite = emptyTexture;
 
         audioManager.Play(GameSound.LevelBGM);
-
 
         itemNamePanel.SetActive(false);
         itemNamePanelTr = itemNamePanel.GetComponent<RectTransform>();
@@ -100,10 +119,16 @@ public class LevelManager : MonoBehaviour
             if (properties.Category == Defs.ItemCategory.CLOTHING)
             {
                 categoryTitleTr = clothingTitleTr;
+                clothingTitleTr.gameObject.SetActive(true);
             }
             else if (properties.Category == Defs.ItemCategory.FOOTWEAR)
             {
                 categoryTitleTr = footwearTitleTr;
+                footwearTitleTr.gameObject.SetActive(true);
+            }
+            else
+            {
+                otherTitleTr.gameObject.SetActive(true);
             }
 
             GameObject instance = Instantiate(listItemPrefab, itemsListTr);
@@ -119,7 +144,7 @@ public class LevelManager : MonoBehaviour
     {
         if (itemsInfo.ContainsKey(id))
         {
-            GameObject scenarioItem = 
+            GameObject scenarioItem =
                 Instantiate(spawnType == Defs.SpawnType.REGULAR ? itemsInfo[id].SceneItemPrefab : itemsInfo[id].DrawerItemPrefab, spawnpoint);
             GameObject caseItem = Instantiate(itemsInfo[id].StoredItemPrefab, topViewCase.transform);
             caseItem.SetActive(false);
@@ -148,8 +173,7 @@ public class LevelManager : MonoBehaviour
             scenarioDragNdrop.Initialize(this, id, caseItem, spawnType == Defs.SpawnType.STORED ? topViewCase : normalCase);
             caseDragNDrop.Initialize(this, id, scenarioItem, topViewCase);
 
-            scenarioItems.Add(scenarioItem.name, scenarioDragNdrop);
-            scenarioItems.Add(caseItem.name, caseDragNDrop);
+            scenarioStoredItemsPairs.Add(id, new ItemPair(scenarioItem, caseItem));
         }
     }
 
@@ -209,7 +233,7 @@ public class LevelManager : MonoBehaviour
         {
             panelPos.x = uiRectTr.offsetMin.x + NAME_PANEL_BORDER_OFFSET + itemNamePanelTr.sizeDelta.x / 2;
         }
-        
+
         itemNamePanelTr.position = panelPos;
     }
 
@@ -325,7 +349,7 @@ public class LevelManager : MonoBehaviour
 
         string levelName = Defs.GetLevelSaveKey(gameManager.Level, gameManager.Climate);
 
-        if (!PlayerPrefs.HasKey(levelName) || (PlayerPrefs.HasKey(levelName) &&PlayerPrefs.GetInt(levelName) < totalStars))
+        if (!PlayerPrefs.HasKey(levelName) || (PlayerPrefs.HasKey(levelName) && PlayerPrefs.GetInt(levelName) < totalStars))
         {
             PlayerPrefs.SetInt(levelName, totalStars);
         }
@@ -336,7 +360,8 @@ public class LevelManager : MonoBehaviour
         List<string> correctItemsList = new List<string>();
         List<string> wrongItemsList = new List<string>();
 
-        foreach (string item in storedItems) {
+        foreach (string item in storedItems)
+        {
             if (neededItems.ContainsKey(item))
             {
                 correctItemsList.Add(item);

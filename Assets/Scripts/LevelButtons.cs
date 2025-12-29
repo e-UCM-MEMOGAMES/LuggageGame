@@ -123,7 +123,7 @@ public class LevelButtons : MonoBehaviour
         bathroomCaseView.SetActive(true);
 
         cabinet.SetActive(false);
-        
+
         trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Bathroom"));
     }
 
@@ -145,7 +145,7 @@ public class LevelButtons : MonoBehaviour
         OpenCase();
 
         drawer.SetActive(true);
-        
+
         caseOpened.localScale = caseScaleDrawer;
         caseOpened.localPosition = new Vector3(caseOpened.localPosition.x, caseYDrawer, caseOpened.localPosition.z);
 
