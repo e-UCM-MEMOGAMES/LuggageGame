@@ -1,43 +1,110 @@
 using System.Collections;
 using System.Linq;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using static UnityEditor.Progress;
+using Xasu.HighLevel;
+
 
 public class Tutorial : MonoBehaviour
 {
-    enum State
+    /// <summary>
+    /// Estados del tutorial (en que momentos se muestra cada panel)
+    /// </summary>
+    enum States
     {
         PRESS_ITEM, DRAG_IN, CHECK_SUITCASE, CHECK_NAME, DRAG_OUT, CLOSE_SUITCASE, PUT_BACK,
-        CHECK_DRAWER, EXIT_DRAWER, GO_TO_BATHROOM, CHECK_LIST, LIST_TRIES, GO_TO_BEDROOM, FINISH
+        CHECK_DRAWER, EXIT_DRAWER, GO_TO_BATHROOM, CHECK_LIST, LIST_TRIES, GO_TO_BEDROOM, FINISH, 
+        LAST
     };
 
+    /// <summary>
+    /// Instancia del LevelManager
+    /// </summary>
     [SerializeField]
     LevelManager levelManager;
+    /// <summary>
+    /// Instancia del TrackerManager
+    /// </summary>
+    TrackerManager trackerManager;
 
     [Header("State info and animations")]
+    /// <summary>
+    /// Paneles con la informacion de cada estado del tutorial
+    /// </summary>
     [SerializeField] GameObject[] infoPanels;
+    /// <summary>
+    /// Animator de la mano (para cambiar las animaciones segun el estado)
+    /// </summary>
     [SerializeField] Animator handAnimator;
 
     [Header("Items and buttons to disable at the beginning")]
+    /// <summary>
+    /// Boton de ir al bano desde la habitacion
+    /// </summary>
     [SerializeField] GameObject bathroomButton;
+    /// <summary>
+    /// Boton de ir a la habitacion desde el bano
+    /// </summary>
     [SerializeField] GameObject bedroomButton;
-    [SerializeField] GameObject listButton;
+    /// <summary>
+    /// Boton de cerrar la maleta
+    /// </summary>
     [SerializeField] GameObject exitCaseButton;
+    /// <summary>
+    /// Boton para abrir la lista de objetos
+    /// </summary>
+    [SerializeField] GameObject listButton;
+    /// <summary>
+    /// Botones de todos los cajones
+    /// </summary>
+    [SerializeField] Button[] drawers;
+
 
     [Header("Objects to check in each state")]
+    /// <summary>
+    /// Vista desde la maleta
+    /// </summary>
     [SerializeField] GameObject caseView;
+    /// <summary>
+    /// Elementos del bano de la vista normal
+    /// </summary>
     [SerializeField] GameObject bathroom;
+    /// <summary>
+    /// Boton de la maleta de la vista normal
+    /// </summary>
     [SerializeField] Button caseButton;
-    [SerializeField] Button[] drawers;
+    /// <summary>
+    /// Lista de objetos
+    /// </summary>
     [SerializeField] GameObject itemList;
+    /// <summary>
+    /// Elementos de la habitacion de la vista normal
+    /// </summary>
     [SerializeField] GameObject bedroom;
-    GameObject neededItem, neededItemStored;
-    bool draggingNeededItem = false, pointerOverNeededItemStored = false;
 
-    State currState;
+    /// <summary>
+    /// Instancia del objeto que meter a la maleta en la vista normal
+    /// </summary>
+    GameObject neededItem,
+    /// <summary>
+    /// Instancia del objeto que meter a la maleta en la vista de la maleta
+    /// </summary>
+    neededItemStored;
+    /// <summary>
+    /// Si se esta arrastrando el objeto necesario
+    /// </summary>
+    bool draggingNeededItem = false,
+    /// <summary>
+    /// Si se ha pasado el puntero por encima del objeto necesario
+    /// </summary>
+    pointerOverNeededItemStored = false;
+
+    /// <summary>
+    /// Paso del tutorial reproduciendose actualmente
+    /// </summary>
+    States currState;
+
 
     private void Awake()
     {
@@ -47,25 +114,27 @@ public class Tutorial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        trackerManager = TrackerManager.Instance;
+
+        // Se desactivan todos los elementos que no se utilizan en el primer paso del tutorial
         caseButton.interactable = false;
         bathroomButton.SetActive(false);
         bedroomButton.SetActive(false);
         listButton.SetActive(false);
         exitCaseButton.SetActive(false);
-
         foreach (Button drawerButton in drawers)
         {
             drawerButton.interactable = false;
         }
-
         foreach (GameObject panel in infoPanels)
         {
             panel.SetActive(false);
         }
 
-        currState = State.PRESS_ITEM;
+        currState = States.PRESS_ITEM;
         ChangeState(0);
 
+        // Se configuran las instancias del objeto necesario
         StartCoroutine(SetupNeededItem());
     }
 
@@ -74,13 +143,13 @@ public class Tutorial : MonoBehaviour
     {
         switch (currState)
         {
-            case State.PRESS_ITEM:
+            case States.PRESS_ITEM:
                 if (draggingNeededItem)
                 {
                     ChangeState(1);
                 }
                 break;
-            case State.DRAG_IN:
+            case States.DRAG_IN:
                 if (!draggingNeededItem && !neededItemStored.activeSelf)
                 {
                     ChangeState(-1);
@@ -91,33 +160,33 @@ public class Tutorial : MonoBehaviour
                     caseButton.interactable = true;
                 }
                 break;
-            case State.CHECK_SUITCASE:
+            case States.CHECK_SUITCASE:
                 if (caseView.activeSelf)
                 {
                     ChangeState(1);
                 }
                 break;
-            case State.CHECK_NAME:
+            case States.CHECK_NAME:
                 if (pointerOverNeededItemStored)
                 {
                     ChangeState(1);
                 }
                 break;
-            case State.DRAG_OUT:
+            case States.DRAG_OUT:
                 if (neededItem.activeSelf)
                 {
                     ChangeState(1);
                     exitCaseButton.SetActive(true);
                 }
                 break;
-            case State.CLOSE_SUITCASE:
+            case States.CLOSE_SUITCASE:
                 if (!caseView.activeSelf)
                 {
                     ChangeState(1);
                     caseButton.interactable = false;
                 }
                 break;
-            case State.PUT_BACK:
+            case States.PUT_BACK:
                 if (!neededItem.activeSelf)
                 {
                     ChangeState(1);
@@ -128,13 +197,13 @@ public class Tutorial : MonoBehaviour
                     }
                 }
                 break;
-            case State.CHECK_DRAWER:
+            case States.CHECK_DRAWER:
                 if (caseView.activeSelf)
                 {
                     ChangeState(1);
                 }
                 break;
-            case State.EXIT_DRAWER:
+            case States.EXIT_DRAWER:
                 if (!caseView.activeSelf)
                 {
                     ChangeState(1);
@@ -146,27 +215,27 @@ public class Tutorial : MonoBehaviour
                     }
                 }
                 break;
-            case State.GO_TO_BATHROOM:
+            case States.GO_TO_BATHROOM:
                 if (bathroom.activeSelf)
                 {
                     ChangeState(1);
                     listButton.SetActive(true);
                 }
                 break;
-            case State.CHECK_LIST:
+            case States.CHECK_LIST:
                 if (itemList.activeSelf)
                 {
                     ChangeState(1);
                 }
                 break;
-            case State.LIST_TRIES:
+            case States.LIST_TRIES:
                 if (!itemList.activeSelf && Input.GetMouseButtonDown(0))
                 {
                     ChangeState(1);
                     bedroomButton.SetActive(true);
                 }
                 break;
-            case State.GO_TO_BEDROOM:
+            case States.GO_TO_BEDROOM:
                 if (bedroom.activeSelf)
                 {
                     ChangeState(1);
@@ -182,17 +251,42 @@ public class Tutorial : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Se configuran las instancias de los objetos necesarios
+    /// (tiene que hacerse con retardo porque los objetos se instancian en el Start del LevelManager)
+    /// </summary>
     private IEnumerator SetupNeededItem()
     {
         yield return new WaitForEndOfFrame();
 
+        // Se obtiene el primer (y en teoria unico) elemento de la lista de objetos necesarios
         neededItem = levelManager.ScenarioStoredItemsPairs.First().Value.ScenarioItem;
-        AddDragEvents(neededItem);
-
         neededItemStored = levelManager.ScenarioStoredItemsPairs.First().Value.StoredItem;
-        AddDragEvents(neededItemStored);
 
-        EventTrigger evtTrigger = neededItemStored.GetComponent<EventTrigger>();
+        // Se anaden los eventos de arrastrar al objeto de la vista normal
+        EventTrigger evtTrigger = neededItem.AddComponent<EventTrigger>();
+
+        // Empezar a arrastrar
+        EventTrigger.Entry pointerdown = new EventTrigger.Entry();
+        pointerdown.eventID = EventTriggerType.PointerDown;
+        pointerdown.callback.AddListener((data) =>
+        {
+            draggingNeededItem = true;
+        });
+        evtTrigger.triggers.Add(pointerdown);
+
+        // Terminar de arrastrar
+        EventTrigger.Entry pointerup = new EventTrigger.Entry();
+        pointerup.eventID = EventTriggerType.PointerUp;
+        pointerup.callback.AddListener((data) =>
+        {
+            draggingNeededItem = false;
+        });
+        evtTrigger.triggers.Add(pointerup);
+
+
+        // Se anade el evento de pasar el puntero por el objeto de la vista de la maleta
+        evtTrigger = neededItemStored.AddComponent<EventTrigger>();
         EventTrigger.Entry pointerOver = new EventTrigger.Entry();
         pointerOver.eventID = EventTriggerType.PointerEnter;
         pointerOver.callback.AddListener((data) =>
@@ -202,38 +296,26 @@ public class Tutorial : MonoBehaviour
         evtTrigger.triggers.Add(pointerOver);
     }
 
-    private void AddDragEvents(GameObject item)
-    {
-        EventTrigger evtTrigger = item.AddComponent<EventTrigger>();
-
-        EventTrigger.Entry pointerdown = new EventTrigger.Entry();
-        pointerdown.eventID = EventTriggerType.PointerDown;
-        pointerdown.callback.AddListener((data) =>
-        {
-            draggingNeededItem = true;
-        });
-        evtTrigger.triggers.Add(pointerdown);
-
-        EventTrigger.Entry pointerup = new EventTrigger.Entry();
-        pointerup.eventID = EventTriggerType.PointerUp;
-        pointerup.callback.AddListener((data) =>
-        {
-            draggingNeededItem = false;
-        });
-        evtTrigger.triggers.Add(pointerup);
-    }
-
+    /// <summary>
+    /// Actualiza el paso actual la cantidad de pasos indicada
+    /// </summary>
     private void ChangeState(int increase)
     {
+        // Oculta el panel del estado actual
         if ((int)currState >= 0 && infoPanels.Length > 0)
         {
             infoPanels[(int)currState].SetActive(false);
         }
+        // Actualiza el estado
         currState += increase;
+        // Muestra el panel del nuevo estado actual
         if ((int)currState < infoPanels.Length)
         {
             infoPanels[(int)currState].SetActive(true);
         }
+        // Hace la transicion de la animacion a la del nuevo estado actual
         handAnimator.SetInteger("step", (int)currState);
+
+        trackerManager.TrySendStatement(CompletableTracker.Instance.Progressed("Tutorial", CompletableTracker.CompletableType.Level, (float)currState / (int)States.LAST));
     }
 }

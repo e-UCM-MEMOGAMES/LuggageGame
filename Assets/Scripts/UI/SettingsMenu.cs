@@ -12,36 +12,33 @@ public class SettingsMenu : MonoBehaviour
     /// Instancia del GameManager
     /// </summary>
     GameManager gameManager;
-
     /// <summary>
     /// Instancia del AudioManager
     /// </summary>
     AudioManager audioManager;
-
     /// <summary>
     /// Instancia del TrackerManager
     /// </summary>
     TrackerManager trackerManager;
-
 
     /// <summary>
     /// Slider de volumen de la musica de fondo
     /// </summary>
     [SerializeField]
     Slider bgmSlider,
-
     /// <summary>
     /// Slider de volumen de los efectos de sonido
     /// </summary>
     sfxSlider;
-
 
     /// <summary>
     /// Dropdown con los idiomas disponibles
     /// </summary>
     [SerializeField]
     TMP_Dropdown languageDropdown,
-
+    /// <summary>
+    /// Dropdown con los generos entre los que puede elegir el jugador
+    /// </summary>
     genderDropdown;
 
     /// <summary>
@@ -61,25 +58,34 @@ public class SettingsMenu : MonoBehaviour
         trackerManager = TrackerManager.Instance;
         lcs = LocalizationSettings.AvailableLocales.Locales;
 
+        // Se rellena el dropdown de idiomas con las opciones disponibles
         for (int i = 0; i < lcs.Count; ++i)
         {
             languageDropdown.options.Add(new TMP_Dropdown.OptionData() { text = lcs[i].LocaleName });
         }
 
+        int lid = lcs.IndexOf(LocalizationSettings.SelectedLocale);
+
+        // Si hay un idioma guardado, se usa su id
         if (PlayerPrefs.HasKey(Defs.LANGUAGE_PREFS_KEY))
         {
-            languageDropdown.SetValueWithoutNotify(PlayerPrefs.GetInt(Defs.LANGUAGE_PREFS_KEY));
+            lid = PlayerPrefs.GetInt(Defs.LANGUAGE_PREFS_KEY);
         }
+        // Si no, se guarda la id del idioma elegido previamente
         else
         {
-            int lid = lcs.IndexOf(LocalizationSettings.SelectedLocale);
-            languageDropdown.SetValueWithoutNotify(lid);
             PlayerPrefs.SetInt(Defs.LANGUAGE_PREFS_KEY, lid);
         }
+
+        // Se cambia el valor del slider sin llamar al OnValueChanged y se fuerza la actualizacion de su valor
+        languageDropdown.SetValueWithoutNotify(lid);
         languageDropdown.RefreshShownValue();
     }
 
 
+    /// <summary>
+    /// Llamado al cambiar el valor del dropdown del idioma
+    /// </summary>
     public void ChangeLanguage()
     {
         LocalizationSettings.SelectedLocale = lcs[languageDropdown.value];
@@ -87,16 +93,25 @@ public class SettingsMenu : MonoBehaviour
 
         trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected("Language", lcs[languageDropdown.value].LocaleName));
     }
+    /// <summary>
+    /// Llamado al cambiar el valor del dropdown del genero
+    /// </summary>
     public void ChangeGender()
     {
         gameManager.PlayerGender = (Defs.Gender)PlayerPrefs.GetInt(Defs.GENDER_PREFS_KEY);
     }
+
+    /// <summary>
+    /// Llamado al cambiar el valor del slider de la musica
+    /// </summary>
     public void SetBGMVolume()
     {
         audioManager.BGMVolume = bgmSlider.value;
     }
-
-    public void setSFXVolume()
+    /// <summary>
+    /// Llamado al cambiar el valor del slider de los efectos de sonido
+    /// </summary>
+    public void SetSFXVolume()
     {
         audioManager.SFXVolume = sfxSlider.value;
     }
