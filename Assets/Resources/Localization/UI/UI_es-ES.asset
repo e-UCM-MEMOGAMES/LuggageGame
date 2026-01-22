@@ -101,7 +101,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 221603523915776
-    m_Localized: "\xBFQuiere restablecer los ajustes?"
+    m_Localized: "\xBFQuiere restablecer los ajustes y borrar la partida guardada?"
     m_Metadata:
       m_Items: []
   - m_Id: 221737011834880

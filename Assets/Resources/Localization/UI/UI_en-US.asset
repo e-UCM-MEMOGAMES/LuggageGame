@@ -102,7 +102,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 221603523915776
-    m_Localized: Do you want to reset the settings?
+    m_Localized: Do you want to reset the settings and delete the saved game?
     m_Metadata:
       m_Items: []
   - m_Id: 221737011834880

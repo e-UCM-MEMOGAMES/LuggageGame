@@ -37,10 +37,11 @@ public class DifficultyButton : MonoBehaviour
     /// <summary>
     /// Componente Button del objeto para bloquear la pulsacion si el nivel esta bloqueado
     /// </summary>
+    [SerializeField]
     Button button;
     
     /// <summary>
-    /// Numero del nivel
+    /// Si el nivel viene desbloqueado por defecto
     /// </summary>
     [SerializeField]
     bool preUnlocked = false;
@@ -49,14 +50,12 @@ public class DifficultyButton : MonoBehaviour
     private void Awake()
     {
         gameManager = GameManager.Instance;
-        button = GetComponent<Button>();
     }
 
     void Start()
     {
         levelText.text = levelNumber.ToString();
     }
-
 
     private void OnEnable()
     {
