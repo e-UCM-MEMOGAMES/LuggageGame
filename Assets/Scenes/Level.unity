@@ -8239,7 +8239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelManager: {fileID: 1670826825}
-  infoPanels:
+  statePanels:
   - {fileID: 343521454}
   - {fileID: 347082031}
   - {fileID: 1847187165}

@@ -14,7 +14,7 @@ public class Tutorial : MonoBehaviour
     enum States
     {
         PRESS_ITEM, DRAG_IN, CHECK_SUITCASE, CHECK_NAME, DRAG_OUT, CLOSE_SUITCASE, PUT_BACK,
-        CHECK_DRAWER, EXIT_DRAWER, GO_TO_BATHROOM, CHECK_LIST, LIST_TRIES, GO_TO_BEDROOM, FINISH, 
+        CHECK_DRAWER, EXIT_DRAWER, GO_TO_BATHROOM, CHECK_LIST, LIST_TRIES, GO_TO_BEDROOM, FINISH,
         LAST
     };
 
@@ -32,7 +32,7 @@ public class Tutorial : MonoBehaviour
     /// <summary>
     /// Paneles con la informacion de cada estado del tutorial
     /// </summary>
-    [SerializeField] GameObject[] infoPanels;
+    [SerializeField] GameObject[] statePanels;
     /// <summary>
     /// Animator de la mano (para cambiar las animaciones segun el estado)
     /// </summary>
@@ -126,13 +126,13 @@ public class Tutorial : MonoBehaviour
         {
             drawerButton.interactable = false;
         }
-        foreach (GameObject panel in infoPanels)
+        foreach (GameObject panel in statePanels)
         {
             panel.SetActive(false);
         }
 
         currState = States.PRESS_ITEM;
-        ChangeState(0);
+        UpdateState(0);
 
         // Se configuran las instancias del objeto necesario
         StartCoroutine(SetupNeededItem());
@@ -146,50 +146,50 @@ public class Tutorial : MonoBehaviour
             case States.PRESS_ITEM:
                 if (draggingNeededItem)
                 {
-                    ChangeState(1);
+                    UpdateState();
                 }
                 break;
             case States.DRAG_IN:
                 if (!draggingNeededItem && !neededItemStored.activeSelf)
                 {
-                    ChangeState(-1);
+                    UpdateState(-1);
                 }
                 else if (!draggingNeededItem && neededItemStored.activeSelf)
                 {
-                    ChangeState(1);
+                    UpdateState();
                     caseButton.interactable = true;
                 }
                 break;
             case States.CHECK_SUITCASE:
                 if (caseView.activeSelf)
                 {
-                    ChangeState(1);
+                    UpdateState();
                 }
                 break;
             case States.CHECK_NAME:
                 if (pointerOverNeededItemStored)
                 {
-                    ChangeState(1);
+                    UpdateState();
                 }
                 break;
             case States.DRAG_OUT:
                 if (neededItem.activeSelf)
                 {
-                    ChangeState(1);
+                    UpdateState();
                     exitCaseButton.SetActive(true);
                 }
                 break;
             case States.CLOSE_SUITCASE:
                 if (!caseView.activeSelf)
                 {
-                    ChangeState(1);
+                    UpdateState();
                     caseButton.interactable = false;
                 }
                 break;
             case States.PUT_BACK:
                 if (!neededItem.activeSelf)
                 {
-                    ChangeState(1);
+                    UpdateState();
 
                     foreach (Button drawerButton in drawers)
                     {
@@ -200,13 +200,13 @@ public class Tutorial : MonoBehaviour
             case States.CHECK_DRAWER:
                 if (caseView.activeSelf)
                 {
-                    ChangeState(1);
+                    UpdateState();
                 }
                 break;
             case States.EXIT_DRAWER:
                 if (!caseView.activeSelf)
                 {
-                    ChangeState(1);
+                    UpdateState();
                     bathroomButton.SetActive(true);
 
                     foreach (Button drawerButton in drawers)
@@ -218,27 +218,27 @@ public class Tutorial : MonoBehaviour
             case States.GO_TO_BATHROOM:
                 if (bathroom.activeSelf)
                 {
-                    ChangeState(1);
+                    UpdateState();
                     listButton.SetActive(true);
                 }
                 break;
             case States.CHECK_LIST:
                 if (itemList.activeSelf)
                 {
-                    ChangeState(1);
+                    UpdateState();
                 }
                 break;
             case States.LIST_TRIES:
                 if (!itemList.activeSelf && Input.GetMouseButtonDown(0))
                 {
-                    ChangeState(1);
+                    UpdateState();
                     bedroomButton.SetActive(true);
                 }
                 break;
             case States.GO_TO_BEDROOM:
                 if (bedroom.activeSelf)
                 {
-                    ChangeState(1);
+                    UpdateState();
 
                     caseButton.interactable = true;
 
@@ -297,25 +297,33 @@ public class Tutorial : MonoBehaviour
     }
 
     /// <summary>
-    /// Actualiza el paso actual la cantidad de pasos indicada
+    /// Actualiza el estado actual, ocultando el panel actual y mostrando el siguiente
     /// </summary>
-    private void ChangeState(int increase)
+    void UpdateState(int increment = 1)
     {
         // Oculta el panel del estado actual
-        if ((int)currState >= 0 && infoPanels.Length > 0)
+        if (ValidState())
         {
-            infoPanels[(int)currState].SetActive(false);
+            statePanels[(int)currState].SetActive(false);
         }
         // Actualiza el estado
-        currState += increase;
+        currState += increment;
         // Muestra el panel del nuevo estado actual
-        if ((int)currState < infoPanels.Length)
+        if (ValidState())
         {
-            infoPanels[(int)currState].SetActive(true);
+            statePanels[(int)currState].SetActive(true);
         }
         // Hace la transicion de la animacion a la del nuevo estado actual
         handAnimator.SetInteger("step", (int)currState);
 
         trackerManager.TrySendStatement(CompletableTracker.Instance.Progressed("Tutorial", CompletableTracker.CompletableType.Level, (float)currState / (int)States.LAST));
+    }
+
+    /// <summary>
+    /// Devuelve si el estado actual, es valido
+    /// </summary>
+    bool ValidState()
+    {
+        return currState >= 0 && (int)currState < statePanels.Length;
     }
 }
