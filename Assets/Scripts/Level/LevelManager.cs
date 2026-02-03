@@ -556,7 +556,7 @@ public class LevelManager : MonoBehaviour
         }
 
         trackerManager.TrySendStatement(
-            CompletableTracker.Instance.Completed(levelName, COMPLETABLE_TYPE, watch.ElapsedMilliseconds)
+            CompletableTracker.Instance.Completed(levelName, COMPLETABLE_TYPE, completionTime)
             .WithSuccess(true)
             .WithResultExtensions(new Dictionary<string, object> {
                 { "https://stars", totalStars },
