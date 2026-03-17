@@ -207,7 +207,11 @@ public class LevelButtons : MonoBehaviour
         // Desactiva los elementos del armario 
         cabinet.SetActive(false);
 
-        trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Bedroom"));
+        try
+        {
+            trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Bedroom"));
+        }
+        catch { }
     }
 
     /// <summary>
@@ -226,7 +230,11 @@ public class LevelButtons : MonoBehaviour
         // Desactiva los elementos del armario 
         cabinet.SetActive(false);
 
-        trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Bathroom"));
+        try
+        {
+            trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Bathroom"));
+        }
+        catch { }
     }
 
     /// <summary>
@@ -238,11 +246,15 @@ public class LevelButtons : MonoBehaviour
         cabinet.SetActive(true);
         ShowHiddenElements(cabinetItems);
 
-        trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Cabinet")
-            .WithResultExtensions(new Dictionary<string, object> {
+        try
+        {
+            trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Cabinet")
+                .WithResultExtensions(new Dictionary<string, object> {
                 { "https://cabinet", cabinetItems.name }
-            })
-        );
+                })
+            );
+        }
+        catch { }
     }
 
     /// <summary>
@@ -259,11 +271,15 @@ public class LevelButtons : MonoBehaviour
         drawer.SetActive(true);
         ShowHiddenElements(drawerItems);
 
-        trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Drawer")
-            .WithResultExtensions(new Dictionary<string, object> {
+        try
+        {
+            trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Drawer")
+                .WithResultExtensions(new Dictionary<string, object> {
                 { "https://drawer", drawerItems.name }
-            })
-        );
+                })
+            );
+        }
+        catch { }
     }
 
     /// <summary>
@@ -296,7 +312,11 @@ public class LevelButtons : MonoBehaviour
 
         if (!openingDrawer)
         {
-            trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Case", AccessibleTracker.AccessibleType.Inventory));
+            try
+            {
+                trackerManager.TrySendStatement(AccessibleTracker.Instance.Accessed("Case", AccessibleTracker.AccessibleType.Inventory));
+            }
+            catch { }
         }
     }
 

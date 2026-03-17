@@ -125,11 +125,16 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
         transform.SetSiblingIndex(caseObj.transform.GetSiblingIndex() + 1);
 
         string location = stored ? "suitcase" : "scenario";
-        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
-            .WithResultExtensions(new Dictionary<string, object> {
+
+        try
+        {
+            trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
+                .WithResultExtensions(new Dictionary<string, object> {
                 { $"https://draggingFrom", location}
-            })
-        );
+                })
+            );
+        }
+        catch { }
     }
     /// <summary>
     /// Llamado al arrastrar el objeto. Cambia su posicion a la del puntero
@@ -173,11 +178,16 @@ public class DragAndDrop : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
 
         string location = stored ? "suitcase" : "scenario";
-        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
-            .WithResultExtensions(new Dictionary<string, object> {
+
+        try
+        {
+            trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
+                .WithResultExtensions(new Dictionary<string, object> {
                 { $"https://droppingFrom", location}
-            })
-        );
+                })
+            );
+        }
+        catch { }
     }
 
     /// <summary>

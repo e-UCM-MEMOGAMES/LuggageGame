@@ -91,7 +91,11 @@ public class SettingsMenu : MonoBehaviour
         LocalizationSettings.SelectedLocale = lcs[languageDropdown.value];
         PlayerPrefs.SetInt(Defs.LANGUAGE_PREFS_KEY, languageDropdown.value);
 
-        trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected("Language", lcs[languageDropdown.value].LocaleName));
+        try
+        {
+            trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected("Language", lcs[languageDropdown.value].LocaleName));
+        }
+        catch { }
     }
     /// <summary>
     /// Llamado al cambiar el valor del dropdown del genero

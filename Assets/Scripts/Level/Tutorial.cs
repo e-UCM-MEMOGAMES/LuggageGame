@@ -316,7 +316,11 @@ public class Tutorial : MonoBehaviour
         // Hace la transicion de la animacion a la del nuevo estado actual
         handAnimator.SetInteger("step", (int)currState);
 
-        trackerManager.TrySendStatement(CompletableTracker.Instance.Progressed("Tutorial", CompletableTracker.CompletableType.Level, (float)currState / (int)States.LAST));
+        try
+        {
+            trackerManager.TrySendStatement(CompletableTracker.Instance.Progressed("Tutorial", CompletableTracker.CompletableType.Level, (float)currState / (int)States.LAST));
+        }
+        catch { }
     }
 
     /// <summary>

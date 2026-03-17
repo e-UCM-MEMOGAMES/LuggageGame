@@ -39,8 +39,11 @@ public class LanguageButton : MonoBehaviour
         // Se guarda el idioma elegido en las configuraciones
         PlayerPrefs.SetInt(Defs.LANGUAGE_PREFS_KEY, lid);
 
-        trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected(locale.LocaleName, "Language"));
-
+        try
+        {
+            trackerManager.TrySendStatement(AlternativeTracker.Instance.Selected(locale.LocaleName, "Language"));
+        }
+        catch { }
         // Se pasa al menu principal
         gameManager.ChangeScene(Defs.MENU_SCENE_NAME);
     }

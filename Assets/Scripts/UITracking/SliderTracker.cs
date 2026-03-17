@@ -26,7 +26,7 @@ public class SliderTracker : MonoBehaviour
     Slider slider;
 
 
-    private void Start()
+    void Start()
     {
         trackerManager = TrackerManager.Instance;
         slider = GetComponent<Slider>();
@@ -37,11 +37,15 @@ public class SliderTracker : MonoBehaviour
     /// </summary>
     public void PointerUp()
     {
-        trackerManager.TrySendStatement(
-            GameObjectTracker.Instance.Interacted(sliderName)
-            .WithResultExtensions(new Dictionary<string, object> {
+        try
+        {
+            trackerManager.TrySendStatement(
+                GameObjectTracker.Instance.Interacted(sliderName)
+                .WithResultExtensions(new Dictionary<string, object> {
                 { $"https://{valueExtension}", slider.value }
-            })
-        );
+                })
+            );
+        }
+        catch { }
     }
 }

@@ -227,8 +227,11 @@ public class LevelManager : MonoBehaviour
         itemNamePanel.SetActive(false);
         itemNamePanelTr = itemNamePanel.GetComponent<RectTransform>();
 
-
-        trackerManager.TrySendStatement(CompletableTracker.Instance.Initialized(Defs.GetLevelSaveKey(gameManager.Level, gameManager.Climate), COMPLETABLE_TYPE));
+        try
+        {
+            trackerManager.TrySendStatement(CompletableTracker.Instance.Initialized(Defs.GetLevelSaveKey(gameManager.Level, gameManager.Climate), COMPLETABLE_TYPE));
+        }
+        catch { }
     }
 
     /// <summary>
@@ -425,14 +428,18 @@ public class LevelManager : MonoBehaviour
             contextExtension = "correctItemProgression";
         }
 
-        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
-            .WithResultExtensions(new Dictionary<string, object> {
+        try
+        {
+            trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
+                .WithResultExtensions(new Dictionary<string, object> {
                 { "https://storeIn",  "suitcase" }
-            })
-            .WithContextExtensions(new Dictionary<string, object> {
+                })
+                .WithContextExtensions(new Dictionary<string, object> {
                 { $"https://{contextExtension}",  $"{storedItems.Count / (double)neededItems.Count}" }
-            })
-        );
+                })
+            );
+        }
+        catch { }
     }
     /// <summary>
     /// Llamado por el DragAndDrop de un objeto. Saca el objeto indicado de la maleta
@@ -456,14 +463,19 @@ public class LevelManager : MonoBehaviour
             contextExtension = "correctItemProgression";
         }
 
-        trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
-            .WithResultExtensions(new Dictionary<string, object> {
+        try
+        {
+            trackerManager.TrySendStatement(GameObjectTracker.Instance.Interacted(id)
+                .WithResultExtensions(new Dictionary<string, object> {
                 { "https://removeFrom",  "suitcase" }
-            })
-            .WithContextExtensions(new Dictionary<string, object> {
+                })
+                .WithContextExtensions(new Dictionary<string, object> {
                 { $"https://{contextExtension}",  $"{storedItems.Count / (double)neededItems.Count}" }
-            })
-        );
+                })
+            );
+        }
+        catch { }
+
         if (neededItems.ContainsKey(id))
         {
             neededItems[id].SetObtained(false);
@@ -555,18 +567,21 @@ public class LevelManager : MonoBehaviour
             }
         }
 
-        trackerManager.TrySendStatement(
-            CompletableTracker.Instance.Completed(levelName, COMPLETABLE_TYPE, completionTime)
-            .WithSuccess(true)
-            .WithResultExtensions(new Dictionary<string, object> {
+        try {
+            trackerManager.TrySendStatement(
+                CompletableTracker.Instance.Completed(levelName, COMPLETABLE_TYPE, completionTime)
+                .WithSuccess(true)
+                .WithResultExtensions(new Dictionary<string, object> {
                 { "https://stars", totalStars },
                 { "https://wrongItems", incorrectItems },
                 { "https://correctItems", $"{correctItems}/{neededItems.Count}" },
                 { "https://wrongItemsList", wrongItemsList },
                 { "https://correctItemsList", correctItemsList },
                 { "https://checkListOpportunities", $"{listUses}/{MAX_LIST_USES}" },
-            })
-        );
+                })
+            );
+        }
+        catch { }
     }
 }
 

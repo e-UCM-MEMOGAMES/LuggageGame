@@ -513,6 +513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AutoStart: 0
+  EnableDebugLogging: 1
+  CanLoadConfigFromURL: 1
   processingLoopTime: 1
 --- !u!114 &2025093144858826701
 MonoBehaviour:
