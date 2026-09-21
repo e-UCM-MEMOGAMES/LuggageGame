@@ -240,7 +240,10 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2088170123599872
-    m_Localized: Please log in to the page you are shown on...
+    m_Localized: 'WAITING FOR LOG IN...
+
+
+      CHECK YOUR BROWSER'
     m_Metadata:
       m_Items: []
   - m_Id: 31801445282156544

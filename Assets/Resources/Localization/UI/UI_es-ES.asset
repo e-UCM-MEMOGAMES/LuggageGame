@@ -242,7 +242,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 2088170123599872
-    m_Localized: "Inicie sesi\xF3n en la p\xE1gina que se le muestra..."
+    m_Localized: "ESPERANDO AL INICIO DE SESI\xD3N...\n\nCOMPRUEBA TU NAVEGADOR"
     m_Metadata:
       m_Items: []
   - m_Id: 31801445282156544
